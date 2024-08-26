@@ -269,51 +269,10 @@ td, th {
 html {
   height: 100%;
 }
-link-45 {
-  color: #0082f3;
-}
-.link-45:hover {
-  color: #0069c3;
-}
 
-.link-45:active {
-  color: #005197;
-}
-.heading-176 {
-  font-weight: 300;
-  text-align: center;
-  font-size: 40px;
-}
-.text-span-153 {
-  color: #0082f3;
-}
-.heading-158 {
-  margin-bottom: 11px;
-  font-size: 60px;
-}
-.heading-158 {
-  margin-top: 0;
-}
-
-.heading-158 {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 35px;
-  line-height: 45px;
-}
-.heading-158 {
-  font-size: 40px;
-  line-height: 40px;
-}
-.text-block-246 {
-  text-align: center;
-  font-size: 40px;
-  line-height: 20px;
-  text-align: center;
-}
 body {
-  color: #ffffff;
-  background-color: #aad6ff;
+  color: #aad6ff;
+  background-color: #fff;
   min-height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -49494,7 +49453,7 @@ figcaption {
 
 .text-block-246 {
   color: #fff;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .secularevd {
@@ -58584,7 +58543,7 @@ figcaption {
 }
 
 .webblockwhite {
-  background-color: #fff;
+  background-color: #aedbff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -66825,7 +66784,7 @@ figcaption {
 }
 
 .webblockwhite5-2 {
-  background-color: #fff;
+  background-color: #aedbff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -67038,7 +66997,7 @@ figcaption {
 }
 
 .webblockwhite2-2 {
-  background-color: #fff;
+  background-color: #aedbff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -70753,7 +70712,7 @@ figcaption {
 
 .timeline_welcome_screen {
   z-index: 5000;
-  background-color: #000027;
+  background-color: #aedbff;
   background-image: url("../615e0a924f1763d2506a1929_Purple Starry Backround.png");
   background-position: 0 0;
   background-size: auto;
@@ -70885,7 +70844,7 @@ figcaption {
 }
 
 .heading-177-copy {
-  color: #91d9ff;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
   font-family: Exo, sans-serif;
@@ -70895,7 +70854,6 @@ figcaption {
 
 .timeline_welcome_screen_home {
   z-index: 5000;
-  background-color: #000027;
   background-image: url("../615e0a924f1763d2506a1929_Purple Starry Backround.png");
   background-position: 0 0;
   background-size: auto;
@@ -71523,7 +71481,7 @@ figcaption {
 }
 
 .text-span-1075 {
-  background-color: #aedbff;
+  background-color: #7f00ff;
   font-size: 20px;
   font-weight: 900;
 }
@@ -71563,6 +71521,12 @@ figcaption {
 }
 
 .international_tracts {
+  background-color: #aedbff;
+  margin-left: 250px;
+  margin-right: 100px;
+}
+
+.international_tracts1 {
   background-color: #aedbff;
   margin-left: 250px;
   margin-right: 100px;
@@ -73896,7 +73860,7 @@ figcaption {
   .div_lineanimationbox {
     justify-content: flex-end;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 220px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -73906,7 +73870,8 @@ figcaption {
   }
 
   .paragraph-124-copy {
-    margin-left: 20px;
+    margin-left: 1px;
+    margin-right: 220px;
     font-size: 30px;
     line-height: 40px;
   }
@@ -73921,6 +73886,14 @@ figcaption {
   }
 
   .international_tracts {
+    background-color: #aedbff;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+    display: flex;
+  }
+  .international_tracts1 {
     background-color: #aedbff;
     flex-flow: column;
     justify-content: center;
@@ -74626,6 +74599,9 @@ figcaption {
   }
 
   .sm_body, .div-block-583, .international_tracts, .div-block-585 {
+    margin-left: 400px;
+  }
+  .sm_body, .div-block-583, .international_tracts1, .div-block-585 {
     margin-left: 400px;
   }
 
@@ -87999,7 +87975,8 @@ figcaption {
   }
 
   .text-block-246 {
-    text-align: center;
+    margin-left: 16px;
+    margin-right: 10px;
     font-size: 15px;
     line-height: 20px;
   }

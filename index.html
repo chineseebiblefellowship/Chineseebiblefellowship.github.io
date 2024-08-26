@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>eBible Fellowship</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="nb.css">
+<link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
 <style>
  .text-art {
             font-family: 'Arial', sans-serif;
@@ -55,15 +57,15 @@
 </div>
 <div class="date">
       <div class="icon-container">
-        <a href="https://cnebiblefellowship-github-io.pages.dev/learnbible.html" class="icon-item">
+        <a href="learnbible.html" class="icon-item">
           <i class="fas fa-graduation-cap"></i>
           <span>圣经学习</span>
         </a>
-        <a href="https://cnebiblefellowship-github-io.pages.dev/lib.html" class="icon-item">
+        <a href="lib.html" class="icon-item">
           <i class="fas fa-book-open"></i>
           <span>圣经书籍</span>
         </a>
-        <a href="https://cnebiblefellowship-github-io.pages.dev/hymns.html" class="icon-item">
+        <a href="hymns.html" class="icon-item">
           <i class="fas fa-music"></i>
           <span>音乐</span>
         </a>
@@ -78,7 +80,7 @@
 </div>
 </head>
 <body>
-  <div class="sidebar">
+  <div class="sidebar-menu">
     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
     <div class="title">
      
@@ -89,19 +91,19 @@
     </div>
     
     <!-- 按钮列表 -->
-    <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/'">
+    <button class="nav-button" onclick="location.href='index.html'">
       <i class="fas fa-home"></i> 首页
     </button>
     <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
       <i class="fas fa-search"></i> Zoom
     </button>
-    <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/learnbible.html'">
+    <button class="nav-button" onclick="location.href='learnbible.html'">
       <i class="fas fa-book-open"></i> 学习圣经
     </button>
     <button class="nav-button" onclick="location.href='https://newopenforum.org'">
       <i class="fas fa-comments"></i> 圣经论坛
     </button>
-    <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/lib.html'">
+    <button class="nav-button" onclick="location.href='lib.html'">
       <i class="fas fa-book"></i> 圣经书籍
     </button>
     <!-- 直播室嵌入 -->
@@ -111,14 +113,42 @@
   
     <!-- 平台图标 -->
     <div class="platform-title">电子圣经团契平台</div>
-    <div class="icon-container">
-      <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
-      <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
-      <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
-      <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+    <div class="icon-grid">
+      <!-- 微信图标 -->
+      <div class="icon">
+          <a href="https://www.wechat.com/" target="_blank" class="wechat"><i class="fab fa-weixin"></i></a>
+      </div>
+      <!-- QQ图标 -->
+      <div class="icon">
+          <a href="https://www.qq.com/" target="_blank" class="qq"><i class="fab fa-qq"></i></a>
+      </div>
+      <!-- YouTube图标 -->
+      <div class="icon">
+          <a href="https://www.youtube.com/@Ebiblefellowship" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <!-- Facebook图标 -->
+      <div class="icon">
+          <a href="https://www.facebook.com/ebiblefellowship/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <!-- Instagram图标 -->
+      <div class="icon">
+          <a href="https://www.instagram.com/ebiblefellowship/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <!-- Spotify图标 -->
+      <div class="icon">
+          <a href="https://open.spotify.com/show/2QaYhjDxUM6TYcFZS1k25N   " target="_blank" class="spotify"><i class="fab fa-spotify"></i></a>
+      </div>
+      <!-- TikTok图标 -->
+      <div class="icon">
+          <a href="https://www.tiktok.com/@ebiblefellowship" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <!-- X (Twitter)图标 -->
+      <div class="icon">
+          <a href="https://twitter.com/EBF2033" target="_blank" class="x"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <div class="icon">
+        <a href="https://soundcloud.com/ebiblefellowship" target="_blank" class="soundcloud"><i class="fab fa-soundcloud"></i></a>
+    </div>
       <!-- 添加其他图标... -->
     </div>
   
@@ -154,72 +184,409 @@
   </a>
   </div>
   </div>
-  <div class="center-container">
-    <a href="https://newopenforum.org" class="blue-text" target="_blank">电子圣经团契 圣经论坛</a>
+  <h1 class="heading-158" _msttexthash="26733096" _msthash="161"><span class="text-span-153" _istranslated="1">E</span>BF 的新开放论坛</h1>
+  <div class="text-block-246" _msttexthash="46178600" _msthash="162">现场圣经问答节目！</div>
 </div>
-  <div class="center-container">
-    <a href="https://newopenforum.org" class="text-art" target="_blank">NEWOPENFORUM.ORG</a>
+<div><h1 class="heading-176"><a href="http://NewOpenForum.org" class="link-45" _msttexthash="302419" _msthash="163">NewOpenForum.org</a></h1></div>
 </div>
 
   </div>
   <hr class="separator"> 
-  <div class="book-section">
-    <div class="book-title">
-      电子圣经团契书籍
+  <div class="international_tracts">
+    <div class="div_lower">
+      <h1 class="heading-180" _msttexthash="15182583" _msthash="314">圣经查考</h1>
     </div>
-    <img src="https://chineseebf.github.io/static/picture/5d0026e6ed749a1b7cbbf2f0_types%20figures.png" alt="电子圣经团契书籍封面" class="book-image">
-    <div class="book-title-divider"></div>
-    <div class="book-subject">
-      罗马书1章查考
-    </div>
-    <div class="button-container">
-      <a href="s/罗马书1章圣经查考(加密).pdf" class="book-button">下载</a>
-      <a href="s/roman1.html" class="book-button">阅读</a>
-    </div>
-  </div>
-  <hr class="separator">
-  <div class="book-section">
-    <div class="book-title">
-      圣经传单
-    </div>
-    <img src="https://chineseebf.github.io/static/picture/5d0026e6ed749a1b7cbbf2f0_types%20figures.png" alt="电子圣经团契书籍封面" class="book-image">
-    <div class="book-title-divider"></div>
-    <div class="book-subject">
-      为何世界如此自相纷争
-    </div>
-    <div class="button-container">
-      <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.pdf" class="book-button">下载</a>
-      <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html" class="book-button">阅读</a>
+    <div class="div_upper">
+      <div class="columns-126 w-row">
+        <div class="w-col w-col-8 w-col-tiny-tiny-stack">
+          <div class="div-block-584">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png" loading="lazy" width="133" data-w-id="46fb3ae2-1fe2-2f7d-3288-a3af69c31618" alt="" srcset="http://ebfchk.pages.dev/static/picture/5d0026e6ed749a1b7cbbf2f0_types figures.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png 1046w" sizes="(max-width: 479px) 64vw, 133px" class="image-117" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <div>
+              <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html" data-w-id="5b974b14-5e66-0d0c-1086-d5a91699642f" class="english_text" _msttexthash="5710978" _msthash="315" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">阅读<span class="text-span-1076" _istranslated="1">➟</span>
+              </a>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div class="column-341 w-col w-col-2 w-col-tiny-tiny-stack"></div>
+        <div class="w-col w-col-2 w-col-tiny-tiny-stack"></div>
+      </div>
     </div>
   </div>
   <hr class="separator">
-  <div class="timeline-section">
-    <div class="title">
-      圣经历史年代表
+  <div class="international_tracts">
+    <div class="div_lower">
+      <h1 class="heading-180" _msttexthash="15182583" _msthash="314">EBF 国际传单</h1>
     </div>
-    <div class="subtitle">
-      看看圣经中发现的历史时间表，从创造的日期到时间的终结
+    <div class="div_upper">
+      <div class="columns-126 w-row">
+        <div class="w-col w-col-8 w-col-tiny-tiny-stack">
+          <div class="div-block-584">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png" loading="lazy" width="133" data-w-id="46fb3ae2-1fe2-2f7d-3288-a3af69c31618" alt="" srcset="http://ebfchk.pages.dev/static/picture/5d0026e6ed749a1b7cbbf2f0_types figures.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png 1046w" sizes="(max-width: 479px) 64vw, 133px" class="image-117" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+            <div>
+              <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html" data-w-id="5b974b14-5e66-0d0c-1086-d5a91699642f" class="english_text" _msttexthash="5710978" _msthash="315" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">中文 <span class="text-span-1076" _istranslated="1">➟</span>
+              </a>
+              <a href="https://www.dropbox.com/scl/fi/dirjefuiyjj7x5r8qgiul/3.-chinese-world-divided-tract.pdf?rlkey=428yqx2ueqym2mvassd9dij2i&amp;dl=1" data-w-id="c8f5a2f0-b886-2799-3039-181c9cb8b53f" class="english_text" _msttexthash="40663428" _msthash="317">中文 （未格式化）<span class="text-span-1076" _istranslated="1">➟</span>
+              </a>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div class="column-341 w-col w-col-2 w-col-tiny-tiny-stack"></div>
+        <div class="w-col w-col-2 w-col-tiny-tiny-stack"></div>
+      </div>
     </div>
-    <div class="subtitle">
-      由已故的哈罗德·坎平（Harold Camping）发现，正如上帝允许的那样，在末世时解开他的话语。这个交互式图表将显示关键的圣经事件...
+  </div>
+  <hr class="separator">
+  <div class="div-block-562">
+    <div class="code-embed w-embed w-script">
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core="" defer=""></script>
+      <div class="elfsight-app-19e74be4-bf38-4d1a-84e8-b52045959d7d" data-elfsight-app-lazy=""></div>
     </div>
-    <div class="interactive-timeline">
-      <!-- 编号的框示例，实际应用中应根据需要编号 -->
-  
-      <a href="biblicaltimeline.html" class="enter-interface-link">
-        进入界面<i class="fas fa-arrow-right"></i> <!-- 箭头图标 -->
-      </a>
+    <div>
+      <div class="timeline_welcome_screen_home">
+        <div class="div-block-577">
+          <h1 class="heading-177-copy" _msttexthash="31955027" _msthash="309">圣经历史的时间表</h1>
+          <h1 class="tbtohm" _msttexthash="780078" _msthidden="1" _msthash="310">The Biblical
+            <br>Timeline of History</h1>
+          <p class="paragraph-124-copy" _msttexthash="6806077265" _msthash="311">看看圣经中发现的圣经历史时间表，从创世之日到时间的终结，由已故的哈罗德·康平 （Harold Camping） 发现，正如上帝允许他的那样，在末世时解封了他的话语。这个交互式图表将显示关键的圣经事件，例如创建日期、洪水发生的时间、出埃及、所罗门圣殿地基的奠基等。
+            <br _istranslated="1">
+            <br _istranslated="1">您将单击编号框以揭开这些日期背后的真相，所有这些都是通过对圣经的仔细研究发现的。你会看到圣经的作者，全能的上帝是多么精确和详细。</p>
+        </div>
+        <div class="div_lineanimationbox">
+          <div class="div_lineanimationinner">
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14094" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14095" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14096" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14097" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14098" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14099" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1409a" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1409b" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1409c" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1409d" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1409e" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1409f" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a1" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a2" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a3" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a4" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a5" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a6" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a7" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a8" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140a9" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140aa" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ab" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ac" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ad" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ae" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140af" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140b0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140b1" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140b2" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140b3" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140b4" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140b5" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140bd" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140be" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140bf" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c1" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c2" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c3" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c4" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c5" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c6" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140c7" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140e0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140e1" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <a href="biblicaltimeline.html" class="link-block-43 w-inline-block">
+              <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140e4" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div_long">
+                <h1 data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140e5" class="heading-178" style="transform: translate3d(6.6519px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;" _msttexthash="11483173" _msthash="312">时间线 ➤</h1>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="div_lineanimationboxm" _msthidden="1">
+          <div class="div_lineanimationinner" _msthidden="1">
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ea" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140eb" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ec" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ed" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ee" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ef" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f0" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f1" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f2" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f3" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f4" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f5" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f6" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f7" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f8" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140f9" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140fa" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140fb" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140fc" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140fd" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140fe" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b140ff" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14100" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14101" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14102" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14103" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14104" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14105" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14106" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14107" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14108" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14109" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1410a" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1410b" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1410c" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1410d" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1410e" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b1410f" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14110" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14111" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14112" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14113" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14114" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14115" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14116" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div hideline"></div>
+            <a href="biblicaltimeline.html" class="link-block-43 w-inline-block" _msthidden="1">
+              <div data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14117" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="line_div_long" _msthidden="1">
+                <h1 data-w-id="33ac6b0f-4f99-8ee8-80c3-b409b6b14118" class="heading-178" style="transform: translate3d(6.6519px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;" _msttexthash="5205759" _msthidden="1" _msthash="313">Enter ➤➤➤</h1>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-block-563">
+      <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/664a4381c2d613ae28e457a1_Website.png" loading="lazy" width="Auto" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/664a4381c2d613ae28e457a1_Website-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/664a4381c2d613ae28e457a1_Website-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/664a4381c2d613ae28e457a1_Website-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/664a4381c2d613ae28e457a1_Website-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/664a4381c2d613ae28e457a1_Website.png 1920w" class="image-115">
+    </div>
+  </div>
       <!-- 继续添加更多事件 -->
     </div>
   </div>
   <hr class="separator">
-  <div class="white-interface">
-    <div class="title">喂养我的羊</div>
-    <div class="subtitle">2011年5月21日之后</div>
-    <div class="subtitle">
-      <p>eBibleFellowship 继续前往各个国家进行国际旅行，以遵循上帝的命令，"喂养我的羊"，并传讲圣经中出现的所有新教导。</p>
+  <div class="div-block-585">
+    <h1 class="heading-181" _msttexthash="26875745" _msthash="355">EBF 的国际牵引图</h1>
+    <h1 class="fms" _msttexthash="30689464" _msthash="356">“喂养我的羊！”</h1>
+    <p _msttexthash="2579001425" _msthash="357">2011 年 5 月 21 日之后，eBibleFellowship 继续前往各个国家进行国际传单旅行，以遵循上帝的命令，用圣经中所有的新教导“喂养我的羊”。
+      <br _istranslated="1">
+      <br _istranslated="1">将鼠标悬停在地图图钉上，查看我们迄今为止访问过的不同国家，然后单击它们以收听这些旅行的报告。</p>
+  </div>
+  <div class="map_div" _msthidden="37">
+    <div class="map-section" _msthidden="37">
+      <div class="map-wrapper" _msthidden="37">
+        <img width="719" sizes="(max-width: 991px) 100vw, 719px" alt="" src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/6697cb1a50d729725b3e9928_World_map_green%20(1).png" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/6697cb1a50d729725b3e9928_World_map_green%2520(1)-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/6697cb1a50d729725b3e9928_World_map_green%20(1).png 4312w" class="map-image">
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05ae" href="https://www.facebook.com/share/p/qxTo3xxsjVk6Srun/" target="_blank" class="map-pin brazil w-inline-block" _msthidden="2">
+          <div class="map-pin-tooltip north-america hidebox" style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" _mstvisible="0">
+            <h5 class="country" _msttexthash="5849428" _msthash="358" _mstvisible="1">巴西</h5>
+            <div class="text-block-352" _msttexthash="239229406" _msthash="359" _mstvisible="1">区域类型：
+              <br _istranslated="1">不再有救赎。
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 7 月，一个小组被派往圣保罗派发单张。</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05b2" href="http://www.google.com/southamerica" target="_blank" class="map-pin columbia w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="9930479" _msthash="360" _mstvisible="1">哥伦比亚</h5>
+            <div class="text-block-352" _mstvisible="1">
+              <font _mstmutation="1" _msttexthash="362125400" _msthash="361" _mstvisible="2">传单类型：
+                <br _mstmutation="1" _istranslated="1">不再有救赎
+                <br _mstmutation="1" _istranslated="1">
+                <br _mstmutation="1" _istranslated="1">2015 年，一个团队被派往哥伦比亚的博加塔 （Bogata Columbia） 分发传单。</font>
+              <br _mstvisible="2">
+            </div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05b6" href="https://www.facebook.com/share/p/Rn39zMpUGr6RmXM8/" target="_blank" class="map-pin sev_spain w-inline-block" _msthidden="2">
+          <div class="map-pin-tooltip north-america hidebox" style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" _mstvisible="0">
+            <h5 class="country" _msttexthash="23984584" _msthash="362" _mstvisible="1">西班牙 塞维利亚</h5>
+            <div class="text-block-352" _msttexthash="511877990" _msthash="363" _mstvisible="1">传单类型：
+              <br _istranslated="1">为什么世界如此分裂
+              <br _istranslated="1">
+              <br _istranslated="1">2019 年 5 月，一个团队被派往西班牙塞维利亚，然后前往西班牙马德里。</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05ba" href="https://www.facebook.com/share/p/cygZweP8QC6z8xxS/" target="_blank" class="map-pin mc w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="11190933" _msthash="364" _mstvisible="1">墨西哥城</h5>
+            <div class="text-block-352" _msttexthash="244099271" _msthash="365" _mstvisible="1">传单类型：
+              <br _istranslated="1">不再有救赎
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 2 月，一个团队被派往墨西哥城分发传单。
+              <br _istranslated="1">‍</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05be" href="https://www.facebook.com/share/v/KxMZCvzFaEeXuBZu/" target="_blank" class="map-pin cr w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _msthidden="2">
+            <h5 class="country" _msttexthash="127517" _msthidden="1" _msthash="366">Costa Rica</h5>
+            <div class="text-block-352" _msttexthash="15432378" _msthidden="1" _msthash="367">
+              <span class="text-span-1079">Tract type:</span>
+              <br>
+              <span class="text-span-1080">No more salvation tracts</span>
+              <br>
+              <br>In June of 2015 a team was sent to Costa Rica, and then to Nicaragua.
+              <br>‍
+            </div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05c2" href="https://www.facebook.com/share/p/EEkpVAUfpBMvof9G/" target="_blank" class="map-pin nicar w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="11196393" _msthash="368" _mstvisible="1">尼加拉瓜</h5>
+            <div class="text-block-352" _msttexthash="442175838" _msthash="369" _mstvisible="1">传单类型：
+              <br _istranslated="1">为什么世界如此分裂
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 7 月，一个团队在前往哥斯达黎加分发传单后被派往尼加拉瓜。
+              <br _istranslated="1">‍</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05c6" href="http://www.google.com/southamerica" target="_blank" class="map-pin tor w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="16651921" _msthash="370" _mstvisible="1">加拿大多伦多</h5>
+            <div class="text-block-352" _msttexthash="383778876" _msthash="371" _mstvisible="1">传单类型： 不再有救赎
+              <br _istranslated="1"> 2015
+              <br _istranslated="1">年，一个团队被派往加拿大多伦多，分发有关不再有救恩的传单。</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05ca" href="https://www.facebook.com/share/p/vxH22BbEfdURxuUd/" target="_blank" class="map-pin s_m w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="24180091" _msthash="372" _mstvisible="1">西班牙 马德里</h5>
+            <div class="text-block-352" _msttexthash="470727153" _msthash="373" _mstvisible="1">区域类型：
+              <br _istranslated="1">为什么世界如此分裂
+              <br _istranslated="1">
+              <br _istranslated="1">2019 年 5 月，一个团队在前往西班牙塞维利亚后被派往西班牙马德里。</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05ce" href="http://www.google.com/southamerica" target="_blank" class="map-pin ca_o w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="17487379" _msthash="374" _mstvisible="1">加拿大 渥太华</h5>
+            <div class="text-block-352" _msttexthash="578622226" _msthash="375" _mstvisible="1">
+              <span class="text-span-1079" _istranslated="1">传单类型：</span>
+              <br _istranslated="1">
+              <span class="text-span-1080" _istranslated="1">为什么世界如此分裂</span>
+              <br _istranslated="1">
+              <br _istranslated="1">EBF 在卡车司机车队抗议期间派出一个团队到加拿大渥太华分发与该部门相关的传单。
+              <br _istranslated="1">‍
+            </div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05d2" href="https://youtu.be/NzXWlUg80gM" target="_blank" class="map-pin phil w-inline-block" _msthidden="2">
+          <div class="map-pin-tooltip north-america hidebox" style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" _mstvisible="0">
+            <h5 class="country" _msttexthash="8365396" _msthash="376" _mstvisible="1">菲律宾</h5>
+            <div class="text-block-352" _msttexthash="468061594" _msthash="377" _mstvisible="1">
+              <span class="text-span-1079" _istranslated="1">传单类型：</span>
+              <br _istranslated="1">
+              <span class="text-span-1080" _istranslated="1">为什么世界如此分裂</span>
+              <br _istranslated="1">
+              <br _istranslated="1">2023 年 2 月，一个团队被派往菲律宾马尼拉分发传单。
+              <br _istranslated="1">
+              <br _istranslated="1">单击可观看视频。
+            </div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05d6" href="http://www.google.com/southamerica" target="_blank" class="map-pin asia-pacific hidepin w-inline-block" _msthidden="1">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _msthidden="1">
+            <h5 class="country" _msttexthash="168792" _msthidden="1" _msthash="378">Asia Pacific</h5>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05da" href="http://www.google.com/southamerica" target="_blank" class="map-pin russia hidepin w-inline-block" _msthidden="1">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _msthidden="1">
+            <h5 class="country" _msttexthash="78182" _msthidden="1" _msthash="379">Russia</h5>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05de" href="http://www.google.com/southamerica" target="_blank" class="map-pin london sensitive-3 hidepin w-inline-block" _msthidden="1">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _msthidden="1">
+            <h5 class="country" _msttexthash="320424" _msthidden="1" _msthash="380">Sensitive Nations</h5>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05e2" href="https://www.facebook.com/share/p/9dU5zPNiVhNTpXnE/" target="_blank" class="map-pin pr w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="12461332" _msthash="381" _mstvisible="1">波多黎各</h5>
+            <div class="text-block-352" _msttexthash="261213966" _msthash="382" _mstvisible="1">
+              <span class="text-span-1079" _istranslated="1">区域类型：</span>
+              <br _istranslated="1">
+              <span class="text-span-1080" _istranslated="1">不再有救赎</span>
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 1 月，一个团队被派往波多黎各的圣胡安。
+              <br _istranslated="1">‍
+            </div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05e6" href="https://www.facebook.com/share/p/WLmSyUhLfY8psd7L/" target="_blank" class="map-pin sa w-inline-block" _msthidden="2">
+          <div class="map-pin-tooltip north-america hidebox" style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" _mstvisible="0">
+            <h5 class="country" _msttexthash="5971485" _msthash="383" _mstvisible="1">南非</h5>
+            <div class="text-block-352" _msttexthash="476608366" _msthash="384" _mstvisible="1">
+              <span class="text-span-1079" _istranslated="1">传单类型：</span>
+              <br _istranslated="1">
+              <span class="text-span-1080" _istranslated="1">属灵审判日和不再有救赎</span>
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 4 月，一个团队被派往南非比勒陀利亚的约翰内斯堡分发传单。
+            </div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05ea" href="https://www.facebook.com/share/p/2gjmm8NHqzKbkNAA/" target="_blank" class="map-pin peru w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="7005232" _msthash="385" _mstvisible="1">秘鲁</h5>
+            <div class="text-block-352" _msttexthash="240314698" _msthash="386" _mstvisible="1">传单类型：
+              <br _istranslated="1">No More Salvation 传单
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 9 月，一个团队被派往秘鲁。
+              <br _istranslated="1">‍</div>
+          </div>
+        </a>
+        <a data-w-id="66322ad6-5f1b-559b-aba0-ae8af5b36bfc" href="https://www.facebook.com/share/p/2gjmm8NHqzKbkNAA/" target="_blank" class="map-pin peru2019 w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="7005232" _msthash="387" _mstvisible="1">秘鲁</h5>
+            <div class="text-block-352" _msttexthash="240314698" _msthash="388" _mstvisible="1">传单类型：
+              <br _istranslated="1">No More Salvation 传单
+              <br _istranslated="1">
+              <br _istranslated="1">2015 年 9 月，一个团队被派往秘鲁。
+              <br _istranslated="1">‍</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05ee" href="https://www.facebook.com/share/p/REA1f3Kt4EmfSy8u/" target="_blank" class="map-pin nl w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="5230797" _msthash="389" _mstvisible="1">荷兰</h5>
+            <div class="text-block-352" _msttexthash="502315164" _msthash="390" _mstvisible="1">传单类型：
+              <br _istranslated="1">为什么世界如此分裂
+              <br _istranslated="1">
+              <br _istranslated="1">2022 年 9 月，一个团队被派往荷兰，在那里分发有关世界范围划分的传单。
+              <br _istranslated="1">‍</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05f2" href="https://www.facebook.com/groups/ebiblefellowship/permalink/604809752956875/" target="_blank" class="map-pin ec w-inline-block" _msthidden="2">
+          <div class="map-pin-tooltip north-america hidebox" style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" _mstvisible="0">
+            <h5 class="country" _msttexthash="10789974" _msthash="391" _mstvisible="1">厄瓜多尔</h5>
+            <div class="text-block-352" _msttexthash="860877147" _msthash="392" _mstvisible="1">传单类型：精神审判日&amp;没有更多的救赎
+              <br _istranslated="1"> 2014
+              <br _istranslated="1">年11月，一个团队被派往厄瓜多尔基多及周边地区分发传单。这是 EBF 在 2011 年 5 月 21 日之后的第一次传单之旅。
+              <br _istranslated="1">‍</div>
+          </div>
+        </a>
+        <a data-w-id="c59e06cf-293c-ce36-217f-262beeae05f6" href="https://www.facebook.com/share/p/P5WpePkqKVCXA14X/" target="_blank" class="map-pin ch w-inline-block" _msthidden="2">
+          <div style="display: none; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" class="map-pin-tooltip north-america" _mstvisible="0">
+            <h5 class="country" _msttexthash="4574726" _msthash="393" _mstvisible="1">智利</h5>
+            <div class="text-block-352" _msttexthash="356388539" _msthash="394" _mstvisible="1">
+              <span class="text-span-1079" _istranslated="1">传单类型：</span>
+              <br _istranslated="1">
+              <span class="text-span-1080" _istranslated="1">不再有</span>
+              <br _istranslated="1">
+              <br _istranslated="1">救赎 2015 年 9 月，一个团队被派往智利圣地亚哥，不再分发救赎传单。
+              <br _istranslated="1">‍
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
+</div>
   
   <style>
     .timeline-section,
@@ -240,9 +607,159 @@
     }
   </style>
   <hr class="separator">
-  <div class="title">
-    <span style="color: rgb(0, 0, 0);">欢迎来到</span> 
-    <span style="color: rgb(41, 152, 255);">电子</span> 圣经团契
+  <div class="webblockwhite5-2">
+    <div class="div-block-552">
+      <h1 class="ebiblefellowship-copy">
+        <font _mstmutation="1" _msttexthash="12156495" _msthash="395">欢迎来到</font>
+        <span class="text-span-643" _msttexthash="9191" _msthash="396">电子</span>
+        <font _mstmutation="1" _msttexthash="10980853" _msthash="397">圣经团契</font>
+      </h1>
+      <div class="text-block-325">
+        <font _mstmutation="1" _msttexthash="130481143" _msthash="398">我们是一个基督教组织，不隶属于任何教会或事工</font>
+        <br>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-6"></div>
+        <div class="w-col w-col-6"></div>
+      </div>
+    </div>
+    <div class="div-block-554" _msthidden="2">
+      <div class="div-block-551"></div>
+      <div class="html-embed-50 w-embed w-iframe" _msthidden="2">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;" _msthidden="2">
+          <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank" style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="399">E Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult" title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;" _msttexthash="565084" _msthidden="1" _msthash="400">Is E bible Fellowship a cult</a>
+        </div>
+      </div>
+    </div>
+    <div data-delay="4000" data-animation="slide" class="slider-11 w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="1000" data-infinite="true" role="region" aria-label="carousel" _msthidden="24" _mstaria-label="118261" _msthash="401">
+      <div class="div-block-550" _msthidden="2">
+        <h1 class="heading-174" _msttexthash="1352247" _msthidden="1" _msthash="402">EBF Bible Banquet Miami Florida - Official Form</h1>
+        <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM.png" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM.png 2000w" alt="" class="image-113">
+        <div class="div-block-553" _msthidden="1">
+          <a href="#floridaform" data-w-id="81d68598-b715-2039-b347-2e93c698dbc5" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="signupbutton w-button" _msttexthash="58227" _msthidden="1" _msthash="403">SIGN&nbsp;UP</a>
+        </div>
+      </div>
+      <div class="mask-6 w-slider-mask" id="w-slider-mask-0" _msthidden="19">
+        <div class="w-slide" aria-label="1 of 1" role="group" style="transition: all; transform: translateX(0px); opacity: 1;" _msthidden="18" _mstaria-label="34307" _msthash="404">
+          <div class="text-block-326" _msthidden="1">
+            <br>
+            <font _mstmutation="1" _msttexthash="618733687" _msthidden="1" _msthash="405">
+              <span class="text-span-639" _mstmutation="1">eBible Fellowship is hosting a 2 Day Event in&nbsp;Miami, Florida. (About 3 hour flight from PA, NJ, NY). Chris, Robert and Eddie will give Bible studies and there will be a lunch and dinner buffet.
+                <br>
+                <br>
+              </span>
+              <span class="textimportant" _mstmutation="1">Important: When booking your flight be sure to arrive before 12PM on May 10, to make the lunch buffet,
+                <br>some have flights booked for May 9th so they arrive a day prior.</span>
+              <span class="text-span-639" _mstmutation="1">
+                <br>
+                <br>Schedule May 10th: Room is open 8AM, Conference starts 11:30 AM and will go to 7PM, we have the meeting room until 8PM. (We can't bring food into the meeting room or EBF will get charged for it)
+                <br>‍
+                <br>12PM to 1PM - Lunch Buffet (Communal table Room)
+                <br>1PM to 6PM - Bible&nbsp;Studies (schedule TBD) (Coconut Grove Room)
+                <br>6PM to 7PM - Dinner Buffet (Havana Room)
+                <br>7PM to 8PM - Free Time
+                <br>
+              </span>
+              <br _mstmutation="1">
+              <br _mstmutation="1">
+              <span class="text-span-642" _mstmutation="1">Attendace update: </span>
+              <br _mstmutation="1">‍<span class="text-span-648" _mstmutation="1">21/50+ Signed up
+                <br>
+              </span>
+              <span class="text-span-640" _mstmutation="1">Additional 10 Might come</span>
+              <span class="text-span-648" _mstmutation="1">
+                <br>‍</span>
+              <br _mstmutation="1">‍
+              <br _mstmutation="1">
+              <br _mstmutation="1">
+              <span class="text-span-647" _mstmutation="1">WHEN</span>
+              <br _mstmutation="1">
+              <span class="text-span-651" _mstmutation="1">Friday May 10th, 2024:</span> A Day In The Word Banquet at Hotel Conference Center.
+              <br _mstmutation="1">
+              <span class="text-span-638" _mstmutation="1">Saturday May 11th, 2024: </span>&nbsp;Day Of Tracting
+              <br _mstmutation="1">
+              <br _mstmutation="1">
+              <span class="text-span-649" _mstmutation="1">WHERE</span>
+              <br _mstmutation="1">Miami, Florida
+            </font>
+            <br>
+          </div>
+          <div class="div-block-549">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel.png" loading="lazy" width="382" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel.png 1988w">
+          </div>
+          <div class="text-block-326" _msthidden="1">
+            <br>
+            <br>
+            <font _mstmutation="1" _msttexthash="68193294" _msthidden="1" _msthash="406">
+              <span class="text-span-645" _mstmutation="1">COST</span>
+              <br _mstmutation="1">
+              <span class="text-span-646" _mstmutation="1">Lunch + Dinner buffet:</span> $96
+              <br _mstmutation="1">
+              <span class="text-span-641" _mstmutation="1">Hotel: </span>About low $200 per night.
+              <br _mstmutation="1">
+              <span class="text-span-650" _mstmutation="1">Flights:</span> Around $150 - $300 range (check google flights)
+              <br _mstmutation="1">‍
+              <br _mstmutation="1">
+              <span class="text-span-652" _mstmutation="1">We need to know if you would be interested in attending ASAP. If interested please let us know by filling out the form below.
+                <br>
+                <br>
+              </span>
+              <span class="text-span-644" _mstmutation="1">LOCATION:</span> Embassy Suites by Hilton Miami International Airport
+              <br _mstmutation="1">Address: 3974 NW S River Dr, Miami, FL 33142
+            </font>
+            <br>
+            <br>
+          </div>
+          <div class="div-block-555">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy.png" loading="lazy" width="310" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy.png 1000w" class="image-114">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room.png" loading="lazy" width="310" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room.png 1000w" class="image-114">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables.png" loading="lazy" width="310" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables.png 1000w" class="image-114">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner.jpg" loading="lazy" width="310" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-800.jpg 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner.jpg 1220w" class="image-114">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel.jpg" loading="lazy" width="310" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-800.jpg 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-1600.jpg 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel.jpg 1734w" class="image-114">
+            <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444ad11_Pool.jpg" loading="lazy" width="310" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444ad11_Pool-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444ad11_Pool.jpg 783w" class="image-114">
+          </div>
+          <div id="floridaform" _msthidden="16">
+            <div class="form-block-13 w-form" _msthidden="16">
+              <form id="wf-form-Florida-2-Day-Event-Attendence" name="wf-form-Florida-2-Day-Event-Attendence" data-name="Florida 2 Day Event Attendence" method="get" data-wf-page-id="65c93546bdae1d24d02a0bcc" data-wf-element-id="81d68598-b715-2039-b347-2e93c698dc32" aria-label="Florida 2 Day Event Attendence" _msthidden="11" _mstaria-label="661817" _msthash="407">
+                <label for="EBF-Day-in-the-Word-Banquet-Florida" class="field-label-20" _msttexthash="1973114" _msthidden="1" _msthash="408">Select option from green dropdown menu below (required)</label>
+                <select id="EBF-Day-in-the-Word-Banquet-Florida" name="EBF-Day-in-the-Word-Banquet-Florida" data-name="EBF Day In The Word Banquet Florida" required="" class="select-field-3 w-select" _msthidden="4">
+                  <option value="" _msttexthash="379925" _msthidden="1" _msthash="409">Attendance Dropdown</option>
+                  <option value="Yes I'll plan to Attend" _msttexthash="401479" _msthidden="1" _msthash="410">Yes I'll plan to Attend</option>
+                  <option value="Maybe - I might be able to make it" _msttexthash="677521" _msthidden="1" _msthash="411">Maybe - I might be able to make it</option>
+                  <option value="No, I can't attend" _msttexthash="264680" _msthidden="1" _msthash="412">No, I can't attend</option>
+                </select>
+                <label for="Name-4" class="field-label-23" _msttexthash="43069" _msthidden="1" _msthash="413">Name</label>
+                <input class="text-field-12 w-input" maxlength="256" name="Name-4" data-name="Name 4" placeholder="Name Here" type="text" id="Name-4" required="" _msthidden="A" _mstplaceholder="106769" _msthash="414">
+                <label for="Email-4" class="field-label-24" _msttexthash="198861" _msthidden="1" _msthash="415">Email Address</label>
+                <input class="text-field-12 w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="Email Address Here" type="email" id="Email-4" required="" _msthidden="A" _mstplaceholder="302913" _msthash="416">
+                <label for="Message-Box" class="field-label-24" _msttexthash="92924" _msthidden="1" _msthash="417">Message</label>
+                <textarea placeholder="Write Us " maxlength="5000" id="Message-Box" name="Message-Box" data-name="Message Box" class="textarea-6 w-input" _msthidden="A" _mstplaceholder="94276" _msthash="418"></textarea>
+                <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key"></div>
+                <input type="submit" data-wait="Please wait..." class="submit-button-16 w-button" value="Submit" _msthidden="A" _mstvalue="78468" _msthash="419">
+              </form>
+              <div class="success-message-10 w-form-done" role="region" aria-label="Florida 2 Day Event Attendence success" _msthidden="1" _mstaria-label="1017939" _msthash="420">
+                <div _msttexthash="1605721" _msthidden="1" _msthash="421">Thank you! Your submission has been received by EBF!</div>
+              </div>
+              <div class="w-form-fail" role="region" aria-label="Florida 2 Day Event Attendence failure" _msthidden="1" _mstaria-label="1010568" _msthash="422">
+                <div _msttexthash="1861613" _msthidden="1" _msthash="423">Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
+      </div>
+      <div class="left-arrow-11 w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-0" aria-label="previous slide" _msthidden="A" _mstaria-label="238680" _msthash="424">
+        <div class="w-icon-slider-left"></div>
+      </div>
+      <div class="rightarrowfield w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-0" aria-label="next slide" _msthidden="A" _mstaria-label="138567" _msthash="425">
+        <div class="icon-24 w-icon-slider-right"></div>
+      </div>
+      <div class="w-slider-nav w-slider-nav-invert w-round" _msthidden="1">
+        <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 1" aria-pressed="true" role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;" _msthidden="A" _mstaria-label="206453" _msthash="426"></div>
+      </div>
+    </div>
+  </div>
         <style>
             .container {
                 width: 80%;
@@ -304,15 +821,17 @@ body {
     color: #333;
 }
 
-.site-footer {
+.rb {
     background-color: #333;
+    width: 100%;
     color: #fff;
+    
     padding: 20px 0;
     text-align: center;
 }
 
 .footer-content {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -327,7 +846,7 @@ body {
     margin-right: 10px;
 }
 
-.social-icons {
+. {
     padding: 10px 0;
 }
 
@@ -361,7 +880,6 @@ body {
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 300px;
             text-align: center;
         }
 
@@ -389,70 +907,76 @@ body {
         </style>
     </head>
     <body>
-      <div class="div-block-445">
-        <h1 class="aboutheader" _msttexthash="9552686" _msthash="1261">关于我们</h1>
-        <p class="paragraph-105">
-          <br>
-          <font _mstmutation="1" _msttexthash="79508481" _msthash="1262">
-            <em class="italic-text-26" _mstmutation="1" _istranslated="1">E Bible Fellowship 的命名原因如下：</em>
-            <br _mstmutation="1" _istranslated="1">
-          </font>
-          <strong class="bold-text-75" _msttexthash="17201119" _msthash="1263">电子的：</strong>
-          <font _mstmutation="1" _msttexthash="16103483305" _msthash="1264">我们相信，主以一种巨大的方式使用电子媒介
-            <br _mstmutation="1" _istranslated="1">（无线电、互联网等）来拯救世界上教会和会众之外的许多人。现在
-            <br _mstmutation="1" _istranslated="1">手头的任务是，“喂养祂的羊”，使所有神拯救的人都能得到福音的启发。
-            <strong class="bold-text-75" _mstmutation="1" _istranslated="1">圣经：</strong>
-            <br _mstmutation="1" _istranslated="1">圣经是我们的权威。任何人的忏悔、信条、任何形式的教义陈述都
-            <br _mstmutation="1" _istranslated="1">不能凌驾于圣经之上。我们生活在一个圣经被上帝高度高举的时代。神的话语在它所宣
-            <br _mstmutation="1" _istranslated="1">告的一切中都是至高无上的。
-            <strong class="bold-text-75" _mstmutation="1" _istranslated="1">团契：</strong>我们是信徒的团契，
-            <br _mstmutation="1" _istranslated="1"> 他们的愿望是通过他的话语与上帝相交。圣经教导我们，教会时代
-            <br _mstmutation="1" _istranslated="1">已经结束;因此，我们与任何教会或教派没有任何隶属关系或认同。感谢您的光临。
-            <br _mstmutation="1" _istranslated="1">约翰一书 1：3 我们将所看见，所听见的，传给你们，使你们与我们相交。
-            <br _mstmutation="1" _istranslated="1">，我们乃是与父并他儿子耶稣基督相交的。
-          </font>
-        </p>
+      <div class="webblockwhite">
+        <div class="div-block-445">
+          <h1 class="aboutheader" _msttexthash="9552686" _msthash="427">关于我们</h1>
+          <p class="paragraph-105">
+            <br>
+            <font _mstmutation="1" _msttexthash="90035348" _msthash="428">
+              <em class="italic-text-26" _mstmutation="1" _istranslated="1">E Bible Fellowship 的名字有以下原因：</em>
+              <br _mstmutation="1" _istranslated="1">
+            </font>
+            <strong class="bold-text-75" _msttexthash="17201119" _msthash="429">电子的：</strong>
+            <font _mstmutation="1" _msttexthash="16606899608" _msthash="430">我们相信主已经以极大的方式使用电子媒介（收音机、互联网等）来拯救世界教会和会众之外的许多人。现在手头的任务是，“喂养他的羊”，这样所有神所拯救的人都会被福音造就。
+              <br _mstmutation="1" _istranslated="1">
+              <br _mstmutation="1" _istranslated="1">
+              <strong class="bold-text-76" _mstmutation="1" _istranslated="1">圣经：</strong>
+              <br _mstmutation="1" _istranslated="1">圣经是我们的权威。没有人为的认信、信条或任何形式的教义声明具有超越圣经的任何权威。我们生活在一个圣经被神高举的时代。上帝的话语在它所宣告的一切中都是至高无上的。
+              <br _mstmutation="1" _istranslated="1">
+              <br _mstmutation="1" _istranslated="1">
+              <strong class="bold-text-77" _mstmutation="1" _istranslated="1">团契：</strong>
+              <br _mstmutation="1" _istranslated="1">我们是信徒的团契，他们的愿望是通过神的话语与神相交。圣经教导我们，教会时代已经结束了;因此，我们与任何教会或任何形式的教派都没有隶属关系或身份认同。感谢您的光临。
+              <br _mstmutation="1" _istranslated="1">
+              <br _mstmutation="1" _istranslated="1">
+              <em _mstmutation="1" _istranslated="1">约翰一书 1：3 我们所看见所听见的，都告诉你们，叫你们也与我们相交，我们的交往实在是与父和他的儿子耶稣基督相交。</em>
+            </font>
+          </p>
+          <div class="html-embed-25 w-embed w-iframe" _msthidden="2">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;" _msthidden="2">
+              <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank" style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="431">E Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult" title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;" _msttexthash="565084" _msthidden="1" _msthash="432">Is E bible Fellowship a cult</a>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </body>
     </html>
-    <div class="contact-section">
-      <h2 class="form-title">联系我们</h2>
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">名字:</label>
-          <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+    <div id="contact" class="webblockwhite2-2">
+      <div class="div-block-557" _msthidden="2">
+        <div class="div-block-556"></div>
+        <div class="html-embed-51 w-embed w-iframe" _msthidden="2">
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+          <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;" _msthidden="2">
+            <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank" style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="433">E Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult" title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;" _msttexthash="565084" _msthidden="1" _msthash="434">Is E bible Fellowship a cult</a>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">E-MAIL地址:</label>
-          <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+      </div>
+      <div class="form-block-contact w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-7" data-wf-page-id="65c93546bdae1d24d02a0bcc" data-wf-element-id="abd2f591-8f76-0fcb-27f4-e4e6e758fd97" aria-label="电子邮件表格" _mstaria-label="129740" _msthash="435">
+          <h1 class="heading-149-copy" _msttexthash="11880817" _msthash="436">联系我们</h1>
+          <label for="name-5" class="field-label-25" _msttexthash="4389879" _msthash="437">名字</label>
+          <input class="contact-form-name w-input" maxlength="256" name="name-4" data-name="Name 4" placeholder="输入您的姓名" type="text" id="name-4" required="" _mstplaceholder="225004" _msthash="438">
+          <label for="email-5" class="field-label-27" _msttexthash="18799001" _msthash="439">电子邮件地址</label>
+          <input class="text-field-14 w-input" maxlength="256" name="email-4" data-name="Email 4" placeholder="输入您的电子邮件" type="email" id="email-4" required="" _mstplaceholder="252044" _msthash="440">
+          <label for="Message-Box-2" class="field-label-26" _msttexthash="5119088" _msthash="441">消息</label>
+          <textarea placeholder="Write EBible A Message" maxlength="5000" id="Message-Box-2" name="Message-Box-2" data-name="Message Box 2" required="" class="textarea-7 w-input" _mstplaceholder="385242" _msthash="442"></textarea>
+          <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key"></div>
+          <input type="submit" data-wait="Please wait..." class="submit-button-17 w-button" value="提交" _mstvalue="78468" _msthash="443">
+        </form>
+        <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success" _msthidden="1" _mstaria-label="317681" _msthash="444">
+          <div _msttexthash="1345955" _msthidden="1" _msthash="445">Thank you! Your submission has been received!</div>
         </div>
-        <div class="form-group">
-          <label for="message">消息:</label>
-          <textarea id="message" name="message" rows="4" placeholder="Write a Message" required></textarea>
+        <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure" _msthidden="1" _mstaria-label="314067" _msthash="446">
+          <div _msttexthash="1861613" _msthidden="1" _msthash="447">Oops! Something went wrong while submitting the form.</div>
         </div>
-        <button type="submit" class="submit-button">Submit</button>
-      </form>
-      <p id="message-sent" class="message-sent" style="display: none;">您的信息已发出</p>
+      </div>
     </div>
-    <script>document.querySelector('.contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      var messageSent = document.getElementById("message-sent");
-      messageSent.style.display = 'block'; // 显示“您的信息已发出”提示
-      // 这里可以添加发送邮件的逻辑
-      // ...
-    });</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E Bible Fellowship</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <style>
-        /* 在这里添加CSS样式 */
-    </style>
 </head>
 <body>
     <!-- 页面主要内容 -->
 
-    <footer class="site-footer">
+    <footer class="rb">
         <div class="footer-content">
             <p>&copy;️ 2024 E Bible Fellowship</p>
             <div class="footer-links">
@@ -461,11 +985,11 @@ body {
                 <a href="hymns.html">音乐</a>
                 <a href="https://newopenforum.org" class="footer-forum">圣经论坛</a>
             </div>
-            <div class="social-icons">
-                <footer class="site-footer">
+            <div class="">
+                <footer class="rb">
                   <div class="footer-content">
                       <!-- 社交媒体图标 -->
-                      <div class="social-icons">
+                      <div class="">
                         <a href="#" class="social-icon" onclick="showQRCode(event)" title="QQ"><i class="fab fa-qq"></i></a>
                           <a href="https://www.facebook.com/ebiblefellowship/" class="social-icon" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                           <a href="https://www.bing.com/ck/a?!&&p=0059473aaeeae321JmltdHM9MTcyNDExMjAwMCZpZ3VpZD0wYTUzODU5NC01ODJhLTYxNmMtMWEyZC05MTQ4NTliODYwYmImaW5zaWQ9NTE5OQ&ptn=3&ver=2&hsh=3&fclid=0a538594-582a-616c-1a2d-914859b860bb&psq=ebiblefellowship+tiktok&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AZWJpYmxlZmVsbG93c2hpcA&ntb=1" class="social-icon" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -616,7 +1140,7 @@ body {
                 margin-right: 0;
             }
             .right-nav {
-                right: -110px;
+                right: -300px;
             }
             .nav-toggle {
                 display: block;
@@ -629,7 +1153,7 @@ body {
 </head>
 <body>
     <button class="nav-toggle" onclick="toggleNav()">
-        <span id="toggleIcon">☰</span>
+        <span id="toggleIcon">展开</span>
     </button>
     
     <nav class="right-nav" id="rightNav">
@@ -643,17 +1167,17 @@ body {
                     </div>
                 </div>
             </li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/bible-index"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/audio-index"><i class="fa-solid fa-file-audio"></i>圣经朗读</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/biblicaltimeline.html"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/books.html"><i class="fa-solid fa-book"></i>圣经书籍</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/pingtai.html"><i class="fa-solid fa-layer-group"></i>电子圣经团契平台</a></li>
+            <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
+            <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i>圣经朗读</a></li>
+            <li><a href="hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
+            <li><a href="biblicaltimeline.html"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
+            <li><a href="books.html"><i class="fa-solid fa-book"></i>圣经书籍</a></li>
+            <li><a href="pingtai.html"><i class="fa-solid fa-layer-group"></i>电子圣经团契平台</a></li>
             <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
             <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i class="fas fa-video"></i> Zoom</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
-            <li><a href="https://cnebiblefellowship-github-io.pages.dev/email.html"><i class="fa-solid fa-address-card"></i>联系我们</a></li>
+            <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
+            <li><a href="download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
+            <li><a href="email.html"><i class="fa-solid fa-address-card"></i>联系我们</a></li>
         </ul>
     </nav>
 
@@ -665,7 +1189,7 @@ body {
             if (nav.classList.contains("active")) {
                 icon.innerHTML = "×";
             } else {
-                icon.innerHTML = "☰";
+                icon.innerHTML = "展开";
             }
         }
 

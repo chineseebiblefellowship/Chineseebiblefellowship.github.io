@@ -1,27 +1,5 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-.sidebar {
-  z-index: 2000;
-  background-color: #a0d1ff;
-  border: 1px solid #000;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 300px;
-  height: auto;
-  margin-top: 0;
-  padding-top: 17px;
-  display: flex;
-  position: fixed;
-  inset: 0% auto 0% 0%;
-  overflow: scroll;
-  box-shadow: 15px 8px 5px #0003;
-  background-color: #91cdff;
-  z-index: 2000;
-  
-}
+
+
 .logo {
   width: 100%;
   height: auto;
@@ -30,6 +8,7 @@ body {
 .title, .date {
   color: rgb(0, 0, 0);
   font-weight: bold;
+
 }
 .title {
   font-size: 24px;
@@ -60,9 +39,55 @@ body {
   background-color: #e6c1e9;
 }
 .live-stream {
-  width: 100%;
+  width: 300PX;
   margin-top: 30px;
 }
+.icon-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+.icon a:hover {
+  opacity: 0.8;
+}
+/* 为每个图标指定不同的背景颜色 */
+.wechat {
+  background-color: #07C160;
+}
+.qq {
+  background-color: #12B7F5;
+}
+.youtube {
+  background-color: #FF0000;
+}
+.facebook {
+  background-color: #1877F2;
+}
+.instagram {
+  background-color: #E1306C;
+}
+.spotify {
+  background-color: #1DB954;
+}
+.tiktok {
+  background-color: #01010100;
+}
+.x {
+  background-color: #1DA1F2;
+}
+
 .main-content {
   flex-grow: 1;
   padding: 20px;
@@ -867,7 +892,7 @@ body {
         margin-left: 400px;
       }
 .body {
-  margin-left: 0;
+  margin-left: 10px;
   margin-right: 0;
   display: block;
   overflow: scroll;
@@ -1087,7 +1112,7 @@ body {
   color: #333;
 }
 
-.site-footer {
+.rb {
   background-color: #f4f4f4;
   width: 100%;
   padding: 20px 0;
@@ -1114,7 +1139,7 @@ body {
   font-weight: bold;
 }
 
-.social-icons {
+.srb {
   padding: 10px 0;
 }
 
@@ -1248,7 +1273,7 @@ padding: 0;
 color: #333;
 }
 
-.site-footer {
+.rb {
 background-color: #333;
 color: #fff;
 
@@ -1257,7 +1282,7 @@ text-align: center;
 }
 
 .footer-content {
-width: 80%;
+width: 100%;
 margin: auto;
 }
 
@@ -1272,7 +1297,7 @@ padding: 5px 10px;
 margin-right: 10px;
 }
 
-.social-icons {
+.srb {
 padding: 10px 0;
 }
 
