@@ -268,9 +268,6 @@
 
 或写信给我们：E Bible Fellowship, P.O. Box 1393 Sharon Hill, PA 19079 USA
 
-##愿神完美的旨意成就
+# 愿神完美的旨意成就
 
-<audio controls>
-  <source src="https://example.com/path/to/your/audiofile.mp3" type="Hymns/在那边点名的时候.mp3">
-</audio>
 [更多内容请访问电子圣经团契中文网](https://chineseebiblefellowship.github.io/)
