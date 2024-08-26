@@ -284,10 +284,247 @@
         <i class="fas fa-arrow-left"></i> 返回
     </a>
     <div>
-      <link rel="stylesheet" href="eplayer.css">
+      <link rel="stylesheet" href="APlayer.css">
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f0f0f0;
+          }
+          .search-container {
+              text-align: right;
+              margin-bottom: 20px;
+          }
+          .search-container input {
+              padding: 10px;
+              font-size: 18px;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              width: 300px;
+          }
+          .aplayer {
+              margin-top: 20px;
+          }
+          .aplayer .aplayer-lyrics {
+              padding: 20px;
+              border-top: 1px solid #ddd;
+              font-size: 18px; /* Larger font size for lyrics */
+          }
+          .btn {
+              display: inline-block;
+              padding: 10px 20px;
+              margin: 10px 5px;
+              font-size: 18px;
+              color: #fff;
+              background-color: #007bff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              text-decoration: none;
+              text-align: center;
+          }
+          .btn:hover {
+              background-color: #0056b3;
+          }
+          .jicheng {
+            font-size: 30px;
+            font-weight:bold;
+          }
+          body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#player-container {
+    position: relative;
+    margin: 0 auto; /* 自动水平居中 */
+    padding: 10px;
+    height: 100%;
+    overflow: auto; /* 允许滚动 */
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 10px; /* 播放器之间的间距 */
+}
+
+.eplayer-container {
+    width: 150px;
+    height: 300px;
+    background-color: #aaebff;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* 保持播放器不超过左130px右30px */
+#player-container::before {
+    content: '';
+    display: block;
+    width: 260px; /* 左边距 */
+}
+
+.eplayer-container {
+    flex: 1 1 300px; /* 播放器的基础宽度和自适应 */
+    max-width: calc(100% - 130px - 30px); /* 宽度限制 */
+}
+
+.eplayer-container:nth-of-type(2n) {
+    margin-right: 30px; /* 右边距 */
+}
+
+/* 确保播放器在超过最大宽度时换行 */
+@media (max-width: 480px) {
+    .eplayer-container {
+        max-width: 100%;
+    }
+}
+
+.cover-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.cover-container img {
+    width: 50px; /* 固定宽度 */
+    height: 50px; /* 固定高度 */
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    border-radius: 10px;
+}
+.cover-container {
+    position: relative;
+    margin-bottom: 10px;
+    z-index: 2; /* 确保图片在歌词上方 */
+}
+
+.cover-container img {
+    width: 90px; /* 固定宽度 */
+    height: 90px; /* 固定高度 */
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    border-radius: 10px;
+}
+
+.song-info {
+    margin-top: 10px;
+}
+
+#title {
+    font-size: 16px;
+    font-weight: bold; /* 歌曲名加粗 */
+    color: #333;
+}
+
+#author {
+    font-size: 12px;
+    color: #666;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.top-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px; /* 调整按钮大小 */
+}
+
+#play-pause {
+    font-size: 24px; /* 播放按钮的大小 */
+}
+
+#progress {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#time-display {
+    margin: 0 10px;
+}
+
+.bottom-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#volume-mute {
+    font-size: 24px; /* 静音按钮大小 */
+}
+
+#volume {
+    width: 80px;
+    margin: 0 10px;
+}
+
+#loop {
+    font-size: 24px; /* 循环按钮大小 */
+}
+
+.lrc-container {
+    margin-top: 10px;
+    text-align: center; /* 居中显示歌词 */
+    height: 60px; /* 隐藏状态时的高度 */
+    overflow: hidden;
+    transition: height 0.3s ease, font-size 0.3s ease; /* 平滑过渡效果 */
+    position: absolute; /* 确保歌词在播放器的底部 */
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.lrc-container.expanded {
+    height: calc(100% - 80px); /* 展开状态时的高度 */
+}
+
+#lrc-content {
+    max-height: 100%;
+    overflow-y: auto;
+    display: block; /* 确保歌词始终显示 */
+    font-size: 14px; /* 隐藏时的字体大小 */
+    color: white; /* 歌词颜色为白色 */
+}
+
+#toggle-lrc {
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+#lrc-content p {
+    margin: 0;
+    padding: 2px 0;
+    color: rgb(255, 255, 255); /* 歌词颜色为白色 */
+    transition: font-weight 0.3s, font-size 0.3s;
+}
+
+#lrc-content p.active {
+    color: rgb(0, 0, 0); /* 高亮歌词颜色 */
+    font-weight: bold;
+    font-size: 27px; /* 当前歌词加大 */
+}
+      </style>
   </head>
   <body>
-    <link rel="stylesheet" href="ebfplayer.pages.dev/eplayer.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
 <h5 class="jicheng">赞美诗<h5>
@@ -307,7 +544,255 @@
         <div class="eplayer-container" id="eplayer12"></div>
     </div>
 
-    <script src="ebfplayer.pages.dev/eplayer.js"></script>
+    <script>
+      class ePlayer {
+    constructor(options) {
+        this.element = options.element;
+        this.music = options.music;
+        this.isLooping = false; // 默认不循环
+        this.audio = new Audio(this.music.url);
+        this.audio.loop = this.isLooping;
+        this.lrc = null;
+        this.defaultCover = 's/111.png'; // 默认封面图片
+        this.coverUrl = this.music.cover || this.defaultCover; // 设置封面图片URL
+        this.initUI();
+        this.addEventListeners();
+    }
+
+    initUI() {
+        this.element.innerHTML = `
+            <div class="cover-container">
+                <img id="cover" src="${this.coverUrl}" alt="封面图片">
+            </div>
+            <div class="song-info">
+                <div id="title">${this.music.title}</div>
+                <div id="author">${this.music.author}</div>
+            </div>
+            <div class="controls">
+                <div class="top-controls">
+                    <button id="play-pause" class="control-btn">
+                        <i class="fas fa-play"></i> <!-- 默认为播放 -->
+                    </button>
+                    <input type="range" id="progress" value="0">
+                    <span id="time-display">0:00 / 0:00</span>
+                </div>
+                <div class="bottom-controls">
+                    <button id="volume-mute" class="control-btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <input type="range" id="volume" min="0" max="100" value="100">
+                    <button id="loop" class="control-btn">
+                        <i class="fas fa-repeat"></i> <!-- 默认图标为“不循环” -->
+                    </button>
+                </div>
+            </div>
+            <div class="lrc-container" id="lrc-container">
+                <button id="toggle-lrc" class="control-btn">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div id="lrc-content"></div>
+            </div>
+        `;
+        
+        this.playButton = this.element.querySelector('#play-pause');
+        this.progressBar = this.element.querySelector('#progress');
+        this.timeDisplay = this.element.querySelector('#time-display');
+        this.volumeMuteButton = this.element.querySelector('#volume-mute');
+        this.volumeSlider = this.element.querySelector('#volume');
+        this.loopButton = this.element.querySelector('#loop');
+        this.lrcToggleButton = this.element.querySelector('#toggle-lrc');
+        this.lrcContent = this.element.querySelector('#lrc-content');
+        this.loadLRC(this.music.lrc);
+    }
+
+    addEventListeners() {
+        this.playButton.addEventListener('click', () => this.togglePlayPause());
+        this.audio.addEventListener('timeupdate', () => this.updateProgress());
+        this.audio.addEventListener('ended', () => this.handleAudioEnded());
+        this.progressBar.addEventListener('input', (e) => this.setAudioProgress(e));
+        this.volumeMuteButton.addEventListener('click', () => this.toggleMute());
+        this.volumeSlider.addEventListener('input', (e) => this.setVolume(e));
+        this.loopButton.addEventListener('click', () => this.toggleLoop());
+        this.lrcToggleButton.addEventListener('click', () => this.toggleLRC());
+    }
+
+    togglePlayPause() {
+        if (this.audio.paused) {
+            this.audio.play();
+            this.playButton.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            this.audio.pause();
+            this.playButton.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    }
+
+    updateProgress() {
+        const { currentTime, duration } = this.audio;
+        const percent = (currentTime / duration) * 100;
+        this.progressBar.value = percent;
+        this.timeDisplay.textContent = `${this.formatTime(currentTime)} / ${this.formatTime(duration)}`;
+        this.updateLRC(currentTime);
+    }
+
+    setAudioProgress(e) {
+        const newTime = (e.target.value / 100) * this.audio.duration;
+        this.audio.currentTime = newTime;
+    }
+
+    toggleMute() {
+        this.audio.muted = !this.audio.muted;
+        this.volumeMuteButton.innerHTML = this.audio.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+    }
+
+    setVolume(e) {
+        const volume = e.target.value / 100;
+        this.audio.volume = volume;
+    }
+
+    toggleLoop() {
+        this.isLooping = !this.isLooping;
+        this.audio.loop = this.isLooping;
+
+        if (this.isLooping) {
+           this.loopButton.innerHTML = '<i class="fas fa-repeat"></i>'; // 不循环图标
+        } else {
+            
+            this.loopButton.innerHTML = '<i class="fas fa-repeat-1"></i>'; // 循环图标
+        }
+    }
+
+    handleAudioEnded() {
+        if (!this.isLooping) {
+            this.audio.currentTime = 0;
+            this.progressBar.value = 0;
+            this.timeDisplay.textContent = `0:00 / ${this.formatTime(this.audio.duration)}`;
+            this.playButton.innerHTML = '<i class="fas fa-play"></i>'; // 播放结束，按钮变为播放
+        }
+    }
+
+    loadLRC(lrcFile) {
+        if (lrcFile) {
+            fetch(lrcFile)
+                .then(response => response.text())
+                .then(data => {
+                    this.lrc = this.parseLRC(data);
+                    this.displayLRC();
+                });
+        }
+    }
+
+    parseLRC(lrcData) {
+        const lines = lrcData.split('\n');
+        return lines.map(line => {
+            const match = line.match(/\[(\d+):(\d+)\.(\d+)\](.+)/);
+            if (match) {
+                const minutes = parseInt(match[1], 10);
+                const seconds = parseInt(match[2], 10);
+                const milliseconds = parseInt(match[3], 10);
+                const time = (minutes * 60) + seconds + (milliseconds / 1000);
+                return { time, text: match[4] };
+            }
+            return null;
+        }).filter(item => item !== null);
+    }
+
+    displayLRC() {
+        if (this.lrc) {
+            this.lrcContent.innerHTML = '';
+            this.lrc.forEach(line => {
+                const p = document.createElement('p');
+                p.textContent = line.text;
+                this.lrcContent.appendChild(p);
+            });
+        }
+    }
+
+
+
+    displayLRC() {
+        if (this.lrc) {
+            this.lrcContent.innerHTML = '';
+            this.lrc.forEach(line => {
+                const p = document.createElement('p');
+                p.textContent = line.text;
+                this.lrcContent.appendChild(p);
+            });
+        }
+    }
+    
+    loadLRC(lrcFile) {
+        if (lrcFile) {
+            fetch(lrcFile)
+                .then(response => {
+                    if (!response.ok) throw new Error('网络响应失败');
+                    return response.text();
+                })
+                .then(data => {
+                    this.lrc = this.parseLRC(data);
+                    this.displayLRC();
+                })
+                .catch(error => {
+                    console.error('LRC 文件加载失败或解析错误:', error);
+                });
+        }
+    }
+        
+
+    toggleLRC() {
+        const isVisible = this.lrcContent.style.display === 'block';
+        if (isVisible) {
+            this.lrcContent.style.display = 'none';
+            document.querySelectorAll('.eplayer-container').forEach(player => player.classList.remove('expanded'));
+        } else {
+            document.querySelectorAll('.eplayer-container').forEach(player => player.classList.add('expanded'));
+            this.lrcContent.style.display = 'block';
+        }
+    }
+loadLRC(lrcData) {
+    if (lrcData) {
+        // 当 lrcData 是歌词文本而不是文件路径
+        this.lrc = this.parseLRC(lrcData);
+        this.displayLRC();
+    }
+}
+updateLRC(currentTime) {
+    if (this.lrc) {
+        const lrcParagraphs = this.lrcContent.querySelectorAll('p');
+        let activeLine = null;
+
+        // 查找当前时间对应的歌词行
+        for (let i = 0; i < this.lrc.length; i++) {
+            const line = this.lrc[i];
+            if (line.time <= currentTime && (!this.lrc[i + 1] || this.lrc[i + 1].time > currentTime)) {
+                activeLine = line;
+                break;
+            }
+        }
+
+        if (activeLine) {
+            lrcParagraphs.forEach(p => p.classList.remove('active'));
+            const p = Array.from(lrcParagraphs).find(p => p.textContent === activeLine.text);
+            if (p) {
+                p.classList.add('active');
+
+                // 确保当前高亮的歌词在视口中可见
+                p.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center' // 居中显示
+                });
+            }
+        }
+    }
+}
+
+    formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+}
+
+    </script>
     <script>
         const players = [
             new ePlayer({
