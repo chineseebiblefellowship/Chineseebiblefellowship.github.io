@@ -267,7 +267,4 @@
 如果你有任何问题可以联系我们：info@ebiblefellowship.org
 
 或写信给我们：E Bible Fellowship, P.O. Box 1393 Sharon Hill, PA 19079 USA
-
-# 愿神完美的旨意成就
-
 [更多内容请访问电子圣经团契中文网](https://chineseebiblefellowship.github.io/)
