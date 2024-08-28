@@ -450,6 +450,23 @@
               });
               playlist.appendChild(playlistItem);
           });
+          audioPlayer.addEventListener('ended', () => {
+          // 自动播放下一章
+          if (currentChapterIndex < chapters.length - 1) {
+              loadChapter(currentChapterIndex + 1);
+          }
+      });
+  
+      chapters.forEach((chapter, index) => {
+          const playlistItem = document.createElement('div');
+          playlistItem.className = 'n7o8p9q0';
+          playlistItem.textContent = chapter.title;
+          playlistItem.dataset.index = index;
+          playlistItem.addEventListener('click', () => {
+              loadChapter(index);
+          });
+          playlist.appendChild(playlistItem);
+      });
   
           // Load the first chapter by default
           loadChapter(0);

@@ -395,71 +395,75 @@
       </style>
   </head>
   <body>
-  
-      <div class="c7d8e2f1">
-          <div class="g5h6i3j2">历代志上频播放器</div>
-          <div class="k9l0m4n3">
-              <button id="prev-btn" class="p1q2r4s6"><i class="fa-light fa-forward t7u8v1w0"></i></button>
-              <span id="chapter-info" class="x2y3z5a6">历代志上（Genesis）第1章（chapt 1）</span>
-              <button id="next-btn" class="p1q2r4s6"><i class="fa-solid fa-forward t7u8v1w0"></i></button>
-          </div>
-          <div class="b4c5d6e7">
-              <audio id="f8g9h1i2" controls></audio>
-              <div class="j3k4l5m6" id="playlist"></div>
-          </div>
+    <div class="c7d8e2f1">
+      <div class="g5h6i3j2">历代志上频播放器</div>
+      <div class="k9l0m4n3">
+          <button id="prev-btn" class="p1q2r4s6"><i class="fa-light fa-forward t7u8v1w0"></i></button>
+          <span id="chapter-info" class="x2y3z5a6">历代志上（Genesis）第1章（chapt 1）</span>
+          <button id="next-btn" class="p1q2r4s6"><i class="fa-solid fa-forward t7u8v1w0"></i></button>
       </div>
+      <div class="b4c5d6e7">
+          <audio id="f8g9h1i2" controls></audio>
+          <div class="j3k4l5m6" id="playlist"></div>
+      </div>
+  </div>
   
-      <script>
-          const audioPlayer = document.getElementById('f8g9h1i2');
-          const playlist = document.getElementById('playlist');
-          const chapterInfo = document.getElementById('chapter-info');
-          const prevBtn = document.getElementById('prev-btn');
-          const nextBtn = document.getElementById('next-btn');
+  <script>
+      const audioPlayer = document.getElementById('f8g9h1i2');
+      const playlist = document.getElementById('playlist');
+      const chapterInfo = document.getElementById('chapter-info');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
   
-          const chapters = Array.from({ length: 29 }, (_, i) => ({
-              title: `第${i + 1}章`,
-              url: `https://ebible1.pages.dev/13/${i + 1}.mp3`
-          }));
+      const chapters = Array.from({ length: 29 }, (_, i) => ({
+          title: `第${i + 1}章`,
+          url: `https://ebible1.pages.dev/13/${i + 1}.mp3`
+      }));
   
-          let currentChapterIndex = 0;
+      let currentChapterIndex = 0;
   
-          function loadChapter(index) {
-              if (index >= 0 && index < chapters.length) {
-                  currentChapterIndex = index;
-                  audioPlayer.src = chapters[index].url;
-                  audioPlayer.play();
-                  chapterInfo.textContent = `历代志上 （Genesis）第${index + 1}章（chapt ${index + 1}）`;
-              }
+      function loadChapter(index) {
+          if (index >= 0 && index < chapters.length) {
+              currentChapterIndex = index;
+              audioPlayer.src = chapters[index].url;
+              audioPlayer.play();
+              chapterInfo.textContent = `历代志上 （Genesis）第${index + 1}章（chapt ${index + 1}）`;
           }
+      }
   
-          prevBtn.addEventListener('click', () => {
-              loadChapter(currentChapterIndex - 1);
-          });
+      prevBtn.addEventListener('click', () => {
+          loadChapter(currentChapterIndex - 1);
+      });
   
-          nextBtn.addEventListener('click', () => {
+      nextBtn.addEventListener('click', () => {
+          loadChapter(currentChapterIndex + 1);
+      });
+  
+      audioPlayer.addEventListener('ended', () => {
+          // 自动播放下一章
+          if (currentChapterIndex < chapters.length - 1) {
               loadChapter(currentChapterIndex + 1);
-          });
+          }
+      });
   
-          chapters.forEach((chapter, index) => {
-              const playlistItem = document.createElement('div');
-              playlistItem.className = 'n7o8p9q0';
-              playlistItem.textContent = chapter.title;
-              playlistItem.dataset.index = index;
-              playlistItem.addEventListener('click', () => {
-                  loadChapter(index);
-              });
-              playlist.appendChild(playlistItem);
+      chapters.forEach((chapter, index) => {
+          const playlistItem = document.createElement('div');
+          playlistItem.className = 'n7o8p9q0';
+          playlistItem.textContent = chapter.title;
+          playlistItem.dataset.index = index;
+          playlistItem.addEventListener('click', () => {
+              loadChapter(index);
           });
+          playlist.appendChild(playlistItem);
+      });
   
-          // Load the first chapter by default
-          loadChapter(0);
-      </script>
-   <div class="bottom-controls">
-    <a id="prev-chapter" class="bottom-btn" href="book-of-2-kings.html">上一章</a>
-    <a id="next-chapter" class="bottom-btn" href="book-of-2-chronicles.html">下一章</a>
-</div>
-    </div>
-  </body>
-<p>2024©️cn eBible Fellowship所有<p>
-  </html>
+      // 默认加载第一章
+      loadChapter(0);
+  </script>
+  
+  <div class="bottom-controls">
+      <a id="prev-chapter" class="bottom-btn" href="book-of-2-kings.html">上一章</a>
+      <a id="next-chapter" class="bottom-btn" href="book-of-2-chronicles.html">下一章</a>
+  </div>
+  <p>2024©️cn eBible Fellowship所有<p>
   
