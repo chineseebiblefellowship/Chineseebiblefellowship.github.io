@@ -542,10 +542,16 @@
         <div class="eplayer-container" id="eplayer10"></div>
         <div class="eplayer-container" id="eplayer11"></div>
         <div class="eplayer-container" id="eplayer12"></div>
+        <div class="eplayer-container" id="eplayer13"></div>
+        <div class="eplayer-container" id="eplayer14"></div>
+        <div class="eplayer-container" id="eplayer15"></div>
+        <div class="eplayer-container" id="eplayer16"></div>
     </div>
 
     <script>
-      class ePlayer {
+class ePlayer {
+    static currentPlaying = null; // 用于存储当前正在播放的播放器实例
+
     constructor(options) {
         this.element = options.element;
         this.music = options.music;
@@ -618,11 +624,23 @@
 
     togglePlayPause() {
         if (this.audio.paused) {
+            // 如果当前有其他播放器在播放，暂停它
+            if (ePlayer.currentPlaying && ePlayer.currentPlaying !== this) {
+                ePlayer.currentPlaying.pause();
+            }
             this.audio.play();
             this.playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            ePlayer.currentPlaying = this; // 更新当前播放的播放器
         } else {
-            this.audio.pause();
-            this.playButton.innerHTML = '<i class="fas fa-play"></i>';
+            this.pause();
+        }
+    }
+
+    pause() {
+        this.audio.pause();
+        this.playButton.innerHTML = '<i class="fas fa-play"></i>';
+        if (ePlayer.currentPlaying === this) {
+            ePlayer.currentPlaying = null; // 清空当前播放的播放器
         }
     }
 
@@ -654,10 +672,9 @@
         this.audio.loop = this.isLooping;
 
         if (this.isLooping) {
-           this.loopButton.innerHTML = '<i class="fas fa-repeat"></i>'; // 不循环图标
-        } else {
-            
             this.loopButton.innerHTML = '<i class="fas fa-repeat-1"></i>'; // 循环图标
+        } else {
+            this.loopButton.innerHTML = '<i class="fas fa-repeat"></i>'; // 不循环图标
         }
     }
 
@@ -669,7 +686,6 @@
             this.playButton.innerHTML = '<i class="fas fa-play"></i>'; // 播放结束，按钮变为播放
         }
     }
-
     loadLRC(lrcFile) {
         if (lrcFile) {
             fetch(lrcFile)
@@ -1255,10 +1271,192 @@ updateLRC(currentTime) {
 `
                 }
             }),
+            new ePlayer({
+                element: document.getElementById('eplayer13'),
+                music: {
+                    title: '我的心你要称颂耶和华',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/我的心你要称颂耶和华.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.01]我的心，你要称颂耶和华
+[00:04.66]YouTube收录
+[00:07.80]eBible Fellowship -Hymns
+[00:34.75]我的心，你要称颂耶和华，
+[00:40.63]不可忘记祂的恩惠！
+[00:47.46]祂赦免你一切过犯、罪孽，
+[00:53.94]医治你疾病，复原。
+[00:59.88]我的心，你要称颂耶和华，,.
+[01:05.91]不可忘记祂的恩惠！
+[01:12.55]祂以仁爱、慈悲为你冠冕，
+[01:19.00]为受屈的人伸冤。
+[01:28.08]天离地有何等的高，
+[01:34.40]祂的慈爱也何等的深！
+[01:40.83]东离西有多么的远，
+[01:47.06]祂使我的过犯也离我多远！
+[01:53.44]耶和华有怜悯的爱，
+[01:59.64]且有丰盛无尽的恩典，
+[02:06.19]从亘古直到永远，
+[02:12.39]耶和华祂是我的神。
+[02:50.29]我的心，你要称颂耶和华，
+[02:56.46]不可忘记祂的恩惠！
+[03:02.82]祂赦免你一切过犯、罪孽，
+[03:09.50]医治你疾病，复原。
+[03:15.49]我的心，你要称颂耶和华，
+[03:21.60]不可忘记祂的恩惠！
+[03:28.17]祂以仁爱、慈悲为你冠冕，
+[03:34.69]为受屈的人伸冤。
+[03:43.79]天离地有何等的高，
+[03:50.07]祂的慈爱也何等的深！
+[03:56.49]东离西有多么的远，
+[04:02.74]祂使我的过犯也离我多远！
+[04:09.09]耶和华有怜悯的爱，
+[04:15.32]且有丰盛无尽的恩典，
+[04:21.85]从亘古直到永远，
+[04:27.96]耶和华祂是我的神。
+[04:37.60]从亘古直到永远，
+[04:45.45]耶和华祂是我的神。
+[04:51.98]eBible Fellowship -HYmns
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer14'),
+                music: {
+                    title: '万福泉源歌',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/万福泉源歌.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]万福泉源歌
+[00:06.19]YouTube收录
+[00:09.81]eBible Fellowship-Hymns
+[00:17.86]1.全能上帝，万福泉源
+[00:22.14]恳求垂听我赞美
+[00:26.25]上帝恩典似水长流
+[00:30.43]我们高声颂恩惠
+[00:34.60]愿主教我唱诗和谐
+[00:38.81]犹如天使颂主前
+[00:42.94]上帝恩典实无穷尽
+[00:47.21]主的慈爱不变迁
+[00:51.50]2.我的一生有主引导
+[00:55.43]时时刻刻蒙主恩
+[00:59.70]只求上帝永不离我
+[01:03.64]直到进入天家门
+[01:08.21]有时如羊迷失正路
+[01:12.14]主如牧者来找寻
+[01:16.51]救我脱离一切危险
+[01:20.74]为我流血舍性命
+[01:41.72]3.救主洪恩实在高深
+[01:45.88]万分之中难报一
+[01:50.15]慈悲救主恳求助我
+[01:54.22]侍奉上帝尽我力
+[01:58.46]我深知道我心软弱
+[02:00.70]容易离开我上帝
+[02:06.83]今将身心献为活祭
+[02:11.01]恳求收纳莫丢弃
+[02:16.86]阿们
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer15'),
+                music: {
+                    title: '耶和华神已掌权',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/耶和华神已掌权.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]耶和华神已掌权
+[00:01.63]YouTube收录
+[00:09.95]eBible Fellowship -Hymns
+[00:15.73]主耶和华我的神我的王
+[00:21.95]我的心要倚靠祢
+[00:28.31]凡投靠祢的必不惧怕
+[00:34.67]等候你的必不羞愧
+[00:41.18]主耶和华我的神我的王
+[00:47.43]我的心要倚靠祢
+[00:53.59]凡投靠祢的必不惧怕
+[00:59.89]等候你的必不羞愧
+[01:06.19]愿你的崇高过于诸天
+[01:12.26]你的荣耀高过全地
+[01:18.46]你统管万有你治理列邦
+[01:24.55]万国万民都敬拜你
+[01:31.14]你是那独行奇事的神
+[01:37.14]在你没有难成的事
+[01:43.17]我心要坚定我口要歌颂
+[01:49.31]耶和华神已掌权
+[02:07.15]主耶和华我的神我的王
+[02:12.70]我的心要倚靠祢
+[02:18.30]凡投靠祢的必不惧怕
+[02:24.19]等候你的必不羞愧
+[02:29.85]愿你的崇高过于诸天
+[02:35.59]你的荣耀高过全地
+[02:41.29]你统管万有 你治理列邦
+[02:47.03]万国万民都敬拜你
+[02:53.05]你是那独行奇事的神
+[02:58.42]在你没有难成的事
+[03:04.33]我心要坚定我口要歌颂
+[03:09.94]耶和华神已掌权
+[03:15.55]愿你的崇高过于诸天
+[03:21.22]你的荣耀高过全地
+[03:26.97]你统管万有 你治理列邦
+[03:32.60]万国万民都敬拜你
+[03:39.38]你是那独行奇事的神
+[03:44.86]在你没有难成的事
+[03:50.69]我心要坚定我口要歌颂
+[03:56.45]耶和华神已掌权
+[04:02.49]你是那独行奇事的神
+[04:08.06]在你没有难成的事
+[04:13.86]我心要坚定我口要歌颂
+[04:19.50]耶和华神已掌权
+[04:25.19]耶和华神已掌权
+[04:31.01]耶和华神已掌权
+[04:44.49]eBible Fellowship -HYmns
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer16'),
+                music: {
+                    title: '靠主膀臂歌',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/靠主膀臂歌.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]靠主膀臂歌
+[00:02.17]YouTube收录
+[00:04.69]eBible Fellowship-Hymns
+[00:09.81]1、何等大快乐，何等深情谊，
+[00:14.17]依靠在这永远膀臂上；
+[00:18.48]何等深平安，何等大福气，
+[00:22.78]依靠在这永远膀臂上。
+[00:27.19]（副歌）依靠，依靠，
+[00:31.40]安定稳妥一无惊慌；
+[00:35.84]依靠，依靠，
+[00:40.35]依靠在这永远膀臂上。
+[00:53.36]2、我心真甜蜜，行走天路程，
+[00:57.70]依靠在这永远膀臂上；
+[01:02.04]越走越光明，日日向前行，
+[01:06.40]依靠在这永远膀臂上。
+[01:10.84]（副.歌）依靠，依靠，.,
+[01:15.31]安定稳妥一无惊慌；.
+[01:19.53]依靠，依靠，.
+[01:23.90]依靠在这永远膀臂上。.
+[01:37.02]3、我有何所惧，我又何所惊，
+[01:41.44]依靠在这永远膀臂上；
+[01:45.55]蒙福得平安，与我主亲近，
+[01:50.15]（副歌）依靠，依靠..
+[01:58.75]安定稳妥一无惊慌；..
+[02:03.20]依靠，依靠，..
+[02:07.55]依靠在这永远膀臂上。..
+[02:11.98]依靠，依靠，...
+[02:16.37]安定稳妥一无惊慌；....
+[02:20.43]依靠，依靠，....
+[02:25.03]依靠在这永远膀臂上。....
+[02:29.59]阿门
+`
+                }
+            }),
         ];
     </script>
-</body>
-</html>
-
-</body>
-</html>
+    
