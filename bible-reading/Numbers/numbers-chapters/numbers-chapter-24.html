@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章节按钮</title>
+
+<link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
+<link rel="stylesheet" href="nb.css">
+ <body class="body"></body>
+ <div class="mobile-header">
+    <p>圣经朗读</p>
+    <a href="http://chineseebiblefellowship.pages.dev/" class="home-button">
+      <i class="fas fa-home"></i> 首页
+    </a>
+  </div>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .btn-r8t5u1 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-4p9w6m {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-s2v7x3 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-1y6z4n {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-u7p4q8 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-9a5r3b {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-w2h4m7 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-e9p2k5 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-6t3u9v {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+    <h1 class="title">圣经朗读</h1>
+    <h2 class="subtitle"></h2>
+    <div class="gaji">
+        <a href="numbers-chapter-01.html" class="btn-r8t5u1"> 1</a>
+        <a href="numbers-chapter-02.html" class="btn-4p9w6m"> 2</a>
+        <a href="numbers-chapter-03.html" class="btn-s2v7x3"> 3</a>
+        <a href="numbers-chapter-04.html" class="btn-1y6z4n"> 4</a>
+        <a href="numbers-chapter-05.html" class="btn-u7p4q8"> 5</a>
+        <a href="numbers-chapter-06.html" class="btn-9a5r3b"> 6</a>
+        <a href="numbers-chapter-07.html" class="btn-w2h4m7"> 7</a>
+        <a href="numbers-chapter-08.html" class="btn-e9p2k5"> 8</a>
+        <a href="numbers-chapter-09.html" class="btn-6t3u9v"> 9</a>
+        <a href="numbers-chapter-10.html" class="btn-r8t5u1"> 10</a>
+        <a href="numbers-chapter-11.html" class="btn-4p9w6m"> 11</a>
+        <a href="numbers-chapter-12.html" class="btn-s2v7x3"> 12</a>
+        <a href="numbers-chapter-13.html" class="btn-1y6z4n"> 13</a>
+        <a href="numbers-chapter-14.html" class="btn-u7p4q8"> 14</a>
+        <a href="numbers-chapter-15.html" class="btn-9a5r3b"> 15</a>
+        <a href="numbers-chapter-16.html" class="btn-w2h4m7"> 16</a>
+        <a href="numbers-chapter-17.html" class="btn-e9p2k5"> 17</a>
+        <a href="numbers-chapter-18.html" class="btn-6t3u9v"> 18</a>
+        <a href="numbers-chapter-19.html" class="btn-r8t5u1"> 19</a>
+        <a href="numbers-chapter-20.html" class="btn-4p9w6m"> 20</a>
+        <a href="numbers-chapter-21.html" class="btn-s2v7x3"> 21</a>
+        <a href="numbers-chapter-22.html" class="btn-1y6z4n"> 22</a>
+        <a href="numbers-chapter-23.html" class="btn-u7p4q8"> 23</a>
+        <a href="numbers-chapter-24.html" class="btn-9a5r3b"> 24</a>
+        <a href="numbers-chapter-25.html" class="btn-w2h4m7"> 25</a>
+        <a href="numbers-chapter-26.html" class="btn-e9p2k5"> 26</a>
+        <a href="numbers-chapter-27.html" class="btn-6t3u9v"> 27</a>
+        <a href="numbers-chapter-28.html" class="btn-r8t5u1"> 28</a>
+        <a href="numbers-chapter-29.html" class="btn-4p9w6m"> 29</a>
+        <a href="numbers-chapter-30.html" class="btn-s2v7x3"> 30</a>
+        <a href="numbers-chapter-31.html" class="btn-1y6z4n"> 31</a>
+        <a href="numbers-chapter-32.html" class="btn-u7p4q8"> 32</a>
+        <a href="numbers-chapter-33.html" class="btn-9a5r3b"> 33</a>
+        <a href="numbers-chapter-34.html" class="btn-w2h4m7"> 34</a>
+        <a href="numbers-chapter-35.html" class="btn-e9p2k5"> 35</a>
+        <a href="numbers-chapter-36.html" class="btn-6t3u9v"> 36</a>
+    </div>
+    </div>
+    <head>
+</html>
+
+<body class="body"></body>
+ 
+<style>
+ 
+   .mobile-header {
+     display: none; 
+     height: 100px;
+     background-color: #00ffdd;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+     box-sizing: border-box;
+   }
+ 
+   .b2k4x1 {
+     display: inline-flex;
+     align-items: center;
+     padding: 10px 20px;
+     background-color: #007bff; /* 蓝色背景 */
+     color: #fff; /* 白色文字 */
+     border: none;
+     border-radius: 5px;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: bold;
+     transition: background-color 0.3s, color 0.3s;
+   }
+ 
+   .b2k4x1:hover {
+     background-color: #0056b3; /* 深蓝色背景 */
+     color: #e6e6e6; /* 浅灰色文字 */
+   }
+ 
+   .a7p3c9 i {
+     margin-right: 8px; /* 图标和文字之间的间距 */
+   }
+ 
+   .sealed-scroll {
+     height: 60px; /* 调整图片大小 */
+     width: auto;
+     object-fit: contain;
+   }
+ 
+   .home-button {
+     background-color: #ffffff;
+     color: #00ffdd;
+     padding: 8px 20px;
+     border-radius: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s, color 0.3s;
+   }
+ 
+   .home-button:hover {
+     background-color: #e6f2ff;
+   }
+ 
+   .home-button i {
+     margin-right: 5px;
+   }
+ 
+   /* 媒体查询：检测移动设备 */
+   @media screen and (max-width: 1023px) {
+     .mobile-header {
+       display: flex;
+     }
+ 
+     .sidebar {
+       display: none; /* 隐藏侧边栏 */
+     }
+ 
+     .banner, .blue-interface {
+       margin-left: 0; /* 移除左边距 */
+     }
+ 
+     .content {
+       margin-left: 20px;
+       margin-right: 20px;
+     }
+   }
+ 
+   .header-area {
+     text-align: center;
+     padding: 60px 20px; /* 增加上下内边距 */
+     background-color: #f0f8ff;
+   }
+ 
+   .main-title {
+     font-size: 72px; /* 增大字体大小 */
+     color: #007bff;
+     margin-bottom: 50px; /* 增加与按钮的间距 */
+     text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 添加文字阴影 */
+   }
+ 
+   .button-container {
+     display: flex;
+     justify-content: center;
+     gap: 30px; /* 增加按钮之间的间距 */
+   }
+ 
+   .action-button {
+     padding: 15px 30px; /* 增加按钮的内边距 */
+     font-size: 24px; /* 增大按钮文字大小 */
+     border: none;
+     border-radius: 10px; /* 增加圆角 */
+     cursor: pointer;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加阴影 */
+   }
+ 
+   .action-button:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+   }
+ 
+   .audio-button {
+     background-color: #36d7ff;
+     color: white;
+   }
+ 
+   .audio-button:hover {
+     background-color: #45a049;
+   }
+ 
+   .book-button {
+     background-color: #2196F3;
+     color: white;
+   }
+ 
+   .book-button:hover {
+     background-color: #1e87db;
+   }
+ 
+   .download-button {
+     background-color: #ff9800;
+     color: white;
+   }
+ 
+   .download-button:hover {
+     background-color: #e68a00;
+   }
+ 
+   .action-button i {
+     margin-right: 12px; /* 增加图标和文字的间距 */
+     font-size: 28px; /* 增大图标大小 */
+   }
+ 
+   @media screen and (max-width: 1024px) {
+     .main-title {
+       font-size: 56px;
+     }
+ 
+     .action-button {
+       font-size: 20px;
+       padding: 12px 24px;
+     }
+ 
+     .action-button i {
+       font-size: 24px;
+     }
+   }
+ 
+   @media screen and (max-width: 768px) {
+     .main-title {
+       font-size: 48px;
+     }
+ 
+     .button-container {
+       flex-direction: column;
+       align-items: center;
+     }
+ 
+     .action-button {
+       width: 80%;
+       max-width: 300px;
+       margin-bottom: 15px;
+     }
+   }
+ 
+   .footer-text {
+     text-align: center;
+     margin-top: 20px;
+     color: #666;
+   }
+ </style>
+ </head>
+ <body>
+
+   <div>
+    <a href="http://chineseebiblefellowship.pages.dev/" class="b2k4x1 a7p3c9">
+        <i class="fas fa-arrow-left"></i> 返回
+    </a>
+    <div>
+<div>
+</div>
+   <!-- 其他现有的HTML内容 -->
+   
+   <div class="sidebar">
+     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+     <div class="title">
+       <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+     </div>
+     <div class="date">
+       自2011年5月21日选民生活在审判日里
+     </div>
+     
+     <!-- 按钮列表 -->
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/'">
+       <i class="fas fa-home"></i> 首页
+     </button>
+     <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+       <i class="fas fa-search"></i> Zoom
+     </button>
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/learnbible.html'">
+       <i class="fas fa-book-open"></i> 学习圣经
+     </button>
+     <button class="nav-button" onclick="location.href='https://newopenforum.org'">
+       <i class="fas fa-comments"></i> 圣经论坛
+     </button>
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/books.html'">
+       <i class="fas fa-book"></i> 圣经书籍
+     </button>
+     
+     <!-- 直播室嵌入 -->
+     <div class="live-stream">
+       <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+     </div>
+   
+     <!-- 平台图标 -->
+     <div class="platform-title">电子圣经团契平台</div>
+     <div class="icon-container">
+       <a href="#" class="icon-link"><i class="fab fa-spotify"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+       <!-- 添加其他图标... -->
+     </div>
+   
+     <!-- 联系我们按钮 -->
+     <button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+       <i class="fas fa-envelope"></i> 联系我们
+     </button>
+   
+     <!-- 地址按钮 -->
+     <button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+       <i class="fas fa-map-marker-alt"></i> 地址
+     </button>
+   
+     <!-- 联系我们信息 -->
+     <div class="contact-info">
+       Info@eBibleFellowship.org
+     </div>
+   
+     <!-- 地址信息 -->
+     <div class="address">
+       E Bible Fellowship<br>
+       P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+     </div>
+   
+     <!-- 版权声明 -->
+     <div class="copyright">
+       &copy; 2024 eBible Fellowship
+     </div>
+   </div>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .chapter {
+        margin: 40px;
+        font-size:30px;
+    }
+    .verse {
+        margin-bottom: 10px;
+        font-size:30px;
+    }
+    .verse-number {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="chapter">
+    <h1>民数记24章</h1>
+    <div class="verse">
+        <span class="verse-number">1</span> 巴兰见耶和华喜欢赐福与以色列，就不像前两次去求法术，却面向旷野。
+    </div>
+    <div class="verse">
+        <span class="verse-number">2</span> 巴兰举目，看见以色列人照着支派居住。神的灵就临到他身上，
+    </div>
+    <div class="verse">
+        <span class="verse-number">3</span> 他便题起诗歌说，比珥的儿子巴兰说，眼目闭住（闭住或作睁开）的人说，
+    </div>
+    <div class="verse">
+        <span class="verse-number">4</span> 得听神的言语，得见全能者的异象，眼目睁开而仆倒的人说，
+    </div>
+    <div class="verse">
+        <span class="verse-number">5</span> 雅各啊，你的帐棚何等华美。以色列啊，你的帐幕何其华丽。
+    </div>
+    <div class="verse">
+        <span class="verse-number">6</span> 如接连的山谷，如河旁的园子，如耶和华所栽的沉香树，如水边的香柏木。
+    </div>
+    <div class="verse">
+        <span class="verse-number">7</span> 水要从他的桶里流出。种子要撒在多水之处。他的王必超过亚甲。他的国必要振兴。
+    </div>
+    <div class="verse">
+        <span class="verse-number">8</span> 神领他出埃及。他似乎有野牛之力。他要吞吃敌国，折断他们的骨头，用箭射透他们。
+    </div>
+    <div class="verse">
+        <span class="verse-number">9</span> 他蹲如公狮，卧如母狮，谁敢惹他，凡给你祝福的，愿他蒙福。凡咒诅你的，愿他受咒诅。
+    </div>
+    <div class="verse">
+        <span class="verse-number">10</span> 巴勒向巴兰生气，就拍起手来，对巴兰说，我召你来为我咒诅仇敌，不料，你这三次竟为他们祝福。
+    </div>
+    <div class="verse">
+        <span class="verse-number">11</span> 如今你快回本地去吧。我想使你得大尊荣，耶和华却阻止你不得尊荣。
+    </div>
+    <div class="verse">
+        <span class="verse-number">12</span> 巴兰对巴勒说，我岂不是对你所差遣到我那里的使者说，
+    </div>
+    <div class="verse">
+        <span class="verse-number">13</span> 巴勒就是将他满屋的金银给我，我也不得越过耶和华的命，凭自己的心意行好行歹。耶和华说什么，我就要说什么，
+    </div>
+    <div class="verse">
+        <span class="verse-number">14</span> 现在我要回本族去。你来，我告诉你这民日后要怎样待你的民。
+    </div>
+    <div class="verse">
+        <span class="verse-number">15</span> 他就题起诗歌说，比珥的儿子巴兰说，眼目闭住（闭住或作睁开）的人说，
+    </div>
+    <div class="verse">
+        <span class="verse-number">16</span> 得听神的言语，明白至高者的意旨，看见全能者的异象，眼目睁开而仆倒的人说，
+    </div>
+    <div class="verse">
+        <span class="verse-number">17</span> 我看他却不在现时。我望他却不在近日。有星要出于雅各，有杖要兴于以色列，必打破摩押的四角，毁坏扰乱之子。
+    </div>
+    <div class="verse">
+        <span class="verse-number">18</span> 他必得以东为基业，又得仇敌之地西珥为产业。以色列必行事勇敢。
+    </div>
+    <div class="verse">
+        <span class="verse-number">19</span> 有一位出于雅各的，必掌大权。他要除灭城中的余民。
+    </div>
+    <div class="verse">
+        <span class="verse-number">20</span> 巴兰观看亚玛力，就题起诗歌说，亚玛力原为诸国之首，但他终必沉沦。
+    </div>
+    <div class="verse">
+        <span class="verse-number">21</span> 巴兰观看基尼人，就题起诗歌说，你的住处本是坚固。你的窝巢作在岩穴中。
+    </div>
+    <div class="verse">
+        <span class="verse-number">22</span> 然而基尼必至衰微，直到亚述把你掳去。
+    </div>
+    <div class="verse">
+        <span class="verse-number">23</span> 巴兰又题起诗歌说，哀哉。神行这事，谁能得活，
+    </div>
+    <div class="verse">
+        <span class="verse-number">24</span> 必有人乘船从基提界而来，苦害亚述，苦害希伯。他也必至沉沦。
+    </div>
+    <div class="verse">
+        <span class="verse-number">25</span> 于是巴兰起来，回他本地去。巴勒也回去了。
+    </div>
+    
