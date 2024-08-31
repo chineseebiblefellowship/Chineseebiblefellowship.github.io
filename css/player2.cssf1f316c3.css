@@ -1,0 +1,317 @@
+/*
+ * We have to have the default Muses skin displayed on the page or else
+ * the player will not work. Setting the display to none and hidden does
+ * not work. It has to be "visible" on the page. As a hacky work around we
+ * set the height and width to 1px so users will not see it.
+ */
+ #muses_skin {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #ff5d1a;
+    border: 1px solid #888;
+  }
+  
+  .modal-content {
+    color: #000000;
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+  }
+  
+  .modal .modal-content .src-code {
+    width: 100%;
+    color: #ffffff;
+    word-break: break-word;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+  .airtime-player {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    background-color: #25292c;
+    padding: 25px;
+  }
+  
+  .airtime-header {
+    display: flex;
+    color: #8f8f8f;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .station-name {
+    font-size: 15px;
+    margin: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .airtime-pro {
+    font-size: 15px;
+    margin: 0px;
+    white-space: nowrap;
+  }
+  
+  .track-title {
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .artist {
+    display: block;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .airtime-schedule {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 0px 30px 0px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .airtime-header a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .player-play {
+    display: flex;
+    justify-content: center;
+  }
+  #play_pause_button {
+    position: absolute;
+    z-index: 2;
+    background: #080809;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .play-pause {
+    display: block;
+    width: 0;
+    height: 24px;
+    margin-left: 4px;
+    border-color: transparent transparent transparent #fff;
+    transition: 200ms all ease;
+    border-style: solid;
+    border-width: 15px 0 15px 26px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  #play_pause_wrap_container.pause .play-pause {
+    border-style: double;
+    border-width: 0px 0 0px 24px;
+    height: 30px;
+    margin-left: 0px;
+  }
+  
+  #play_pause_wrap_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+    user-select: none;
+  }
+  
+  #play_pause_wrap_container:before {
+    display: block;
+    content: ' ';
+    width: 60px;
+    height: 300px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    transform: rotate(30deg);
+    z-index: 1;
+    transition: left 2s ease;
+  
+    background: -moz-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+  }
+  
+  #play_pause_wrap_container:hover:before {
+    left: 240px;
+  }
+  
+  #play_pause_wrap_container img {
+    width: 184px;
+    height: 184px;
+    border-radius: 100%;
+    border: 8px solid #070808;
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+  #play_pause_wrap_container.pause img {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running;
+  }
+  
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  .player-info {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .now-playing {
+    margin: 20px 0px;
+  }
+  
+  .airtime-next {
+    margin-right: 10px;
+  }
+  
+  .next-track-title {
+    color: #8f8f8f;
+  }
+  
+  .sharing-button {
+    display: flex;
+    font-size: 14px;
+    text-align: right;
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    z-index: 2;
+  }
+  
+  .sharing-button.hover + .player-content .airtime-schedule {
+    opacity: 0;
+  }
+  
+  .sharing-button svg {
+    width: 20px;
+    padding: 10px 0px;
+  }
+  
+  .sharing-icon {
+    position: relative;
+    margin-left: auto;
+  }
+  
+  .sharing-items {
+    display: none;
+    color: #8f8f8f;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+  
+  .svg-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .sharing-button.hover .sharing-items {
+    display: flex;
+    background: #25292c;
+  }
+  
+  .sharing-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .sharing-item span {
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #8f8f8f;
+  }
+  
