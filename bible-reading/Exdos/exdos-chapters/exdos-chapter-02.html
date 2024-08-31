@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章节按钮</title>
+
+<link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
+<link rel="stylesheet" href="nb.css">
+ <body class="body"></body>
+ <div class="mobile-header">
+    <p>圣经朗读</p>
+    <a href="http://chineseebiblefellowship.pages.dev/" class="home-button">
+      <i class="fas fa-home"></i> 首页
+    </a>
+  </div>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .btn-r8t5u1 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-4p9w6m {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-s2v7x3 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-1y6z4n {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-u7p4q8 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-9a5r3b {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-w2h4m7 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-e9p2k5 {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-6t3u9v {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+    <h1 class="title">圣经朗读</h1>
+    <h2 class="subtitle"></h2>
+    <div class="gaji">
+        <a href="exdos-chapter-01.html" class="btn-r8t5u1"> 1</a>
+        <a href="exdos-chapter-02.html" class="btn-4p9w6m"> 2</a>
+        <a href="exdos-chapter-03.html" class="btn-s2v7x3"> 3</a>
+        <a href="exdos-chapter-04.html" class="btn-1y6z4n"> 4</a>
+        <a href="exdos-chapter-05.html" class="btn-u7p4q8"> 5</a>
+        <a href="exdos-chapter-06.html" class="btn-9a5r3b"> 6</a>
+        <a href="exdos-chapter-07.html" class="btn-w2h4m7"> 7</a>
+        <a href="exdos-chapter-08.html" class="btn-e9p2k5"> 8</a>
+        <a href="exdos-chapter-09.html" class="btn-6t3u9v"> 9</a>
+        <a href="exdos-chapter-10.html" class="btn-r8t5u1"> 10</a>
+        <a href="exdos-chapter-11.html" class="btn-4p9w6m"> 11</a>
+        <a href="exdos-chapter-12.html" class="btn-s2v7x3"> 12</a>
+        <a href="exdos-chapter-13.html" class="btn-1y6z4n"> 13</a>
+        <a href="exdos-chapter-14.html" class="btn-u7p4q8"> 14</a>
+        <a href="exdos-chapter-15.html" class="btn-9a5r3b"> 15</a>
+        <a href="exdos-chapter-16.html" class="btn-w2h4m7"> 16</a>
+        <a href="exdos-chapter-17.html" class="btn-e9p2k5"> 17</a>
+        <a href="exdos-chapter-18.html" class="btn-6t3u9v"> 18</a>
+        <a href="exdos-chapter-19.html" class="btn-r8t5u1"> 19</a>
+        <a href="exdos-chapter-20.html" class="btn-4p9w6m"> 20</a>
+        <a href="exdos-chapter-21.html" class="btn-s2v7x3"> 21</a>
+        <a href="exdos-chapter-22.html" class="btn-1y6z4n"> 22</a>
+        <a href="exdos-chapter-23.html" class="btn-u7p4q8"> 23</a>
+        <a href="exdos-chapter-24.html" class="btn-9a5r3b"> 24</a>
+        <a href="exdos-chapter-25.html" class="btn-w2h4m7"> 25</a>
+        <a href="exdos-chapter-26.html" class="btn-e9p2k5"> 26</a>
+        <a href="exdos-chapter-27.html" class="btn-6t3u9v"> 27</a>
+        <a href="exdos-chapter-28.html" class="btn-r8t5u1"> 28</a>
+        <a href="exdos-chapter-29.html" class="btn-4p9w6m"> 29</a>
+        <a href="exdos-chapter-30.html" class="btn-s2v7x3"> 30</a>
+        <a href="exdos-chapter-31.html" class="btn-1y6z4n"> 31</a>
+        <a href="exdos-chapter-32.html" class="btn-u7p4q8"> 32</a>
+        <a href="exdos-chapter-33.html" class="btn-9a5r3b"> 33</a>
+        <a href="exdos-chapter-34.html" class="btn-w2h4m7"> 34</a>
+        <a href="exdos-chapter-35.html" class="btn-e9p2k5"> 35</a>
+        <a href="exdos-chapter-36.html" class="btn-6t3u9v"> 36</a>
+        <a href="exdos-chapter-37.html" class="btn-r8t5u1"> 37</a>
+        <a href="exdos-chapter-38.html" class="btn-4p9w6m"> 38</a>
+        <a href="exdos-chapter-39.html" class="btn-s2v7x3"> 39</a>
+        <a href="exdos-chapter-40.html" class="btn-1y6z4n"> 40</a>
+
+    </div>
+    </div>
+    <head>
+</html>
+
+<body class="body"></body>
+ 
+<style>
+   /* 现有的样式保持不变 */
+ 
+   .mobile-header {
+     display: none; /* 默认隐藏 */
+     height: 100px;
+     background-color: #00ffdd;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+     box-sizing: border-box;
+   }
+ 
+   .b2k4x1 {
+     display: inline-flex;
+     align-items: center;
+     padding: 10px 20px;
+     background-color: #007bff; /* 蓝色背景 */
+     color: #fff; /* 白色文字 */
+     border: none;
+     border-radius: 5px;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: bold;
+     transition: background-color 0.3s, color 0.3s;
+   }
+ 
+   .b2k4x1:hover {
+     background-color: #0056b3; /* 深蓝色背景 */
+     color: #e6e6e6; /* 浅灰色文字 */
+   }
+ 
+   .a7p3c9 i {
+     margin-right: 8px; /* 图标和文字之间的间距 */
+   }
+ 
+   .sealed-scroll {
+     height: 60px; /* 调整图片大小 */
+     width: auto;
+     object-fit: contain;
+   }
+ 
+   .home-button {
+     background-color: #ffffff;
+     color: #00ffdd;
+     padding: 8px 20px;
+     border-radius: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s, color 0.3s;
+   }
+ 
+   .home-button:hover {
+     background-color: #e6f2ff;
+   }
+ 
+   .home-button i {
+     margin-right: 5px;
+   }
+ 
+   /* 媒体查询：检测移动设备 */
+   @media screen and (max-width: 1023px) {
+     .mobile-header {
+       display: flex;
+     }
+ 
+     .sidebar {
+       display: none; /* 隐藏侧边栏 */
+     }
+ 
+     .banner, .blue-interface {
+       margin-left: 0; /* 移除左边距 */
+     }
+ 
+     .content {
+       margin-left: 20px;
+       margin-right: 20px;
+     }
+   }
+ 
+   .header-area {
+     text-align: center;
+     padding: 60px 20px; /* 增加上下内边距 */
+     background-color: #f0f8ff;
+   }
+ 
+   .main-title {
+     font-size: 72px; /* 增大字体大小 */
+     color: #007bff;
+     margin-bottom: 50px; /* 增加与按钮的间距 */
+     text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 添加文字阴影 */
+   }
+ 
+   .button-container {
+     display: flex;
+     justify-content: center;
+     gap: 30px; /* 增加按钮之间的间距 */
+   }
+ 
+   .action-button {
+     padding: 15px 30px; /* 增加按钮的内边距 */
+     font-size: 24px; /* 增大按钮文字大小 */
+     border: none;
+     border-radius: 10px; /* 增加圆角 */
+     cursor: pointer;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加阴影 */
+   }
+ 
+   .action-button:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+   }
+ 
+   .audio-button {
+     background-color: #36d7ff;
+     color: white;
+   }
+ 
+   .audio-button:hover {
+     background-color: #45a049;
+   }
+ 
+   .book-button {
+     background-color: #2196F3;
+     color: white;
+   }
+ 
+   .book-button:hover {
+     background-color: #1e87db;
+   }
+ 
+   .download-button {
+     background-color: #ff9800;
+     color: white;
+   }
+ 
+   .download-button:hover {
+     background-color: #e68a00;
+   }
+ 
+   .action-button i {
+     margin-right: 12px; /* 增加图标和文字的间距 */
+     font-size: 28px; /* 增大图标大小 */
+   }
+ 
+   @media screen and (max-width: 1024px) {
+     .main-title {
+       font-size: 56px;
+     }
+ 
+     .action-button {
+       font-size: 20px;
+       padding: 12px 24px;
+     }
+ 
+     .action-button i {
+       font-size: 24px;
+     }
+   }
+ 
+   @media screen and (max-width: 768px) {
+     .main-title {
+       font-size: 48px;
+     }
+ 
+     .button-container {
+       flex-direction: column;
+       align-items: center;
+     }
+ 
+     .action-button {
+       width: 80%;
+       max-width: 300px;
+       margin-bottom: 15px;
+     }
+   }
+ 
+   .footer-text {
+     text-align: center;
+     margin-top: 20px;
+     color: #666;
+   }
+ </style>
+ </head>
+ <body>
+
+   <div>
+    <a href="http://chineseebiblefellowship.pages.dev/" class="b2k4x1 a7p3c9">
+        <i class="fas fa-arrow-left"></i> 返回
+    </a>
+    <div>
+<div>
+</div>
+   <!-- 其他现有的HTML内容 -->
+   
+   <div class="sidebar">
+     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+     <div class="title">
+       <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+     </div>
+     <div class="date">
+       自2011年5月21日选民生活在审判日里
+     </div>
+     
+     <!-- 按钮列表 -->
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/'">
+       <i class="fas fa-home"></i> 首页
+     </button>
+     <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+       <i class="fas fa-search"></i> Zoom
+     </button>
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/learnbible.html'">
+       <i class="fas fa-book-open"></i> 学习圣经
+     </button>
+     <button class="nav-button" onclick="location.href='https://newopenforum.org'">
+       <i class="fas fa-comments"></i> 圣经论坛
+     </button>
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/books.html'">
+       <i class="fas fa-book"></i> 圣经书籍
+     </button>
+     
+     <!-- 直播室嵌入 -->
+     <div class="live-stream">
+       <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+     </div>
+   
+     <!-- 平台图标 -->
+     <div class="platform-title">电子圣经团契平台</div>
+     <div class="icon-container">
+       <a href="#" class="icon-link"><i class="fab fa-spotify"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+       <!-- 添加其他图标... -->
+     </div>
+   
+     <!-- 联系我们按钮 -->
+     <button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+       <i class="fas fa-envelope"></i> 联系我们
+     </button>
+   
+     <!-- 地址按钮 -->
+     <button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+       <i class="fas fa-map-marker-alt"></i> 地址
+     </button>
+   
+     <!-- 联系我们信息 -->
+     <div class="contact-info">
+       Info@eBibleFellowship.org
+     </div>
+   
+     <!-- 地址信息 -->
+     <div class="address">
+       E Bible Fellowship<br>
+       P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+     </div>
+   
+     <!-- 版权声明 -->
+     <div class="copyright">
+       &copy; 2024 eBible Fellowship
+     </div>
+   </div>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .chapter {
+        margin: 40px;
+        font-size:30px;
+    }
+    .verse {
+        margin-bottom: 10px;
+        font-size:30px;
+    }
+    .verse-number {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="chapter">
+  <h1>出埃及记2章</h1>
+<div class="verse">
+    <span class="verse-number">1</span> 有一个利未家的人娶了一个利未女子为妻。
+</div>
+<div class="verse">
+    <span class="verse-number">2</span> 那女人怀孕，生一个儿子，见他俊美，就藏了他三个月，
+</div>
+<div class="verse">
+    <span class="verse-number">3</span> 后来不能再藏，就取了一个蒲草箱，抹上石漆和石油，将孩子放在里头，把箱子搁在河边的芦荻中。
+</div>
+<div class="verse">
+    <span class="verse-number">4</span> 孩子的姐姐远远站着，要知道他究竟怎么样。
+</div>
+<div class="verse">
+    <span class="verse-number">5</span> 法老的女儿来到河边洗澡，她的使女们在河边行走。她看见箱子在芦荻中，就打发一个婢女拿来。
+</div>
+<div class="verse">
+    <span class="verse-number">6</span> 她打开箱子，看见那孩子。孩子哭了，她就可怜他，说，这是希伯来人的一个孩子。
+</div>
+<div class="verse">
+    <span class="verse-number">7</span> 孩子的姐姐对法老的女儿说，我去在希伯来妇人中叫一个奶妈来，为你奶这孩子，可以不可以。
+</div>
+<div class="verse">
+    <span class="verse-number">8</span> 法老的女儿说，可以。童女就去叫了孩子的母亲来。
+</div>
+<div class="verse">
+    <span class="verse-number">9</span> 法老的女儿对她说，你把这孩子抱去，为我奶他，我必给你工价。妇人就抱了孩子去奶他。
+</div>
+<div class="verse">
+    <span class="verse-number">10</span> 孩子渐长，妇人把他带到法老的女儿那里，就作了她的儿子。她给孩子起名叫摩西，意思说，因我把他从水里拉出来。
+</div>
+<div class="verse">
+    <span class="verse-number">11</span> 后来，摩西长大，他出去到他弟兄那里，看他们的重担，见一个埃及人打希伯来人的一个弟兄。
+</div>
+<div class="verse">
+    <span class="verse-number">12</span> 他左右观看，见没有人，就把埃及人打死了，藏在沙土里。
+</div>
+<div class="verse">
+    <span class="verse-number">13</span> 第二天他出去，见有两个希伯来人争斗，就对那欺负人的说，你为什么打你同族的人呢？
+</div>
+<div class="verse">
+    <span class="verse-number">14</span> 那人说，谁立你作我们的首领和审判官呢？难道你要杀我，像杀那埃及人吗？摩西便惧怕，说，这事必是被人知道了。
+</div>
+<div class="verse">
+    <span class="verse-number">15</span> 法老听见这事，就想杀摩西，但摩西躲避法老，逃往米甸地居住。
+</div>
+<div class="verse">
+    <span class="verse-number">16</span> 一日，他在井旁坐下。米甸的祭司有七个女儿，她们来打水，打满了槽，要饮父亲的群羊。
+</div>
+<div class="verse">
+    <span class="verse-number">17</span> 有牧羊的人来，把她们赶走了，摩西却起来帮助她们，又饮了她们的群羊。
+</div>
+<div class="verse">
+    <span class="verse-number">18</span> 她们来到父亲流珥那里，他说，今日你们为何来得这么快呢？
+</div>
+<div class="verse">
+    <span class="verse-number">19</span> 她们说，有一个埃及人救我们脱离牧羊人的手，并且为我们打水饮了群羊。
+</div>
+<div class="verse">
+    <span class="verse-number">20</span> 他对女儿们说，那个人在哪里，你们为什么撇下他呢？你们去请他来吃饭。
+</div>
+<div class="verse">
+    <span class="verse-number">21</span> 摩西甘心和那人同住，那人把他的女儿西坡拉给摩西为妻。
+</div>
+<div class="verse">
+    <span class="verse-number">22</span> 西坡拉生了一个儿子，摩西给他起名叫革舜，意思说，因我在外邦作了寄居的。
+</div>
+<div class="verse">
+    <span class="verse-number">23</span> 过了多年，埃及王死了。以色列人因作苦工，就叹息哀求，他们的哀声达于神。
+</div>
+<div class="verse">
+    <span class="verse-number">24</span> 神听见他们的哀声，就记念他与亚伯拉罕，以撒，雅各所立的约。
+</div>
+<div class="verse">
+    <span class="verse-number">25</span> 神看顾以色列人，也知道他们的苦情。
+</div>
+</div>
+</body>
