@@ -2391,7 +2391,7 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #000000;
   margin-top: 20px;
   margin-bottom: 15px;
   font-size: 44px;
@@ -70833,7 +70833,7 @@ figcaption {
 }
 
 .paragraph-124-copy {
-  color: #fff;
+  color: #000;
   text-align: justify;
   margin-left: 0;
   margin-right: 0;
@@ -71579,6 +71579,7 @@ figcaption {
   align-items: flex-start;
   margin-left: 20px;
   padding-top: 10px;
+  color:#000;
   padding-bottom: 10px;
   display: flex;
 }
@@ -85272,6 +85273,7 @@ figcaption {
 
   .heading-180 {
     font-size: 30px;
+    color:#000;
     font-weight: 400;
   }
 
