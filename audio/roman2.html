@@ -170,24 +170,187 @@
       <div id='aplayer'></div>
  
 
-    <script class="666">
-        // 初始化音频列表
-        var audioList = [];
-
-        // 动态生成音频列表
-        for (var i = 1; i <= 29; i++) {
-            audioList.push({
-                title: '罗马书2章' + i + '讲',
-                author: '克里斯麦肯',
-                url: 'https://roman-bjt.pages.dev/r2' + (i < 10 ? '0' + i : i) + '.mp3',
-                pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
-            });
-        }
-
+      <script class="666">
         // 创建 APlayer 实例
         var ap = new APlayer({
             element: document.getElementById('aplayer'),
-            audio: audioList // 使用生成的音频列表
+            audio: [
+                {
+                    title: '罗马书2章1讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r21.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章2讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r22.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章3讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r23.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章4讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r24.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章5讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r25.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章6讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r26.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章7讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r27.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章8讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r28.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章9讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r29.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章10讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r210.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章11讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r211.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章12讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r212.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章13讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r213.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章14讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r214.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章15讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r215.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章16讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r216.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章17讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r217.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章18讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r218.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章19讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r219.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章20讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r220.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章21讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r221.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章22讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r222.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章23讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r223.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章24讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r224.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章25讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r225.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章26讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r226.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章27讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r227.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章28讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r228.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                },
+                {
+                    title: '罗马书2章29讲',
+                    author: '克里斯麦肯',
+                    url: 'https://roman-bjt.pages.dev/r229.mp3',
+                    pic: 'https://i1.sndcdn.com/avatars-000510390906-cc0jnv-t120x120.jpg'
+                }
+            ]
         });
-    </script>
 
+        ap.init(); // 初始化播放器
+    </script>
