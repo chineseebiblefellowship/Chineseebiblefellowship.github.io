@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章节按钮</title>
+
+<link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
+<link rel="stylesheet" href="nb.css">
+ <body class="body"></body>
+ <div class="mobile-header">
+    <p>圣经朗读</p>
+    <a href="http://chineseebiblefellowship.pages.dev/" class="home-button">
+      <i class="fas fa-home"></i> 首页
+    </a>
+  </div>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .btn-r8t5u1 {
+        display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-4p9w6m {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-s2v7x3 {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-1y6z4n {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-u7p4q8 {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-9a5r3b {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-w2h4m7 {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-e9p2k5 {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .btn-6t3u9v {
+      display: inline-block;
+        padding: 6px 4px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+    <h1 class="title">圣经朗读</h1>
+    <h2 class="subtitle"></h2>
+    <div class="gaji">
+        <a href="genesis-chapter-01.html" class="btn-r8t5u1"> 1</a>
+        <a href="genesis-chapter-02.html" class="btn-4p9w6m"> 2</a>
+        <a href="genesis-chapter-03.html" class="btn-s2v7x3"> 3</a>
+        <a href="genesis-chapter-04.html" class="btn-1y6z4n"> 4</a>
+        <a href="genesis-chapter-05.html" class="btn-u7p4q8"> 5</a>
+        <a href="genesis-chapter-06.html" class="btn-9a5r3b"> 6</a>
+        <a href="genesis-chapter-07.html" class="btn-w2h4m7"> 7</a>
+        <a href="genesis-chapter-08.html" class="btn-e9p2k5"> 8</a>
+        <a href="genesis-chapter-09.html" class="btn-6t3u9v"> 9</a>
+        <a href="genesis-chapter-10.html" class="btn-r8t5u1"> 10</a>
+        <a href="genesis-chapter-11.html" class="btn-4p9w6m"> 11</a>
+        <a href="genesis-chapter-12.html" class="btn-s2v7x3"> 12</a>
+        <a href="genesis-chapter-13.html" class="btn-1y6z4n"> 13</a>
+        <a href="genesis-chapter-14.html" class="btn-u7p4q8"> 14</a>
+        <a href="genesis-chapter-15.html" class="btn-9a5r3b"> 15</a>
+        <a href="genesis-chapter-16.html" class="btn-w2h4m7"> 16</a>
+        <a href="genesis-chapter-17.html" class="btn-e9p2k5"> 17</a>
+        <a href="genesis-chapter-18.html" class="btn-6t3u9v"> 18</a>
+        <a href="genesis-chapter-19.html" class="btn-r8t5u1"> 19</a>
+        <a href="genesis-chapter-20.html" class="btn-4p9w6m"> 20</a>
+        <a href="genesis-chapter-21.html" class="btn-s2v7x3"> 21</a>
+        <a href="genesis-chapter-22.html" class="btn-1y6z4n"> 22</a>
+        <a href="genesis-chapter-23.html" class="btn-u7p4q8"> 23</a>
+        <a href="genesis-chapter-24.html" class="btn-9a5r3b"> 24</a>
+        <a href="genesis-chapter-25.html" class="btn-w2h4m7"> 25</a>
+        <a href="genesis-chapter-26.html" class="btn-e9p2k5"> 26</a>
+        <a href="genesis-chapter-27.html" class="btn-6t3u9v"> 27</a>
+        <a href="genesis-chapter-28.html" class="btn-r8t5u1"> 28</a>
+        <a href="genesis-chapter-29.html" class="btn-4p9w6m"> 29</a>
+        <a href="genesis-chapter-30.html" class="btn-s2v7x3"> 30</a>
+        <a href="genesis-chapter-31.html" class="btn-1y6z4n"> 31</a>
+        <a href="genesis-chapter-32.html" class="btn-u7p4q8"> 32</a>
+        <a href="genesis-chapter-33.html" class="btn-9a5r3b"> 33</a>
+        <a href="genesis-chapter-34.html" class="btn-w2h4m7"> 34</a>
+        <a href="genesis-chapter-35.html" class="btn-e9p2k5"> 35</a>
+        <a href="genesis-chapter-36.html" class="btn-6t3u9v"> 36</a>
+        <a href="genesis-chapter-37.html" class="btn-r8t5u1"> 37</a>
+        <a href="genesis-chapter-38.html" class="btn-4p9w6m"> 38</a>
+        <a href="genesis-chapter-39.html" class="btn-s2v7x3"> 39</a>
+        <a href="genesis-chapter-40.html" class="btn-1y6z4n"> 40</a>
+        <a href="genesis-chapter-41.html" class="btn-u7p4q8"> 41</a>
+        <a href="genesis-chapter-42.html" class="btn-9a5r3b"> 42</a>
+        <a href="genesis-chapter-43.html" class="btn-w2h4m7"> 43</a>
+        <a href="genesis-chapter-44.html" class="btn-e9p2k5"> 44</a>
+        <a href="genesis-chapter-45.html" class="btn-6t3u9v"> 45</a>
+        <a href="genesis-chapter-46.html" class="btn-r8t5u1"> 46</a>
+        <a href="genesis-chapter-47.html" class="btn-4p9w6m"> 47</a>
+        <a href="genesis-chapter-48.html" class="btn-s2v7x3"> 48</a>
+        <a href="genesis-chapter-49.html" class="btn-1y6z4n"> 49</a>
+        <a href="genesis-chapter-50.html" class="btn-u7p4q8"> 50</a>
+    </div>
+    </div>
+    <head>
+</html>
+
+<body class="body"></body>
+ 
+<style>
+   /* 现有的样式保持不变 */
+ 
+   .mobile-header {
+     display: none; /* 默认隐藏 */
+     height: 100px;
+     background-color: #00ffdd;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+     box-sizing: border-box;
+   }
+ 
+   .b2k4x1 {
+     display: inline-flex;
+     align-items: center;
+     padding: 10px 20px;
+     background-color: #007bff; /* 蓝色背景 */
+     color: #fff; /* 白色文字 */
+     border: none;
+     border-radius: 5px;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: bold;
+     transition: background-color 0.3s, color 0.3s;
+   }
+ 
+   .b2k4x1:hover {
+     background-color: #0056b3; /* 深蓝色背景 */
+     color: #e6e6e6; /* 浅灰色文字 */
+   }
+ 
+   .a7p3c9 i {
+     margin-right: 8px; /* 图标和文字之间的间距 */
+   }
+ 
+   .sealed-scroll {
+     height: 60px; /* 调整图片大小 */
+     width: auto;
+     object-fit: contain;
+   }
+ 
+   .home-button {
+     background-color: #ffffff;
+     color: #00ffdd;
+     padding: 8px 20px;
+     border-radius: 20px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background-color 0.3s, color 0.3s;
+   }
+ 
+   .home-button:hover {
+     background-color: #e6f2ff;
+   }
+ 
+   .home-button i {
+     margin-right: 5px;
+   }
+ 
+   /* 媒体查询：检测移动设备 */
+   @media screen and (max-width: 1023px) {
+     .mobile-header {
+       display: flex;
+     }
+ 
+     .sidebar {
+       display: none; /* 隐藏侧边栏 */
+     }
+ 
+     .banner, .blue-interface {
+       margin-left: 0; /* 移除左边距 */
+     }
+ 
+     .content {
+       margin-left: 20px;
+       margin-right: 20px;
+     }
+   }
+ 
+   .header-area {
+     text-align: center;
+     padding: 60px 20px; /* 增加上下内边距 */
+     background-color: #f0f8ff;
+   }
+ 
+   .main-title {
+     font-size: 72px; /* 增大字体大小 */
+     color: #007bff;
+     margin-bottom: 50px; /* 增加与按钮的间距 */
+     text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 添加文字阴影 */
+   }
+ 
+   .button-container {
+     display: flex;
+     justify-content: center;
+     gap: 30px; /* 增加按钮之间的间距 */
+   }
+ 
+   .action-button {
+     padding: 15px 30px; /* 增加按钮的内边距 */
+     font-size: 24px; /* 增大按钮文字大小 */
+     border: none;
+     border-radius: 10px; /* 增加圆角 */
+     cursor: pointer;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加阴影 */
+   }
+ 
+   .action-button:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+   }
+ 
+   .audio-button {
+     background-color: #36d7ff;
+     color: white;
+   }
+ 
+   .audio-button:hover {
+     background-color: #45a049;
+   }
+ 
+   .book-button {
+     background-color: #2196F3;
+     color: white;
+   }
+ 
+   .book-button:hover {
+     background-color: #1e87db;
+   }
+ 
+   .download-button {
+     background-color: #ff9800;
+     color: white;
+   }
+ 
+   .download-button:hover {
+     background-color: #e68a00;
+   }
+ 
+   .action-button i {
+     margin-right: 12px; /* 增加图标和文字的间距 */
+     font-size: 28px; /* 增大图标大小 */
+   }
+ 
+   @media screen and (max-width: 1024px) {
+     .main-title {
+       font-size: 56px;
+     }
+ 
+     .action-button {
+       font-size: 20px;
+       padding: 12px 24px;
+     }
+ 
+     .action-button i {
+       font-size: 24px;
+     }
+   }
+ 
+   @media screen and (max-width: 768px) {
+     .main-title {
+       font-size: 48px;
+     }
+ 
+     .button-container {
+       flex-direction: column;
+       align-items: center;
+     }
+ 
+     .action-button {
+       width: 80%;
+       max-width: 300px;
+       margin-bottom: 15px;
+     }
+   }
+ 
+   .footer-text {
+     text-align: center;
+     margin-top: 20px;
+     color: #666;
+   }
+ </style>
+ </head>
+ <body>
+
+   <div>
+    <a href="http://chineseebiblefellowship.pages.dev/" class="b2k4x1 a7p3c9">
+        <i class="fas fa-arrow-left"></i> 返回
+    </a>
+    <div>
+<div>
+</div>
+   <!-- 其他现有的HTML内容 -->
+   
+   <div class="sidebar">
+     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+     <div class="title">
+       <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+     </div>
+     <div class="date">
+       自2011年5月21日选民生活在审判日里
+     </div>
+     
+     <!-- 按钮列表 -->
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/'">
+       <i class="fas fa-home"></i> 首页
+     </button>
+     <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+       <i class="fas fa-search"></i> Zoom
+     </button>
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/learnbible.html'">
+       <i class="fas fa-book-open"></i> 学习圣经
+     </button>
+     <button class="nav-button" onclick="location.href='https://newopenforum.org'">
+       <i class="fas fa-comments"></i> 圣经论坛
+     </button>
+     <button class="nav-button" onclick="location.href='http://chineseebiblefellowship.pages.dev/books.html'">
+       <i class="fas fa-book"></i> 圣经书籍
+     </button>
+     
+     <!-- 直播室嵌入 -->
+     <div class="live-stream">
+       <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+     </div>
+   
+     <!-- 平台图标 -->
+     <div class="platform-title">电子圣经团契平台</div>
+     <div class="icon-container">
+       <a href="#" class="icon-link"><i class="fab fa-spotify"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+       <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+       <!-- 添加其他图标... -->
+     </div>
+   
+     <!-- 联系我们按钮 -->
+     <button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+       <i class="fas fa-envelope"></i> 联系我们
+     </button>
+   
+     <!-- 地址按钮 -->
+     <button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+       <i class="fas fa-map-marker-alt"></i> 地址
+     </button>
+   
+     <!-- 联系我们信息 -->
+     <div class="contact-info">
+       Info@eBibleFellowship.org
+     </div>
+   
+     <!-- 地址信息 -->
+     <div class="address">
+       E Bible Fellowship<br>
+       P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+     </div>
+   
+     <!-- 版权声明 -->
+     <div class="copyright">
+       &copy; 2024 eBible Fellowship
+     </div>
+   </div>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .chapter {
+        margin: 4px;
+        font-size:30px;
+    }
+    .verse {
+        margin-bottom: 10px;
+        font-size:30px;
+    }
+    .verse-number {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="chapter">
+  <h1>创世纪 第9章</h1>
+  <div class="verse">
+      <span class="verse-number">1.</span> 神赐福给挪亚和他的儿子，对他们说：“你们要生养众多，遍满了地。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">2.</span> 凡地上的走兽和空中的飞鸟都必惊恐惧怕你们；连地上一切的昆虫并海里一切的鱼，都交付你们的手。
+  </div>
+  <div class="verse">
+      <span class="verse-number">3.</span> 凡活着的动物都可以作你们的食物；这一切我都赐给你们，如同菜蔬一样。
+  </div>
+  <div class="verse">
+      <span class="verse-number">4.</span> 惟独肉带着血，那就是它的生命，你们不可吃。
+  </div>
+  <div class="verse">
+      <span class="verse-number">5.</span> 流你们血、害你们命的，无论是兽是人，我必讨他的罪；就是向各人的弟兄也是如此。
+  </div>
+  <div class="verse">
+      <span class="verse-number">6.</span> 凡流人血的，他的血也必被人所流；因为神造人，是照自己的形像造的。
+  </div>
+  <div class="verse">
+      <span class="verse-number">7.</span> 你们要生养众多，在地上昌盛繁茂。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">8.</span> 神晓谕挪亚和他的儿子说：
+  </div>
+  <div class="verse">
+      <span class="verse-number">9.</span> “我与你们和你们的后裔立约，
+  </div>
+  <div class="verse">
+      <span class="verse-number">10.</span> 并与你们这里的一切活物，就是飞鸟、牲畜、走兽，凡从方舟里出来的活物立约。
+  </div>
+  <div class="verse">
+      <span class="verse-number">11.</span> 我与你们立约：凡有血肉的，不再被洪水灭绝，也不再有洪水毁坏地了。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">12.</span> 神说：“我与你们并你们这里的各样活物所立的永约是有记号的。
+  </div>
+  <div class="verse">
+      <span class="verse-number">13.</span> 我把虹放在云彩中，这就可作我与地立约的记号了。
+  </div>
+  <div class="verse">
+      <span class="verse-number">14.</span> 我使云彩盖地的时候，必有虹现在云彩中，
+  </div>
+  <div class="verse">
+      <span class="verse-number">15.</span> 我便记念我与你们和各样有血肉的活物所立的约，水就不再泛滥毁坏一切有血肉的物了。
+  </div>
+  <div class="verse">
+      <span class="verse-number">16.</span> 虹必现在云彩中，我看见，就要记念我与地上各样有血肉的活物所立的永约。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">17.</span> 神对挪亚说：“这就是我与地上一切有血肉之物立约的记号了。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">18.</span> 出方舟挪亚的儿子就是闪、含、雅弗；含是迦南的父亲。
+  </div>
+  <div class="verse">
+      <span class="verse-number">19.</span> 这是挪亚的三个儿子，他们的后裔分散在全地。
+  </div>
+  <div class="verse">
+      <span class="verse-number">20.</span> 挪亚作起农夫来，栽了一个葡萄园。
+  </div>
+  <div class="verse">
+      <span class="verse-number">21.</span> 他喝了园中的酒便醉了，在帐棚里赤着身子。
+  </div>
+  <div class="verse">
+      <span class="verse-number">22.</span> 迦南的父亲含看见他父亲赤身，就到外边告诉他两个弟兄。
+  </div>
+  <div class="verse">
+      <span class="verse-number">23.</span> 于是闪和雅弗拿件衣服搭在肩上，倒退着进去，给他们父亲盖上；他们背着脸，就看不见父亲的赤身。
+  </div>
+  <div class="verse">
+      <span class="verse-number">24.</span> 挪亚醒了酒，知道小儿子向他所做的事，
+  </div>
+  <div class="verse">
+      <span class="verse-number">25.</span> 就说：“迦南当受咒诅，必给他弟兄作奴仆的奴仆。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">26.</span> 又说：“耶和华闪的神是应当称颂的，愿迦南作闪的奴仆。
+  </div>
+  <div class="verse">
+      <span class="verse-number">27.</span> 愿神使雅弗扩张，使他住在闪的帐棚里；愿迦南作他的奴仆。”
+  </div>
+  <div class="verse">
+      <span class="verse-number">28.</span> 洪水以后，挪亚又活了三百五十年。
+  </div>
+  <div class="verse">
+      <span class="verse-number">29.</span> 挪亚共活了九百五十岁就死了。
+  </div>
+  <style>
+    .content {
+      margin-left: 120px; /* 侧边栏宽度加上一些边距 */
+      padding: 20px;
+      flex: 1; /* 内容区域占据剩余空间 */
+    }
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      height:150px;
+      width: 100%;
+    }
+    .footer button {
+      margin: 0 5px;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: transparent;
+      border: 1px solid #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .footer button:hover {
+      background-color: #444;
+    }
+    .footer .copyright {
+      margin-top: 5px;
+      font-size: 0.8em;
+    }
+    .push {
+      flex: 1; /* 用于推动页脚到页面底部 */
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+  </head>
+  <body>
+  
+  <div class="footer">
+    <!-- 按钮组 -->
+    <button class="arrow-left" onclick="goToPage('genesis-chapter-08.html')">&lt; 前一页</button>
+    <button class="back-to-top" onclick="smoothScrollToTop()">返回顶部</button>
+    <button class="arrow-right" onclick="goToPage('genesis-chapter-10.html')">下一页 &gt;</button>
+    <!-- 版权信息 -->
+    <div class="copyright">
+      &copy; 2024 eBible Fellowship Bible-Reading
+    </div>
+  </div>
+  
+  <script>
+    // 平滑滚动到顶部的函数
+  function smoothScrollToTop() {
+    var currentTime = 0;
+    var interval = setInterval(function() {
+      currentTime += 5; // 每次增加16ms，大约60fps
+      if (currentTime >= 500) { // 2秒
+        clearInterval(interval); // 停止滚动
+      }
+      window.scrollBy(0, -(window.innerHeight / 10)); // 每次滚动屏幕高度的1/50
+    }, 16);
+  }
+  
+  // 导航到页面的函数
+  function goToPage(pageUrl) {
+    window.location.href = pageUrl;
+  }
+  </script>
+  
+  </body>
+  </html>
+  </body>
+  </html>
