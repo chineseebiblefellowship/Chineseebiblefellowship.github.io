@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="nb.css">
+<link rel="icon" href="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5f359c4a91336f7eca8b3028_Ebibe%20Fav%2032.png" type="image/x-icon">
 <link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
 <style>
  .text-art {
@@ -682,269 +683,157 @@
 </script>
 </head>
 <body>
-<div class="page-wrapper">
-    <div class="container">
-        <!-- 音乐播放器 -->
-        <div class="music-player">
-            <audio id="audio-player" controls>
-                您的浏览器不支持 HTML5 音频。
-            </audio>
-        </div>
-
-        <!-- 选项容器 -->
-        <div class="options-container">
-            <div class="options">
-                <button class="option-button" onclick="playAudio('caudio/d/1/1.mp3')">但以理书1章 1</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/2.mp3')">但以理书1章 2</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/3.mp3')">但以理书1章 3</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/4.mp3')">但以理书1章 4</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/5.mp3')">但以理书1章 5</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/6.mp3')">但以理书1章 6</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/7.mp3')">但以理书1章 7</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/8.mp3')">但以理书1章 8</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/9.mp3')">但以理书1章 9</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/10.mp3')">但以理书1章 10</button>
-                <button class="option-button" onclick="playAudio('caudio/d/1/11.mp3')">但以理书1章 11</button>
-                <a href="https://baidu.com">请访问查考音频网站</a>
-            </div>
-        </div>
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/zplayer.min.css" />
+      <script type="text/javascript" src="js/zplayer.min.js"></script>
+      <title>zplayer</title>
+      <style>
+          /* 添加这部分样式 */
+          .container {
+              display: flex;
+              justify-content: center; /* 水平居中对齐 */
+              height: 100%; /* 使容器占满视口高度 */
+        text-align:center;
+          }
+          #player1 {
+              width: 90%; /* 可根据需要调整 */
+          }
+          #player2 {
+              width: 90%; /* 可根据需要调整 */
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <div id="player1"></div>
+      </div>
+      <script>
+         var zp1 = new zplayer({
+              element: document.getElementById("player1"),
+              musics: [{
+                    title: "但以理书1章1讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/1.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章2讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/2.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章3讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/3.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章4讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/4.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章5讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/5.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章6讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/6.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章7讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/7.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章8讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/8.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章9讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/9.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章10讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/10.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },
+                {
+                    title: "但以理书1章11讲",
+                    author: "克里斯麦肯",
+                    url: "caudio/d/1/11.mp3",
+                    pic: "https://i1.sndcdn.com/artworks-000206291975-umbsiq-t200x200.jpg",
+        
+                },]
+          })
+          zp1.init();
+          
+      </script>
+        <hr>
+        <h1 style="font-size:50px; font-weight:800;">圣经音乐</h1>
+      <div class="container">
+        <div id="player2"></div>
     </div>
-</div>
+    <script>
+       var zp1 = new zplayer({
+            element: document.getElementById("player2"),
+            musics: [{
+                  title: "我宁愿有耶稣",
+                  url: "Hymns/我宁愿有耶稣.mp3",
+                  pic: "https://i1.sndcdn.com/artworks-oH47H9XcQziGyB9s-3SySmA-t200x200.jpg",
+      
+              },
+              {
+                  title: "惟独耶稣歌",
+                  url: "Hymns/惟独耶稣歌.mp3",
+                  pic: "https://i1.sndcdn.com/artworks-oH47H9XcQziGyB9s-3SySmA-t200x200.jpg",
+      
+              },
+              {
+                  title: "安居主怀歌",
+                  url: "Hymns/安居主怀歌.mp3",
+                  pic: "https://i1.sndcdn.com/artworks-oH47H9XcQziGyB9s-3SySmA-t200x200.jpg",
+      
+              },
+              {
+                  title: "我宁愿有耶稣",
+                  url: "Hymns/我宁愿有耶稣.mp3",
+                  pic: "https://i1.sndcdn.com/artworks-oH47H9XcQziGyB9s-3SySmA-t200x200.jpg",
+      
+              },]
+        })
+        zp1.init();
+        
+    </script>
+     <a href="https://baidu.com">请访问查考音频网站</a>
   <hr>
-  <h1 style="font-size:50px; font-weight:800;">圣经音乐</h1>
-  <style>
-    .random-main-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #ffffff7e;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: 300px;
-        margin: 0 auto;
-        height: auto;
-    }
 
-    .random-title {
-        font-size: 18px;
-        color: #333;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .random-player-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f1f1f1;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .random-play-pause-button {
-        background-color: transparent;
-        border: none;
-        color: #007bff;
-        cursor: pointer;
-        font-size: 24px;
-        padding: 5px;
-        margin-right: 10px;
-        transition: color 0.3s ease;
-    }
-
-    .random-play-pause-button:hover {
-        color: #0056b3;
-    }
-
-    .random-progress-container {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-    }
-
-    .random-progress-bar {
-        width: 100%;
-        height: 6px;
-        background-color: #e0e0e0;
-        border-radius: 3px;
-        margin-right: 10px;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .random-progress {
-        height: 100%;
-        background-color: #007bff;
-        width: 0%;
-    }
-
-    .random-time {
-        font-size: 12px;
-        color: #555;
-        margin-left: 5px;
-    }
-
-    .random-volume-container {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .random-volume-label {
-        font-size: 12px;
-        color: #555;
-        margin-right: 10px;
-    }
-
-    .random-volume-slider {
-        width: 100%;
-    }
-
-    .random-list-container {
-        width: 100%;
-        height: auto;
-        overflow-y: auto;
-        margin-top: 20px;
-    }
-
-    .random-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .random-list-button {
-        padding: 12px 20px;
-        border: none;
-        border-radius: 25px;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-        font-size: 16px;
-        margin-bottom: 10px;
-        width: 100%;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .random-list-button:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-    }
-
-    .random-list-button:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-    }
-</style>
-</head>
-<body>
-<div class="random-main-container">
-    <!-- 当前播放的歌曲标题 -->
-    <div class="random-title">正在播放: 无</div>
-    <!-- 音乐播放器 -->
-    <div class="random-player-container">
-        <button class="random-play-pause-button" onclick="togglePlayPause()">▶️</button>
-        <div class="random-progress-container">
-            <div class="random-progress-bar" onclick="seekAudio(event)">
-                <div class="random-progress"></div>
-            </div>
-            <div class="random-time">
-                <span id="current-time">0:00</span> / <span id="total-time">0:00</span>
-            </div>
-        </div>
-        <audio id="random-audio-player" ontimeupdate="updateRandomProgressBar()" onloadedmetadata="updateTotalTime()" src="" style="display: none;"></audio>
-    </div>
-
-    <!-- 音量控制 -->
-    <div class="random-volume-container">
-        <label class="random-volume-label" for="volume-control">音量</label>
-        <input class="random-volume-slider" type="range" id="volume-control" min="0" max="1" step="0.01" value="1" onchange="changeVolume(this.value)">
-    </div>
-
-    <!-- 选项容器 -->
-    <div class="random-list-container">
-        <div class="random-list">
-            <button class="random-list-button" onclick="playRandomAudio('Hymns/你坐着为王.mp3', '你坐着为王')">你坐着为王</button>
-            <button class="random-list-button" onclick="playRandomAudio('Hymns/惟独耶稣歌.mp3', '惟独耶稣歌')">惟独耶稣歌</button>
-            <button class="random-list-button" onclick="playRandomAudio('Hymns/安居主怀歌.mp3', '安居主怀歌')">安居主怀歌</button>
-            <button class="random-list-button" onclick="playRandomAudio('Hymns/我宁愿有耶稣.mp3', '我宁愿有耶稣')">我宁愿有耶稣</button>
-            <a href="https://baidu.com">请访问查考音频网站</a>
-        </div>
-    </div>
-</div>
-
-<script>
-    let isPlaying = false;
-
-    function togglePlayPause() {
-        const audioPlayer = document.getElementById('random-audio-player');
-        const playPauseButton = document.querySelector('.random-play-pause-button');
-        if (isPlaying) {
-            audioPlayer.pause();
-            playPauseButton.textContent = '▶️';
-        } else {
-            audioPlayer.play();
-            playPauseButton.textContent = '⏸️';
-        }
-        isPlaying = !isPlaying;
-    }
-
-    function playRandomAudio(audioSrc, title) {
-        const audioPlayer = document.getElementById('random-audio-player');
-        const currentTitle = document.querySelector('.random-title');
-        currentTitle.textContent = '正在播放: ' + title;
-        audioPlayer.src = audioSrc;
-        audioPlayer.play();
-        document.querySelector('.random-play-pause-button').textContent = '⏸️';
-        isPlaying = true;
-    }
-
-    function updateRandomProgressBar() {
-        const audioPlayer = document.getElementById('random-audio-player');
-        const progress = document.querySelector('.random-progress');
-        const value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-        progress.style.width = value + '%';
-
-        // 更新当前时间
-        const currentTimeDisplay = document.getElementById('current-time');
-        currentTimeDisplay.textContent = formatRandomTime(audioPlayer.currentTime);
-    }
-
-    function formatRandomTime(seconds) {
-        const min = Math.floor(seconds / 60);
-        const sec = Math.floor(seconds % 60);
-        return min + ':' + (sec < 10 ? '0' + sec : sec);
-    }
-
-    function updateTotalTime() {
-        const audioPlayer = document.getElementById('random-audio-player');
-        const totalTimeDisplay = document.getElementById('total-time');
-        totalTimeDisplay.textContent = formatRandomTime(audioPlayer.duration);
-    }
-
-    function seekAudio(event) {
-        const audioPlayer = document.getElementById('random-audio-player');
-        const progressBar = document.querySelector('.random-progress-bar');
-        const clickPosition = event.offsetX;
-        const totalWidth = progressBar.clientWidth;
-        const percentage = clickPosition / totalWidth;
-        audioPlayer.currentTime = percentage * audioPlayer.duration;
-    }
-
-    function changeVolume(value) {
-        const audioPlayer = document.getElementById('random-audio-player');
-        audioPlayer.volume = value;
-    }
-</script>
-</body>
-</html>
 <div>
   <h1 style="text-align:center;">社交媒体</h1>
   <p style="text-align:center;">由于上帝在这末世兴起电子媒体，主要是为了接触分散在世界各国的他的选民，因此 E Bible Fellowship 已在众多社交媒体平台上发展起来，寻求将上帝话语的真理带给上帝在大灾难的小季节中拯救的大群人。您可以在下面探索我们正在利用的许多社交媒体平台来喂养世界各地的上帝的羊。</p>
@@ -1196,9 +1085,7 @@ body {
     margin-right: 10px;
 }
 
-. {
-    padding: 10px 0;
-}
+
 
 .social-icon {
     color: #fff;
@@ -1460,7 +1347,7 @@ body {
         }
         .language-dropdown {
             position: relative;
-            display: inline-block;
+            display: ;
         }
         .language-content {
             display: none;
@@ -1498,39 +1385,133 @@ body {
                 right: 0;
             }
         }
+        .language-dropdown {
+    position: relative; /* Ensure the dropdown is positioned relative to its container */
+    display: inline-block;
+}
+
+.language-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it relative to the parent */
+    background-color: white;
+    min-width: 50px; /* Adjust width as needed */
+    box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.2);
+    z-index: 9999; /* Ensure it is above other elements */
+    right: 0; /* Align the dropdown content to the right of the dropdown */
+}
+
+.language-dropdown:hover .language-content {
+    display: block; /* Show the dropdown content on hover */
+}
+.language-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+      }
+      .language-dropdown:hover .language-content {
+          display: block;
+      }
+      #githubLink, #excelLink {
+          display: none; /* 默认隐藏 */
+      }
+      #devWebsite {
+          display: none; /* 默认隐藏 */
+      }
     </style>
 </head>
 <body>
     <button class="nav-toggle" onclick="toggleNav()">
         <span id="toggleIcon">展开</span>
     </button>
-    
-    <nav class="right-nav" id="rightNav">
-        <ul>
-            <li>
-                <div class="language-dropdown">
-                    <a href="#"><i class="fa-solid fa-earth-asia"></i>语言</a>
-                    <div class="language-content">
-                        <a href="" onclick="changeLanguage('zh')">中文</a>
-                        <a href="ebiblefellowship.org" onclick="changeLanguage('en')">English</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
-            <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i>圣经朗读</a></li>
-            <li><a href="hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
-            <li><a href="biblicaltimeline.html"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
-            <li><a href="books.html"><i class="fa-solid fa-book"></i>圣经书籍</a></li>
-            <li><a href="pingtai.html"><i class="fa-solid fa-layer-group"></i>电子圣经团契平台</a></li>
-            <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
-            <li><a href="audio.html"><i class="fa-solid fa-file-audio"></i>查考音频</a></li>
-            <li><a href="learnbible.html"><i class="fa-solid fa-lines-leaning"></i>圣经学习</a></li>
-            <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i class="fas fa-video"></i> Zoom</a></li>
-            <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
-            <li><a href="download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
-            <li><a href="email.html"><i class="fa-solid fa-address-card"></i>联系我们</a></li>
-        </ul>
-    </nav>
+
+</head>
+<body>
+  <nav class="right-nav" id="rightNav">
+      <ul>
+          <li>
+              <div class="language-dropdown">
+                  <a href="#"><i class="fa-solid fa-earth-asia"></i> 语言</a>
+                  <div class="language-content">
+                      <a href="#" onclick="changeLanguage('zh')">中文</a>
+                      <a href="#" onclick="changeLanguage('en')">English</a>
+                  </div>
+              </div>
+          </li>
+          <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
+          <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i> 圣经朗读</a></li>
+          <li><a href="hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
+          <li><a href="biblicaltimeline.html" id="biblicalTimeline"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
+          <li><a href="books.html"><i class="fa-solid fa-book"></i> 圣经书籍</a></li>
+          <li><a href="pingtai.html"><i class="fa-solid fa-layer-group"></i> 电子圣经团契平台</a></li>
+          <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
+          <li><a href="audio.html"><i class="fa-solid fa-file-audio"></i> 查考音频</a></li>
+          <li><a href="learnbible.html"><i class="fa-solid fa-lines-leaning"></i> 圣经学习</a></li>
+          <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i class="fas fa-video"></i> Zoom</a></li>
+          <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
+          <li><a href="download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
+          <li><a href="email.html"><i class="fa-solid fa-address-card"></i> 联系我们</a></li>
+          <!-- 默认隐藏的DEV websites，点击5次后显示 -->
+          <li id="devWebsite"><a href="https://chineseebf.github.io"><i class="fa-solid fa-terminal"></i> DEV websites</a></li>
+          <!-- 默认隐藏的 GitHub 和 Excel 链接 -->
+          <li id="githubLink"><a href="https://github.com/chineseebiblefellowship/Chineseebiblefellowship.github.io/tree/main"><i class="fab fa-github"></i> GitHub</a></li>
+          <li id="airtime"><a href="airtime.html"><i class="fab fa-airtime"></i> Airtime 直播室</a></li>
+          <li id="excelLink"><a href="https://liujiangheping-my.sharepoint.com/:x:/g/personal/liujiang13144675659_liujiangheping_onmicrosoft_com/EQ_dMRCBx0hJjgCRaIJmxyIBBV38xLLDxKFkLFsTfe8xZA?e=FzwhvY">查看 Excel 表格</a></li>
+      </ul>
+  </nav>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          let clickCount = 0; // 初始化点击次数
+          const rightNav = document.getElementById('rightNav');
+          const devWebsite = document.getElementById('devWebsite');
+          const githubLink = document.getElementById('githubLink');
+          const excelLink = document.getElementById('excelLink');
+          const biblicalTimeline = document.getElementById('biblicalTimeline');
+
+          rightNav.addEventListener('click', function() {
+              clickCount += 1; // 每次点击增加点击次数
+              if (clickCount >= 5) {
+                  devWebsite.style.display = 'block'; // 显示 "DEV websites" 链接
+              }
+          });
+
+          rightNav.addEventListener('mousedown', function() {
+              setTimeout(function() {
+                  githubLink.style.display = 'block';
+              }, 2000); // 5秒后显示 GitHub 链接
+          });
+
+          rightNav.addEventListener('mouseup', function() {
+              clearTimeout();
+          });
+
+          rightNav.addEventListener('mouseleave', function() {
+              clearTimeout();
+          });
+
+          biblicalTimeline.addEventListener('mousedown', function() {
+              setTimeout(function() {
+                  excelLink.style.display = 'block';
+              }, 5000); // 5秒后显示 Excel 链接
+          });
+
+          biblicalTimeline.addEventListener('mouseup', function() {
+              clearTimeout();
+          });
+
+          biblicalTimeline.addEventListener('mouseleave', function() {
+              clearTimeout();
+          });
+
+          function changeLanguage(lang) {
+              console.log("语言已切换为: " + lang);
+          }
+      });
+  </script>
+</body>
+</html>
 
     <script>
         function toggleNav() {
