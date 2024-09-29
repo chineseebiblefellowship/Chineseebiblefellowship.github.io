@@ -45,6 +45,7 @@
     .glass-container {
             overflow: hidden; /* 确保子元素不会超出容器 */
             backdrop-filter: blur(10px); /* 毛玻璃效果 */
+
         }
 
         .glass-container::before {
@@ -96,7 +97,23 @@
       /* 深蓝色 */
       text-shadow: 2px 2px 0 #1f77d0, -1px -1px 0 #2980b9, 1px -1px 0 #2980b9, -1px 1px 0 #2980b9, 1px 1px 0 #2980b9;
     }
+/* 隐藏滚动条 */
+.sidebar-menu::-webkit-scrollbar {
+    display: none; /* 对于Chrome和Safari */
+}
 
+.sidebar-menu {
+    -ms-overflow-style: none; /* 对于IE和Edge */
+    scrollbar-width: none; /* 对于Firefox */
+    border-radius: 20px; /* 圆角 */
+}
+
+/* 适配其他浏览器 */
+.sidebar-menu {
+    /* IE和Edge */
+    overflow: -ms-overflow-style: none; /* 适配IE */
+    overflow: overlay; /* 适配旧版浏览器 */
+}
     .center-container {
       display: flex;
       justify-content: center;
@@ -105,33 +122,164 @@
       text-align: center;
     }
   </style>
+<style>
+  .sidebar-menu ul {
+      list-style: none; /* 去掉列表样式 */
+      padding: 0; /* 去掉内边距 */
+      text-align: center; /* 文本居中 */
+  }
+  
+  .sidebar-menu li {
+      padding: 15px 0; /* 上下内边距 */
+      font-size: 18px; /* 字体大小 */
+      color: #333; /* 字体颜色 */
+      transition: background-color 0.3s; /* 动效 */
+  }
+  
+  .sidebar-menu li:hover {
+      background-color: #e0e7ff; /* 悬停时背景颜色 */
+      cursor: pointer; /* 鼠标悬停时变成手型 */
+  }
+  .content-container {
+    padding: 20px; /* 内边距 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
 
-  <div class="title">
-    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
-      alt="eBible Fellowship Logo" class="l" style="width: 80px;height:auto">
-    <span class="navc" style="color:#007bff;">e</span>
-    <span class="navd">Bible Fellowship</span>
+.icon-list {
+    display: flex; /* 水平排列 */
+    justify-content: space-around; /* 项目间距 */
+    margin-bottom: 20px; /* 底部间距 */
+}
+
+.icon-link {
+    display: flex; /* 使用 Flexbox */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    text-decoration: none; /* 去掉下划线 */
+    color: #333; /* 字体颜色 */
+    transition: transform 0.3s, color 0.3s; /* 动效 */
+}
+
+.icon-link:hover {
+    transform: translateY(-5px); /* 悬停时上移 */
+    color: #007bff; /* 悬停时颜色变化 */
+}
+
+.icon-link i {
+    font-size: 30px; /* 图标大小 */
+    margin-bottom: 5px; /* 图标与文本之间的间距 */
+}
+
+
+  .sidebar-menu a {
+    font-size: 18px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: background-color 0.3s; /* 动效 */
+    display: flex; /* 使图标和文本在同一行 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+}
+  .sidebar-menu i {
+      margin-right: 10px; /* 图标和文字之间的间距 */
+      color: #007bff; /* 图标颜色 */
+  }
+  </style>
+<div class="logo-container">
+  <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
+       alt="eBible Fellowship Logo" class="logo-image" style="width: 140px; height: auto;">
+  <span class="logo-text" style="color: #007bff; display: inline; font-size: 40px;">e</span>
+  <span class="logo-text" style="display: inline; font-size: 40px;">Bible Fellowship</span>
+</div>
+
+<style>
+.logo-container {
+    text-align: center; /* 内容居中 */
+}
+
+.logo-image {
+    display: block; /* 确保图像是块级元素 */
+    margin: 0 auto; /* 居中图像 */
+}
+
+.logo-text {
+    display: inline; /* 保持文本行内显示 */
+    font-size: 40px; /* 设置字体大小 */
+}
+</style>
+
+
   </div>
-  <div class="date">
-    <div class="icon-container">
-      <a href="learnbible.html" class="icon-item">
-        <i class="fas fa-graduation-cap"></i>
-        <span>圣经学习</span>
-      </a>
-      <a href="lib.html" class="icon-item">
-        <i class="fas fa-book-open"></i>
-        <span>圣经书籍</span>
-      </a>
-      <a href="hymns.html" class="icon-item">
-        <i class="fas fa-music"></i>
-        <span>音乐</span>
-      </a>
-      <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="icon-item">
-        <i class="fas fa-video"></i>
-        <span>Zoom</span>
-      </a>
+
+ <!-- 引入 Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="content-container">
+    <div class="icon-row">
+        <a href="learnbible.html" class="icon-box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>圣经学习</span>
+        </a>
+        <a href="lib.html" class="icon-box">
+            <i class="fas fa-book-open"></i>
+            <span>圣经书籍</span>
+        </a>
     </div>
-    <div class="live-stream-container">
+    <div class="icon-row">
+        <a href="hymns.html" class="icon-box">
+            <i class="fas fa-music"></i>
+            <span>音乐</span>
+        </a>
+        <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="icon-box">
+            <i class="fas fa-video"></i>
+            <span>Zoom</span>
+        </a>
+    </div>
+</div>
+
+<style>
+
+.icon-row {
+    display: flex; /* 使用 Flexbox */
+    justify-content: space-between; /* 确保间距均匀 */
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    width: calc(50% - 10px); /* 每个按钮占据50%的宽度 */
+    display: flex; /* 使用 Flexbox */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    text-decoration: none; /* 去掉下划线 */
+    color: #333; /* 字体颜色 */
+    border: 2px solid #007bff; /* 边框 */
+    border-radius: 10px; /* 圆角 */
+    padding: 20px; /* 内边距 */
+    transition: transform 0.3s, color 0.3s; /* 动效 */
+}
+
+.icon-box:hover {
+    transform: translateY(-5px); /* 悬停时上移 */
+    color: #007bff; /* 悬停时颜色变化 */
+}
+
+.icon-box i {
+    font-size: 30px; /* 图标大小 */
+    margin-bottom: 10px; /* 图标与文本之间的间距 */
+}
+
+
+
+/* 隐藏电脑屏幕上的按钮 */
+@media (min-width: 768px) {
+    .icon-row {
+        display: none; /* 隐藏整个按钮行 */
+    }
+}
+</style>
+
+    <div class="timeshi-container">
       <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0"
         width="100%" height="300PX"></iframe>
     </div>
@@ -146,32 +294,47 @@
       <span class="navc" style="color:#007bff;">e</span>
       <span class="navd">Bible Fellowship</span>
     </div>
-    <div class="date">
+    <div class="date" style="text-align: center;">
       自2011年5月21日选民生活在审判日里
     </div>
 
     <!-- 按钮列表 -->
-    <button class="nav-button" onclick="location.href='index.html'">
-      <i class="fas fa-home"></i> 首页
-    </button>
-    <button class="nav-button"
-      onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
-      <i class="fas fa-search"></i> Zoom
-    </button>
-    <button class="nav-button" onclick="location.href='learnbible.html'">
-      <i class="fas fa-book-open"></i> 学习圣经
-    </button>
-    <button class="nav-button" onclick="location.href='https://newopenforum.org'">
-      <i class="fas fa-comments"></i> 圣经论坛
-    </button>
-    <button class="nav-button" onclick="location.href='lib.html'">
-      <i class="fas fa-book"></i> 圣经书籍
-    </button>
+    <ul>
+      <li><a href=""><i class="fas fa-home"></i> 首页</a></li>
+      <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09"><i class="fas fa-search-plus"></i> Zoom</a></li>
+      <li><a href="learnbible.html"><i class="fas fa-book"></i> 圣经学习</a></li>
+      <li><a href="lib.html"><i class="fas fa-book-open"></i> 书籍</a></li>
+      <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 圣经论坛</a></li>
+  </ul>
     <!-- 直播室嵌入 -->
-    <div class="live-stream">
-      <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" width="300px"
-        height="400px"></iframe>
-    </div>
+    <div class="timeshi">
+      <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2"
+              class="timeshi-iframe"></iframe>
+  </div>
+  
+  <style>
+  .timeshi {
+      overflow: hidden; /* 隐藏滚动条 */
+      border-radius: 10px; /* 圆角 */
+      width: 100%; /* 宽度为100% */
+      width: 100%; /* 宽度为100% */
+  }
+  
+  .timeshi-iframe {
+      width: 100%; /* 宽度为100% */
+      height: 100%; /* 高度为100% */
+      border: none; /* 去掉边框 */
+      border-radius: 10px; /* 圆角 */
+  }
+  
+  /* 隐藏滚动条，仅在小屏幕上 */
+  @media (max-width: 767px) {
+      .timeshi-iframe {
+          overflow: hidden; /* 隐藏滚动条 */
+      }
+  }
+  </style>
+  
     <div class="sidebarplayer">
       <div class="social_media_div">
         <div class="text-block-277">电子圣经团契社交媒体</div>
@@ -371,88 +534,159 @@
   </div>
   <h1 class="heading-158" _msttexthash="26733096" _msthash="161"><span class="text-span-153"
       _istranslated="1">E</span>BF 的新开放论坛</h1>
-  <div class="text-block-246" _msttexthash="46178600" _msthash="162">现场圣经问答节目！</div>
+  <p></p>
+  <p></p>
+  <p></p>
+  <div class="ccc2" _msttexthash="46178600" _msthash="162">现场圣经问答节目！</div>
   </div>
   <div>
     <h1 class="heading-176"><a href="http://NewOpenForum.org" class="link-45" _msttexthash="302419"
         _msthash="163">NewOpenForum.org</a></h1>
-  </div>
-  <p class="date-text">今天的日期是 2024年09月15日</p> <!-- 显示日期 -->
-  </div>
-  <div class="glass-container">
+
+  <div class="glass-container" style="  border-radius: 20px; /* 圆角 */">
     <h1>每日经文</h1>
     <p>惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
-    <a class="welcom" href="">欢迎来到电子圣经团契中文网
+    <div class="welcome-container">
+      <a class="welcom" href="">欢迎来到电子圣经团契中文网</a>
+  </div>
+  <style>
+    .ccc2 {
+      color: white; /* 白色字体 */
+    font-weight: bold; /* 加粗 */
+    font-size: 20px; /* 可选：设置字体大小 */
+    text-align: center; /* 居中 */
+    }
+    .welcome-container {
+        text-align: center; /* 内容居中 */
+        margin: 20px 0; /* 上下边距 */
+    }
+    
+    .welcom {
+        font-size: 20px; /* 字体大小 */
+        color: #ff0000; /* 字体颜色 */
+        text-decoration: none; /* 去掉下划线 */
+        transition: color 0.3s; /* 动效 */
+    }
+    
+    .welcom:hover {
+        color: #b10000; /* 悬停时字体颜色 */
+    }
+    .international_tracts {
+      /* 隐藏滚动条 */
+.scrollable-content::-webkit-scrollbar {
+    display: none; /* 对于Chrome和Safari */
+}
 
-    </a>
+.scrollable-content {
+    -ms-overflow-style: none; /* 对于IE和Edge */
+    scrollbar-width: none; /* 对于Firefox */
+}
+    }
+    </style>
 </div>
   </div>
-  <hr class="separator">
-  <div class="international_tracts">
-    <div class="div_lower">
-      <h1 class="heading-180" _msttexthash="15182583" _msthash="314">圣经查考</h1>
-    </div>
-    <div class="div_upper">
-      <div class="columns-126 w-row">
-        <div class="w-col w-col-8 w-col-tiny-tiny-stack">
-          <div class="div-block-584">
-            <img
-              src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
-              loading="lazy" width="133" data-w-id="46fb3ae2-1fe2-2f7d-3288-a3af69c31618" alt=""
-              srcset="http://ebfchk.pages.dev/static/picture/5d0026e6ed749a1b7cbbf2f0_types figures.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png 1046w"
-              sizes="(max-width: 479px) 64vw, 133px" class="image-117"
-              style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <div>
-              <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html"
-                data-w-id="5b974b14-5e66-0d0c-1086-d5a91699642f" class="english_text" _msttexthash="5710978"
-                _msthash="315"
-                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">阅读<span
-                  class="text-span-1076" _istranslated="1">➟</span>
-              </a>
-            </div>
-          </div>
-          <div></div>
-        </div>
-        <div class="column-341 w-col w-col-2 w-col-tiny-tiny-stack"></div>
-        <div class="w-col w-col-2 w-col-tiny-tiny-stack"></div>
-      </div>
-    </div>
-  </div>
-  <hr class="separator">
-  <div class="international_tracts">
-    <div class="div_lower">
-      <h1 class="heading-180" _msttexthash="15182583" _msthash="314">EBF 国际传单</h1>
-    </div>
-    <div class="div_upper">
-      <div class="columns-126 w-row">
-        <div class="w-col w-col-8 w-col-tiny-tiny-stack">
-          <div class="div-block-584">
-            <img
-              src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
-              loading="lazy" width="133" data-w-id="46fb3ae2-1fe2-2f7d-3288-a3af69c31618" alt=""
-              srcset="http://ebfchk.pages.dev/static/picture/5d0026e6ed749a1b7cbbf2f0_types figures.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png 1046w"
-              sizes="(max-width: 479px) 64vw, 133px" class="image-117"
-              style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-            <div>
-              <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html"
-                data-w-id="5b974b14-5e66-0d0c-1086-d5a91699642f" class="english_text" _msttexthash="5710978"
-                _msthash="315"
-                style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">中文
-                <span class="text-span-1076" _istranslated="1">➟</span>
-              </a>
-              <a href="https://www.dropbox.com/scl/fi/dirjefuiyjj7x5r8qgiul/3.-chinese-world-divided-tract.pdf?rlkey=428yqx2ueqym2mvassd9dij2i&amp;dl=1"
-                data-w-id="c8f5a2f0-b886-2799-3039-181c9cb8b53f" class="english_text" _msttexthash="40663428"
-                _msthash="317">中文 （未格式化）<span class="text-span-1076" _istranslated="1">➟</span>
-              </a>
-            </div>
-          </div>
-          <div></div>
-        </div>
-        <div class="column-341 w-col w-col-2 w-col-tiny-tiny-stack"></div>
-        <div class="w-col w-col-2 w-col-tiny-tiny-stack"></div>
-      </div>
-    </div>
-  </div>
+  <div class="content-container">
+    <h2 class="centered-text">圣经传单</h2>
+    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
+         loading="lazy" width="133" alt=""
+         class="centered-image">
+    <h3 class="title-text">为什么世界如此自相纷争</h3>
+    <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html" class="custom-button">阅读</a>
+</div>
+
+<style>
+.content-container {
+    text-align: center; /* 居中 */
+    margin: 20px; /* 外边距 */
+}
+
+.centered-text {
+    font-size: 24px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+    margin-bottom: 10px; /* 下边距 */
+}
+
+.centered-image {
+    display: block; /* 将图片设置为块级元素 */
+    margin: 0 auto; /* 居中图片 */
+}
+
+.title-text {
+    font-size: 20px; /* 标题字体大小 */
+    color: #555; /* 标题颜色 */
+    margin-top: 10px; /* 上边距 */
+    margin-bottom: 15px; /* 下边距 */
+}
+
+.custom-button {
+    display: inline-block; /* 设置为块级元素以应用边距 */
+    padding: 12px 25px; /* 内边距 */
+    background-color: #0062d3; /* 按钮背景颜色 */
+    color: white; /* 字体颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    border: none; /* 去掉边框 */
+    border-radius: 10px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    transition: background-color 0.3s, transform 0.3s; /* 动效 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* 添加按钮阴影 */
+}
+
+.custom-button:hover {
+    background-color: #004ec2; /* 悬停时的背景颜色 */
+    transform: scale(1.05); /* 悬停时放大 */
+}
+</style>
+<div class="content-container">
+  <h2 class="centered-text">圣经查考</h2>
+  <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
+       loading="lazy" width="133" alt=""
+       class="centered-image">
+  <h3 class="title-text">末日圣经证据</h3>
+  <a href="s/末日审判证据(1-50).html" class="custom-button">阅读</a>
+</div>
+
+<style>
+.content-container {
+  text-align: center; /* 居中 */
+  margin: 20px; /* 外边距 */
+}
+
+.centered-text {
+  font-size: 24px; /* 字体大小 */
+  color: #333; /* 字体颜色 */
+  margin-bottom: 10px; /* 下边距 */
+}
+
+.centered-image {
+  display: block; /* 将图片设置为块级元素 */
+  margin: 0 auto; /* 居中图片 */
+}
+
+.title-text {
+  font-size: 20px; /* 标题字体大小 */
+  color: #555; /* 标题颜色 */
+  margin-top: 10px; /* 上边距 */
+  margin-bottom: 15px; /* 下边距 */
+}
+
+.custom-button {
+  display: inline-block; /* 设置为块级元素以应用边距 */
+  padding: 12px 25px; /* 内边距 */
+  background-color: #0062d3; /* 按钮背景颜色 */
+  color: white; /* 字体颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  border: none; /* 去掉边框 */
+  border-radius: 10px; /* 圆角 */
+  font-size: 16px; /* 字体大小 */
+  transition: background-color 0.3s, transform 0.3s; /* 动效 */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* 添加按钮阴影 */
+}
+
+.custom-button:hover {
+  background-color: #004ec2; /* 悬停时的背景颜色 */
+  transform: scale(1.05); /* 悬停时放大 */
+}
+</style>
   <hr class="separator">
   <div class="div-block-562">
     <div class="code-embed w-embed w-script">
@@ -1704,9 +1938,7 @@
         </div>
         <style>
           .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            width: 93%;
           }
 
           .section {
@@ -1769,7 +2001,41 @@
               font-weight: 900;
             }
           }
+          .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+.icon {
+    margin-right: 10px; /* 图标和输入框之间的间距 */
+    font-size: 20px; /* 图标大小 */
+    color: #007bff; /* 图标颜色 */
+}
+
+.styled-input {
+    width: 400px; /* 宽度100% */
+    padding: 10px; /* 内边距 */
+    border: 2px solid #007bff; /* 边框颜色 */
+    border-radius: 100px; /* 圆角 */
+    background-color: #e7f0ff; /* 背景颜色 */
+    color: #333; /* 字体颜色 */
+    font-size: 16px; /* 字体大小 */
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s; /* 动效 */
+}
+
+.styled-input:focus {
+    border-color: #0056b3; /* 聚焦时边框颜色 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 聚焦时阴影 */
+    outline: none; /* 去掉默认的聚焦轮廓 */
+    background-color: #fff; /* 聚焦时背景变为白色 */
+}
+
+
+
+.styled-input:focus::placeholder {
+    color: transparent; /* 聚焦时隐藏占位符文字 */
+}
           body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -1932,14 +2198,41 @@
       data-wf-page-id="65c93546bdae1d24d02a0bcc" data-wf-element-id="abd2f591-8f76-0fcb-27f4-e4e6e758fd97"
       aria-label="电子邮件表格" _mstaria-label="129740" _msthash="435">
       <h1 class="heading-149-copy" _msttexthash="11880817" _msthash="436">联系我们</h1>
-      <label for="name-5" class="field-label-25" _msttexthash="4389879" _msthash="437">名字</label>
-      <input type="text" placeholder="请输入您的姓名">
-      <label for="email-5" class="field-label-27" _msttexthash="18799001" _msthash="439">电子邮件地址</label>
-      <input type="text" placeholder="请输入您的电子邮箱">
-      <label for="Message-Box-2" class="field-label-26" _msttexthash="5119088" _msthash="441">消息</label>
-      <input type="text" placeholder="请输入您的信息。。。" width="200px" height="60px">
-      <input type="submit" data-wait="Please wait..." class="submit-button-17 w-button" value="提交" _mstvalue="78468"
-        _msthash="443">
+      <div class="input-container">
+        <input type="text" class="styled-input" id="name-input" placeholder="👤姓名:" onfocus="hidePlaceholder()" onblur="showPlaceholder()">
+    </div>
+    <div class="input-container">
+      <input type="text" class="styled-input" id="name-input" placeholder="电子邮箱:" onfocus="hidePlaceholder()" onblur="showPlaceholder()">
+  </div>
+  <div class="input-container">
+    <input type="text" class="styled-input" id="name-input" placeholder="信息" onfocus="hidePlaceholder()" onblur="showPlaceholder()">
+</div>
+<button class="submit-button">提交</button>
+
+<style>
+.submit-button {
+    background-color: #007bff; /* 背景颜色 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 去掉默认边框 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    cursor: pointer; /* 鼠标悬停时变成手型 */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* 阴影 */
+    transition: background-color 0.3s, transform 0.3s; /* 动效 */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* 悬停时背景颜色 */
+    transform: translateY(-2px); /* 悬停时轻微向上移动 */
+}
+
+.submit-button:focus {
+    outline: none; /* 去掉聚焦时的轮廓 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 聚焦时阴影 */
+}
+</style>
+
     </form>
     <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success" _msthidden="1"
       _mstaria-label="317681" _msthash="444">
@@ -2301,9 +2594,41 @@
             <a href="#"><i class="fa-solid fa-earth-asia"></i> 语言</a>
             <div class="language-content">
               <a href="#" onclick="changeLanguage('zh')">中文</a>
-              <a href="#" onclick="changeLanguage('en')">English</a>
+              <a href="https://ebiblefellowship.org" onclick="changeLanguage('en')">English</a>
             </div>
           </div>
+          <style>
+            .language-dropdown {
+                position: relative; /* 使下拉菜单相对于父元素定位 */
+            }
+            
+         
+            
+            .language-content {
+                display: none; /* 默认隐藏下拉内容 */
+                position: absolute; /* 绝对定位 */
+                top: 100%; /* 位于父元素下方 */
+                left: 0; /* 左对齐 */
+                background-color: white; /* 背景颜色 */
+                border-radius: 10px; /* 圆角 */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+            }
+            
+            .language-dropdown:hover .language-content {
+                display: block; /* 悬停时显示下拉内容 */
+            }
+            
+            .language-content a {
+                padding: 10px; /* 内边距 */
+                color: #333; /* 字体颜色 */
+                text-decoration: none; /* 去掉下划线 */
+                transition: background-color 0.2s; /* 动效 */
+            }
+            
+            .language-content a:hover {
+                background-color: #f1f1f1; /* 悬停时的背景颜色 */
+            }
+            </style>
         </li>
         <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
         <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i> 圣经朗读</a></li>
