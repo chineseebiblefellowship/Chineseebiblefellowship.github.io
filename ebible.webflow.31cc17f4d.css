@@ -43670,6 +43670,8 @@ figcaption {
 
 .text-span-153 {
   color: #0082f3;
+  text-align: center;
+
 }
 
 .text-span-154 {
@@ -58419,7 +58421,6 @@ figcaption {
 }
 
 .sidebarplayer {
-  background-color: #151720;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -58456,6 +58457,7 @@ figcaption {
 .social_media_div {
   width: 200px;
   height: auto;
+  color: #a0d1ff;
 }
 
 .div-block-444 {
@@ -58543,7 +58545,7 @@ figcaption {
 }
 
 .webblockwhite {
-  background-color: #aedbff;
+  background-color: #fff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -66784,7 +66786,7 @@ figcaption {
 }
 
 .webblockwhite5-2 {
-  background-color: #aedbff;
+  background-color: #fff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -66997,7 +66999,7 @@ figcaption {
 }
 
 .webblockwhite2-2 {
-  background-color: #aedbff;
+  background-color: #fff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -84757,7 +84759,7 @@ figcaption {
 
   .heading-158 {
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 45px;
   }
 

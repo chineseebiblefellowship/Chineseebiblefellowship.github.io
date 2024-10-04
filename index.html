@@ -268,7 +268,30 @@
     font-size: 30px; /* 图标大小 */
     margin-bottom: 10px; /* 图标与文本之间的间距 */
 }
+.timeshi-containe {
+    display: none; /* 默认隐藏 */
+    text-align: center; /* 居中对齐 */
+    border-radius: 10px; /* 圆角 */
+    background-color: #f0f0f0; /* 背景颜色，可根据需要调整 */
+    padding: 10px; /* 内边距 */
+}
 
+.highlight {
+    color: #007bff; /* 蓝色 */
+    font-size: 20px;
+    font-weight: 500;
+}
+.cllla {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* 小屏幕样式 */
+@media (max-width: 768px) {
+    .timeshi-containe {
+        display: block; /* 小屏幕上显示 */
+    }
+}
 
 
 /* 隐藏电脑屏幕上的按钮 */
@@ -278,6 +301,10 @@
     }
 }
 </style>
+<div class="timeshi-containe">
+  <span class="highlight">E</span>
+  <span class="cllla">BF 直播室</span>
+</div>
 
     <div class="timeshi-container">
       <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0"
@@ -313,16 +340,10 @@
   </div>
   
   <style>
-  .timeshi {
-      overflow: hidden; /* 隐藏滚动条 */
-      border-radius: 10px; /* 圆角 */
-      width: 100%; /* 宽度为100% */
-      width: 100%; /* 宽度为100% */
-  }
-  
+
   .timeshi-iframe {
       width: 100%; /* 宽度为100% */
-      height: 100%; /* 高度为100% */
+      height: 400px; /* 高度为100% */
       border: none; /* 去掉边框 */
       border-radius: 10px; /* 圆角 */
   }
@@ -532,6 +553,11 @@
     </a>
   </div>
   </div>
+  <style>
+    .tbtohm {
+      text-align: center;
+    }
+  </style>
   <h1 class="heading-158" _msttexthash="26733096" _msthash="161"><span class="text-span-153"
       _istranslated="1">E</span>BF 的新开放论坛</h1>
   <p></p>
@@ -545,7 +571,7 @@
 
   <div class="glass-container" style="  border-radius: 20px; /* 圆角 */">
     <h1>每日经文</h1>
-    <p>惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
+    <p class="lllpa">惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
     <div class="welcome-container">
       <a class="welcom" href="">欢迎来到电子圣经团契中文网</a>
   </div>
@@ -697,8 +723,7 @@
       <div class="timeline_welcome_screen_home">
         <div class="div-block-577">
           <h1 class="heading-177-copy" _msttexthash="31955027" _msthash="309">圣经历史的时间表</h1>
-          <h1 class="tbtohm" _msttexthash="780078" _msthidden="1" _msthash="310">The Biblical
-            <br>Timeline of History
+          <h1 class="tbtohm" _msttexthash="780078" _msthidden="1" _msthash="310" >圣经历史年代表
           </h1>
           <p class="paragraph-124-copy" _msttexthash="6806077265" _msthash="311">看看圣经中发现的圣经历史时间表，从创世之日到时间的终结，由已故的哈罗德·康平
             （Harold Camping） 发现，正如上帝允许他的那样，在末世时解封了他的话语。这个交互式图表将显示关键的圣经事件，例如创建日期、洪水发生的时间、出埃及、所罗门圣殿地基的奠基等。
@@ -2006,6 +2031,16 @@
     display: flex;
     align-items: center;
 }
+.input-container {
+  margin-left: 270px; /* 默认设置为电脑的 */
+}
+
+@media (max-width: 768px) { /* 针对手机屏幕宽度 */
+  .input-container {
+    margin-left: 20px; /* 手机上左边距为 20px */
+  }
+}
+
 
 .icon {
     margin-right: 10px; /* 图标和输入框之间的间距 */
@@ -2378,11 +2413,15 @@
             <a href="bible-music.html"><i class="fas fa-music"></i> 圣经音乐</a>
             <a href="bible-history.html"><i class="fas fa-calendar-alt"></i> 圣经历史年代</a>
         </div>
-
+<style>
+  .lllpa {
+    text-align: center;
+  }
+</style>
         <!-- 毛玻璃效果显示每日经节 -->
         <div class="blur-container" id="daily-verse">
             <h1>每日经节</h1>
-            <p>惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
+            <p class="lllpa">惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
         </div>
         <hr>
         <h1>电子圣经团契平台</h1>
@@ -2466,18 +2505,19 @@
     }
 
     .nav-toggle {
-      display: none;
-      position: fixed;
-      right: 20px;
-      top: 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      z-index: 1000;
-      border-radius: 5px;
-    }
+    display: none; /* 确保按钮在需要时可见 */
+    position: absolute; /* 或使用 relative，根据需求 */
+    right: 20px;
+    top: 20px; /* 你可以调整这个值来改变按钮的垂直位置 */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
 
     .language-dropdown {
       position: relative;
