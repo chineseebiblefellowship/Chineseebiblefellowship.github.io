@@ -7,6 +7,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.18.2"  // 示例依赖
+    "express": "^4.18.2" 
   }
 }
