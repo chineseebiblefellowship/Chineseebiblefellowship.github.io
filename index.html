@@ -24,16 +24,23 @@
       text-shadow: 3px 3px 0 #f39c12, -1px -1px 0 #f1c40f, 1px -1px 0 #f1c40f, -1px 1px 0 #f1c40f, 1px 1px 0 #f1c40f;
       text-decoration: none;
     }
-.welcom {
-  display: inline-block;
-            text-decoration: none; /* 去掉下划线 */
-            color: rgb(168, 0, 0); /* 红色文本 */
-            font-weight: bold; /* 加粗 */
-            justify-content: center;
-            margin: 5px; /* 内边距 */
-            font-size: 18px; /* 字体大小 */
 
-}
+    .welcom {
+      display: inline-block;
+      text-decoration: none;
+      /* 去掉下划线 */
+      color: rgb(168, 0, 0);
+      /* 红色文本 */
+      font-weight: bold;
+      /* 加粗 */
+      justify-content: center;
+      margin: 5px;
+      /* 内边距 */
+      font-size: 18px;
+      /* 字体大小 */
+
+    }
+
     .center-container {
       display: flex;
       justify-content: center;
@@ -43,39 +50,52 @@
     }
 
     .glass-container {
-            overflow: hidden; /* 确保子元素不会超出容器 */
-            backdrop-filter: blur(10px); /* 毛玻璃效果 */
+      overflow: hidden;
+      /* 确保子元素不会超出容器 */
+      backdrop-filter: blur(10px);
+      /* 毛玻璃效果 */
 
-        }
+    }
 
-        .glass-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png') no-repeat center center;
-            background-size: cover;
-            z-index: -1; /* 确保背景在文本下方 */
-            filter: blur(10px); /* 胶卷效果的背景模糊 */
-        }
+    .glass-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png') no-repeat center center;
+      background-size: cover;
+      z-index: -1;
+      /* 确保背景在文本下方 */
+      filter: blur(10px);
+      /* 胶卷效果的背景模糊 */
+    }
 
-        .glass-container h1 {
-            font-size: 40px; /* 标题大小 */
-            margin: 10px 0; /* 标题上下间距 */
-            color: #fff;
-        }
+    .glass-container h1 {
+      font-size: 40px;
+      /* 标题大小 */
+      margin: 10px 0;
+      /* 标题上下间距 */
+      color: #fff;
+    }
 
-        .glass-container p {
-            font-size: 30px; /* 经文大小 */
-        }
-        .date-text {
-            font-size: 20px; /* 日期文本大小 */
-            font-weight: bold; /* 加粗 */
-            color: rgb(255, 230, 0); /* 绿色 */
-            margin-top: 20px; /* 上边距 */
-        }
+    .glass-container p {
+      font-size: 30px;
+      /* 经文大小 */
+    }
+
+    .date-text {
+      font-size: 20px;
+      /* 日期文本大小 */
+      font-weight: bold;
+      /* 加粗 */
+      color: rgb(255, 230, 0);
+      /* 绿色 */
+      margin-top: 20px;
+      /* 上边距 */
+    }
+
     .text-art:hover {
       color: #f39c12;
       /* 深黄色 */
@@ -97,23 +117,31 @@
       /* 深蓝色 */
       text-shadow: 2px 2px 0 #1f77d0, -1px -1px 0 #2980b9, 1px -1px 0 #2980b9, -1px 1px 0 #2980b9, 1px 1px 0 #2980b9;
     }
-/* 隐藏滚动条 */
-.sidebar-menu::-webkit-scrollbar {
-    display: none; /* 对于Chrome和Safari */
-}
 
-.sidebar-menu {
-    -ms-overflow-style: none; /* 对于IE和Edge */
-    scrollbar-width: none; /* 对于Firefox */
-    border-radius: 20px; /* 圆角 */
-}
+    /* 隐藏滚动条 */
+    .sidebar-menu::-webkit-scrollbar {
+      display: none;
+      /* 对于Chrome和Safari */
+    }
 
-/* 适配其他浏览器 */
-.sidebar-menu {
-    /* IE和Edge */
-    overflow: -ms-overflow-style: none; /* 适配IE */
-    overflow: overlay; /* 适配旧版浏览器 */
-}
+    .sidebar-menu {
+      -ms-overflow-style: none;
+      /* 对于IE和Edge */
+      scrollbar-width: none;
+      /* 对于Firefox */
+      border-radius: 20px;
+      /* 圆角 */
+    }
+
+    /* 适配其他浏览器 */
+    .sidebar-menu {
+      /* IE和Edge */
+      overflow: -ms-overflow-style: none;
+      /* 适配IE */
+      overflow: overlay;
+      /* 适配旧版浏览器 */
+    }
+
     .center-container {
       display: flex;
       justify-content: center;
@@ -122,194 +150,260 @@
       text-align: center;
     }
   </style>
-<style>
-  .sidebar-menu ul {
-      list-style: none; /* 去掉列表样式 */
-      padding: 0; /* 去掉内边距 */
-      text-align: center; /* 文本居中 */
-  }
-  
-  .sidebar-menu li {
-      padding: 15px 0; /* 上下内边距 */
-      font-size: 18px; /* 字体大小 */
-      color: #333; /* 字体颜色 */
-      transition: background-color 0.3s; /* 动效 */
-  }
-  
-  .sidebar-menu li:hover {
-      background-color: #e0e7ff; /* 悬停时背景颜色 */
-      cursor: pointer; /* 鼠标悬停时变成手型 */
-  }
-  .content-container {
-    padding: 20px; /* 内边距 */
-    border-radius: 10px; /* 圆角 */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影 */
-}
+  <style>
+    .sidebar-menu ul {
+      list-style: none;
+      /* 去掉列表样式 */
+      padding: 0;
+      /* 去掉内边距 */
+      text-align: center;
+      /* 文本居中 */
+    }
 
-.icon-list {
-    display: flex; /* 水平排列 */
-    justify-content: space-around; /* 项目间距 */
-    margin-bottom: 20px; /* 底部间距 */
-}
+    .sidebar-menu li {
+      padding: 15px 0;
+      /* 上下内边距 */
+      font-size: 18px;
+      /* 字体大小 */
+      color: #333;
+      /* 字体颜色 */
+      transition: background-color 0.3s;
+      /* 动效 */
+    }
 
-.icon-link {
-    display: flex; /* 使用 Flexbox */
-    flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 水平居中 */
-    text-decoration: none; /* 去掉下划线 */
-    color: #333; /* 字体颜色 */
-    transition: transform 0.3s, color 0.3s; /* 动效 */
-}
+    .sidebar-menu li:hover {
+      background-color: #e0e7ff;
+      /* 悬停时背景颜色 */
+      cursor: pointer;
+      /* 鼠标悬停时变成手型 */
+    }
 
-.icon-link:hover {
-    transform: translateY(-5px); /* 悬停时上移 */
-    color: #007bff; /* 悬停时颜色变化 */
-}
+    .content-container {
+      padding: 20px;
+      /* 内边距 */
+      border-radius: 10px;
+      /* 圆角 */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      /* 阴影 */
+    }
 
-.icon-link i {
-    font-size: 30px; /* 图标大小 */
-    margin-bottom: 5px; /* 图标与文本之间的间距 */
-}
+    .icon-list {
+      display: flex;
+      /* 水平排列 */
+      justify-content: space-around;
+      /* 项目间距 */
+      margin-bottom: 20px;
+      /* 底部间距 */
+    }
+
+    .icon-link {
+      display: flex;
+      /* 使用 Flexbox */
+      flex-direction: column;
+      /* 垂直排列 */
+      align-items: center;
+      /* 水平居中 */
+      text-decoration: none;
+      /* 去掉下划线 */
+      color: #333;
+      /* 字体颜色 */
+      transition: transform 0.3s, color 0.3s;
+      /* 动效 */
+    }
+
+    .icon-link:hover {
+      transform: translateY(-5px);
+      /* 悬停时上移 */
+      color: #007bff;
+      /* 悬停时颜色变化 */
+    }
+
+    .icon-link i {
+      font-size: 30px;
+      /* 图标大小 */
+      margin-bottom: 5px;
+      /* 图标与文本之间的间距 */
+    }
 
 
-  .sidebar-menu a {
-    font-size: 18px; /* 字体大小 */
-    color: #333; /* 字体颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    transition: background-color 0.3s; /* 动效 */
-    display: flex; /* 使图标和文本在同一行 */
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-}
-  .sidebar-menu i {
-      margin-right: 10px; /* 图标和文字之间的间距 */
-      color: #007bff; /* 图标颜色 */
-  }
+    .sidebar-menu a {
+      font-size: 18px;
+      /* 字体大小 */
+      color: #333;
+      /* 字体颜色 */
+      text-decoration: none;
+      /* 去掉下划线 */
+      transition: background-color 0.3s;
+      /* 动效 */
+      display: flex;
+      /* 使图标和文本在同一行 */
+      align-items: center;
+      /* 垂直居中 */
+      justify-content: center;
+      /* 水平居中 */
+    }
+
+    .sidebar-menu i {
+      margin-right: 10px;
+      /* 图标和文字之间的间距 */
+      color: #007bff;
+      /* 图标颜色 */
+    }
   </style>
-<div class="logo-container">
-  <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
-       alt="eBible Fellowship Logo" class="logo-image" style="width: 140px; height: auto;">
-  <span class="logo-text" style="color: #007bff; display: inline; font-size: 40px;">e</span>
-  <span class="logo-text" style="display: inline; font-size: 40px;">Bible Fellowship</span>
-</div>
+  <div class="logo-container">
+    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
+      alt="eBible Fellowship Logo" class="logo-image" style="width: 140px; height: auto;">
+    <span class="logo-text" style="color: #007bff; display: inline; font-size: 40px;">e</span>
+    <span class="logo-text" style="display: inline; font-size: 40px;">Bible Fellowship</span>
+  </div>
 
-<style>
-.logo-container {
-    text-align: center; /* 内容居中 */
-}
+  <style>
+    .logo-container {
+      text-align: center;
+      /* 内容居中 */
+    }
 
-.logo-image {
-    display: block; /* 确保图像是块级元素 */
-    margin: 0 auto; /* 居中图像 */
-}
+    .logo-image {
+      display: block;
+      /* 确保图像是块级元素 */
+      margin: 0 auto;
+      /* 居中图像 */
+    }
 
-.logo-text {
-    display: inline; /* 保持文本行内显示 */
-    font-size: 40px; /* 设置字体大小 */
-}
-</style>
+    .logo-text {
+      display: inline;
+      /* 保持文本行内显示 */
+      font-size: 40px;
+      /* 设置字体大小 */
+    }
+  </style>
 
 
   </div>
 
- <!-- 引入 Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 引入 Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<div class="content-container">
+  <div class="content-container">
     <div class="icon-row">
-        <a href="learnbible.html" class="icon-box">
-            <i class="fas fa-graduation-cap"></i>
-            <span>圣经学习</span>
-        </a>
-        <a href="lib.html" class="icon-box">
-            <i class="fas fa-book-open"></i>
-            <span>圣经书籍</span>
-        </a>
+      <a href="learnbible.html" class="icon-box">
+        <i class="fas fa-graduation-cap"></i>
+        <span>圣经学习</span>
+      </a>
+      <a href="lib.html" class="icon-box">
+        <i class="fas fa-book-open"></i>
+        <span>圣经书籍</span>
+      </a>
     </div>
     <div class="icon-row">
-        <a href="hymns.html" class="icon-box">
-            <i class="fas fa-music"></i>
-            <span>音乐</span>
-        </a>
-        <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="icon-box">
-            <i class="fas fa-video"></i>
-            <span>Zoom</span>
-        </a>
+      <a href="hymns.html" class="icon-box">
+        <i class="fas fa-music"></i>
+        <span>音乐</span>
+      </a>
+      <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="icon-box">
+        <i class="fas fa-video"></i>
+        <span>Zoom</span>
+      </a>
     </div>
-</div>
+  </div>
 
-<style>
-
-.icon-row {
-    display: flex; /* 使用 Flexbox */
-    justify-content: space-between; /* 确保间距均匀 */
-    margin-bottom: 20px;
-}
-
-.icon-box {
-    width: calc(50% - 10px); /* 每个按钮占据50%的宽度 */
-    display: flex; /* 使用 Flexbox */
-    flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 水平居中 */
-    text-decoration: none; /* 去掉下划线 */
-    color: #333; /* 字体颜色 */
-    border: 2px solid #007bff; /* 边框 */
-    border-radius: 10px; /* 圆角 */
-    padding: 20px; /* 内边距 */
-    transition: transform 0.3s, color 0.3s; /* 动效 */
-}
-
-.icon-box:hover {
-    transform: translateY(-5px); /* 悬停时上移 */
-    color: #007bff; /* 悬停时颜色变化 */
-}
-
-.icon-box i {
-    font-size: 30px; /* 图标大小 */
-    margin-bottom: 10px; /* 图标与文本之间的间距 */
-}
-.timeshi-containe {
-    display: none; /* 默认隐藏 */
-    text-align: center; /* 居中对齐 */
-    border-radius: 10px; /* 圆角 */
-    background-color: #f0f0f0; /* 背景颜色，可根据需要调整 */
-    padding: 10px; /* 内边距 */
-}
-
-.highlight {
-    color: #007bff; /* 蓝色 */
-    font-size: 20px;
-    font-weight: 500;
-}
-.cllla {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-/* 小屏幕样式 */
-@media (max-width: 768px) {
-    .timeshi-containe {
-        display: block; /* 小屏幕上显示 */
-    }
-}
-
-
-/* 隐藏电脑屏幕上的按钮 */
-@media (min-width: 768px) {
+  <style>
     .icon-row {
-        display: none; /* 隐藏整个按钮行 */
+      display: flex;
+      /* 使用 Flexbox */
+      justify-content: space-between;
+      /* 确保间距均匀 */
+      margin-bottom: 20px;
     }
-}
-</style>
-<div class="timeshi-containe">
-  <span class="highlight">E</span>
-  <span class="cllla">BF 直播室</span>
-</div>
 
-    <div class="timeshi-container">
-      <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0"
-        width="100%" height="300PX"></iframe>
-    </div>
+    .icon-box {
+      width: calc(50% - 10px);
+      /* 每个按钮占据50%的宽度 */
+      display: flex;
+      /* 使用 Flexbox */
+      flex-direction: column;
+      /* 垂直排列 */
+      align-items: center;
+      /* 水平居中 */
+      text-decoration: none;
+      /* 去掉下划线 */
+      color: #333;
+      /* 字体颜色 */
+      border: 2px solid #007bff;
+      /* 边框 */
+      border-radius: 10px;
+      /* 圆角 */
+      padding: 20px;
+      /* 内边距 */
+      transition: transform 0.3s, color 0.3s;
+      /* 动效 */
+    }
+
+    .icon-box:hover {
+      transform: translateY(-5px);
+      /* 悬停时上移 */
+      color: #007bff;
+      /* 悬停时颜色变化 */
+    }
+
+    .icon-box i {
+      font-size: 30px;
+      /* 图标大小 */
+      margin-bottom: 10px;
+      /* 图标与文本之间的间距 */
+    }
+
+    .timeshi-containe {
+      display: none;
+      /* 默认隐藏 */
+      text-align: center;
+      /* 居中对齐 */
+      border-radius: 10px;
+      /* 圆角 */
+      background-color: #f0f0f0;
+      /* 背景颜色，可根据需要调整 */
+      padding: 10px;
+      /* 内边距 */
+    }
+
+    .highlight {
+      color: #007bff;
+      /* 蓝色 */
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .cllla {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    /* 小屏幕样式 */
+    @media (max-width: 768px) {
+      .timeshi-containe {
+        display: block;
+        /* 小屏幕上显示 */
+      }
+    }
+
+
+    /* 隐藏电脑屏幕上的按钮 */
+    @media (min-width: 768px) {
+      .icon-row {
+        display: none;
+        /* 隐藏整个按钮行 */
+      }
+    }
+  </style>
+  <div class="timeshi-containe">
+    <span class="highlight">E</span>
+    <span class="cllla">BF 直播室</span>
+  </div>
+
+  <div class="timeshi-container">
+    <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0"
+      width="100%" height="300PX"></iframe>
+  </div>
   </div>
 </head>
 
@@ -328,34 +422,39 @@
     <!-- 按钮列表 -->
     <ul>
       <li><a href=""><i class="fas fa-home"></i> 首页</a></li>
-      <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09"><i class="fas fa-search-plus"></i> Zoom</a></li>
+      <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09"><i
+            class="fas fa-search-plus"></i> Zoom</a></li>
       <li><a href="learnbible.html"><i class="fas fa-book"></i> 圣经学习</a></li>
       <li><a href="lib.html"><i class="fas fa-book-open"></i> 书籍</a></li>
       <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 圣经论坛</a></li>
-  </ul>
+    </ul>
     <!-- 直播室嵌入 -->
     <div class="timeshi">
       <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2"
-              class="timeshi-iframe"></iframe>
-  </div>
-  
-  <style>
+        class="timeshi-iframe"></iframe>
+    </div>
 
-  .timeshi-iframe {
-      width: 100%; /* 宽度为100% */
-      height: 400px; /* 高度为100% */
-      border: none; /* 去掉边框 */
-      border-radius: 10px; /* 圆角 */
-  }
-  
-  /* 隐藏滚动条，仅在小屏幕上 */
-  @media (max-width: 767px) {
+    <style>
       .timeshi-iframe {
-          overflow: hidden; /* 隐藏滚动条 */
+        width: 100%;
+        /* 宽度为100% */
+        height: 400px;
+        /* 高度为100% */
+        border: none;
+        /* 去掉边框 */
+        border-radius: 10px;
+        /* 圆角 */
       }
-  }
-  </style>
-  
+
+      /* 隐藏滚动条，仅在小屏幕上 */
+      @media (max-width: 767px) {
+        .timeshi-iframe {
+          overflow: hidden;
+          /* 隐藏滚动条 */
+        }
+      }
+    </style>
+
     <div class="sidebarplayer">
       <div class="social_media_div">
         <div class="text-block-277">电子圣经团契社交媒体</div>
@@ -569,150 +668,361 @@
     <h1 class="heading-176"><a href="http://NewOpenForum.org" class="link-45" _msttexthash="302419"
         _msthash="163">NewOpenForum.org</a></h1>
 
-  <div class="glass-container" style="  border-radius: 20px; /* 圆角 */">
-    <h1>每日经文</h1>
-    <p class="lllpa">惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
-    <div class="welcome-container">
-      <a class="welcom" href="">欢迎来到电子圣经团契中文网</a>
-  </div>
-  <style>
-    .ccc2 {
-      color: white; /* 白色字体 */
-    font-weight: bold; /* 加粗 */
-    font-size: 20px; /* 可选：设置字体大小 */
-    text-align: center; /* 居中 */
-    }
-    .welcome-container {
-        text-align: center; /* 内容居中 */
-        margin: 20px 0; /* 上下边距 */
-    }
-    
-    .welcom {
-        font-size: 20px; /* 字体大小 */
-        color: #ff0000; /* 字体颜色 */
-        text-decoration: none; /* 去掉下划线 */
-        transition: color 0.3s; /* 动效 */
-    }
-    
-    .welcom:hover {
-        color: #b10000; /* 悬停时字体颜色 */
-    }
-    .international_tracts {
-      /* 隐藏滚动条 */
-.scrollable-content::-webkit-scrollbar {
-    display: none; /* 对于Chrome和Safari */
-}
+    <div class="glass-container" style="  border-radius: 20px; /* 圆角 */">
+      <h1 style="margin-top: 50px;">每日经文</h1>
+      <p id="verse-text" style="font-size: 24px; margin: 20px;text-align: center;"></p>
+      <script>
+          const verses = [
+              "愿耶和华祝福你，保护你；愿耶和华使他的脸光照你。 民数记 6:24-25",
+              "我能做的一切事，都是因为那加给我力量的。 腓立比书 4:13",
+              "我单要默默等候，仰望我的救主。 诗篇 62:1",
+              "惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言 1:33",
+    "因我知道我所信的是谁，也深信他能保全我所交付他的，直到那日。 提摩太后书 1:12",
+    "你们中间谁是大的，倒要像小的；为首的，倒要像服事人的。 路加福音 22:26",
+    "耶和华是我的牧者，我必不致缺乏。 诗篇 23:1",
+    "凡事都能行，但不都有益处；凡事都能行，但不都能造就人。 哥林多前书 10:23",
+    "你们要彼此相爱，像我爱你们一样，这就是我的命令。 约翰福音 15:12",
+    "喜乐的心，乃是良药；忧伤的灵，使骨枯干。 箴言 17:22",
+    "因为我知道，万事都互相效力，叫爱神的人得益处。 罗马书 8:28",
+    "你们要倚靠耶和华，永远倚靠他；因为耶和华是永远的磐石。 以赛亚书 26:4",
+    "无论做什么，都要尽心尽力，像是给主做的，不是给人做的。 歌罗西书 3:23",
+    "求你将我的眼目从看虚妄的事上转回，照你的道将我复兴。 诗篇 119:37",
+    "我的恩典够你用的，因为我的能力是在人的软弱上显得完全。 哥林多后书 12:9",
+    "你们若不饶恕人，天父也必不饶恕你们的过犯。 马太福音 6:15",
+    "当以耶和华为乐，他就将你心里所求的赐给你。 诗篇 37:4",
+    "耶和华是公义的，他喜爱公正；正直人必得见他的面。 诗篇 11:7",
+    "主是我心里的亮光，是我的救恩，我还怕谁呢？ 诗篇 27:1",
+    "你们要寻求耶和华，若可寻找他，就当呼求他。 以赛亚书 55:6",
+    "万军之耶和华啊，谁能与你相比呢？ 诗篇 89:8",
+    "我必在你面前，在你的百姓中间，行神迹奇事。 使徒行传 2:22",
+    "我心中存敬畏的时候，你的话安慰了我。 诗篇 94:19",
+    "耶和华赐下安息，赐下力量给他百姓。 诗篇 29:11",
+    "将你的事交托耶和华，倚靠他，他必成全。 诗篇 37:5",
+    "我就是道路，真理，生命；若不藉着我，没有人能到父那里去。 约翰福音 14:6",
+    "我来是要叫羊得生命，并且得的更丰盛。 约翰福音 10:10",
+    "那时，耶和华的灵充满了他，使他在以色列中带领他们。 士师记 6:34",
+    "耶和华啊，我的心切慕你，如露水切慕溪水。 诗篇 42:1",
+    "他必照着他的丰盛，供应你们一切所需用的。 腓立比书 4:19",
+    "正直人必蒙福；行义的必得喜乐。 箴言 12:21",
+    "你们要追求公义、信德、爱心、和平，和那些在主里面清心的人一起追求。 提摩太后书 2:22",
+    "主与你们同在，愿他使你们心里常常有平安。 贴撒罗尼迦后书 3:16",
+    "要向主倾心吐意，他必成全你的心愿。 诗篇 37:5",
+    "在你面前有满足的喜乐，在你右手中有永远的福乐。 诗篇 16:11",
+    "我的心里在耶和华的律法中，昼夜思想。 诗篇 1:2",
+    "你们若在我里面， 我的话也在你们里面， 凡你们所愿意的，祈求，就给你们成全。 约翰福音 15:7",
+    "我若不见神的面，就必不见安慰。 诗篇 27:9",
+    "你要将你的心思完全仰望于耶和华。 诗篇 25:1",
+    "耶和华是信实的，他必坚定你们，保守你们脱离那恶者。 帖撒罗尼迦后书 3:3",
+    "耶和华要施行救恩，他的手必使你们得胜。 以赛亚书 59:1",
+    "当你行走的时候，愿你如同日头照耀，愿你的光辉如同日出。 箴言 4:18",
+    "我在困苦中求告耶和华，耶和华应允了我，且把我救了。 诗篇 120:1",
+    "求你照着你的话，成就你所应许的。 诗篇 119:49",
+    "我们要追求使人和睦的事，并且要追求建立彼此的事。 罗马书 14:19",
+    "耶和华说：‘我与你同在，必保守你，带领你回到这地。’ 创世记 28:15",
+    "你们要倚靠耶和华，不可依赖自己的聪明。 箴言 3:5",
+    "你们的心里要充满感恩。 歌罗西书 3:15",
+    "耶和华是我的力量，我的盾牌，我心里倚靠他，得帮助。 诗篇 28:7",
+    "我心里一切的思念、计划，乃是要为主的名而立。 诗篇 138:8",
+    "主的恩典够你用的，因他能力在软弱中显得完全。 哥林多后书 12:9",
+    "主耶稣要成为你生命的磐石，基督是你坚固的根基。 哥林多前书 3:11",
+    "你们若先求他的国和他的义，这些东西都要加给你们。 马太福音 6:33",
+    "凡劳苦担重担的人，可以到我这里来，我就使你们得安息。 马太福音 11:28",
+    "你们要爱你们的仇敌，为迫害你们的祷告。 马太福音 5:44",
+    "我对你们说，凡人所作的事，都是出于我。 使徒行传 17:28",
+    "让你们的心思、意念常常回到主那里，记得他对你们的关爱。 诗篇 139:1",
+    "要常常喜乐，不住地祷告，凡事谢恩。 贴撒罗尼迦前书 5:16-18",
+    "无论何事，你们都要顺服，像顺服主一样。 以弗所书 6:5",
+    "求你赐我智慧，使我能知道你的道。 诗篇 119:27",
+    "耶和华啊，你的道在我面前，教我走这生命之路。 诗篇 25:4",
+    "我为你的话，欢喜快乐，如同得着了丰裕的财物。 诗篇 119:162",
+    "耶和华必照着你的心愿成就，你的计划必得顺利。 诗篇 20:4",
+    "我的神啊，我要称颂你，我要称谢你。 诗篇 86:12",
+    "愿耶和华祝福你，保护你；愿耶和华使他的脸光照你。 民数记 6:24-25",
+    "我能做的一切事，都是因为那加给我力量的。 腓立比书 4:13",
+    "我单要默默等候，仰望我的救主。 诗篇 62:1",
+    "所以我不忧虑，宁可顺服他的旨意，保守我的心。 彼得前书 5:7",
+    "耶和华的眼目看顾义人，他的耳朵听他们的呼求。 诗篇 34:15",
+    "我愿意尽心寻求你，不要让我偏离你的命令。 诗篇 119:10",
+    "我把我的心归给你，愿意顺服你的旨意。 诗篇 119:34",
+    "耶和华啊，你是我的神，我要极力寻求你。 诗篇 63:1",
+    "因你是我的避难所，是我逃难的山寨。 诗篇 59:16",
+    "你必为义人的心引导他们，指教他们。 诗篇 25:9",
+    "因为耶和华所爱的，他必管教，正如父亲管教他所喜爱的儿子。 箴言 3:12",
+    "你的话是我脚前的灯，是我路上的光。 诗篇 119:105",
+    "主说：‘我必与你同在，永远不会离开你。’ 约书亚记 1:5",
+    "你们要为自己的过犯悔改，转向主。 使徒行传 3:19",
+    "愿我的心常常寻求你的面，愿我常常喜乐。 诗篇 105:4",
+    "有耶和华与我同在，我不怕什么。 诗篇 118:6",
+    "主的言语是纯净的，像银子在炉中熬炼过七次。 诗篇 12:6",
+    "你们要将主的道传扬，使人回转归向他。 以赛亚书 40:3",
+    "你们要常常存心感恩，为所蒙受的恩典感谢主。 歌罗西书 3:15",
+    "你们要追求神的国和他的义，这样一切所需的都要加给你们。 马太福音 6:33",
+    "愿我的口常常称颂主。 诗篇 34:1",
+    "我必在主的家中住，直到永远。 诗篇 23:6",
+    "我向你们献上我的感谢，因你们常在我心里。 腓立比书 1:3",
+    "主的恩典是够用的，我必在他里面安然无惧。 诗篇 56:3",
+    "我在困苦中呼求耶和华，耶和华就应允了我。 诗篇 120:1",
+    "你们要倚靠耶和华，不可依赖人的智慧。 箴言 3:5",
+    "若有人在基督里，他就是新造的人。 哥林多后书 5:17",
+    "耶和华的恩典是我所倚靠的，我必不会失望。 诗篇 39:7",
+    "你们若不愿意相信，我就不会被信。 约翰福音 8:24",
+    "我在主的道上走，信靠他，靠近他。 诗篇 119:115",
+    "愿神祝福你们，保守你们。 民数记 6:24",
+    "我的神啊，我要永远歌颂你。 诗篇 63:4",
+    "当我心中忧愁的时候，你的话安慰了我。 诗篇 94:19",
+    "因信心得救的，乃是义人的生命。 加拉太书 3:11",
+    "你们要存忍耐，承受应许。 希伯来书 10:36",
+    "义人必在信心中得生。 诗篇 37:39",
+    "你们要彼此相爱，像我爱你们一样。 约翰福音 15:12",
+    "我必亲自赐给你们安息。 马太福音 11:28",
+    "愿耶和华与我同在，拯救我的心。 诗篇 139:10",
+    "求你赐我智慧，使我能明白你的道。 诗篇 119:27",
+    "我要将我所有的心意完全交托于你。 诗篇 37:5",
+    "我的心灵，你要在耶和华面前安静，因他是我的救主。 诗篇 62:5",
+    "愿我的心常常归向你，愿我常常仰望你。 诗篇 25:1",
+    "我心中所怀的，都是你的。 诗篇 139:2",
+    "我愿意称颂耶和华的名，直到永远。 诗篇 145:1",
+    "因耶和华必引导你，饱足你心中所愿的。 以赛亚书 58:11",
+    "主耶稣要带给你们安慰，愿他给你们力量。 腓立比书 4:13",
+    "耶和华是我的光，我的救恩，我还怕谁呢？ 诗篇 27:1",
+    "愿我的心思完全归向你，求你帮助我。 诗篇 119:36",
+    "耶和华必应允我，在我遭遇艰难时，必保护我。 诗篇 138:7",
+    "你们要在主里面常常喜乐，我再说，你们要喜乐。 腓立比书 4:4",
+    "我必亲自引导你，你在我里面必得安慰。 诗篇 23:4",
+    "主的恩典是我生命的保障，我要常常赞美他。 诗篇 107:1",
+    "因我知道我所信的是谁，他必保守我。 提摩太后书 1:12",
+    "愿神的光照耀你们，愿你们在他里面得安息。 以赛亚书 60:1",
+    "在你面前有丰盛的喜乐，在你右手中有永远的福乐。 诗篇 16:11",
+    "我必在你面前，常常歌颂你的恩典。 诗篇 138:1",
+    "耶和华啊，求你施恩于我，因我倚靠你。 诗篇 86:2",
+    "愿主的灵常常与我同在，我的心灵得安息。 诗篇 131:2",
+    "在你面前有满溢的喜乐，愿我在你里面得安慰。 诗篇 36:8",
+    "我必仰望耶和华，他必为我成全。 诗篇 37:5",
+    "愿你常常关注我，赐我智慧，教导我走你的道路。 诗篇 25:5",
+    "我要常常歌颂耶和华，因他总是带来喜乐。 诗篇 13:6"
+              // 继续添加更多经文...
+          ];
+  
+          // 获取今天的日期
+          const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD 格式
+  
+          // 从 localStorage 获取存储的数据
+          const storedDate = localStorage.getItem('verseDate');
+          const storedIndex = localStorage.getItem('verseIndex');
+  
+          if (storedDate !== today) {
+              // 如果今天的日期不同，生成新的随机索引并存储
+              const randomIndex = Math.floor(Math.random() * verses.length);
+              localStorage.setItem('verseIndex', randomIndex);
+              localStorage.setItem('verseDate', today);
+          }
+  
+          // 从 localStorage 获取经文索引并显示相应的经文
+          const verseIndex = localStorage.getItem('verseIndex');
+          document.getElementById('verse-text').innerText = verses[verseIndex];
+      </script>
+      <div class="welcome-container">
+        <a class="welcom" href="">欢迎来到电子圣经团契中文网</a>
+      </div>
+      <style>
+        .ccc2 {
+          color: white;
+          /* 白色字体 */
+          font-weight: bold;
+          /* 加粗 */
+          font-size: 20px;
+          /* 可选：设置字体大小 */
+          text-align: center;
+          /* 居中 */
+        }
 
-.scrollable-content {
-    -ms-overflow-style: none; /* 对于IE和Edge */
-    scrollbar-width: none; /* 对于Firefox */
-}
-    }
-    </style>
-</div>
+        .welcome-container {
+          text-align: center;
+          /* 内容居中 */
+          margin: 20px 0;
+          /* 上下边距 */
+        }
+
+        .welcom {
+          font-size: 20px;
+          /* 字体大小 */
+          color: #ff0000;
+          /* 字体颜色 */
+          text-decoration: none;
+          /* 去掉下划线 */
+          transition: color 0.3s;
+          /* 动效 */
+        }
+
+        .welcom:hover {
+          color: #b10000;
+          /* 悬停时字体颜色 */
+        }
+
+        .international_tracts {
+
+          /* 隐藏滚动条 */
+          .scrollable-content::-webkit-scrollbar {
+            display: none;
+            /* 对于Chrome和Safari */
+          }
+
+          .scrollable-content {
+            -ms-overflow-style: none;
+            /* 对于IE和Edge */
+            scrollbar-width: none;
+            /* 对于Firefox */
+          }
+        }
+      </style>
+    </div>
   </div>
   <div class="content-container">
     <h2 class="centered-text">圣经传单</h2>
     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
-         loading="lazy" width="133" alt=""
-         class="centered-image">
+      loading="lazy" width="133" alt="" class="centered-image">
     <h3 class="title-text">为什么世界如此自相纷争</h3>
     <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html" class="custom-button">阅读</a>
-</div>
+  </div>
 
-<style>
-.content-container {
-    text-align: center; /* 居中 */
-    margin: 20px; /* 外边距 */
-}
+  <style>
+    .content-container {
+      text-align: center;
+      /* 居中 */
+      margin: 20px;
+      /* 外边距 */
+    }
 
-.centered-text {
-    font-size: 24px; /* 字体大小 */
-    color: #333; /* 字体颜色 */
-    margin-bottom: 10px; /* 下边距 */
-}
+    .centered-text {
+      font-size: 24px;
+      /* 字体大小 */
+      color: #333;
+      /* 字体颜色 */
+      margin-bottom: 10px;
+      /* 下边距 */
+    }
 
-.centered-image {
-    display: block; /* 将图片设置为块级元素 */
-    margin: 0 auto; /* 居中图片 */
-}
+    .centered-image {
+      display: block;
+      /* 将图片设置为块级元素 */
+      margin: 0 auto;
+      /* 居中图片 */
+    }
 
-.title-text {
-    font-size: 20px; /* 标题字体大小 */
-    color: #555; /* 标题颜色 */
-    margin-top: 10px; /* 上边距 */
-    margin-bottom: 15px; /* 下边距 */
-}
+    .title-text {
+      font-size: 20px;
+      /* 标题字体大小 */
+      color: #555;
+      /* 标题颜色 */
+      margin-top: 10px;
+      /* 上边距 */
+      margin-bottom: 15px;
+      /* 下边距 */
+    }
 
-.custom-button {
-    display: inline-block; /* 设置为块级元素以应用边距 */
-    padding: 12px 25px; /* 内边距 */
-    background-color: #0062d3; /* 按钮背景颜色 */
-    color: white; /* 字体颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    border: none; /* 去掉边框 */
-    border-radius: 10px; /* 圆角 */
-    font-size: 16px; /* 字体大小 */
-    transition: background-color 0.3s, transform 0.3s; /* 动效 */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* 添加按钮阴影 */
-}
+    .custom-button {
+      display: inline-block;
+      /* 设置为块级元素以应用边距 */
+      padding: 12px 25px;
+      /* 内边距 */
+      background-color: #0062d3;
+      /* 按钮背景颜色 */
+      color: white;
+      /* 字体颜色 */
+      text-decoration: none;
+      /* 去掉下划线 */
+      border: none;
+      /* 去掉边框 */
+      border-radius: 10px;
+      /* 圆角 */
+      font-size: 16px;
+      /* 字体大小 */
+      transition: background-color 0.3s, transform 0.3s;
+      /* 动效 */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+      /* 添加按钮阴影 */
+    }
 
-.custom-button:hover {
-    background-color: #004ec2; /* 悬停时的背景颜色 */
-    transform: scale(1.05); /* 悬停时放大 */
-}
-</style>
-<div class="content-container">
-  <h2 class="centered-text">圣经查考</h2>
-  <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
-       loading="lazy" width="133" alt=""
-       class="centered-image">
-  <h3 class="title-text">末日圣经证据</h3>
-  <a href="s/末日审判证据(1-50).html" class="custom-button">阅读</a>
-</div>
+    .custom-button:hover {
+      background-color: #004ec2;
+      /* 悬停时的背景颜色 */
+      transform: scale(1.05);
+      /* 悬停时放大 */
+    }
+  </style>
+  <div class="content-container">
+    <h2 class="centered-text">圣经查考</h2>
+    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5ebec656430498006b22c217_Tract%20%233.png"
+      loading="lazy" width="133" alt="" class="centered-image">
+    <h3 class="title-text">末日圣经证据</h3>
+    <a href="s/末日审判证据(1-50).html" class="custom-button">阅读</a>
+  </div>
 
-<style>
-.content-container {
-  text-align: center; /* 居中 */
-  margin: 20px; /* 外边距 */
-}
+  <style>
+    .content-container {
+      text-align: center;
+      /* 居中 */
+      margin: 20px;
+      /* 外边距 */
+    }
 
-.centered-text {
-  font-size: 24px; /* 字体大小 */
-  color: #333; /* 字体颜色 */
-  margin-bottom: 10px; /* 下边距 */
-}
+    .centered-text {
+      font-size: 24px;
+      /* 字体大小 */
+      color: #333;
+      /* 字体颜色 */
+      margin-bottom: 10px;
+      /* 下边距 */
+    }
 
-.centered-image {
-  display: block; /* 将图片设置为块级元素 */
-  margin: 0 auto; /* 居中图片 */
-}
+    .centered-image {
+      display: block;
+      /* 将图片设置为块级元素 */
+      margin: 0 auto;
+      /* 居中图片 */
+    }
 
-.title-text {
-  font-size: 20px; /* 标题字体大小 */
-  color: #555; /* 标题颜色 */
-  margin-top: 10px; /* 上边距 */
-  margin-bottom: 15px; /* 下边距 */
-}
+    .title-text {
+      font-size: 20px;
+      /* 标题字体大小 */
+      color: #555;
+      /* 标题颜色 */
+      margin-top: 10px;
+      /* 上边距 */
+      margin-bottom: 15px;
+      /* 下边距 */
+    }
 
-.custom-button {
-  display: inline-block; /* 设置为块级元素以应用边距 */
-  padding: 12px 25px; /* 内边距 */
-  background-color: #0062d3; /* 按钮背景颜色 */
-  color: white; /* 字体颜色 */
-  text-decoration: none; /* 去掉下划线 */
-  border: none; /* 去掉边框 */
-  border-radius: 10px; /* 圆角 */
-  font-size: 16px; /* 字体大小 */
-  transition: background-color 0.3s, transform 0.3s; /* 动效 */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* 添加按钮阴影 */
-}
+    .custom-button {
+      display: inline-block;
+      /* 设置为块级元素以应用边距 */
+      padding: 12px 25px;
+      /* 内边距 */
+      background-color: #0062d3;
+      /* 按钮背景颜色 */
+      color: white;
+      /* 字体颜色 */
+      text-decoration: none;
+      /* 去掉下划线 */
+      border: none;
+      /* 去掉边框 */
+      border-radius: 10px;
+      /* 圆角 */
+      font-size: 16px;
+      /* 字体大小 */
+      transition: background-color 0.3s, transform 0.3s;
+      /* 动效 */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+      /* 添加按钮阴影 */
+    }
 
-.custom-button:hover {
-  background-color: #004ec2; /* 悬停时的背景颜色 */
-  transform: scale(1.05); /* 悬停时放大 */
-}
-</style>
+    .custom-button:hover {
+      background-color: #004ec2;
+      /* 悬停时的背景颜色 */
+      transform: scale(1.05);
+      /* 悬停时放大 */
+    }
+  </style>
   <hr class="separator">
   <div class="div-block-562">
     <div class="code-embed w-embed w-script">
@@ -723,7 +1033,7 @@
       <div class="timeline_welcome_screen_home">
         <div class="div-block-577">
           <h1 class="heading-177-copy" _msttexthash="31955027" _msthash="309">圣经历史的时间表</h1>
-          <h1 class="tbtohm" _msttexthash="780078" _msthidden="1" _msthash="310" >圣经历史年代表
+          <h1 class="tbtohm" _msttexthash="780078" _msthidden="1" _msthash="310">圣经历史年代表
           </h1>
           <p class="paragraph-124-copy" _msttexthash="6806077265" _msthash="311">看看圣经中发现的圣经历史时间表，从创世之日到时间的终结，由已故的哈罗德·康平
             （Harold Camping） 发现，正如上帝允许他的那样，在末世时解封了他的话语。这个交互式图表将显示关键的圣经事件，例如创建日期、洪水发生的时间、出埃及、所罗门圣殿地基的奠基等。
@@ -1338,875 +1648,938 @@
   </div>
   </div>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    .timeline-section,
-    .white-interface {
-      text-align: center;
+   body {
+        color: rgb(0, 0, 0);
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center; /* 水平居中 */
+        min-height: 100vh; /* 使 body 高度至少为 100% */
+        margin: 0; /* 去掉默认边距 */
     }
 
-    .title,
-    .subtitle,
-    .interactive-timeline,
-    .enter-interface-link {
-      margin: 0 auto;
-      max-width: 800px;
-      /* 或者其他适合的宽度 */
+    .music-player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
     }
 
-    .subtitle p {
-      text-align: center;
+    .controls {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
     }
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    .progress-container {
+      width: 300px;
+      height: 5px;
+      background: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .progress {
+      height: 100%;
+      background: #40d9ff;
+      width: 0;
+      border-radius: 5px;
+    }
+
+    .time {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .song-list {
+      margin-top: 20px;
+      width: 300px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #ffffff;
+    }
+
+    .song-item {
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .song-item:hover {
+      background-color: #009dff;
+    }
+
+    .active-song {
+      background-color: #00aaff;
+    }
+
+    .music-player {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .progress-container {
+      position: relative;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+    }
+
+    .progress {
+      position: absolute;
+      height: 100%;
+      background-color: #3b5998;
+      /* 修改为您喜欢的颜色 */
+      border-radius: 5px;
+    }
+
+    .time {
+      position: absolute;
+      font-size: 12px;
+      color: #333;
+    }
+
+    #hymnsCurrentTime {
+      left: 10px;
+      /* 左上角 */
+      top: -20px;
+      /* 上方 */
+    }
+
+    #hymnsDuration {
+      right: 10px;
+      /* 右上角 */
+      top: -20px;
+      /* 上方 */
+    }
+
+    #danielCurrentTime {
+      left: 10px;
+      /* 左上角 */
+      top: -20px;
+      /* 上方 */
+    }
+
+    #danielDuration {
+      right: 10px;
+      /* 右上角 */
+      top: -20px;
+      /* 上方 */
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+
+    button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3b5998;
+      /* 按钮颜色 */
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #365e9d;
+      /* 按钮悬停颜色 */
+    }
+
+    .music-player {
+    margin-left: 0; /* 默认情况下没有左边距 */
+}
+
+
+
   </style>
-  <hr>
-  <div>
-    <style>
-      .page-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        /* 占据整个视口高度 */
-        margin: 0;
-        /* 去除默认的边距 */
-      }
+  </head>
 
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ffffff7e;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: 500px;
-        height: 100vh;
-      }
+  <body>
+    <!-- Hymns 播放器 -->
+    <!-- Hymns 播放器 -->
+    <div class="music-player" id="hymnsPlayer">
+      <h2 id="hymnsSongTitle">正在播放 : </h2>
+      <div class="progress-container" id="hymnsProgressContainer">
+        <div class="time" id="hymnsCurrentTime">0:00</div>
+        <div class="progress" id="hymnsProgress"></div>
+        <div class="time" id="hymnsDuration">0:00</div>
+      </div>
+      <div class="controls">
+        <button id="hymnsPrevBtn"><i class="fas fa-step-backward"></i></button>
+        <button id="hymnsPlayBtn"><i class="fas fa-play"></i></button>
+        <button id="hymnsNextBtn"><i class="fas fa-step-forward"></i></button>
+      </div>
+      <div class="song-list" id="hymnsSongList"></div>
+    </div>
 
-      .music-player {
-        display: flex;
-        /* 使播放器居中 */
-        justify-content: center;
-        /* 水平居中 */
-        width: 100%;
-        margin-bottom: 20px;
-      }
+    <!-- 但以理书 播放器 -->
+    <div class="music-player" id="danielPlayer">
+      <h2 id="danielSongTitle">正在播放 : </h2>
+      <div class="progress-container" id="danielProgressContainer">
+        <div class="time" id="danielCurrentTime">0:00</div>
+        <div class="progress" id="danielProgress"></div>
+        <div class="time" id="danielDuration">0:00</div>
+      </div>
+      <div class="controls">
+        <button id="danielPrevBtn"><i class="fas fa-step-backward"></i></button>
+        <button id="danielPlayBtn"><i class="fas fa-play"></i></button>
+        <button id="danielNextBtn"><i class="fas fa-step-forward"></i></button>
+      </div>
+      <div class="song-list" id="danielSongList"></div>
+    </div>
 
-      .options-container {
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-      }
-
-      .options {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-
-      .option-button {
-        padding: 12px 20px;
-        border: none;
-        border-radius: 25px;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-        font-size: 16px;
-        margin-bottom: 10px;
-        width: 100%;
-        transition: background-color 0.3s, transform 0.3s;
-      }
-
-      .option-button:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-      }
-
-      .option-button:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-      }
-    </style>
     <script>
-      function playAudio(audioSrc) {
-        const audioPlayer = document.getElementById('audio-player');
-        audioPlayer.src = audioSrc;
-        audioPlayer.play();
+      // Hymns 播放器相关代码
+      const hymnsAudioPlayer = new Audio();
+      let hymnsSongs = [];
+      let hymnsCurrentSongIndex = 0;
+
+      const hymnsSongTitle = document.getElementById('hymnsSongTitle');
+      const hymnsPlayBtn = document.getElementById('hymnsPlayBtn');
+      const hymnsPrevBtn = document.getElementById('hymnsPrevBtn');
+      const hymnsNextBtn = document.getElementById('hymnsNextBtn');
+      const hymnsProgressContainer = document.getElementById('hymnsProgressContainer');
+      const hymnsProgress = document.getElementById('hymnsProgress');
+      const hymnsCurrentTimeDisplay = document.getElementById('hymnsCurrentTime');
+      const hymnsDurationDisplay = document.getElementById('hymnsDuration');
+      const hymnsSongListElement = document.getElementById('hymnsSongList');
+
+      fetch('/songs')
+        .then(response => response.json())
+        .then(data => {
+          hymnsSongs = shuffleArray(data);
+          loadHymnsSong();
+          hymnsAudioPlayer.play();
+          hymnsPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        })
+        .catch(err => console.error(err));
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
       }
+
+      function loadHymnsSong() {
+        const currentSong = `Hymns/${hymnsSongs[hymnsCurrentSongIndex]}`;
+        hymnsAudioPlayer.src = currentSong;
+        const songName = hymnsSongs[hymnsCurrentSongIndex].replace('.mp3', '');
+        hymnsSongTitle.innerText = `正在播放: ${songName}`;
+
+        hymnsAudioPlayer.onloadedmetadata = () => {
+          hymnsDurationDisplay.innerText = formatTime(hymnsAudioPlayer.duration);
+        };
+
+        updateHymnsSongList();
+      }
+
+      function updateHymnsSongList() {
+        hymnsSongListElement.innerHTML = '';
+        hymnsSongs.forEach((song, index) => {
+          const songItem = document.createElement('div');
+          songItem.classList.add('song-item');
+          songItem.innerText = song.replace('.mp3', '');
+          if (index === hymnsCurrentSongIndex) {
+            songItem.classList.add('active-song');
+          }
+          songItem.addEventListener('click', () => {
+            hymnsCurrentSongIndex = index;
+            loadHymnsSong();
+            hymnsAudioPlayer.play();
+            hymnsPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
+          });
+          hymnsSongListElement.appendChild(songItem);
+        });
+      }
+
+      hymnsPlayBtn.addEventListener('click', () => {
+        if (hymnsAudioPlayer.paused) {
+          hymnsAudioPlayer.play();
+          hymnsPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+          hymnsAudioPlayer.pause();
+          hymnsPlayBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+      });
+
+      hymnsPrevBtn.addEventListener('click', () => {
+        hymnsCurrentSongIndex = (hymnsCurrentSongIndex - 1 + hymnsSongs.length) % hymnsSongs.length;
+        loadHymnsSong();
+        hymnsAudioPlayer.play();
+        hymnsPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      });
+
+      hymnsNextBtn.addEventListener('click', () => {
+        hymnsCurrentSongIndex = (hymnsCurrentSongIndex + 1) % hymnsSongs.length;
+        loadHymnsSong();
+        hymnsAudioPlayer.play();
+        hymnsPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      });
+
+      hymnsAudioPlayer.addEventListener('timeupdate', () => {
+        const progressPercent = (hymnsAudioPlayer.currentTime / hymnsAudioPlayer.duration) * 100;
+        hymnsProgress.style.width = `${progressPercent}%`;
+        hymnsCurrentTimeDisplay.innerText = formatTime(hymnsAudioPlayer.currentTime);
+      });
+
+      hymnsProgressContainer.addEventListener('click', (event) => {
+        const rect = hymnsProgressContainer.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const percent = clickX / hymnsProgressContainer.clientWidth;
+        hymnsAudioPlayer.currentTime = percent * hymnsAudioPlayer.duration;
+      });
+
+      function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      }
+
+      hymnsAudioPlayer.addEventListener('ended', () => {
+        hymnsNextBtn.click();
+      });
+      // 但以理书播放器
+      const danielAudioPlayer = document.createElement('audio');
+      const danielSongTitle = document.getElementById('danielSongTitle');
+      const danielPlayBtn = document.getElementById('danielPlayBtn');
+      const danielPrevBtn = document.getElementById('danielPrevBtn');
+      const danielNextBtn = document.getElementById('danielNextBtn');
+      const danielProgressContainer = document.getElementById('danielProgressContainer');
+      const danielProgress = document.getElementById('danielProgress');
+      const danielCurrentTimeDisplay = document.getElementById('danielCurrentTime');
+      const danielDurationDisplay = document.getElementById('danielDuration');
+      const danielSongListElement = document.getElementById('danielSongList');
+
+      // 静态的但以理书章节列表
+      const danielSongs = [
+        { file: 'caudio/d/1/1.mp3', title: '但以理书 1 章 1' },
+        { file: 'caudio/d/1/2.mp3', title: '但以理书 1 章 2' },
+        { file: 'caudio/d/1/3.mp3', title: '但以理书 1 章 3' },
+        { file: 'caudio/d/1/4.mp3', title: '但以理书 1 章 4' },
+        { file: 'caudio/d/1/5.mp3', title: '但以理书 1 章 5' },
+        { file: 'caudio/d/1/6.mp3', title: '但以理书 1 章 6' },
+        { file: 'caudio/d/1/7.mp3', title: '但以理书 1 章 7' },
+        { file: 'caudio/d/1/8.mp3', title: '但以理书 1 章 8' },
+        { file: 'caudio/d/1/9.mp3', title: '但以理书 1 章 9' },
+        { file: 'caudio/d/1/10.mp3', title: '但以理书 1 章 10' },
+        { file: 'caudio/d/1/11.mp3', title: '但以理书 1 章 11' },
+      ];
+
+      let danielCurrentSongIndex = 0;
+
+      // 加载当前歌曲
+      function loadDanielSong() {
+        const currentSong = danielSongs[danielCurrentSongIndex].file;
+        danielAudioPlayer.src = currentSong;
+        const songName = danielSongs[danielCurrentSongIndex].title;
+        danielSongTitle.innerText = `正在播放 : ${songName}`;
+
+        danielAudioPlayer.onloadedmetadata = () => {
+          danielDurationDisplay.innerText = formatTime(danielAudioPlayer.duration);
+        };
+
+        updateDanielSongList();
+      }
+
+      // 更新但以理书歌曲列表
+      function updateDanielSongList() {
+        danielSongListElement.innerHTML = '';
+        danielSongs.forEach((song, index) => {
+          const songItem = document.createElement('div');
+          songItem.classList.add('song-item');
+          songItem.innerText = song.title;
+          if (index === danielCurrentSongIndex) {
+            songItem.classList.add('active-song');
+          }
+          songItem.addEventListener('click', () => {
+            danielCurrentSongIndex = index;
+            loadDanielSong();
+            danielAudioPlayer.play();
+          });
+          danielSongListElement.appendChild(songItem);
+        });
+      }
+
+      // 格式化时间
+      function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' + secs : secs}`;
+      }
+
+      // 播放或暂停
+      danielPlayBtn.addEventListener('click', () => {
+        if (danielAudioPlayer.paused) {
+          danielAudioPlayer.play();
+          danielPlayBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+          danielAudioPlayer.pause();
+          danielPlayBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+      });
+
+      // 上一首
+      danielPrevBtn.addEventListener('click', () => {
+        danielCurrentSongIndex = (danielCurrentSongIndex - 1 + danielSongs.length) % danielSongs.length;
+        loadDanielSong();
+        danielAudioPlayer.play();
+      });
+
+      // 下一首
+      danielNextBtn.addEventListener('click', () => {
+        danielCurrentSongIndex = (danielCurrentSongIndex + 1) % danielSongs.length;
+        loadDanielSong();
+        danielAudioPlayer.play();
+      });
+
+      // 更新进度条和时间
+      danielAudioPlayer.addEventListener('timeupdate', () => {
+        const currentTime = danielAudioPlayer.currentTime;
+        danielCurrentTimeDisplay.innerText = formatTime(currentTime);
+        danielProgress.style.width = (currentTime / danielAudioPlayer.duration) * 100 + '%';
+      });
+
+      // 点击进度条跳转
+      danielProgressContainer.addEventListener('click', (event) => {
+        const rect = danielProgressContainer.getBoundingClientRect();
+        const offsetX = event.clientX - rect.left;
+        const totalWidth = rect.width;
+        const percentage = offsetX / totalWidth;
+        danielAudioPlayer.currentTime = percentage * danielAudioPlayer.duration;
+      });
+
+      // 自动播放下一首
+      danielAudioPlayer.addEventListener('ended', () => {
+        danielNextBtn.click();
+      });
+
+      // 初始化加载第一首歌曲
+      loadDanielSong();
+
     </script>
-    </head>
+  </body>
 
-
-        <style>
-          /* 添加这部分样式 */
-          .container {
-            display: flex;
-            justify-content: center;
-            /* 水平居中对齐 */
-            height: 100%;
-            /* 使容器占满视口高度 */
-            text-align: center;
-          }
-
-          #player1 {
-            width: 90%;
-            /* 可根据需要调整 */
-          }
-
-          #player2 {
-            width: 90%;
-            /* 可根据需要调整 */
-          }
-        </style>
-      </head>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <div class="container">
-    <style>
-        .player-container {
-            border-radius: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            padding: 40px;
-            background-color: #ffffff;
-        }
-        .playlist {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .playlist-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            cursor: pointer;
-            border-bottom: 1px solid #ddd;
-        }
-        .playlist-item:last-child {
-            border-bottom: none;
-        }
-        .playlist-item:hover {
-            background-color: #f0f0f0;
-        }
-        .playlist-item img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
-        .player-controls {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .player-controls button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            margin: 0 10px;
-        }
-        .player-controls button:focus {
-            outline: none;
-        }
-        .status-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            height: 20px;
-            margin-bottom: 10px;
-        }
-        .status-text {
-            display: inline-block;
-            padding: 0 10px;
-            white-space: nowrap;
-            animation: moveText 10s linear infinite;
-        }
-        @keyframes moveText {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        .progress-container {
-            width: 100%;
-            background-color: #ddd;
-            border-radius: 40px;
-            height: 10px;
-            margin: 10px 0;
-            position: relative;
-            cursor: pointer;
-        }
-        .progress-bar {
-            height: 100%;
-            background-color: #007bff;
-            border-radius: 5px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-        }
-        .time-container {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin-bottom: 5px;
-        }
-    </style>
-</head>
-<body>
-  <div class="player-container" data-player="1">
-    <h2>圣经音乐</h2>
-    <ul class="playlist">
-        <li class="playlist-item" data-src="Hymns/有福确据歌 .mp3">
-            <img src="1.jpg"> 有福确据歌 
-        </li>
-        <li class="playlist-item" data-src="Hymns/惟独耶稣歌.mp3">
-            <img src="1.jpg"> 惟独耶稣歌
-        </li>
-        <li class="playlist-item" data-src="Hymns/安居主怀歌.mp3">
-            <img src="1.jpg"> 安居主怀歌
-        </li>
-    </ul>
-    <div class="status-container">
-        <div class="status-text" id="statusText1">没有正在播放</div>
-    </div>
-    <div class="time-container">
-        <span id="currentTime1">00:00</span>
-        <span id="totalTime1">00:00</span>
-    </div>
-    <div class="progress-container" id="progressContainer1">
-        <div class="progress-bar" id="progressBar1"></div>
-    </div>
-    <div class="player-controls">
-        <button id="playPauseBtn1"><i class="fas fa-play"></i></button>
-    </div>
-    <p style="text-align: center;">eBible Fellowship Player</p>
+</html>
 </div>
-
-<div class="player-container" data-player="2">
-    <h2>但以理书1章</h2>
-    <ul class="playlist">
-        <li class="playlist-item" data-src="caudio/d/1/1.mp3">
-            <img src="1.jpg"> 但以理书1章（1）
-        </li>
-        <li class="playlist-item" data-src="caudio/d/1/2.mp3">
-          <img src="1.jpg"> 但以理书1章（2）
-      </li>
-      <li class="playlist-item" data-src="caudio/d/1/3.mp3">
-        <img src="1.jpg"> 但以理书1章（3）
-    </li>
-    <li class="playlist-item" data-src="caudio/d/1/4.mp3">
-      <img src="1.jpg"> 但以理书1章（4）
-  </li>
-  <li class="playlist-item" data-src="caudio/d/1/5.mp3">
-    <img src="1.jpg"> 但以理书1章（5）
-</li>
-<li class="playlist-item" data-src="caudio/d/1/6.mp3">
-  <img src="1.jpg"> 但以理书1章（6）
-</li>
-<li class="playlist-item" data-src="caudio/d/1/7.mp3">
-  <img src="1.jpg"> 但以理书1章（7）
-</li>
-<li class="playlist-item" data-src="caudio/d/1/8.mp3">
-  <img src="1.jpg"> 但以理书1章（8）
-</li>
-<li class="playlist-item" data-src="caudio/d/1/9.mp3">
-  <img src="1.jpg"> 但以理书1章（9）
-</li>
-<li class="playlist-item" data-src="caudio/d/1/10.mp3">
-  <img src="1.jpg"> 但以理书1章（10）
-</li>
-<li class="playlist-item" data-src="caudio/d/1/11.mp3">
-  <img src="1.jpg"> 但以理书1章（11）
-</li>
-    </ul>
-    <div class="status-container">
-        <div class="status-text" id="statusText2">没有正在播放</div>
+<hr class="separator">
+<div class="webblockwhite5-2">
+  <div class="div-block-552">
+    <h1 class="ebiblefellowship-copy">
+      <font _mstmutation="1" _msttexthash="12156495" _msthash="395">欢迎来到</font>
+      <span class="text-span-643" _msttexthash="9191" _msthash="396">电子</span>
+      <font _mstmutation="1" _msttexthash="10980853" _msthash="397">圣经团契</font>
+    </h1>
+    <div class="text-block-325">
+      <font _mstmutation="1" _msttexthash="130481143" _msthash="398">我们是一个基督教组织，不隶属于任何教会或事工</font>
+      <br>
     </div>
-    <div class="time-container">
-        <span id="currentTime2">00:00</span>
-        <span id="totalTime2">00:00</span>
+    <div class="w-row">
+      <div class="w-col w-col-6"></div>
+      <div class="w-col w-col-6"></div>
     </div>
-    <div class="progress-container" id="progressContainer2">
-        <div class="progress-bar" id="progressBar2"></div>
+  </div>
+  <div class="div-block-554" _msthidden="2">
+    <div class="div-block-551"></div>
+    <div class="html-embed-50 w-embed w-iframe" _msthidden="2">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+      <div
+        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+        _msthidden="2">
+        <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank"
+          style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="399">E
+          Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult"
+          title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;"
+          _msttexthash="565084" _msthidden="1" _msthash="400">Is E bible Fellowship a cult</a>
+      </div>
     </div>
-    <div class="player-controls">
-        <button id="playPauseBtn2"><i class="fas fa-play"></i></button>
+  </div>
+  <div data-delay="4000" data-animation="slide" class="slider-11 w-slider" data-autoplay="false" data-easing="ease"
+    data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3"
+    data-duration="1000" data-infinite="true" role="region" aria-label="carousel" _msthidden="24"
+    _mstaria-label="118261" _msthash="401">
+    <div class="div-block-550" _msthidden="2">
+      <h1 class="heading-174" _msttexthash="1352247" _msthidden="1" _msthash="402">EBF Bible Banquet Miami
+        Florida - Official Form</h1>
+      <img
+        src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM.png"
+        loading="lazy" sizes="100vw"
+        srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM.png 2000w"
+        alt="" class="image-113">
+      <div class="div-block-553" _msthidden="1">
+        <a href="#floridaform" data-w-id="81d68598-b715-2039-b347-2e93c698dbc5"
+          style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+          class="signupbutton w-button" _msttexthash="58227" _msthidden="1" _msthash="403">SIGN&nbsp;UP</a>
+      </div>
     </div>
-    <p style="text-align: center;">eBible Fellowship Player</p>
-</div>
-
-<script>
-    const players = document.querySelectorAll('.player-container');
-    let currentTrack = null;
-    let isPlaying = false;
-
-    players.forEach(player => {
-        const playerId = player.dataset.player;
-        const playPauseBtn = document.getElementById(`playPauseBtn${playerId}`);
-        const progressBar = document.getElementById(`progressBar${playerId}`);
-        const progressContainer = document.getElementById(`progressContainer${playerId}`);
-        const statusText = document.getElementById(`statusText${playerId}`);
-        const currentTimeDisplay = document.getElementById(`currentTime${playerId}`);
-        const totalTimeDisplay = document.getElementById(`totalTime${playerId}`);
-        const playlistItems = player.querySelectorAll('.playlist-item');
-
-        function formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-
-        function updateStatus(text) {
-            statusText.textContent = text;
-            statusText.style.animation = 'none';
-            statusText.offsetHeight;
-            statusText.style.animation = 'moveText 10s linear infinite';
-        }
-
-        function playTrack(src, trackName) {
-            if (currentTrack) currentTrack.pause();  // Pause the previous track
-            currentTrack = new Audio(src);
-            currentTrack.play();
-            isPlaying = true;
-            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            updateStatus(`正在播放：${trackName}`);
-            updateProgress();
-        }
-
-        function updateProgress() {
-            if (isPlaying) {
-                const seek = currentTrack.currentTime;
-                const duration = currentTrack.duration;
-                const progress = (seek / duration) * 100;
-                progressBar.style.width = `${progress}%`;
-                currentTimeDisplay.textContent = formatTime(seek);
-                totalTimeDisplay.textContent = formatTime(duration);
-                requestAnimationFrame(updateProgress);
-            }
-        }
-
-        progressContainer.addEventListener('click', (e) => {
-            const rect = progressContainer.getBoundingClientRect();
-            const offsetX = e.clientX - rect.left;
-            const totalWidth = progressContainer.offsetWidth;
-            const percentage = offsetX / totalWidth;
-            const newTime = percentage * currentTrack.duration;
-            currentTrack.currentTime = newTime;
-            updateProgress();
-        });
-
-        playlistItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const src = item.getAttribute('data-src');
-                const trackName = item.textContent.trim();
-                playTrack(src, trackName);
-            });
-        });
-
-        playPauseBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                currentTrack.pause();
-                isPlaying = false;
-                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-                updateStatus('播放暂停');
-            } else {
-                currentTrack.play();
-                isPlaying = true;
-                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                updateStatus(`正在播放：${currentTrack.src}`);
-            }
-        });
-    });
-</script>
-        </div>
-        <hr class="separator">
-        <div class="webblockwhite5-2">
-          <div class="div-block-552">
-            <h1 class="ebiblefellowship-copy">
-              <font _mstmutation="1" _msttexthash="12156495" _msthash="395">欢迎来到</font>
-              <span class="text-span-643" _msttexthash="9191" _msthash="396">电子</span>
-              <font _mstmutation="1" _msttexthash="10980853" _msthash="397">圣经团契</font>
-            </h1>
-            <div class="text-block-325">
-              <font _mstmutation="1" _msttexthash="130481143" _msthash="398">我们是一个基督教组织，不隶属于任何教会或事工</font>
+    <div class="mask-6 w-slider-mask" id="w-slider-mask-0" _msthidden="19">
+      <div class="w-slide" aria-label="1 of 1" role="group"
+        style="transition: all; transform: translateX(0px); opacity: 1;" _msthidden="18" _mstaria-label="34307"
+        _msthash="404">
+        <div class="text-block-326" _msthidden="1">
+          <br>
+          <font _mstmutation="1" _msttexthash="618733687" _msthidden="1" _msthash="405">
+            <span class="text-span-639" _mstmutation="1">eBible Fellowship is hosting a 2 Day Event
+              in&nbsp;Miami, Florida. (About 3 hour flight from PA, NJ, NY). Chris, Robert and Eddie will give
+              Bible studies and there will be a lunch and dinner buffet.
               <br>
-            </div>
-            <div class="w-row">
-              <div class="w-col w-col-6"></div>
-              <div class="w-col w-col-6"></div>
-            </div>
-          </div>
-          <div class="div-block-554" _msthidden="2">
-            <div class="div-block-551"></div>
-            <div class="html-embed-50 w-embed w-iframe" _msthidden="2">
-              <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+              <br>
+            </span>
+            <span class="textimportant" _mstmutation="1">Important: When booking your flight be sure to arrive
+              before 12PM on May 10, to make the lunch buffet,
+              <br>some have flights booked for May 9th so they arrive a day prior.</span>
+            <span class="text-span-639" _mstmutation="1">
+              <br>
+              <br>Schedule May 10th: Room is open 8AM, Conference starts 11:30 AM and will go to 7PM, we have
+              the meeting room until 8PM. (We can't bring food into the meeting room or EBF will get charged for
+              it)
+              <br>‍
+              <br>12PM to 1PM - Lunch Buffet (Communal table Room)
+              <br>1PM to 6PM - Bible&nbsp;Studies (schedule TBD) (Coconut Grove Room)
+              <br>6PM to 7PM - Dinner Buffet (Havana Room)
+              <br>7PM to 8PM - Free Time
+              <br>
+            </span>
+            <br _mstmutation="1">
+            <br _mstmutation="1">
+            <span class="text-span-642" _mstmutation="1">Attendace update: </span>
+            <br _mstmutation="1">‍<span class="text-span-648" _mstmutation="1">21/50+ Signed up
+              <br>
+            </span>
+            <span class="text-span-640" _mstmutation="1">Additional 10 Might come</span>
+            <span class="text-span-648" _mstmutation="1">
+              <br>‍</span>
+            <br _mstmutation="1">‍
+            <br _mstmutation="1">
+            <br _mstmutation="1">
+            <span class="text-span-647" _mstmutation="1">WHEN</span>
+            <br _mstmutation="1">
+            <span class="text-span-651" _mstmutation="1">Friday May 10th, 2024:</span> A Day In The Word Banquet
+            at Hotel Conference Center.
+            <br _mstmutation="1">
+            <span class="text-span-638" _mstmutation="1">Saturday May 11th, 2024: </span>&nbsp;Day Of Tracting
+            <br _mstmutation="1">
+            <br _mstmutation="1">
+            <span class="text-span-649" _mstmutation="1">WHERE</span>
+            <br _mstmutation="1">Miami, Florida
+          </font>
+          <br>
+        </div>
+        <div class="div-block-549">
+          <img
+            src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel.png"
+            loading="lazy" width="382" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel.png 1988w">
+        </div>
+        <div class="text-block-326" _msthidden="1">
+          <br>
+          <br>
+          <font _mstmutation="1" _msttexthash="68193294" _msthidden="1" _msthash="406">
+            <span class="text-span-645" _mstmutation="1">COST</span>
+            <br _mstmutation="1">
+            <span class="text-span-646" _mstmutation="1">Lunch + Dinner buffet:</span> $96
+            <br _mstmutation="1">
+            <span class="text-span-641" _mstmutation="1">Hotel: </span>About low $200 per night.
+            <br _mstmutation="1">
+            <span class="text-span-650" _mstmutation="1">Flights:</span> Around $150 - $300 range (check google
+            flights)
+            <br _mstmutation="1">‍
+            <br _mstmutation="1">
+            <span class="text-span-652" _mstmutation="1">We need to know if you would be interested in attending
+              ASAP. If interested please let us know by filling out the form below.
+              <br>
+              <br>
+            </span>
+            <span class="text-span-644" _mstmutation="1">LOCATION:</span> Embassy Suites by Hilton Miami
+            International Airport
+            <br _mstmutation="1">Address: 3974 NW S River Dr, Miami, FL 33142
+          </font>
+          <br>
+          <br>
+        </div>
+        <div class="div-block-555">
+          <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy.png"
+            loading="lazy" width="310" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy.png 1000w"
+            class="image-114">
+          <img
+            src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room.png"
+            loading="lazy" width="310" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room.png 1000w"
+            class="image-114">
+          <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables.png"
+            loading="lazy" width="310" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables.png 1000w"
+            class="image-114">
+          <img
+            src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner.jpg"
+            loading="lazy" width="310" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-800.jpg 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner.jpg 1220w"
+            class="image-114">
+          <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel.jpg"
+            loading="lazy" width="310" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-800.jpg 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-1600.jpg 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel.jpg 1734w"
+            class="image-114">
+          <img
+            src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444acaudio/d/1/1_Pool.jpg"
+            loading="lazy" width="310" sizes="100vw" alt=""
+            srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444acaudio/d/1/1_Pool-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444acaudio/d/1/1_Pool.jpg 783w"
+            class="image-114">
+        </div>
+        <div id="floridaform" _msthidden="16">
+          <div class="form-block-13 w-form" _msthidden="16">
+            <form id="wf-form-Florida-2-Day-Event-Attendence" name="wf-form-Florida-2-Day-Event-Attendence"
+              data-name="Florida 2 Day Event Attendence" method="get" data-wf-page-id="65c93546bdae1d24d02a0bcc"
+              data-wf-element-id="81d68598-b715-2039-b347-2e93c698dc32" aria-label="Florida 2 Day Event Attendence"
+              _msthidden="11" _mstaria-label="661817" _msthash="407">
+              <label for="EBF-Day-in-the-Word-Banquet-Florida" class="field-label-20" _msttexthash="1973114"
+                _msthidden="1" _msthash="408">Select option from green dropdown menu below (required)</label>
+              <select id="EBF-Day-in-the-Word-Banquet-Florida" name="EBF-Day-in-the-Word-Banquet-Florida"
+                data-name="EBF Day In The Word Banquet Florida" required="" class="select-field-3 w-select"
+                _msthidden="4">
+                <option value="" _msttexthash="379925" _msthidden="1" _msthash="409">Attendance Dropdown
+                </option>
+                <option value="Yes I'll plan to Attend" _msttexthash="401479" _msthidden="1" _msthash="410">Yes
+                  I'll plan to Attend</option>
+                <option value="Maybe - I might be able to make it" _msttexthash="677521" _msthidden="1" _msthash="411">
+                  Maybe - I might be able to make it</option>
+                <option value="No, I can't attend" _msttexthash="264680" _msthidden="1" _msthash="412">No, I
+                  can't attend</option>
+              </select>
+              <label for="Name-4" class="field-label-23" _msttexthash="43069" _msthidden="1" _msthash="413">Name</label>
+              <input class="text-field-12 w-input" maxlength="256" name="Name-4" data-name="Name 4"
+                placeholder="Name Here" type="text" id="Name-4" required="" _msthidden="A" _mstplaceholder="106769"
+                _msthash="414">
+              <label for="Email-4" class="field-label-24" _msttexthash="198861" _msthidden="1" _msthash="415">Email
+                Address</label>
+              <input class="text-field-12 w-input" maxlength="256" name="Email-4" data-name="Email 4"
+                placeholder="Email Address Here" type="email" id="Email-4" required="" _msthidden="A"
+                _mstplaceholder="302913" _msthash="416">
+              <label for="Message-Box" class="field-label-24" _msttexthash="92924" _msthidden="1"
+                _msthash="417">Message</label>
+              <textarea placeholder="Write Us " maxlength="5000" id="Message-Box" name="Message-Box"
+                data-name="Message Box" class="textarea-6 w-input" _msthidden="A" _mstplaceholder="94276"
+                _msthash="418"></textarea>
               <div
-                style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
-                _msthidden="2">
-                <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank"
-                  style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="399">E
-                  Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult"
-                  title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;"
-                  _msttexthash="565084" _msthidden="1" _msthash="400">Is E bible Fellowship a cult</a>
+                class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key">
               </div>
+              <input type="submit" data-wait="Please wait..." class="submit-button-16 w-button" value="Submit"
+                _msthidden="A" _mstvalue="78468" _msthash="419">
+            </form>
+            <div class="success-message-10 w-form-done" role="region"
+              aria-label="Florida 2 Day Event Attendence success" _msthidden="1" _mstaria-label="1017939"
+              _msthash="420">
+              <div _msttexthash="1605721" _msthidden="1" _msthash="421">Thank you! Your submission has been
+                received by EBF!</div>
             </div>
-          </div>
-          <div data-delay="4000" data-animation="slide" class="slider-11 w-slider" data-autoplay="false"
-            data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
-            data-nav-spacing="3" data-duration="1000" data-infinite="true" role="region" aria-label="carousel"
-            _msthidden="24" _mstaria-label="118261" _msthash="401">
-            <div class="div-block-550" _msthidden="2">
-              <h1 class="heading-174" _msttexthash="1352247" _msthidden="1" _msthash="402">EBF Bible Banquet Miami
-                Florida - Official Form</h1>
-              <img
-                src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM.png"
-                loading="lazy" sizes="100vw"
-                srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65e9d052673079120c415a56_Screenshot%202024-03-07%20at%209.31.35%20AM.png 2000w"
-                alt="" class="image-113">
-              <div class="div-block-553" _msthidden="1">
-                <a href="#floridaform" data-w-id="81d68598-b715-2039-b347-2e93c698dbc5"
-                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-                  class="signupbutton w-button" _msttexthash="58227" _msthidden="1" _msthash="403">SIGN&nbsp;UP</a>
-              </div>
-            </div>
-            <div class="mask-6 w-slider-mask" id="w-slider-mask-0" _msthidden="19">
-              <div class="w-slide" aria-label="1 of 1" role="group"
-                style="transition: all; transform: translateX(0px); opacity: 1;" _msthidden="18" _mstaria-label="34307"
-                _msthash="404">
-                <div class="text-block-326" _msthidden="1">
-                  <br>
-                  <font _mstmutation="1" _msttexthash="618733687" _msthidden="1" _msthash="405">
-                    <span class="text-span-639" _mstmutation="1">eBible Fellowship is hosting a 2 Day Event
-                      in&nbsp;Miami, Florida. (About 3 hour flight from PA, NJ, NY). Chris, Robert and Eddie will give
-                      Bible studies and there will be a lunch and dinner buffet.
-                      <br>
-                      <br>
-                    </span>
-                    <span class="textimportant" _mstmutation="1">Important: When booking your flight be sure to arrive
-                      before 12PM on May 10, to make the lunch buffet,
-                      <br>some have flights booked for May 9th so they arrive a day prior.</span>
-                    <span class="text-span-639" _mstmutation="1">
-                      <br>
-                      <br>Schedule May 10th: Room is open 8AM, Conference starts 11:30 AM and will go to 7PM, we have
-                      the meeting room until 8PM. (We can't bring food into the meeting room or EBF will get charged for
-                      it)
-                      <br>‍
-                      <br>12PM to 1PM - Lunch Buffet (Communal table Room)
-                      <br>1PM to 6PM - Bible&nbsp;Studies (schedule TBD) (Coconut Grove Room)
-                      <br>6PM to 7PM - Dinner Buffet (Havana Room)
-                      <br>7PM to 8PM - Free Time
-                      <br>
-                    </span>
-                    <br _mstmutation="1">
-                    <br _mstmutation="1">
-                    <span class="text-span-642" _mstmutation="1">Attendace update: </span>
-                    <br _mstmutation="1">‍<span class="text-span-648" _mstmutation="1">21/50+ Signed up
-                      <br>
-                    </span>
-                    <span class="text-span-640" _mstmutation="1">Additional 10 Might come</span>
-                    <span class="text-span-648" _mstmutation="1">
-                      <br>‍</span>
-                    <br _mstmutation="1">‍
-                    <br _mstmutation="1">
-                    <br _mstmutation="1">
-                    <span class="text-span-647" _mstmutation="1">WHEN</span>
-                    <br _mstmutation="1">
-                    <span class="text-span-651" _mstmutation="1">Friday May 10th, 2024:</span> A Day In The Word Banquet
-                    at Hotel Conference Center.
-                    <br _mstmutation="1">
-                    <span class="text-span-638" _mstmutation="1">Saturday May 11th, 2024: </span>&nbsp;Day Of Tracting
-                    <br _mstmutation="1">
-                    <br _mstmutation="1">
-                    <span class="text-span-649" _mstmutation="1">WHERE</span>
-                    <br _mstmutation="1">Miami, Florida
-                  </font>
-                  <br>
-                </div>
-                <div class="div-block-549">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel.png"
-                    loading="lazy" width="382" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-1080.png 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel-p-1600.png 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656ddba8a242b795b5902_Map%20Of%20Hotel.png 1988w">
-                </div>
-                <div class="text-block-326" _msthidden="1">
-                  <br>
-                  <br>
-                  <font _mstmutation="1" _msttexthash="68193294" _msthidden="1" _msthash="406">
-                    <span class="text-span-645" _mstmutation="1">COST</span>
-                    <br _mstmutation="1">
-                    <span class="text-span-646" _mstmutation="1">Lunch + Dinner buffet:</span> $96
-                    <br _mstmutation="1">
-                    <span class="text-span-641" _mstmutation="1">Hotel: </span>About low $200 per night.
-                    <br _mstmutation="1">
-                    <span class="text-span-650" _mstmutation="1">Flights:</span> Around $150 - $300 range (check google
-                    flights)
-                    <br _mstmutation="1">‍
-                    <br _mstmutation="1">
-                    <span class="text-span-652" _mstmutation="1">We need to know if you would be interested in attending
-                      ASAP. If interested please let us know by filling out the form below.
-                      <br>
-                      <br>
-                    </span>
-                    <span class="text-span-644" _mstmutation="1">LOCATION:</span> Embassy Suites by Hilton Miami
-                    International Airport
-                    <br _mstmutation="1">Address: 3974 NW S River Dr, Miami, FL 33142
-                  </font>
-                  <br>
-                  <br>
-                </div>
-                <div class="div-block-555">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy.png"
-                    loading="lazy" width="310" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c138d2853da4015f28_Embassy.png 1000w"
-                    class="image-114">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room.png"
-                    loading="lazy" width="310" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c185463b86b1f25c2b_Conference%20Room.png 1000w"
-                    class="image-114">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables.png"
-                    loading="lazy" width="310" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables-p-500.png 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables-p-800.png 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d656c11b8a047573e87287_Tables.png 1000w"
-                    class="image-114">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner.jpg"
-                    loading="lazy" width="310" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-800.jpg 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d65f165551718a4c3f064b_Lunchdinner.jpg 1220w"
-                    class="image-114">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel.jpg"
-                    loading="lazy" width="310" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-800.jpg 800w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-1080.jpg 1080w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel-p-1600.jpg 1600w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d6568c832f8d275f649f57_Hotel.jpg 1734w"
-                    class="image-114">
-                  <img
-                    src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444acaudio/d/1/1_Pool.jpg"
-                    loading="lazy" width="310" sizes="100vw" alt=""
-                    srcset="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444acaudio/d/1/1_Pool-p-500.jpg 500w, https://cdn.prod.website-files.com/5cf040785de32119f9371abf/65d666480dcc88c09444acaudio/d/1/1_Pool.jpg 783w"
-                    class="image-114">
-                </div>
-                <div id="floridaform" _msthidden="16">
-                  <div class="form-block-13 w-form" _msthidden="16">
-                    <form id="wf-form-Florida-2-Day-Event-Attendence" name="wf-form-Florida-2-Day-Event-Attendence"
-                      data-name="Florida 2 Day Event Attendence" method="get" data-wf-page-id="65c93546bdae1d24d02a0bcc"
-                      data-wf-element-id="81d68598-b715-2039-b347-2e93c698dc32"
-                      aria-label="Florida 2 Day Event Attendence" _msthidden="11" _mstaria-label="661817"
-                      _msthash="407">
-                      <label for="EBF-Day-in-the-Word-Banquet-Florida" class="field-label-20" _msttexthash="1973114"
-                        _msthidden="1" _msthash="408">Select option from green dropdown menu below (required)</label>
-                      <select id="EBF-Day-in-the-Word-Banquet-Florida" name="EBF-Day-in-the-Word-Banquet-Florida"
-                        data-name="EBF Day In The Word Banquet Florida" required="" class="select-field-3 w-select"
-                        _msthidden="4">
-                        <option value="" _msttexthash="379925" _msthidden="1" _msthash="409">Attendance Dropdown
-                        </option>
-                        <option value="Yes I'll plan to Attend" _msttexthash="401479" _msthidden="1" _msthash="410">Yes
-                          I'll plan to Attend</option>
-                        <option value="Maybe - I might be able to make it" _msttexthash="677521" _msthidden="1"
-                          _msthash="411">Maybe - I might be able to make it</option>
-                        <option value="No, I can't attend" _msttexthash="264680" _msthidden="1" _msthash="412">No, I
-                          can't attend</option>
-                      </select>
-                      <label for="Name-4" class="field-label-23" _msttexthash="43069" _msthidden="1"
-                        _msthash="413">Name</label>
-                      <input class="text-field-12 w-input" maxlength="256" name="Name-4" data-name="Name 4"
-                        placeholder="Name Here" type="text" id="Name-4" required="" _msthidden="A"
-                        _mstplaceholder="106769" _msthash="414">
-                      <label for="Email-4" class="field-label-24" _msttexthash="198861" _msthidden="1"
-                        _msthash="415">Email Address</label>
-                      <input class="text-field-12 w-input" maxlength="256" name="Email-4" data-name="Email 4"
-                        placeholder="Email Address Here" type="email" id="Email-4" required="" _msthidden="A"
-                        _mstplaceholder="302913" _msthash="416">
-                      <label for="Message-Box" class="field-label-24" _msttexthash="92924" _msthidden="1"
-                        _msthash="417">Message</label>
-                      <textarea placeholder="Write Us " maxlength="5000" id="Message-Box" name="Message-Box"
-                        data-name="Message Box" class="textarea-6 w-input" _msthidden="A" _mstplaceholder="94276"
-                        _msthash="418"></textarea>
-                      <div
-                        class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key">
-                      </div>
-                      <input type="submit" data-wait="Please wait..." class="submit-button-16 w-button" value="Submit"
-                        _msthidden="A" _mstvalue="78468" _msthash="419">
-                    </form>
-                    <div class="success-message-10 w-form-done" role="region"
-                      aria-label="Florida 2 Day Event Attendence success" _msthidden="1" _mstaria-label="1017939"
-                      _msthash="420">
-                      <div _msttexthash="1605721" _msthidden="1" _msthash="421">Thank you! Your submission has been
-                        received by EBF!</div>
-                    </div>
-                    <div class="w-form-fail" role="region" aria-label="Florida 2 Day Event Attendence failure"
-                      _msthidden="1" _mstaria-label="1010568" _msthash="422">
-                      <div _msttexthash="1861613" _msthidden="1" _msthash="423">Oops! Something went wrong while
-                        submitting the form.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
-            </div>
-            <div class="left-arrow-11 w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-0"
-              aria-label="previous slide" _msthidden="A" _mstaria-label="238680" _msthash="424">
-              <div class="w-icon-slider-left"></div>
-            </div>
-            <div class="rightarrowfield w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-0"
-              aria-label="next slide" _msthidden="A" _mstaria-label="138567" _msthash="425">
-              <div class="icon-24 w-icon-slider-right"></div>
-            </div>
-            <div class="w-slider-nav w-slider-nav-invert w-round" _msthidden="1">
-              <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 1" aria-pressed="true"
-                role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;" _msthidden="A"
-                _mstaria-label="206453" _msthash="426"></div>
+            <div class="w-form-fail" role="region" aria-label="Florida 2 Day Event Attendence failure" _msthidden="1"
+              _mstaria-label="1010568" _msthash="422">
+              <div _msttexthash="1861613" _msthidden="1" _msthash="423">Oops! Something went wrong while
+                submitting the form.</div>
             </div>
           </div>
         </div>
-        <style>
-          .container {
-            width: 93%;
-          }
+      </div>
+      <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
+    </div>
+    <div class="left-arrow-11 w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-0"
+      aria-label="previous slide" _msthidden="A" _mstaria-label="238680" _msthash="424">
+      <div class="w-icon-slider-left"></div>
+    </div>
+    <div class="rightarrowfield w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-0"
+      aria-label="next slide" _msthidden="A" _mstaria-label="138567" _msthash="425">
+      <div class="icon-24 w-icon-slider-right"></div>
+    </div>
+    <div class="w-slider-nav w-slider-nav-invert w-round" _msthidden="1">
+      <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 1" aria-pressed="true"
+        role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;" _msthidden="A" _mstaria-label="206453"
+        _msthash="426"></div>
+    </div>
+  </div>
+</div>
+<style>
+  .container {
+    width: 93%;
+  }
 
-          .section {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          }
+  .section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-          .section-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #007bff;
-          }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
 
-          .h6 {
-            font-size: 30px;
-            margin-bottom: 10px;
-            color: #007bff;
-          }
+  .h6 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
 
-          .paragraph {
-            margin-bottom: 15px;
-          }
+  .paragraph {
+    margin-bottom: 15px;
+  }
 
-          .verse {
-            font-style: italic;
-            margin: 10px 0;
-          }
+  .verse {
+    font-style: italic;
+    margin: 10px 0;
+  }
 
-          .verse:before {
-            content: open-quote;
-          }
+  .verse:before {
+    content: open-quote;
+  }
 
-          .verse:after {
-            content: close-quote;
-          }
+  .verse:after {
+    content: close-quote;
+  }
 
-          .bold {
-            font-weight: bold;
-          }
+  .bold {
+    font-weight: bold;
+  }
 
-          .bold-text-75 {
-            outline-offset: 0px;
-            color: #08f;
-            -webkit-text-stroke-width: 0px;
-            -webkit-text-stroke-color: #08f;
-            outline: 0 #08f;
-            font-size: 20px;
-            font-weight: 900;
-            display: block;
-          }
+  .bold-text-75 {
+    outline-offset: 0px;
+    color: #08f;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #08f;
+    outline: 0 #08f;
+    font-size: 20px;
+    font-weight: 900;
+    display: block;
+  }
 
-          @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
 
-            .bold-text-75,
-            .bold-text-76,
-            .bold-text-77 {
-              font-weight: 900;
-            }
-          }
-          .input-container {
+    .bold-text-75,
+    .bold-text-76,
+    .bold-text-77 {
+      font-weight: 900;
+    }
+  }
+
+  .input-container {
     position: relative;
     display: flex;
     align-items: center;
-}
-.input-container {
-  margin-left: 270px; /* 默认设置为电脑的 */
-}
-
-@media (max-width: 768px) { /* 针对手机屏幕宽度 */
-  .input-container {
-    margin-left: 20px; /* 手机上左边距为 20px */
   }
-}
-
-
-.icon {
-    margin-right: 10px; /* 图标和输入框之间的间距 */
-    font-size: 20px; /* 图标大小 */
-    color: #007bff; /* 图标颜色 */
-}
-
-.styled-input {
-    width: 400px; /* 宽度100% */
-    padding: 10px; /* 内边距 */
-    border: 2px solid #007bff; /* 边框颜色 */
-    border-radius: 100px; /* 圆角 */
-    background-color: #e7f0ff; /* 背景颜色 */
-    color: #333; /* 字体颜色 */
-    font-size: 16px; /* 字体大小 */
-    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s; /* 动效 */
-}
-
-.styled-input:focus {
-    border-color: #0056b3; /* 聚焦时边框颜色 */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 聚焦时阴影 */
-    outline: none; /* 去掉默认的聚焦轮廓 */
-    background-color: #fff; /* 聚焦时背景变为白色 */
-}
 
 
 
-.styled-input:focus::placeholder {
-    color: transparent; /* 聚焦时隐藏占位符文字 */
-}
-          body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-          }
 
-          .rb {
-            background-color: #333;
-            width: 100%;
-            color: #fff;
+  .icon {
+    margin-right: 10px;
+    /* 图标和输入框之间的间距 */
+    font-size: 20px;
+    /* 图标大小 */
+    color: #007bff;
+    /* 图标颜色 */
+  }
 
-            padding: 20px 0;
-            text-align: center;
-          }
+  .styled-input {
+    width: 400px;
+    /* 宽度100% */
+    padding: 10px;
+    /* 内边距 */
+    border: 2px solid #007bff;
+    /* 边框颜色 */
+    border-radius: 100px;
+    /* 圆角 */
+    background-color: #e7f0ff;
+    /* 背景颜色 */
+    color: #333;
+    /* 字体颜色 */
+    font-size: 16px;
+    /* 字体大小 */
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    /* 动效 */
+  }
 
-          .footer-content {
-            width: 100%;
-            margin: auto;
-          }
-
-          .footer-content p,
-          .footer-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-          }
-
-          .footer-links a {
-            margin-right: 10px;
-          }
+  .styled-input:focus {
+    border-color: #0056b3;
+    /* 聚焦时边框颜色 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* 聚焦时阴影 */
+    outline: none;
+    /* 去掉默认的聚焦轮廓 */
+    background-color: #fff;
+    /* 聚焦时背景变为白色 */
+  }
 
 
 
-          .social-icon {
-            color: #fff;
-            margin: 0 5px;
-            font-size: 24px;
-            transition: color 0.3s;
-          }
+  .styled-input:focus::placeholder {
+    color: transparent;
+    /* 聚焦时隐藏占位符文字 */
+  }
 
-          .social-icon:hover {
-            color: #4caf50;
-          }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
 
-          /* 之前的样式 */
+  .rb {
+    background-color: #333;
+    width: 100%;
+    color: #fff;
 
-          /* 模态框样式 */
-          .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-          }
+    padding: 20px 0;
+    text-align: center;
+  }
 
-          .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            text-align: center;
-          }
+  .footer-content {
+    width: 100%;
+    margin: auto;
+  }
 
-          .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-          }
+  .footer-content p,
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
 
-          .close:hover,
-          .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-          }
+  .footer-links a {
+    margin-right: 10px;
+  }
 
-          .qr-code {
-            width: 200px;
-            height: 200px;
-            margin: 10px auto;
-            background-color: #f0f0f0;
-            /* 占位背景色 */
-          }
-        </style>
-        </head>
 
-        <body>
-          <div class="webblockwhite">
-            <div class="div-block-445">
-              <h1 class="aboutheader" _msttexthash="9552686" _msthash="427">关于我们</h1>
-              <p class="paragraph-105">
-                <br>
-                <font _mstmutation="1" _msttexthash="90035348" _msthash="428">
-                  <em class="italic-text-26" _mstmutation="1" _istranslated="1">E Bible Fellowship 的名字有以下原因：</em>
-                  <br _mstmutation="1" _istranslated="1">
-                </font>
-                <strong class="bold-text-75" _msttexthash="17201119" _msthash="429">电子的：</strong>
-                <font _mstmutation="1" _msttexthash="16606899608" _msthash="430">
-                  我们相信主已经以极大的方式使用电子媒介（收音机、互联网等）来拯救世界教会和会众之外的许多人。现在手头的任务是，“喂养他的羊”，这样所有神所拯救的人都会被福音造就。
-                  <br _mstmutation="1" _istranslated="1">
-                  <br _mstmutation="1" _istranslated="1">
-                  <strong class="bold-text-76" _mstmutation="1" _istranslated="1">圣经：</strong>
-                  <br _mstmutation="1"
-                    _istranslated="1">圣经是我们的权威。没有人为的认信、信条或任何形式的教义声明具有超越圣经的任何权威。我们生活在一个圣经被神高举的时代。上帝的话语在它所宣告的一切中都是至高无上的。
-                  <br _mstmutation="1" _istranslated="1">
-                  <br _mstmutation="1" _istranslated="1">
-                  <strong class="bold-text-77" _mstmutation="1" _istranslated="1">团契：</strong>
-                  <br _mstmutation="1"
-                    _istranslated="1">我们是信徒的团契，他们的愿望是通过神的话语与神相交。圣经教导我们，教会时代已经结束了;因此，我们与任何教会或任何形式的教派都没有隶属关系或身份认同。感谢您的光临。
-                  <br _mstmutation="1" _istranslated="1">
-                  <br _mstmutation="1" _istranslated="1">
-                  <em _mstmutation="1" _istranslated="1">约翰一书 1：3 我们所看见所听见的，都告诉你们，叫你们也与我们相交，我们的交往实在是与父和他的儿子耶稣基督相交。</em>
-                </font>
-              </p>
-              <div class="html-embed-25 w-embed w-iframe" _msthidden="2">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
-                <div
-                  style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
-                  _msthidden="2">
-                  <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank"
-                    style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="431">E
-                    Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult"
-                    title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;"
-                    _msttexthash="565084" _msthidden="1" _msthash="432">Is E bible Fellowship a cult</a>
-                </div>
-              </div>
-            </div>
-          </div>
+
+  .social-icon {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+
+  .social-icon:hover {
+    color: #4caf50;
+  }
+
+  /* 之前的样式 */
+
+  /* 模态框样式 */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    text-align: center;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .qr-code {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    background-color: #f0f0f0;
+    /* 占位背景色 */
+  }
+</style>
+</head>
+
+<body>
+  <div class="webblockwhite">
+    <div class="div-block-445">
+      <h1 class="aboutheader" _msttexthash="9552686" _msthash="427">关于我们</h1>
+      <p class="paragraph-105">
+        <br>
+        <font _mstmutation="1" _msttexthash="90035348" _msthash="428">
+          <em class="italic-text-26" _mstmutation="1" _istranslated="1">E Bible Fellowship 的名字有以下原因：</em>
+          <br _mstmutation="1" _istranslated="1">
+        </font>
+        <strong class="bold-text-75" _msttexthash="17201119" _msthash="429">电子的：</strong>
+        <font _mstmutation="1" _msttexthash="16606899608" _msthash="430">
+          我们相信主已经以极大的方式使用电子媒介（收音机、互联网等）来拯救世界教会和会众之外的许多人。现在手头的任务是，“喂养他的羊”，这样所有神所拯救的人都会被福音造就。
+          <br _mstmutation="1" _istranslated="1">
+          <br _mstmutation="1" _istranslated="1">
+          <strong class="bold-text-76" _mstmutation="1" _istranslated="1">圣经：</strong>
+          <br _mstmutation="1"
+            _istranslated="1">圣经是我们的权威。没有人为的认信、信条或任何形式的教义声明具有超越圣经的任何权威。我们生活在一个圣经被神高举的时代。上帝的话语在它所宣告的一切中都是至高无上的。
+          <br _mstmutation="1" _istranslated="1">
+          <br _mstmutation="1" _istranslated="1">
+          <strong class="bold-text-77" _mstmutation="1" _istranslated="1">团契：</strong>
+          <br _mstmutation="1"
+            _istranslated="1">我们是信徒的团契，他们的愿望是通过神的话语与神相交。圣经教导我们，教会时代已经结束了;因此，我们与任何教会或任何形式的教派都没有隶属关系或身份认同。感谢您的光临。
+          <br _mstmutation="1" _istranslated="1">
+          <br _mstmutation="1" _istranslated="1">
+          <em _mstmutation="1" _istranslated="1">约翰一书 1：3 我们所看见所听见的，都告诉你们，叫你们也与我们相交，我们的交往实在是与父和他的儿子耶稣基督相交。</em>
+        </font>
+      </p>
+      <div class="html-embed-25 w-embed w-iframe" _msthidden="2">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/949825951&amp;color=%230066ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+        <div
+          style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+          _msthidden="2">
+          <a href="https://soundcloud.com/user-133929317" title="E Bible Fellowship" target="_blank"
+            style="color: #cccccc; text-decoration: none;" _msttexthash="311623" _msthidden="1" _msthash="431">E
+            Bible Fellowship</a> · <a href="https://soundcloud.com/user-133929317/is-e-bible-fellowship-a-cult"
+            title="Is E bible Fellowship a cult" target="_blank" style="color: #cccccc; text-decoration: none;"
+            _msttexthash="565084" _msthidden="1" _msthash="432">Is E bible Fellowship a cult</a>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 
@@ -2228,45 +2601,143 @@
       </div>
     </div>
   </div>
-  <div class="form-block-contact w-form">
-    <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-7"
-      data-wf-page-id="65c93546bdae1d24d02a0bcc" data-wf-element-id="abd2f591-8f76-0fcb-27f4-e4e6e758fd97"
-      aria-label="电子邮件表格" _mstaria-label="129740" _msthash="435">
-      <h1 class="heading-149-copy" _msttexthash="11880817" _msthash="436">联系我们</h1>
-      <div class="input-container">
-        <input type="text" class="styled-input" id="name-input" placeholder="👤姓名:" onfocus="hidePlaceholder()" onblur="showPlaceholder()">
+  <div id="contact" class="webblockwhite2-2">
+    <div class="form-block-contact w-form">
+      <form id="email-form" name="email-form" method="get" class="form-7">
+        <h1 class="heading-149-copy">联系我们</h1>
+        
+        <div class="input-container">
+          <input type="text" class="styled-input" id="name-input" placeholder="👤姓名:" required>
+        </div>
+        <div class="input-container">
+          <input type="email" class="styled-input" id="email-input" placeholder="电子邮箱:" required>
+        </div>
+        <div class="input-container">
+          <input type="text" class="styled-input" id="message-input" placeholder="信息" required>
+        </div>
+        <button type="submit" class="submit-button" id="submit-btn">提交</button>
+      </form>
+  
+      <!-- 提交后显示的感谢信息 -->
+      <div id="thank-you-message" style="display: none;">
+        您的信息已经收到，谢谢！
+      </div>
     </div>
-    <div class="input-container">
-      <input type="text" class="styled-input" id="name-input" placeholder="电子邮箱:" onfocus="hidePlaceholder()" onblur="showPlaceholder()">
   </div>
-  <div class="input-container">
-    <input type="text" class="styled-input" id="name-input" placeholder="信息" onfocus="hidePlaceholder()" onblur="showPlaceholder()">
-</div>
-<button class="submit-button">提交</button>
+  
+  <script>
+    document.getElementById('email-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // 防止默认提交行为
+  
+      const name = document.getElementById('name-input').value;
+      const email = document.getElementById('email-input').value;
+      const message = document.getElementById('message-input').value;
+  
+      const formData = `姓名: ${name}\n电子邮箱: ${email}\n信息: ${message}\n`;
+  
+      const githubToken = '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'; // 替换为你的 GitHub Token
+      const repoOwner = 'chineseebiblefellowship'; // 替换为你的 GitHub 用户名
+      const repoName = 'chineseebiblefellowship.github.io'; // 替换为你的仓库名称
+      const filePath = 'us/e.txt'; // 你要写入的文件路径
+      const apiUrl = `https://api.github.com/repos/chineseebiblefellowship/chineseebiblefellowship.github.io/contents/us/e.txt`;
+  
+      // 获取文件的 SHA 值以进行更新
+      fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          'Authorization': `token ${githubToken}`,
+          'Accept': 'application/vnd.github.v3+json',
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const sha = data.sha; // 获取文件的 SHA，用于更新文件
+  
+        // Base64 编码表单数据
+        function utf8ToB64(str) {
+          return btoa(unescape(encodeURIComponent(str)));
+        }
+  
+        const encodedContent = utf8ToB64(formData);
+  
+        // 更新文件内容
+        fetch(apiUrl, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${githubToken}`,
+            'Accept': 'application/vnd.github.v3+json',
+          },
+          body: JSON.stringify({
+            message: 'Updated contact information',
+            content: encodedContent, // 文件内容需为 Base64 编码格式
+            sha: sha // 文件的 SHA 值，用于进行更新
+          })
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Success:', data);
+          // 隐藏表单，显示感谢信息
+          document.getElementById('email-form').style.display = 'none';
+          document.getElementById('thank-you-message').style.display = 'block';
+        })
+        .catch((error) => {
+          console.error('Error updating file:', error);
+        });
+      })
+      .catch((error) => {
+        console.error('Error fetching file SHA:', error);
+      });
+    });
+  </script>
+  
 
-<style>
-.submit-button {
-    background-color: #007bff; /* 背景颜色 */
-    color: white; /* 字体颜色 */
-    padding: 10px 20px; /* 内边距 */
-    border: none; /* 去掉默认边框 */
-    border-radius: 5px; /* 圆角 */
-    font-size: 16px; /* 字体大小 */
-    cursor: pointer; /* 鼠标悬停时变成手型 */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* 阴影 */
-    transition: background-color 0.3s, transform 0.3s; /* 动效 */
-}
+      <style>
+        .submit-button {
+          background-color: #007bff;
+          /* 背景颜色 */
+          color: white;
+          width: 200px;
+          /* 字体颜色 */
+          padding: 10px 20px;
+          /* 内边距 */
+          border: none;
+          /* 去掉默认边框 */
+          border-radius: 5px;
+          /* 圆角 */
+          font-size: 16px;
+          /* 字体大小 */
+          cursor: pointer;
+          /* 鼠标悬停时变成手型 */
+          box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+          /* 阴影 */
+          transition: background-color 0.3s, transform 0.3s;
+          /* 动效 */
+        }
 
-.submit-button:hover {
-    background-color: #0056b3; /* 悬停时背景颜色 */
-    transform: translateY(-2px); /* 悬停时轻微向上移动 */
-}
+        .submit-button:hover {
+          background-color: #0056b3;
+          /* 悬停时背景颜色 */
+          transform: translateY(-2px);
+          /* 悬停时轻微向上移动 */
+        }
 
-.submit-button:focus {
-    outline: none; /* 去掉聚焦时的轮廓 */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 聚焦时阴影 */
-}
-</style>
+        .submit-button:focus {
+          outline: none;
+          /* 去掉聚焦时的轮廓 */
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          /* 聚焦时阴影 */
+        }
+      </style>
 
     </form>
     <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success" _msthidden="1"
@@ -2286,156 +2757,171 @@
   <!-- 页面主要内容 -->
 
   <!DOCTYPE html>
-<html lang="en">
-<head>
+  <html lang="en">
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Awesome Icons</title>
     <!-- 引入 Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* 页脚链接样式 */
-        .link-style a {
-            font-size: 24px;
-            transition: color 0.3s, transform 0.3s;
-        }
+      /* 页脚链接样式 */
+      .link-style a {
+        font-size: 24px;
+        transition: color 0.3s, transform 0.3s;
+      }
 
-        /* 悬停效果 */
-        .link-style a:hover {
-            color: blue;
-            transform: scale(1.5);
-        }
+      /* 悬停效果 */
+      .link-style a:hover {
+        color: blue;
+        transform: scale(1.5);
+      }
 
-        /* 图标右边距 */
-        .link-style .fab,
-        .link-style .fas {
-            margin-right: 10px;
-        }
+      /* 图标右边距 */
+      .link-style .fab,
+      .link-style .fas {
+        margin-right: 10px;
+      }
 
-        /* eBible Fellowship 标题样式 */
-        .title-custom {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
+      /* eBible Fellowship 标题样式 */
+      .title-custom {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
 
-        /* 毛玻璃效果的每日经节容器样式 */
-        .blur-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-            text-align: center;
-        }
+      /* 毛玻璃效果的每日经节容器样式 */
+      .blur-container {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+      }
 
-        .verse-text {
-            font-size: 22px;
-            font-style: italic;
-        }
+      .verse-text {
+        font-size: 22px;
+        font-style: italic;
+        text-align: center;
+      }
 
-        .verse-reference {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+      .verse-reference {
+        font-size: 18px;
+        margin-top: 10px;
+      }
 
-        /* 按钮样式 */
-        .btn-group {
-            margin-top: 20px;
-        }
+      /* 按钮样式 */
+      .btn-group {
+        margin-top: 20px;
+      }
 
-        .btn-group a {
-            display: inline-block;
-            font-size: 20px;
-            color: white;
-            background-color: #555;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+      .btn-group a {
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        background-color: #555;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.3s;
+      }
 
-        .btn-group a:hover {
-            background-color: blue;
-            transform: scale(1.1);
-        }
+      .btn-group a:hover {
+        background-color: blue;
+        transform: scale(1.1);
+      }
 
-        .icon-size {
-            width: 80px;
-        }
-        .icon-size {
-            display: block; /* 使图片成为块级元素 */
-            margin: 0 auto; /* 自动左右外边距，居中对齐 */
-            max-width: 100%; /* 确保图片不会超出容器宽度 */
-            height: auto; /* 保持图片的纵横比 */
-        }
-        .image-container {
-            text-align: center; /* 居中对齐内容 */
-        }
-        /* 自定义样式 */
-        .icon-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            font-size: 24px;
-            color: #ffffff;
-        }
-        .icon-group div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-sizing: border-box;
-        }
-        .icon-group a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .icon-group a:hover {
-            color: #007bff;
-        }
+      .icon-size {
+        width: 80px;
+      }
+
+      .icon-size {
+        display: block;
+        /* 使图片成为块级元素 */
+        margin: 0 auto;
+        /* 自动左右外边距，居中对齐 */
+        max-width: 100%;
+        /* 确保图片不会超出容器宽度 */
+        height: auto;
+        /* 保持图片的纵横比 */
+      }
+
+      .image-container {
+        text-align: center;
+        /* 居中对齐内容 */
+      }
+
+      /* 自定义样式 */
+      .icon-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        font-size: 24px;
+        color: #ffffff;
+      }
+
+      .icon-group div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-sizing: border-box;
+      }
+
+      .icon-group a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .icon-group a:hover {
+        color: #007bff;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- 页脚部分 -->
-    <footer style="background-color:#cccccc; color:rgb(0, 0, 0); padding:30px; text-align:center; position:relative; bottom:0; width:100%;">
-        <!-- 页脚顶部的标题 -->
-        <img class="icon-size" src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="">
-        <div class="title-custom">eBible Fellowship</div>
-        <p style="font-size: 18px;">&copy; 2024 Your Website. All rights reserved.</p>
+    <footer
+      style="background-color:#cccccc; color:rgb(0, 0, 0); padding:30px; text-align:center; position:relative; bottom:0; width:100%;">
+      <!-- 页脚顶部的标题 -->
+      <img class="icon-size"
+        src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
+        alt="">
+      <div class="title-custom">eBible Fellowship</div>
+      <p style="font-size: 18px;">&copy; 2024 Your Website. All rights reserved.</p>
 
-        <!-- 按钮区域 -->
-        <div class="btn-group">
-            <a href="bible-study.html"><i class="fas fa-book"></i> 圣经学习</a>
-            <a href="bible-music.html"><i class="fas fa-music"></i> 圣经音乐</a>
-            <a href="bible-history.html"><i class="fas fa-calendar-alt"></i> 圣经历史年代</a>
-        </div>
-<style>
-  .lllpa {
-    text-align: center;
-  }
-</style>
-        <!-- 毛玻璃效果显示每日经节 -->
-        <div class="blur-container" id="daily-verse">
-            <h1>每日经节</h1>
-            <p class="lllpa">惟有听从我的，必安然居住，得享安静，不怕灾祸。 箴言31:33</p>
-        </div>
-        <hr>
-        <h1>电子圣经团契平台</h1>
+      <!-- 按钮区域 -->
+      <div class="btn-group">
+        <a href="bible-study.html"><i class="fas fa-book"></i> 圣经学习</a>
+        <a href="bible-music.html"><i class="fas fa-music"></i> 圣经音乐</a>
+        <a href="bible-history.html"><i class="fas fa-calendar-alt"></i> 圣经历史年代</a>
+      </div>
+      <style>
+        .lllpa {
+          text-align: center;
+        }
+      </style>
+      <!-- 毛玻璃效果显示每日经节 -->
+     
+      <hr>
+      <h1>电子圣经团契平台</h1>
 
-        <div class="icon-group">
-            <div><a href="#"><i class="fab fa-youtube"></i> YouTube</a></div>
-            <div><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></div>
-            <div><a href="#"><i class="fab fa-twitter"></i> Twitter</a></div>
-            <div><a href="#"><i class="fab fa-weixin"></i> 微信</a></div>
-            <div><a href="#"><i class="fab fa-qq"></i> QQ</a></div>
-        </div>
+      <div class="icon-group">
+        <div><a href="#"><i class="fab fa-youtube"></i> YouTube</a></div>
+        <div><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></div>
+        <div><a href="#"><i class="fab fa-twitter"></i> Twitter</a></div>
+        <div><a href="#"><i class="fab fa-weixin"></i> 微信</a></div>
+        <div><a href="#"><i class="fab fa-qq"></i> QQ</a></div>
+      </div>
     </footer>
-</body>
-</html>
+  </body>
+
+  </html>
 
 </body>
 
@@ -2505,18 +2991,21 @@
     }
 
     .nav-toggle {
-    display: none; /* 确保按钮在需要时可见 */
-    position: absolute; /* 或使用 relative，根据需求 */
-    right: 20px;
-    top: 20px; /* 你可以调整这个值来改变按钮的垂直位置 */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 1000;
-    border-radius: 5px;
-}
+      display: none;
+      /* 确保按钮在需要时可见 */
+      position: absolute;
+      /* 或使用 relative，根据需求 */
+      right: 20px;
+      top: 20px;
+      /* 你可以调整这个值来改变按钮的垂直位置 */
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1000;
+      border-radius: 5px;
+    }
 
 
     .language-dropdown {
@@ -2619,131 +3108,145 @@
   </style>
 </head>
 
-  <button class="nav-toggle" onclick="toggleNav()">
-    <span id="toggleIcon">展开</span>
-  </button>
+<button class="nav-toggle" onclick="toggleNav()">
+  <span id="toggleIcon">展开</span>
+</button>
 
-    <nav class="right-nav" id="rightNav">
-      <ul>
-        <li>
-          <div class="language-dropdown">
-            <a href="#"><i class="fa-solid fa-earth-asia"></i> 语言</a>
-            <div class="language-content">
-              <a href="#" onclick="changeLanguage('zh')">中文</a>
-              <a href="https://ebiblefellowship.org" onclick="changeLanguage('en')">English</a>
-            </div>
-          </div>
-          <style>
-            .language-dropdown {
-                position: relative; /* 使下拉菜单相对于父元素定位 */
-            }
-            
-         
-            
-            .language-content {
-                display: none; /* 默认隐藏下拉内容 */
-                position: absolute; /* 绝对定位 */
-                top: 100%; /* 位于父元素下方 */
-                left: 0; /* 左对齐 */
-                background-color: white; /* 背景颜色 */
-                border-radius: 10px; /* 圆角 */
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影 */
-            }
-            
-            .language-dropdown:hover .language-content {
-                display: block; /* 悬停时显示下拉内容 */
-            }
-            
-            .language-content a {
-                padding: 10px; /* 内边距 */
-                color: #333; /* 字体颜色 */
-                text-decoration: none; /* 去掉下划线 */
-                transition: background-color 0.2s; /* 动效 */
-            }
-            
-            .language-content a:hover {
-                background-color: #f1f1f1; /* 悬停时的背景颜色 */
-            }
-            </style>
-        </li>
-        <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
-        <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i> 圣经朗读</a></li>
-        <li><a href="hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
-        <li><a href="biblicaltimeline.html" id="biblicalTimeline"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
-        <li><a href="books.html"><i class="fa-solid fa-book"></i> 圣经书籍</a></li>
-        <li><a href="pingtai.html"><i class="fa-solid fa-layer-group"></i> 电子圣经团契平台</a></li>
-        <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
-        <li><a href="audio.html"><i class="fa-solid fa-file-audio"></i> 查考音频</a></li>
-        <li><a href="learnbible.html"><i class="fa-solid fa-lines-leaning"></i> 圣经学习</a></li>
-        <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i
-              class="fas fa-video"></i> Zoom</a></li>
-        <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
-        <li><a href="download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
-        <li><a href="email.html"><i class="fa-solid fa-address-card"></i> 联系我们</a></li>
-        <!-- 默认隐藏的DEV websites，点击5次后显示 -->
-        <li id="devWebsite"><a href="https://chineseebf.github.io"><i class="fa-solid fa-terminal"></i> DEV websites</a>
-        </li>
-        <!-- 默认隐藏的 GitHub 和 Excel 链接 -->
-        <li id="githubLink"><a
-            href="https://github.com/chineseebiblefellowship/Chineseebiblefellowship.github.io/tree/main"><i
-              class="fab fa-github"></i> GitHub</a></li>
-        <li id="airtime"><a href="airtime.html"><i class="fab fa-airtime"></i> Airtime 直播室</a></li>
-        <li id="excelLink"><a
-            href="https://liujiangheping-my.sharepoint.com/:x:/g/personal/liujiang13144675659_liujiangheping_onmicrosoft_com/EQ_dMRCBx0hJjgCRaIJmxyIBBV38xLLDxKFkLFsTfe8xZA?e=FzwhvY">查看
-            Excel 表格</a></li>
-      </ul>
-    </nav>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        let clickCount = 0; // 初始化点击次数
-        const rightNav = document.getElementById('rightNav');
-        const devWebsite = document.getElementById('devWebsite');
-        const githubLink = document.getElementById('githubLink');
-        const excelLink = document.getElementById('excelLink');
-        const biblicalTimeline = document.getElementById('biblicalTimeline');
-
-        rightNav.addEventListener('click', function () {
-          clickCount += 1; // 每次点击增加点击次数
-          if (clickCount >= 5) {
-            devWebsite.style.display = 'block'; // 显示 "DEV websites" 链接
-          }
-        });
-
-        rightNav.addEventListener('mousedown', function () {
-          setTimeout(function () {
-            githubLink.style.display = 'block';
-          }, 2000); // 5秒后显示 GitHub 链接
-        });
-
-        rightNav.addEventListener('mouseup', function () {
-          clearTimeout();
-        });
-
-        rightNav.addEventListener('mouseleave', function () {
-          clearTimeout();
-        });
-
-        biblicalTimeline.addEventListener('mousedown', function () {
-          setTimeout(function () {
-            excelLink.style.display = 'block';
-          }, 5000); // 5秒后显示 Excel 链接
-        });
-
-        biblicalTimeline.addEventListener('mouseup', function () {
-          clearTimeout();
-        });
-
-        biblicalTimeline.addEventListener('mouseleave', function () {
-          clearTimeout();
-        });
-
-        function changeLanguage(lang) {
-          console.log("语言已切换为: " + lang);
+<nav class="right-nav" id="rightNav">
+  <ul>
+    <li>
+      <div class="language-dropdown">
+        <a href="#"><i class="fa-solid fa-earth-asia"></i> 语言</a>
+        <div class="language-content">
+          <a href="#" onclick="changeLanguage('zh')">中文</a>
+          <a href="https://ebiblefellowship.org" onclick="changeLanguage('en')">English</a>
+        </div>
+      </div>
+      <style>
+        .language-dropdown {
+          position: relative;
+          /* 使下拉菜单相对于父元素定位 */
         }
-      });
-    </script>
-  </body>
+
+
+
+        .language-content {
+          display: none;
+          /* 默认隐藏下拉内容 */
+          position: absolute;
+          /* 绝对定位 */
+          top: 100%;
+          /* 位于父元素下方 */
+          left: 0;
+          /* 左对齐 */
+          background-color: white;
+          /* 背景颜色 */
+          border-radius: 10px;
+          /* 圆角 */
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          /* 添加阴影 */
+        }
+
+        .language-dropdown:hover .language-content {
+          display: block;
+          /* 悬停时显示下拉内容 */
+        }
+
+        .language-content a {
+          padding: 10px;
+          /* 内边距 */
+          color: #333;
+          /* 字体颜色 */
+          text-decoration: none;
+          /* 去掉下划线 */
+          transition: background-color 0.2s;
+          /* 动效 */
+        }
+
+        .language-content a:hover {
+          background-color: #f1f1f1;
+          /* 悬停时的背景颜色 */
+        }
+      </style>
+    </li>
+    <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
+    <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i> 圣经朗读</a></li>
+    <li><a href="hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
+    <li><a href="biblicaltimeline.html" id="biblicalTimeline"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
+    <li><a href="books.html"><i class="fa-solid fa-book"></i> 圣经书籍</a></li>
+    <li><a href="pingtai.html"><i class="fa-solid fa-layer-group"></i> 电子圣经团契平台</a></li>
+    <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
+    <li><a href="audio.html"><i class="fa-solid fa-file-audio"></i> 查考音频</a></li>
+    <li><a href="learnbible.html"><i class="fa-solid fa-lines-leaning"></i> 圣经学习</a></li>
+    <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i
+          class="fas fa-video"></i> Zoom</a></li>
+    <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
+    <li><a href="download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
+    <li><a href="email.html"><i class="fa-solid fa-address-card"></i> 联系我们</a></li>
+    <!-- 默认隐藏的DEV websites，点击5次后显示 -->
+    <li id="devWebsite"><a href="https://chineseebf.github.io"><i class="fa-solid fa-terminal"></i> DEV websites</a>
+    </li>
+    <!-- 默认隐藏的 GitHub 和 Excel 链接 -->
+    <li id="githubLink"><a
+        href="https://github.com/chineseebiblefellowship/Chineseebiblefellowship.github.io/tree/main"><i
+          class="fab fa-github"></i> GitHub</a></li>
+    <li id="airtime"><a href="airtime.html"><i class="fab fa-airtime"></i> Airtime 直播室</a></li>
+    <li id="excelLink"><a
+        href="https://liujiangheping-my.sharepoint.com/:x:/g/personal/liujiang13144675659_liujiangheping_onmicrosoft_com/EQ_dMRCBx0hJjgCRaIJmxyIBBV38xLLDxKFkLFsTfe8xZA?e=FzwhvY">查看
+        Excel 表格</a></li>
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let clickCount = 0; // 初始化点击次数
+    const rightNav = document.getElementById('rightNav');
+    const devWebsite = document.getElementById('devWebsite');
+    const githubLink = document.getElementById('githubLink');
+    const excelLink = document.getElementById('excelLink');
+    const biblicalTimeline = document.getElementById('biblicalTimeline');
+
+    rightNav.addEventListener('click', function () {
+      clickCount += 1; // 每次点击增加点击次数
+      if (clickCount >= 5) {
+        devWebsite.style.display = 'block'; // 显示 "DEV websites" 链接
+      }
+    });
+
+    rightNav.addEventListener('mousedown', function () {
+      setTimeout(function () {
+        githubLink.style.display = 'block';
+      }, 2000); // 5秒后显示 GitHub 链接
+    });
+
+    rightNav.addEventListener('mouseup', function () {
+      clearTimeout();
+    });
+
+    rightNav.addEventListener('mouseleave', function () {
+      clearTimeout();
+    });
+
+    biblicalTimeline.addEventListener('mousedown', function () {
+      setTimeout(function () {
+        excelLink.style.display = 'block';
+      }, 5000); // 5秒后显示 Excel 链接
+    });
+
+    biblicalTimeline.addEventListener('mouseup', function () {
+      clearTimeout();
+    });
+
+    biblicalTimeline.addEventListener('mouseleave', function () {
+      clearTimeout();
+    });
+
+    function changeLanguage(lang) {
+      console.log("语言已切换为: " + lang);
+    }
+  });
+</script>
+</body>
 
 </html>
 
