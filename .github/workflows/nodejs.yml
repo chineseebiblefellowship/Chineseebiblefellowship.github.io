@@ -8,6 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    // 项目的依赖包
+    "express": "^4.18.2"  // 示例：添加 Express 依赖
   }
 }
