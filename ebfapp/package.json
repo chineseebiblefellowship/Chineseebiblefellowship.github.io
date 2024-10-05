@@ -1,10 +1,12 @@
 {
   "name": "ebfapp",
   "version": "1.0.0",
+  "description": "A Node.js project",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    // 项目依赖
+    "express": "^4.18.2"  // 示例依赖
   }
 }
