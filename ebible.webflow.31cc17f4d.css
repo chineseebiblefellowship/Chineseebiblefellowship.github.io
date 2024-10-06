@@ -2400,7 +2400,7 @@ h1 {
 }
 
 h2 {
-  color: var(--slate-blue);
+  color: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: Montserrat, sans-serif;
@@ -2589,7 +2589,7 @@ figcaption {
 
 .container {
   text-align: left;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0);
   border-radius: 0;
   flex-direction: row;
   justify-content: center;

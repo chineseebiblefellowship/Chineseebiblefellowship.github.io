@@ -3,278 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>圣经音乐播放器</title>
-    <!-- 正确加载 FontAwesome 图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>圣经阅读</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            padding-left: 250px; /* 默认留出250px的左侧空间 */
         }
-
-        .player {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .header {
+            text-align: center;
             padding: 20px;
-            margin: 30px auto;
+            background-color: #333;
+            color: white;
         }
-
-        /* 播放器居中限制 */
-        @media (min-width: 769px) {
-            .player {
-                max-width: 700px;
-                margin-left: 270px;
-                margin-right: 270px;
-            }
+        .header h1 {
+            margin: 0;
+        }
+        .button-container {
+            width: 100%;
+            height: 80px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .home-button {
+            background-color: rgb(0, 153, 255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: darkblue;
         }
 
         @media (max-width: 768px) {
-            .player {
-                max-width: 100%;
-                margin-left: 20px;
-                margin-right: 20px;
+            body {
+                padding-left: 0; /* 手机上不留左侧空间 */
             }
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 28px;
-            color: #007BFF;
-            margin-bottom: 20px;
-        }
-
-        .current-track {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .controls i {
-            font-size: 30px;
-            cursor: pointer;
-            color: #007BFF;
-            transition: color 0.3s ease;
-        }
-
-        .controls i:hover {
-            color: #0056b3;
-        }
-
-        .progress-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .progress-bar {
-            position: relative;
-            width: 80%;
-            height: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 0 auto;
-        }
-
-        .progress {
-            height: 100%;
-            width: 0;
-            background-color: #007BFF;
-            border-radius: 5px;
-        }
-
-        .time {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .playlist {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .playlist li {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .playlist li:hover {
-            background-color: #007BFF;
-            color: #fff;
-        }
-
-        .playlist li:last-child {
-            border-bottom: none;
         }
     </style>
 </head>
 <body>
-
-    <div class="player">
-        <!-- 标题 -->
-        <h1>圣经音乐</h1>
-
-        <!-- 当前歌曲名 -->
-        <div class="current-track" id="current-track">请选择一首歌曲</div>
-
-        <!-- 播放控制按钮 -->
-        <div class="controls">
-            <i class="fas fa-backward" id="prev"></i>
-            <i class="fas fa-play" id="play-pause"></i>
-            <i class="fas fa-forward" id="next"></i>
-        </div>
-
-        <!-- 进度条 -->
-        <div class="progress-container">
-            <span class="time" id="current-time">00:00</span>
-            <div class="progress-bar" id="progress-bar">
-                <div class="progress" id="progress"></div>
-            </div>
-            <span class="time" id="total-time">00:00</span>
-        </div>
-
-        <!-- 播放列表 -->
-        <ul class="playlist" id="playlist">
-        </ul>
+    <div class="header">
+        <h1>圣经阅读</h1>
     </div>
-
-    <audio id="audio"></audio>
-
-    <script>
-        const audio = document.getElementById('audio');
-        const currentTrackEl = document.getElementById('current-track');
-        const playPauseBtn = document.getElementById('play-pause');
-        const prevBtn = document.getElementById('prev');
-        const nextBtn = document.getElementById('next');
-        const progressBar = document.getElementById('progress-bar');
-        const progress = document.getElementById('progress');
-        const currentTimeEl = document.getElementById('current-time');
-        const totalTimeEl = document.getElementById('total-time');
-        const playlist = document.getElementById('playlist');
-        let currentTrackIndex = 0;
-        let isPlaying = false;
-
-        // 模拟从 'Hymns' 文件夹中随机选择5首歌曲 (你可以实际获取文件名)
-        const hymns = ['Amazing Grace', 'How Great Thou Art', 'Blessed Assurance', 'It Is Well', 'Great Is Thy Faithfulness'];
-
-        // 创建播放列表项
-        hymns.forEach((song, index) => {
-            const li = document.createElement('li');
-            li.textContent = song;
-            li.dataset.src = `Hymns/${song}.mp3`; // 生成音频文件路径
-            playlist.appendChild(li);
-        });
-
-        const tracks = Array.from(playlist.querySelectorAll('li')).map(li => li.dataset.src);
-
-        // 加载并播放歌曲
-        function loadTrack(index) {
-            audio.src = tracks[index];
-            audio.load();
-            currentTrackEl.textContent = hymns[index]; // 显示当前歌曲名
-        }
-
-        // 播放/暂停歌曲
-        function togglePlayPause() {
-            if (isPlaying) {
-                audio.pause();
-                playPauseBtn.classList.replace('fa-pause', 'fa-play');
-            } else {
-                audio.play();
-                playPauseBtn.classList.replace('fa-play', 'fa-pause');
-            }
-            isPlaying = !isPlaying;
-        }
-
-        // 播放下一首
-        function playNextTrack() {
-            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
-            loadTrack(currentTrackIndex);
-            audio.play();
-            playPauseBtn.classList.replace('fa-play', 'fa-pause');
-            isPlaying = true;
-        }
-
-        // 播放上一首
-        function playPrevTrack() {
-            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
-            loadTrack(currentTrackIndex);
-            audio.play();
-            playPauseBtn.classList.replace('fa-play', 'fa-pause');
-            isPlaying = true;
-        }
-
-        // 格式化时间显示
-        function formatTime(seconds) {
-            const minutes = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-
-        // 更新进度条和时间
-        function updateProgress() {
-            const { currentTime, duration } = audio;
-            const percent = (currentTime / duration) * 100;
-            progress.style.width = `${percent}%`;
-            currentTimeEl.textContent = formatTime(currentTime);
-            totalTimeEl.textContent = formatTime(duration);
-        }
-
-        // 拖动进度条
-        progressBar.addEventListener('click', (e) => {
-            const progressBarWidth = progressBar.offsetWidth;
-            const clickX = e.offsetX;
-            const duration = audio.duration;
-            audio.currentTime = (clickX / progressBarWidth) * duration;
-        });
-
-        // 播放列表点击事件
-        playlist.addEventListener('click', (e) => {
-            if (e.target.tagName === 'LI') {
-                currentTrackIndex = Array.from(playlist.children).indexOf(e.target);
-                loadTrack(currentTrackIndex);
-                audio.play();
-                playPauseBtn.classList.replace('fa-play', 'fa-pause');
-                isPlaying = true;
-            }
-        });
-
-        // 音频时间更新事件
-        audio.addEventListener('timeupdate', updateProgress);
-
-        // 音频加载完成后更新总时长
-        audio.addEventListener('loadedmetadata', () => {
-            totalTimeEl.textContent = formatTime(audio.duration);
-        });
-
-        // 添加播放/暂停、上一首、下一首事件
-        playPauseBtn.addEventListener('click', togglePlayPause);
-        prevBtn.addEventListener('click', playPrevTrack);
-        nextBtn.addEventListener('click', playNextTrack);
-
-        // 加载第一首歌
-        loadTrack(currentTrackIndex);
-    </script>
+    <div class="button-container">
+        <a href="homepage.html" class="home-button">首页</a>
+    </div>
 </body>
 </html>
