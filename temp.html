@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音频链接折叠示例</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    .category {
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .category:hover {
+      background-color: #0056b3;
+    }
+
+    .links {
+      display: none;
+      /* 初始隐藏音频链接 */
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      /* 允许换行 */
+      justify-content: center;
+      /* 居中对齐 */
+    }
+
+    .audio-link {
+      color: #000000;
+      text-decoration: none;
+      padding: 5px 10px;
+      display: inline-none;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      flex: 0 0 calc(50% - 10px);
+      /* 每行两个，留出间隙 */
+      box-sizing: border-box;
+      /* 包含边框和内边距 */
+    }
+
+    .audio-link:hover {
+      background-color: #0088ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="category">罗马书 29 章音频</div>
+  <div class="links">
+    <a href="https://roman-bjt.pages.dev/r21.mp3" class="audio-link">罗马书2章（1）</a>
+    <a href="https://roman-bjt.pages.dev/r22.mp3" class="audio-link">罗马书2章（2）</a>
+    <a href="https://roman-bjt.pages.dev/r23.mp3" class="audio-link">罗马书2章（3）</a>
+    <a href="https://roman-bjt.pages.dev/r24.mp3" class="audio-link">罗马书2章（4）</a>
+    <a href="https://roman-bjt.pages.dev/r25.mp3" class="audio-link">罗马书2章（5）</a>
+
+    <a href="https://roman-bjt.pages.dev/r26.mp3" class="audio-link">罗马书2章（6）</a>
+    <a href="https://roman-bjt.pages.dev/r27.mp3" class="audio-link">罗马书2章（7）</a>
+    <a href="https://roman-bjt.pages.dev/r28.mp3" class="audio-link">罗马书2章（8）</a>
+    <a href="https://roman-bjt.pages.dev/r29.mp3" class="audio-link">罗马书2章（9）</a>
+    <a href="https://roman-bjt.pages.dev/r210.mp3" class="audio-link">罗马书2章（10）</a>
+    <a href="https://roman-bjt.pages.dev/r211.mp3" class="audio-link">罗马书2章（11）</a>
+    <a href="https://roman-bjt.pages.dev/r212.mp3" class="audio-link">罗马书2章（12）</a>
+    <a href="https://roman-bjt.pages.dev/r213.mp3" class="audio-link">罗马书2章（13）</a>
+    <a href="https://roman-bjt.pages.dev/r214.mp3" class="audio-link">罗马书2章（14）</a>
+    <a href="https://roman-bjt.pages.dev/r215.mp3" class="audio-link">罗马书2章（15）</a>
+    <a href="https://roman-bjt.pages.dev/r216.mp3" class="audio-link">罗马书2章（16）</a>
+    <a href="https://roman-bjt.pages.dev/r217.mp3" class="audio-link">罗马书2章（17）</a>
+    <a href="https://roman-bjt.pages.dev/r218.mp3" class="audio-link">罗马书2章（18）</a>
+    <a href="https://roman-bjt.pages.dev/r219.mp3" class="audio-link">罗马书2章（19）</a>
+    <a href="https://roman-bjt.pages.dev/r220.mp3" class="audio-link">罗马书2章（20）</a>
+    <a href="https://roman-bjt.pages.dev/r221.mp3" class="audio-link">罗马书2章（21）</a>
+    <a href="https://roman-bjt.pages.dev/r222.mp3" class="audio-link">罗马书2章（22）</a>
+    <a href="https://roman-bjt.pages.dev/r223.mp3" class="audio-link">罗马书2章（23）</a>
+    <a href="https://roman-bjt.pages.dev/r224.mp3" class="audio-link">罗马书2章（24）</a>
+    <a href="https://roman-bjt.pages.dev/r225.mp3" class="audio-link">罗马书2章（25）</a>
+    <a href="https://roman-bjt.pages.dev/r226.mp3" class="audio-link">罗马书2章（26）</a>
+    <a href="https://roman-bjt.pages.dev/r227.mp3" class="audio-link">罗马书2章（27）</a>
+    <a href="https://roman-bjt.pages.dev/r228.mp3" class="audio-link">罗马书2章（28）</a>
+    <a href="https://roman-bjt.pages.dev/r229.mp3" class="audio-link">罗马书2章（29）</a>
+    <!-- 其他链接... -->
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.category').click(function () {
+        $('.links').slideToggle(); // 切换折叠效果
+      });
+    });
+  </script>
+
+</body>
+
+</html>
