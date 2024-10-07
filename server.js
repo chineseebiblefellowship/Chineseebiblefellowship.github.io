@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = 5023;
 
 // 提供当前目录的静态文件
 app.use(express.static(__dirname));
