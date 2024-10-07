@@ -1,212 +1,79 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>eBible Fellowship</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <script src="jquery.min.js"></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="nb.css">
+  <link rel="icon"
+    href="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5f359c4a91336f7eca8b3028_Ebibe%20Fav%2032.png"
+    type="image/x-icon">
   <link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
-  <style>
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 70px;
-      background-color: #333;
-      color: white;
-    }
-
-    #backk {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      background-color: #007bff;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    #backk:hover {
-      background-color: #0056b3;
-    }
-
-    .logo-container {
-      text-align: center;
-      /* 内容居中 */
-    }
-
-    .logo-image {
-      display: block;
-      /* 确保图像是块级元素 */
-      margin: 0 auto;
-      /* 居中图像 */
-    }
-
-    .logo-text {
-      display: inline;
-      /* 保持文本行内显示 */
-      font-size: 40px;
-      /* 设置字体大小 */
-    }
-
-    .icon-row {
-      display: flex;
-      /* 使用 Flexbox */
-      justify-content: space-between;
-      /* 确保间距均匀 */
-      margin-bottom: 20px;
-    }
-
-    .icon-box {
-      width: calc(50% - 10px);
-      /* 每个按钮占据50%的宽度 */
-      display: flex;
-      /* 使用 Flexbox */
-      flex-direction: column;
-      /* 垂直排列 */
-      align-items: center;
-      /* 水平居中 */
-      text-decoration: none;
-      /* 去掉下划线 */
-      color: #333;
-      /* 字体颜色 */
-      border: 2px solid #007bff;
-      /* 边框 */
-      border-radius: 10px;
-      /* 圆角 */
-      padding: 20px;
-      /* 内边距 */
-      transition: transform 0.3s, color 0.3s;
-      /* 动效 */
-    }
-
-    .icon-box:hover {
-      transform: translateY(-5px);
-      /* 悬停时上移 */
-      color: #007bff;
-      /* 悬停时颜色变化 */
-    }
-
-    .icon-box i {
-      font-size: 30px;
-      /* 图标大小 */
-      margin-bottom: 10px;
-      /* 图标与文本之间的间距 */
-    }
-
-    .timeshi-containe {
-      display: none;
-      /* 默认隐藏 */
-      text-align: center;
-      /* 居中对齐 */
-      border-radius: 10px;
-      /* 圆角 */
-      background-color: #f0f0f0;
-      /* 背景颜色，可根据需要调整 */
-      padding: 10px;
-      /* 内边距 */
-    }
-
-    .highlight {
-      color: #007bff;
-      /* 蓝色 */
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-    .cllla {
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-    /* 小屏幕样式 */
-    @media (max-width: 768px) {
-      .timeshi-containe {
-        display: block;
-        /* 小屏幕上显示 */
-      }
-    }
-
-
-    /* 隐藏电脑屏幕上的按钮 */
-    @media (min-width: 768px) {
-      .icon-row {
-        display: none;
-        /* 隐藏整个按钮行 */
-      }
-    }
-
-    /* 添加按钮样式 */
+  <div class="navbar">
+    <div class="title" style="color: #fff;">创世纪</div>
+    <button>
+        <a href="index.html" class="link"><i class="fas fa-home"></i> <<首页</a>
+        <a href="bible-index.html" class="link"><i class="fas fa-book-open learn-icon"></i> <<圣经索引</a>
+        <a href="" class="link"><i class="fas fa-book-open learn-icon"></i> <<创世纪</a>
+        <a class="backk" href="index.html" style="color: #fff;">返回</a>
+    </button>
+    <div class="logo" style="text-align: center;">eBible Fellowship</div>
+</div>
+    <style>
+        /* 添加按钮样式 */
     .backk {
       display: inline-block;
       padding: 10px 20px;
-      color: #fff;
-      /* 文字颜色 */
-      background-color: #007bff;
-      /* 背景颜色 */
-      border: none;
-      /* 边框 */
-      border-radius: 5px;
-      /* 圆角 */
-      text-decoration: none;
-      /* 去除下划线 */
-      font-size: 16px;
-      /* 字体大小 */
-      cursor: pointer;
-      /* 鼠标光标 */
-      transition: background-color 0.3s;
-      /* 背景颜色渐变效果 */
+      color: #fff; /* 文字颜色 */
+      background-color: #007bff; /* 背景颜色 */
+      border: none; /* 边框 */
+      border-radius: 5px; /* 圆角 */
+      text-decoration: none; /* 去除下划线 */
+      font-size: 16px; /* 字体大小 */
+      cursor: pointer; /* 鼠标光标 */
+      transition: background-color 0.3s; /* 背景颜色渐变效果 */
     }
 
     /* 鼠标悬停时的样式 */
     #backk:hover {
       background-color: #0056b3;
     }
-
-    /* 导航容器样式 */
-
+      /* 导航容器样式 */
+      
     /* 链接容器样式 */
     .nav-links {
-      display: flex;
-      /* 使用 flex 布局 */
-      align-items: center;
-      /* 垂直居中 */
-      gap: 10px;
-      /* 链接之间的间隙 */
+      display: flex; /* 使用 flex 布局 */
+      align-items: center; /* 垂直居中 */
+      gap: 10px; /* 链接之间的间隙 */
     }
 
     /* 链接样式 */
     .nav-link {
-      display: flex;
-      /* 使用 flex 布局 */
-      align-items: center;
-      /* 垂直居中 */
-      color: #007bff;
-      /* 文字颜色 */
-      text-decoration: none;
-      /* 去除下划线 */
-      font-size: 16px;
-      /* 字体大小 */
-      transition: color 0.3s;
-      /* 颜色渐变效果 */
+      display: flex; /* 使用 flex 布局 */
+      align-items: center; /* 垂直居中 */
+      color: #007bff; /* 文字颜色 */
+      text-decoration: none; /* 去除下划线 */
+      font-size: 16px; /* 字体大小 */
+      transition: color 0.3s; /* 颜色渐变效果 */
     }
 
     .nav-link:hover {
-      color: #0056b3;
-      /* 鼠标悬停时的文字颜色 */
+      color: #0056b3; /* 鼠标悬停时的文字颜色 */
     }
 
     /* 图标样式 */
     .nav-icon {
-      margin-right: 5px;
-      /* 图标和文字之间的间隙 */
+      margin-right: 5px; /* 图标和文字之间的间隙 */
     }
-
     body {
       margin: 0;
       background-color: #dff0ff;
     }
-
     .text-art {
       font-family: 'Arial', sans-serif;
       font-size: 4em;
@@ -441,195 +308,7 @@
       color: #007bff;
       /* 图标颜色 */
     }
-
-    @media (min-width: 768px) {
-      body {
-        margin-left: 250px;
-        /* 电脑上让出250px */
-      }
-    }
-
-    .navbar {
-      background-color: black;
-      padding: 10px;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      /* 覆盖整个横屏 */
-      border-top-left-radius: 15px;
-      /* 上边圆角 */
-      border-top-right-radius: 15px;
-      /* 上边圆角 */
-      border-bottom: 5px solid black;
-      /* 下边不圆角 */
-      transition: background-color 0.3s;
-      /* 动画效果 */
-    }
-
-    .navbar:hover {
-      background-color: #333;
-      /* 鼠标悬停变色 */
-    }
-
-    .title {
-      padding: 10px 20px;
-      font-size: 1.5em;
-      text-align: center;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-
-    .navbar button {
-      background-color: transparent;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: color 0.3s;
-      /* 动画效果 */
-    }
-
-    .navbar button:hover {
-      color: #ff4081;
-      /* 鼠标悬停变色 */
-    }
-
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      /* 默认竖着排列 */
-      align-items: center;
-      width: 80%;
-      /* 占横屏的80% */
-      gap: 20px;
-      /* 按钮之间的间距 */
-    }
-
-    @media (min-width: 768px) {
-      .button-container {
-        flex-direction: row;
-        /* 电脑上水平排列 */
-      }
-    }
-
-    @media (min-width: 768px) {
-      .button-container {
-        flex-direction: row;
-        /* 电脑上水平排列 */
-        justify-content: center;
-        /* 水平居中 */
-      }
-    }
-
-    .button {
-      background-color: rgb(0, 119, 255);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 20px 40px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5em;
-      transition: transform 0.3s, background-color 0.3s;
-      /* 动画效果 */
-      width: 100%;
-      /* 按钮在手机上占满 */
-    }
-
-    .button:hover {
-      transform: scale(1.1);
-      /* 悬停放大效果 */
-      background-color: #005dd6;
-      /* 鼠标悬停变色 */
-    }
-
-    .logo {
-      margin-top: 10px;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #0088ff;
-      /* Logo 颜色 */
-    }
-
-    .link {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-      /* 动画效果 */
-    }
-
-    .link:hover {
-      color: #0078e8;
-      /* 超链接悬停变色 */
-    }
-
-    .learn-icon {
-      margin-left: 5px;
-      /* 图标与文字之间的间距 */
-    }
-    .timeshi-iframe {
-      width: 100%;
-      /* 宽度为100% */
-      height: 400px;
-      /* 高度为100% */
-      border: none;
-      /* 去掉边框 */
-      border-radius: 10px;
-      /* 圆角 */
-    }
-
-    /* 隐藏滚动条，仅在小屏幕上 */
-    @media (max-width: 767px) {
-      .timeshi-iframe {
-        overflow: hidden;
-        /* 隐藏滚动条 */
-      }
-    }
   </style>
-</head>
-
-<body>
-  <div class="navbar">
-    <div class="title" style="color: #fff;">圣经书籍</div>
-    <button>
-      <a href="index.html" class="link"><i class="fas fa-home"></i> 首页</a>
-      <a href="learnbible.html" class="link"><i class="fas fa-book-open learn-icon"></i> 圣经学习</a>
-      <a href="lib.html" class="link"><i class="fas fa-book-open learn-icon"></i> 圣经书籍</a>
-      <div class="header">
-        <a id="backk" href="#">返回</a>
-      </div>
-
-      <script>
-        $(document).ready(function () {
-          $('#backk').click(function (event) {
-            event.preventDefault();
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const source = urlParams.get('source');
-            console.log(source); // 添加调试信息
-            let newHref = '#';
-
-            if (source === 'pageA') {
-              newHref = 'learnbible.html';
-            } else if (source === 'pageB') {
-              newHref = 'index.html';
-            } else if (source === 'pageC') {
-              newHref = 'learnbible.html';
-            }
-
-            // 使用 window.location.href 进行页面跳转
-            window.location.href = newHref;
-          });
-        });
-      </script>
-    </button>
-    <div class="logo" style="text-align: center;">eBible Fellowship</div>
-  </div>
-
   <div class="logo-container">
     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
       alt="eBible Fellowship Logo" class="logo-image" style="width: 140px; height: auto;">
@@ -637,6 +316,119 @@
     <span class="logo-text" style="display: inline; font-size: 40px;">Bible Fellowship</span>
   </div>
 
+  <style>
+    .logo-container {
+      text-align: center;
+      /* 内容居中 */
+    }
+
+    .logo-image {
+      display: block;
+      /* 确保图像是块级元素 */
+      margin: 0 auto;
+      /* 居中图像 */
+    }
+
+    .logo-text {
+      display: inline;
+      /* 保持文本行内显示 */
+      font-size: 40px;
+      /* 设置字体大小 */
+    }
+  </style>
+
+
+
+  <style>
+    .icon-row {
+      display: flex;
+      /* 使用 Flexbox */
+      justify-content: space-between;
+      /* 确保间距均匀 */
+      margin-bottom: 20px;
+    }
+
+    .icon-box {
+      width: calc(50% - 10px);
+      /* 每个按钮占据50%的宽度 */
+      display: flex;
+      /* 使用 Flexbox */
+      flex-direction: column;
+      /* 垂直排列 */
+      align-items: center;
+      /* 水平居中 */
+      text-decoration: none;
+      /* 去掉下划线 */
+      color: #333;
+      /* 字体颜色 */
+      border: 2px solid #007bff;
+      /* 边框 */
+      border-radius: 10px;
+      /* 圆角 */
+      padding: 20px;
+      /* 内边距 */
+      transition: transform 0.3s, color 0.3s;
+      /* 动效 */
+    }
+
+    .icon-box:hover {
+      transform: translateY(-5px);
+      /* 悬停时上移 */
+      color: #007bff;
+      /* 悬停时颜色变化 */
+    }
+
+    .icon-box i {
+      font-size: 30px;
+      /* 图标大小 */
+      margin-bottom: 10px;
+      /* 图标与文本之间的间距 */
+    }
+
+    .timeshi-containe {
+      display: none;
+      /* 默认隐藏 */
+      text-align: center;
+      /* 居中对齐 */
+      border-radius: 10px;
+      /* 圆角 */
+      background-color: #f0f0f0;
+      /* 背景颜色，可根据需要调整 */
+      padding: 10px;
+      /* 内边距 */
+    }
+
+    .highlight {
+      color: #007bff;
+      /* 蓝色 */
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .cllla {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    /* 小屏幕样式 */
+    @media (max-width: 768px) {
+      .timeshi-containe {
+        display: block;
+        /* 小屏幕上显示 */
+      }
+    }
+
+
+    /* 隐藏电脑屏幕上的按钮 */
+    @media (min-width: 768px) {
+      .icon-row {
+        display: none;
+        /* 隐藏整个按钮行 */
+      }
+    }
+  </style>
+
+<body>
   <div class="sidebar-menu">
     <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
       alt="eBible Fellowship Logo" class="logo">
@@ -663,7 +455,26 @@
         class="timeshi-iframe"></iframe>
     </div>
 
+    <style>
+      .timeshi-iframe {
+        width: 100%;
+        /* 宽度为100% */
+        height: 400px;
+        /* 高度为100% */
+        border: none;
+        /* 去掉边框 */
+        border-radius: 10px;
+        /* 圆角 */
+      }
 
+      /* 隐藏滚动条，仅在小屏幕上 */
+      @media (max-width: 767px) {
+        .timeshi-iframe {
+          overflow: hidden;
+          /* 隐藏滚动条 */
+        }
+      }
+    </style>
 
     <div class="sidebarplayer">
       <div class="social_media_div">
@@ -855,15 +666,220 @@
       &copy; 2024 eBible Fellowship
     </div>
   </div>
+    <div>
+
+  </html>
+
+
+      <style>
+        @media (min-width: 768px) {
+          body {
+              margin-left: 250px; /* 电脑上让出250px */
+          }
+      }
+      .navbar {
+          background-color: black;
+          padding: 10px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%; /* 覆盖整个横屏 */
+          border-top-left-radius: 15px; /* 上边圆角 */
+          border-top-right-radius: 15px; /* 上边圆角 */
+          border-bottom: 5px solid black; /* 下边不圆角 */
+          transition: background-color 0.3s; /* 动画效果 */
+      }
+      .navbar:hover {
+          background-color: #333; /* 鼠标悬停变色 */
+      }
+      .title {
+          padding: 10px 20px;
+          font-size: 1.5em;
+          text-align: center;
+          margin-bottom: 10px;
+          border-radius: 5px;
+      }
+      .navbar button {
+          background-color: transparent;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: color 0.3s; /* 动画效果 */
+      }
+      .navbar button:hover {
+          color: #ff4081; /* 鼠标悬停变色 */
+      }
+      .button-container {
+          display: flex;
+          flex-direction: column; /* 默认竖着排列 */
+          align-items: center;
+          width: 80%; /* 占横屏的80% */
+          gap: 20px; /* 按钮之间的间距 */
+      }
+      @media (min-width: 768px) {
+          .button-container {
+              flex-direction: row; /* 电脑上水平排列 */
+          }
+      }
+      @media (min-width: 768px) {
+        .button-container {
+            flex-direction: row; /* 电脑上水平排列 */
+            justify-content: center; /* 水平居中 */
+        }
+    }
+      .button {
+          background-color: rgb(0, 157, 255);
+          color: white;
+          border: none;
+          border-radius: 30px;
+          padding: 20px 40px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          
+          justify-content: center;
+          font-size: 1.5em;
+          transition: transform 0.3s, background-color 0.3s; /* 动画效果 */
+          width: 100%; /* 按钮在手机上占满 */
+      }
+      .button:hover {
+          transform: scale(1.1); /* 悬停放大效果 */
+          background-color: #0084d0; /* 鼠标悬停变色 */
+      }
+      .logo {
+          margin-top: 10px;
+          font-size: 1.2em;
+          font-weight: bold;
+          color: #0088ff; /* Logo 颜色 */
+      }
+      .link {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s; /* 动画效果 */
+      }
+      .link:hover {
+          color: #0078e8; /* 超链接悬停变色 */
+      }
+      .learn-icon {
+          margin-left: 5px; /* 图标与文字之间的间距 */
+      }
+    </style>
+</head>
+  
+</head>
+
+<body>
+
+
   <div>
-    <div class="header-area">
-      <h1 class="main-title">单章&查考书籍</h1>
+      <style>
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 95%;
+          /* 手机占屏幕的 95% */
+          margin: 0 auto;
+          padding-left: 250px;
+          /* 电脑左边流出 250px */
+        }
 
+        @media (max-width: 600px) {
+          body {
+            padding-left: 0;
+            /* 手机上不需要左边距 */
+          }
+        }
 
-      <div class="button-container" style=" align-items: center; ">
-        <a href="books.html?source=pageA" class="button"><i class="fas fa-search"></i> 查考</a>
-        <a href="tracts.html?source=pageA" class="button"><i class="fas fa-book"></i> 小册子</a>
+        h1 {
+          font-size: 2em;
+          /* 大标题 */
+          margin: 0.5em 0;
+        }
+
+        h2 {
+          font-size: 1.5em;
+          /* 章节标题 */
+          margin: 0.5em 0;
+        }
+
+        .bu {
+          width: 2.2em;
+          text-align: center;
+          margin: 0.2em;
+          font-size: 100%;
+          font-weight: normal;
+          display: inline-block;
+          line-height: 200%;
+          border-radius: 0.2em;
+          background: #098bff;
+          color: #f2f2f2;
+          text-decoration: none;
+          /* 去掉超链接下划线 */
+          transition: background 0.3s;
+          /* 添加过渡效果 */
+        }
+
+        .bu:hover {
+          background: #066bbd;
+          /* 鼠标悬停时深色 */
+        }
+      </style>
+    </head>
+
+    <body>
+      <div>
+        <script>
+            for (let i = 1; i <= 50; i++) {
+                document.write(`<a class="bu" href="#">${i}</a>`);
+            }
+        </script>
+    </div>
+      <h1>创世纪</h1>
+      <h2>创世纪 1 章</h2>
+
+      <div>
+        <p>1: 起初，神创造天地。</p>
+        <p>2: 地是空虚混沌，渊面黑暗；神的灵运行在水面上。</p>
+        <p>3: 神说：“要有光。”就有了光。</p>
+        <p>4: 神看光是好的，就把光和暗分开了。</p>
+        <p>5: 神称光为昼，称暗为夜。晚霞，早晨，第一日。</p>
+        <p>6: 神说：“诸水之间要有空气，分开诸水。”就这样成了。</p>
+        <p>7: 神造了空气，把空气以下的水和空气以上的水分开了。神称空气为天。晚霞，早晨，第二日。</p>
+        <p>8: 神说：“天下的水要聚在一处，使旱地露出来。”就这样成了。</p>
+        <p>9: 神称旱地为地，称聚集的水为海。神看这是好的。</p>
+        <p>10: 神说：“地要发出青草，和结种子的菜蔬，并结果子的树木，各从其类。”就这样成了。</p>
+        <p>11: 地发出青草，和结种子的菜蔬，各从其类，结果子的树木，各从其类。神看这是好的。</p>
+        <p>12: 有晚上，有早晨，第三日。</p>
+        <p>13: 神说：“要有光体在天上，分昼夜，作记号，定节令，日子，年岁。”</p>
+        <p>14: 并要发光在天空，照在地上。就这样成了。</p>
+        <p>15: 于是，神造了两个大光，大的管昼，小的管夜；又造星星。</p>
+        <p>16: 神把这些光体摆列在天空，照在地上，</p>
+        <p>17: 并管昼夜，分开光暗。神看这是好的。</p>
+        <p>18: 有晚上，有早晨，第四日。</p>
+        <p>19: 神说：“水要多多滋生有生命的物，雀鸟要飞在地面以上，天空之中。”</p>
+        <p>20: 神创造了大鱼和水中所滋生的各样活物，各从其类；又创造了各样飞鸟，各从其类。神看这是好的。</p>
+        <p>21: 神就赐福给这一切，说：“生养众多，充满海中的水；雀鸟也要多生在地上。”</p>
+        <p>22: 有晚上，有早晨，第五日。</p>
+        <p>23: 神说：“地要生出活物，各从其类；牲畜、爬行动物、野兽，各从其类。”就这样成了。</p>
+        <p>24: 神造了野兽，各从其类；牲畜，各从其类；地上一切爬行动物，各从其类。神看这是好的。</p>
+        <p>25: 神说：“我们要照着我们的形象，按着我们的样式造人；让他们管理海里的鱼、空中的鸟、和地上的牲畜，以及全地，并地上所有的爬行动物。”</p>
+        <p>26: 神就照着自己的形象创造人，乃是照着他的形象创造他们，男和女创造他们。</p>
+        <p>27: 神就赐福给他们，神对他们说：“生养众多，遍满地面，治理这地；也要管理海里的鱼、空中的鸟，并地上各样行动的活物。”</p>
+        <p>28: 神说：“看哪，我将遍地一切结种子的菜蔬和一切树上所结的果子，赐给你们作食物；</p>
+        <p>29: 至于地上的一切走兽，空中的一切飞鸟，以及一切爬在地上的动物，我将青草赐给他们作食物。”就这样成了。</p>
+        <p>30: 神看他所造的一切，都是好的。晚霞，早晨，第六日。</p>
+        <p>31: 天地万物都造齐了。</p>
       </div>
+
+    </body>
+
+    </html>
+
+  </div>
+
 </body>
 
 </html>

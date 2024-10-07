@@ -2787,6 +2787,28 @@ background-color: #ecf5ff;
           margin-right: 0;
       }
   }
+  .language-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -100px; /* 调整位置，使其在左边 */
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.language-options a {
+    padding: 10px;
+    color: #61dafb;
+    text-decoration: none;
+    display: block;
+}
+
+.language-options a:hover {
+    background-color: #2c2c2c;
+}
 </style>
 </head>
 
@@ -2797,11 +2819,17 @@ background-color: #ecf5ff;
 </button>
 <nav class="right-nav" id="rightNav">
   <ul>
-      <li><a href="#"><i class="fa-solid fa-earth-asia"></i> 语言</a></li>
+    <li>
+      <a href="#" id="languageLink"><i class="fa-solid fa-earth-asia"></i> 语言</a>
+      <div class="language-options" id="languageOptions">
+          <a href="#" onclick="setLanguage('中文')">中文</a>
+          <a href="#" onclick="setLanguage('English')">English</a>
+      </div>
+  </li>
       <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
       <li><a href="audio-index.html"><i class="fa-solid fa-file-audio"></i> 圣经朗读</a></li>
       <li><a href="hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
-      <li id="devLink"><a href="#"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
+      <li id="devLink"><a href="biblicaltimeline.html"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
       <li id="githubLink" class="hidden"><a
               href="https://github.com/chineseebiblefellowship/Chineseebiblefellowship.github.io/tree/main"><i
                   class="fab fa-github"></i> GitHub</a></li>
@@ -2810,12 +2838,11 @@ background-color: #ecf5ff;
       <li><a href="books.html?source=pageB"><i class="fa-solid fa-book"></i> 圣经书籍</a></li>
       <li><a href="pingtai.html"><i class="fa-solid fa-layer-group"></i> 电子圣经团契平台</a></li>
       <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
-      <li><a href="audio.html"><i class="fa-solid fa-file-audio"></i> 查考音频</a></li>
+      <li><a href="audio.html?source=pageB"><i class="fa-solid fa-file-audio"></i> 查考音频</a></li>
       <li><a href="learnbible.html"><i class="fa-solid fa-lines-leaning"></i> 圣经学习</a></li>
       <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i
                   class="fas fa-video"></i> Zoom</a></li>
       <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
-      <li><a href="download.html?source=pageB"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
       <li><a href="email.html"><i class="fa-solid fa-address-card"></i> 联系我们</a></li>
       <li id="devTest" class="hidden"><a href="test.html"><i class="fa-solid fa-address-card"></i> 开发人员渠道test</a>
       </li>
@@ -2823,7 +2850,30 @@ background-color: #ecf5ff;
       </li>
   </ul>
 </nav>
+<script>
+  const languageLink = document.getElementById('languageLink');
+  const languageOptions = document.getElementById('languageOptions');
 
+  languageLink.addEventListener('mouseover', () => {
+      languageOptions.style.display = 'block';
+  });
+
+  languageLink.addEventListener('mouseout', () => {
+      languageOptions.style.display = 'none';
+  });
+
+  languageOptions.addEventListener('mouseover', () => {
+      languageOptions.style.display = 'block';
+  });
+
+  languageOptions.addEventListener('mouseout', () => {
+      languageOptions.style.display = 'none';
+  });
+
+  function setLanguage(lang) {
+      alert(`选择的语言: ${lang}`);
+  }
+</script>
 <script>
   const navToggleButton = document.getElementById('navToggleButton');
   const rightNav = document.getElementById('rightNav');

@@ -1,10 +1,138 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>website 1<title>
-    <head>
-    <body>
-    <h1>
-        <h1>
-    <body>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eBible Fellowship</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="nb.css">
+  <link rel="icon" href="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5f359c4a91336f7eca8b3028_Ebibe%20Fav%2032.png" type="image/x-icon">
+  <link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
+
+  <!-- Additional styles -->
+  <style>
+    .navbar {
+      background-color: black;
+      padding: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom: 5px solid black;
+      transition: background-color 0.3s;
+    }
+
+    .navbar:hover {
+      background-color: #333;
+    }
+
+    .title {
+      padding: 10px 20px;
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .navbar button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .navbar button:hover {
+      color: #ff4081;
+    }
+
+    body {
+      margin: 0;
+      background-color: #dff0ff;
+    }
+
+    .text {
+      color: #0000ff;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #008CBA;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background-color: #005f73;
+    }
+
+    .smaller {
+      font-size: 14px;
+    }
+
+    .larger {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="title" style="color: #fff;">创世纪</div>
+    <button>
+      <a href="index.html" class="link"><i class="fas fa-home"></i> <<首页</a>
+      <a href="bible-index.html" class="link"><i class="fas fa-book-open learn-icon"></i> <<圣经索引</a>
+      <a href="" class="link"><i class="fas fa-book-open learn-icon"></i> <<创世纪</a>
+      <a class="backk" href="index.html" style="color: #fff;">返回</a>
+    </button>
+    <div class="logo" style="text-align: center;">eBible Fellowship</div>
+  </div>
+
+  <div class="container">
+    <h1>创世纪 1 章</h1>
+    <button class="button" onclick="changeSize('smaller')">字体减小</button>
+    <button class="button" onclick="changeSize('larger')">字体加大</button>
+
+    <p class="text">1: 起初，神创造天地。</p>
+    <p class="text">2: 地是空虚混沌，渊面黑暗；神的灵运行在水面上。</p>
+    <p class="text">3: 神说：“要有光。”就有了光。</p>
+    <p class="text">4: 神看光是好的，就把光和暗分开了。</p>
+    <p class="text">5: 神称光为昼，称暗为夜。晚霞，早晨，第一日。</p>
+    <!-- 其他经文内容 -->
+    <p class="text">31: 天地万物都造齐了。</p>
+  </div>
+
+  <script>
+    let currentSize = 16; // 初始字体大小
+
+    function changeSize(sizeClass) {
+      var elements = document.getElementsByClassName('text');
+      for (var i = 0; i < elements.length; i++) {
+        var newSize = currentSize;
+        if (sizeClass === 'smaller') {
+          newSize = Math.max(5, currentSize - 1); // 减小字体大小，但不低于5px
+        } else {
+          newSize = Math.min(40, currentSize + 1); // 增大字体大小，但不超过40px
+        }
+        elements[i].style.fontSize = newSize + 'px';
+        currentSize = newSize; // 更新当前字体大小
+      }
+    }
+  </script>
+</body>
+
+</html>
