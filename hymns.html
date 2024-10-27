@@ -768,532 +768,330 @@
     </style>
 </head>
 <body>
+  <div id="player-container">
+      <div class="eplayer-container" id="eplayer1"></div>
+      <div class="eplayer-container" id="eplayer2"></div>
+      <div class="eplayer-container" id="eplayer3"></div>
+      <div class="eplayer-container" id="eplayer4"></div>
+      <div class="eplayer-container" id="eplayer5"></div>
+      <div class="eplayer-container" id="eplayer6"></div>
+      <div class="eplayer-container" id="eplayer7"></div>
+      <div class="eplayer-container" id="eplayer8"></div>
+      <div class="eplayer-container" id="eplayer9"></div>
+      <div class="eplayer-container" id="eplayer10"></div>
+      <div class="eplayer-container" id="eplayer11"></div>
+      <div class="eplayer-container" id="eplayer12"></div>
+      <div class="eplayer-container" id="eplayer13"></div>
+      <div class="eplayer-container" id="eplayer14"></div>
+      <div class="eplayer-container" id="eplayer15"></div>
+      <div class="eplayer-container" id="eplayer16"></div>
+      <div class="eplayer-container" id="eplayer17"></div>
+      <div class="eplayer-container" id="eplayer18"></div>
+      <div class="eplayer-container" id="eplayer19"></div>
+      <div class="eplayer-container" id="eplayer20"></div>
+      <div class="eplayer-container" id="eplayer21"></div>
+      <div class="eplayer-container" id="eplayer22"></div>
+      <div class="eplayer-container" id="eplayer23"></div>
+      <div class="eplayer-container" id="eplayer24"></div>
+      <div class="eplayer-container" id="eplayer25"></div>
+  </div>
 
-    <div>
-      <link rel="stylesheet" href="APlayer.css">
-      <style>
-          body {
-              font-family: Arial, sans-serif;
-              margin: 0;
-              padding: 0;
-              background-color: #f0f0f0;
-          }
-          .search-container {
-              text-align: right;
-              margin-bottom: 20px;
-          }
-          .search-container input {
-              padding: 10px;
-              font-size: 18px;
-              border-radius: 5px;
-              border: 1px solid #ccc;
-              width: 300px;
-          }
-          .aplayer {
-              margin-top: 20px;
-          }
-          .aplayer .aplayer-lyrics {
-              padding: 20px;
-              border-top: 1px solid #ddd;
-              font-size: 18px; /* Larger font size for lyrics */
-          }
-          .btn {
-              display: inline-block;
-              padding: 10px 20px;
-              margin: 10px 5px;
-              font-size: 18px;
-              color: #fff;
-              background-color: #007bff;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-              text-decoration: none;
-              text-align: center;
-          }
-          .btn:hover {
-              background-color: #0056b3;
-          }
-          .jicheng {
-            font-size: 30px;
-            font-weight:bold;
-          }
-          body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-#player-container {
-    position: relative;
-    margin: 0 auto; /* 自动水平居中 */
-    padding: 10px;
-    height: 100%;
-    overflow: auto; /* 允许滚动 */
-    display: flex;
-    flex-wrap: wrap; /* 允许换行 */
-    gap: 10px; /* 播放器之间的间距 */
-}
-
-.eplayer-container {
-    width: 150px;
-    height: 300px;
-    background-color: #aaebff;
-    border-radius: 15px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-/* 保持播放器不超过左130px右30px */
-#player-container::before {
-    content: '';
-    display: block;
-    width: 260px; /* 左边距 */
-}
-
-.eplayer-container {
-    flex: 1 1 300px; /* 播放器的基础宽度和自适应 */
-    max-width: calc(100% - 130px - 30px); /* 宽度限制 */
-}
-
-.eplayer-container:nth-of-type(2n) {
-    margin-right: 30px; /* 右边距 */
-}
-
-/* 确保播放器在超过最大宽度时换行 */
-@media (max-width: 480px) {
-    .eplayer-container {
-        max-width: 100%;
-    }
-}
-
-.cover-container {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.cover-container img {
-    width: 50px; /* 固定宽度 */
-    height: 50px; /* 固定高度 */
-    object-fit: cover; /* 保持图片比例并填充容器 */
-    border-radius: 10px;
-}
-.cover-container {
-    position: relative;
-    margin-bottom: 10px;
-    z-index: 2; /* 确保图片在歌词上方 */
-}
-
-.cover-container img {
-    width: 90px; /* 固定宽度 */
-    height: 90px; /* 固定高度 */
-    object-fit: cover; /* 保持图片比例并填充容器 */
-    border-radius: 10px;
-}
-
-.song-info {
-    margin-top: 10px;
-}
-
-#title {
-    font-size: 16px;
-    font-weight: bold; /* 歌曲名加粗 */
-    color: #333;
-}
-
-#author {
-    font-size: 12px;
-    color: #666;
-}
-
-.controls {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    height: 60px;
-    justify-content: space-between;
-}
-
-.top-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.control-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px; /* 调整按钮大小 */
-}
-
-#play-pause {
-    font-size: 24px; /* 播放按钮的大小 */
-}
-
-#progress {
-    flex: 1;
-    margin: 0 10px;
-}
-
-#time-display {
-    margin: 0 10px;
-}
-
-.bottom-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#volume-mute {
-    font-size: 24px; /* 静音按钮大小 */
-}
-
-#volume {
-    width: 80px;
-    margin: 0 10px;
-}
-
-#loop {
-    font-size: 24px; /* 循环按钮大小 */
-}
-
-.lrc-container {
-    margin-top: 10px;
-    text-align: center; /* 居中显示歌词 */
-    height: 60px; /* 隐藏状态时的高度 */
-    overflow: hidden;
-    transition: height 0.3s ease, font-size 0.3s ease; /* 平滑过渡效果 */
-    position: absolute; /* 确保歌词在播放器的底部 */
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.lrc-container.expanded {
-    height: calc(100% - 80px); /* 展开状态时的高度 */
-}
-
-#lrc-content {
-    max-height: 100%;
-    overflow-y: auto;
-    display: block; /* 确保歌词始终显示 */
-    font-size: 14px; /* 隐藏时的字体大小 */
-    color: white; /* 歌词颜色为白色 */
-}
-
-#toggle-lrc {
-    margin-bottom: 10px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 18px;
-}
-
-#lrc-content p {
-    margin: 0;
-    padding: 2px 0;
-    color: rgb(255, 255, 255); /* 歌词颜色为白色 */
-    transition: font-weight 0.3s, font-size 0.3s;
-}
-
-#lrc-content p.active {
-    color: rgb(0, 0, 0); /* 高亮歌词颜色 */
-    font-weight: bold;
-    font-size: 27px; /* 当前歌词加大 */
-}
-      </style>
-  </head>
-  <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-</head>
-<body>
-    <div id="player-container">
-        <div class="eplayer-container" id="eplayer1"></div>
-        <div class="eplayer-container" id="eplayer2"></div>
-        <div class="eplayer-container" id="eplayer3"></div>
-        <div class="eplayer-container" id="eplayer4"></div>
-        <div class="eplayer-container" id="eplayer5"></div>
-        <div class="eplayer-container" id="eplayer6"></div>
-        <div class="eplayer-container" id="eplayer7"></div>
-        <div class="eplayer-container" id="eplayer8"></div>
-        <div class="eplayer-container" id="eplayer9"></div>
-        <div class="eplayer-container" id="eplayer10"></div>
-        <div class="eplayer-container" id="eplayer11"></div>
-        <div class="eplayer-container" id="eplayer12"></div>
-        <div class="eplayer-container" id="eplayer13"></div>
-        <div class="eplayer-container" id="eplayer14"></div>
-        <div class="eplayer-container" id="eplayer15"></div>
-        <div class="eplayer-container" id="eplayer16"></div>
-        <div class="eplayer-container" id="eplayer17"></div>
-        <div class="eplayer-container" id="eplayer18"></div>
-        <div class="eplayer-container" id="eplayer19"></div>
-        <div class="eplayer-container" id="eplayer20"></div>
-        <div class="eplayer-container" id="eplayer21"></div>
-        <div class="eplayer-container" id="eplayer22"></div>
-    </div>
-
-    <script>
+  <script>
 class ePlayer {
-    static currentPlaying = null; // 用于存储当前正在播放的播放器实例
+  static currentPlaying = null; // 用于存储当前正在播放的播放器实例
+  
 
-    constructor(options) {
-        this.element = options.element;
-        this.music = options.music;
-        this.isLooping = false; // 默认不循环
-        this.audio = new Audio(this.music.url);
-        this.audio.loop = this.isLooping;
-        this.lrc = null;
-        this.defaultCover = 's/111.png'; // 默认封面图片
-        this.coverUrl = this.music.cover || this.defaultCover; // 设置封面图片URL
-        this.initUI();
-        this.addEventListeners();
-    }
+  constructor(options) {
+    this.element = options.element;
+    this.music = options.music;
+    this.audio = new Audio(this.music.url);
+    this.audio.autoplay = true;
+    this.audio.loop = true;
+    this.audio.muted = true; // 某些浏览器要求后台播放时音频必须是静音的
+    this.audio.playsinline = true; // 确保音频可以内联播放
+    this.element = options.element;
+    this.music = options.music;
+    this.isLooping = false; // 默认不循环
+    this.audio = new Audio(this.music.url);
+    this.audio.loop = this.isLooping;
+    this.lrc = null;
+    this.defaultCover = 's/111.png'; // 默认封面图片
+    this.coverUrl = this.music.cover || this.defaultCover; // 设置封面图片URL
+    this.initUI();
+    this.addEventListeners();
+    this.songs = this.music.songs || [this.music];
+    this.currentIndex = 0;
+  }
 
-    initUI() {
-        this.element.innerHTML = `
-            <div class="cover-container">
-                <img id="cover" src="${this.coverUrl}" alt="封面图片">
+  initUI() {
+    this.element.innerHTML = `
+        <div class="cover-container">
+            <img id="cover" src="${this.coverUrl}" alt="封面图片">
+        </div>
+        <div class="song-info">
+            <div id="title">${this.music.title}</div>
+            <div id="author">${this.music.author}</div>
+        </div>
+        <div class="controls">
+            <div class="top-controls">
+               <button id="prev" class="control-btn">
+                <i class="fas fa-step-backward"></i> <!-- 上一曲 -->
+            </button>
+            <button id="play-pause" class="control-btn">
+                <i class="fas fa-play"></i> <!-- 默认为播放 -->
+            </button>
+            <button id="next" class="control-btn">
+                <i class="fas fa-step-forward"></i> <!-- 下一曲 -->
+            </button>
+                <input type="range" id="progress" value="0">
+                <span id="time-display">0:00 / 0:00</span>
             </div>
-            <div class="song-info">
-                <div id="title">${this.music.title}</div>
-                <div id="author">${this.music.author}</div>
-            </div>
-            <div class="controls">
-                <div class="top-controls">
-                    <button id="play-pause" class="control-btn">
-                        <i class="fas fa-play"></i> <!-- 默认为播放 -->
-                    </button>
-                    <input type="range" id="progress" value="0">
-                    <span id="time-display">0:00 / 0:00</span>
-                </div>
-                <div class="bottom-controls">
-                    <button id="volume-mute" class="control-btn">
-                        <i class="fas fa-volume-up"></i>
-                    </button>
-                    <input type="range" id="volume" min="0" max="100" value="100">
-                    <button id="loop" class="control-btn">
-                        <i class="fas fa-repeat"></i> <!-- 默认图标为“不循环” -->
-                    </button>
-                </div>
-            </div>
-            <div class="lrc-container" id="lrc-container">
-                <button id="toggle-lrc" class="control-btn">
-                    <i class="fas fa-caret-down"></i>
+            <div class="bottom-controls">
+                <button id="volume-mute" class="control-btn">
+                    <i class="fas fa-volume-up"></i>
                 </button>
-                <div id="lrc-content"></div>
+                <input type="range" id="volume" min="0" max="100" value="100">
+                <button id="loop" class="control-btn">
+                    <i class="fas fa-repeat"></i> <!-- 默认图标为“不循环” -->
+                </button>
             </div>
-        `;
-        
-        this.playButton = this.element.querySelector('#play-pause');
-        this.progressBar = this.element.querySelector('#progress');
-        this.timeDisplay = this.element.querySelector('#time-display');
-        this.volumeMuteButton = this.element.querySelector('#volume-mute');
-        this.volumeSlider = this.element.querySelector('#volume');
-        this.loopButton = this.element.querySelector('#loop');
-        this.lrcToggleButton = this.element.querySelector('#toggle-lrc');
-        this.lrcContent = this.element.querySelector('#lrc-content');
-        this.loadLRC(this.music.lrc);
-    }
-
-    addEventListeners() {
-        this.playButton.addEventListener('click', () => this.togglePlayPause());
-        this.audio.addEventListener('timeupdate', () => this.updateProgress());
-        this.audio.addEventListener('ended', () => this.handleAudioEnded());
-        this.progressBar.addEventListener('input', (e) => this.setAudioProgress(e));
-        this.volumeMuteButton.addEventListener('click', () => this.toggleMute());
-        this.volumeSlider.addEventListener('input', (e) => this.setVolume(e));
-        this.loopButton.addEventListener('click', () => this.toggleLoop());
-        this.lrcToggleButton.addEventListener('click', () => this.toggleLRC());
-    }
-
-    togglePlayPause() {
-        if (this.audio.paused) {
-            // 如果当前有其他播放器在播放，暂停它
-            if (ePlayer.currentPlaying && ePlayer.currentPlaying !== this) {
-                ePlayer.currentPlaying.pause();
-            }
-            this.audio.play();
-            this.playButton.innerHTML = '<i class="fas fa-pause"></i>';
-            ePlayer.currentPlaying = this; // 更新当前播放的播放器
-        } else {
-            this.pause();
-        }
-    }
-    handlePause() {
-        // 保存当前播放状态，如果播放器被暂停
-        if (this.audio.paused) {
-            this.audio.currentTime = this.audio.currentTime; // 保持当前时间
-        }
-    }
+        </div>
+        <div class="lrc-container" id="lrc-container">
+            <button id="toggle-lrc" class="control-btn">
+               
+            </button>
+            <div id="lrc-content"></div>
+        </div>
+    `;
     
-    // 试图在用户交互后继续播放
-    togglePlayPause() {
-        if (this.audio.paused) {
-            this.audio.play().catch(error => {
-                console.error('无法播放音频，可能是因为用户没有与页面交互:', error);
-            });
-            this.playButton.innerHTML = '<i class="fas fa-pause"></i>';
-            ePlayer.currentPlaying = this; // 更新当前播放的播放器
-        } else {
-            this.pause();
-        }
-    }
-    
-    // 继续播放的逻辑
-    continuePlaying() {
-        if (this.audio.paused && ePlayer.currentPlaying === this) {
-            this.audio.play();
-        }
-    }
-    
+    this.playButton = this.element.querySelector('#play-pause');
+    this.progressBar = this.element.querySelector('#progress');
+    this.timeDisplay = this.element.querySelector('#time-display');
+    this.volumeMuteButton = this.element.querySelector('#volume-mute');
+    this.volumeSlider = this.element.querySelector('#volume');
+    this.loopButton = this.element.querySelector('#loop');
+    this.lrcToggleButton = this.element.querySelector('#toggle-lrc');
+    this.lrcContent = this.element.querySelector('#lrc-content');
+    this.loadLRC(this.music.lrc);
+  }
 
-    pause() {
-        this.audio.pause();
-        this.playButton.innerHTML = '<i class="fas fa-play"></i>';
-        if (ePlayer.currentPlaying === this) {
-            ePlayer.currentPlaying = null; // 清空当前播放的播放器
-        }
-    }
+  addEventListeners() {
+    this.playButton.addEventListener('click', () => this.togglePlayPause());
+    this.audio.addEventListener('timeupdate', () => this.updateProgress());
+    this.audio.addEventListener('ended', () => this.handleAudioEnded());
+    this.audio.addEventListener('error', () => this.handleAudioError());
+    this.progressBar.addEventListener('input', (e) => this.setAudioProgress(e));
+    this.volumeMuteButton.addEventListener('click', () => this.toggleMute());
+    this.volumeSlider.addEventListener('input', (e) => this.setVolume(e));
+    this.loopButton.addEventListener('click', () => this.toggleLoop());
+    this.lrcToggleButton.addEventListener('click', () => this.toggleLRC());
+  }
 
-    updateProgress() {
-        const { currentTime, duration } = this.audio;
-        const percent = (currentTime / duration) * 100;
-        this.progressBar.value = percent;
-        this.timeDisplay.textContent = `${this.formatTime(currentTime)} / ${this.formatTime(duration)}`;
-        this.updateLRC(currentTime);
+  togglePlayPause() {
+    if (this.audio.paused) {
+      // 如果当前有其他播放器在播放，暂停它
+      if (ePlayer.currentPlaying && ePlayer.currentPlaying !== this) {
+        ePlayer.currentPlaying.pause();
+      }
+      this.audio.play().catch(error => {
+        console.error('无法播放音频，可能是因为用户没有与页面交互:', error);
+        this.playAIGeneratedMessage("此音频无法播放");
+      });
+      this.playButton.innerHTML = '<i class="fas fa-pause"></i>';
+      ePlayer.currentPlaying = this; // 更新当前播放的播放器
+    } else {
+      this.pause();
     }
+  }
 
-    setAudioProgress(e) {
-        const newTime = (e.target.value / 100) * this.audio.duration;
-        this.audio.currentTime = newTime;
+ 
+
+  pause() {
+    this.audio.pause();
+    this.playButton.innerHTML = '<i class="fas fa-play"></i>';
+    if (ePlayer.currentPlaying === this) {
+      ePlayer.currentPlaying = null; // 清空当前播放的播放器
     }
+  }
 
-    toggleMute() {
-        this.audio.muted = !this.audio.muted;
-        this.volumeMuteButton.innerHTML = this.audio.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+  updateProgress() {
+    const { currentTime, duration } = this.audio;
+    const percent = (currentTime / duration) * 100;
+    this.progressBar.value = percent;
+    this.timeDisplay.textContent = `${this.formatTime(currentTime)} / ${this.formatTime(duration)}`;
+    this.updateLRC(currentTime);
+  }
+
+  setAudioProgress(e) {
+    const newTime = (e.target.value / 100) * this.audio.duration;
+    this.audio.currentTime = newTime;
+  }
+
+  toggleMute() {
+    this.audio.muted = !this.audio.muted;
+    this.volumeMuteButton.innerHTML = this.audio.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+  }
+
+  setVolume(e) {
+    const volume = e.target.value / 100;
+    this.audio.volume = volume;
+  }
+
+  toggleLoop() {
+    this.isLooping = !this.isLooping;
+    this.audio.loop = this.isLooping;
+
+    if (this.isLooping) {
+      this.loopButton.innerHTML = '<i class="fa-sharp-duotone fa-solid fa-rotate-left"></i>'; // 循环图标
+    } else {
+      this.loopButton.innerHTML = '<i class="fas fa-repeat"></i>'; // 不循环图标
     }
+  }
 
-    setVolume(e) {
-        const volume = e.target.value / 100;
-        this.audio.volume = volume;
+  handleAudioEnded() {
+    if (!this.isLooping) {
+      this.audio.currentTime = 0;
+      this.progressBar.value = 0;
+      this.timeDisplay.textContent = `0:00 / ${this.formatTime(this.audio.duration)}`;
+      this.playButton.innerHTML = '<i class="fas fa-play"></i>'; // 播放结束，按钮变为播放
     }
+  }
+  
 
-    toggleLoop() {
-        this.isLooping = !this.isLooping;
-        this.audio.loop = this.isLooping;
+  loadLRC(lrcFile) {
+      if (lrcFile) {
+          fetch(lrcFile)
+              .then(response => response.text())
+              .then(data => {
+                  this.lrc = this.parseLRC(data);
+                  this.displayLRC();
+              });
+      }
+  }
 
-        if (this.isLooping) {
-            this.loopButton.innerHTML = '<i class="fas fa-repeat-1"></i>'; // 循环图标
-        } else {
-            this.loopButton.innerHTML = '<i class="fas fa-repeat"></i>'; // 不循环图标
-        }
-    }
+  parseLRC(lrcData) {
+      const lines = lrcData.split('\n');
+      return lines.map(line => {
+          const match = line.match(/\[(\d+):(\d+)\.(\d+)\](.+)/);
+          if (match) {
+              const minutes = parseInt(match[1], 10);
+              const seconds = parseInt(match[2], 10);
+              const milliseconds = parseInt(match[3], 10);
+              const time = (minutes * 60) + seconds + (milliseconds / 1000);
+              return { time, text: match[4] };
+          }
+          return null;
+      }).filter(item => item !== null);
+  }
 
-    handleAudioEnded() {
-        if (!this.isLooping) {
-            this.audio.currentTime = 0;
-            this.progressBar.value = 0;
-            this.timeDisplay.textContent = `0:00 / ${this.formatTime(this.audio.duration)}`;
-            this.playButton.innerHTML = '<i class="fas fa-play"></i>'; // 播放结束，按钮变为播放
-        }
-    }
-    loadLRC(lrcFile) {
-        if (lrcFile) {
-            fetch(lrcFile)
-                .then(response => response.text())
-                .then(data => {
-                    this.lrc = this.parseLRC(data);
-                    this.displayLRC();
-                });
-        }
-    }
-
-    parseLRC(lrcData) {
-        const lines = lrcData.split('\n');
-        return lines.map(line => {
-            const match = line.match(/\[(\d+):(\d+)\.(\d+)\](.+)/);
-            if (match) {
-                const minutes = parseInt(match[1], 10);
-                const seconds = parseInt(match[2], 10);
-                const milliseconds = parseInt(match[3], 10);
-                const time = (minutes * 60) + seconds + (milliseconds / 1000);
-                return { time, text: match[4] };
-            }
-            return null;
-        }).filter(item => item !== null);
-    }
-
-    displayLRC() {
-        if (this.lrc) {
-            this.lrcContent.innerHTML = '';
-            this.lrc.forEach(line => {
-                const p = document.createElement('p');
-                p.textContent = line.text;
-                this.lrcContent.appendChild(p);
-            });
-        }
-    }
+  displayLRC() {
+      if (this.lrc) {
+          this.lrcContent.innerHTML = '';
+          this.lrc.forEach(line => {
+              const p = document.createElement('p');
+              p.textContent = line.text;
+              this.lrcContent.appendChild(p);
+          });
+      }
+  }
 
 
 
-    displayLRC() {
-        if (this.lrc) {
-            this.lrcContent.innerHTML = '';
-            this.lrc.forEach(line => {
-                const p = document.createElement('p');
-                p.textContent = line.text;
-                this.lrcContent.appendChild(p);
-            });
-        }
-    }
-    
-    loadLRC(lrcFile) {
-        if (lrcFile) {
-            fetch(lrcFile)
-                .then(response => {
-                    if (!response.ok) throw new Error('网络响应失败');
-                    return response.text();
-                })
-                .then(data => {
-                    this.lrc = this.parseLRC(data);
-                    this.displayLRC();
-                })
-                .catch(error => {
-                    console.error('LRC 文件加载失败或解析错误:', error);
-                });
-        }
-    }
-        
+  displayLRC() {
+      if (this.lrc) {
+          this.lrcContent.innerHTML = '';
+          this.lrc.forEach(line => {
+              const p = document.createElement('p');
+              p.textContent = line.text;
+              this.lrcContent.appendChild(p);
+          });
+      }
+  }
+  
+  loadLRC(lrcFile) {
+      if (lrcFile) {
+          fetch(lrcFile)
+              .then(response => {
+                  if (!response.ok) throw new Error('网络响应失败');
+                  return response.text();
+              })
+              .then(data => {
+                  this.lrc = this.parseLRC(data);
+                  this.displayLRC();
+              })
+              .catch(error => {
+                  console.error('LRC 文件加载失败或解析错误:', error);
+              });
+      }
+  }
+      
 
-    toggleLRC() {
-        const isVisible = this.lrcContent.style.display === 'block';
-        if (isVisible) {
-            this.lrcContent.style.display = 'none';
-            document.querySelectorAll('.eplayer-container').forEach(player => player.classList.remove('expanded'));
-        } else {
-            document.querySelectorAll('.eplayer-container').forEach(player => player.classList.add('expanded'));
-            this.lrcContent.style.display = 'block';
-        }
-    }
+  toggleLRC() {
+      const isVisible = this.lrcContent.style.display === 'block';
+      if (isVisible) {
+          this.lrcContent.style.display = 'none';
+          document.querySelectorAll('.eplayer-container').forEach(player => player.classList.remove('expanded'));
+      } else {
+          document.querySelectorAll('.eplayer-container').forEach(player => player.classList.add('expanded'));
+          this.lrcContent.style.display = 'block';
+      }
+  }
 loadLRC(lrcData) {
-    if (lrcData) {
-        // 当 lrcData 是歌词文本而不是文件路径
-        this.lrc = this.parseLRC(lrcData);
-        this.displayLRC();
-    }
+  if (lrcData) {
+      // 当 lrcData 是歌词文本而不是文件路径
+      this.lrc = this.parseLRC(lrcData);
+      this.displayLRC();
+  }
 }
 updateLRC(currentTime) {
-    if (this.lrc) {
+  if (this.lrc) {
+      const lrcParagraphs = this.lrcContent.querySelectorAll('p');
+      let activeLine = null;
+
+      // 查找当前时间对应的歌词行
+      for (let i = 0; i < this.lrc.length; i++) {
+          const line = this.lrc[i];
+          if (line.time <= currentTime && (!this.lrc[i + 1] || this.lrc[i + 1].time > currentTime)) {
+              activeLine = line;
+              break;
+          }
+      }
+
+      if (activeLine) {
+          lrcParagraphs.forEach(p => p.classList.remove('active'));
+          const p = Array.from(lrcParagraphs).find(p => p.textContent === activeLine.text);
+          if (p) {
+              p.classList.add('active');
+
+              // 确保当前高亮的歌词在视口中可见
+              p.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center' // 居中显示
+              });
+          }
+      }
+  }
+}
+
+  formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  }
+}
+
+  </script>
+  <script>// 假设您有一个audio元素用于播放音乐
+    // 用于存储定时器的变量
+    let lyricsInterval;
+    
+    // 更新歌词显示的函数
+    function updateLRCDisplay() {
+      if (this.lrc) {
+        const currentTime = audioElement.currentTime;
         const lrcParagraphs = this.lrcContent.querySelectorAll('p');
         let activeLine = null;
-
+    
         // 查找当前时间对应的歌词行
         for (let i = 0; i < this.lrc.length; i++) {
             const line = this.lrc[i];
@@ -1302,41 +1100,45 @@ updateLRC(currentTime) {
                 break;
             }
         }
-
+    
+        // 如果找到了对应的歌词行，更新显示
         if (activeLine) {
             lrcParagraphs.forEach(p => p.classList.remove('active'));
-            const p = Array.from(lrcParagraphs).find(p => p.textContent === activeLine.text);
-            if (p) {
-                p.classList.add('active');
-
+            const activeParagraph = Array.from(lrcParagraphs).find(p => p.textContent === activeLine.text);
+            if (activeParagraph) {
+                activeParagraph.classList.add('active');
+    
                 // 确保当前高亮的歌词在视口中可见
-                p.scrollIntoView({
+                activeParagraph.scrollIntoView({
                     behavior: 'smooth',
                     block: 'center' // 居中显示
                 });
             }
         }
     }
-}
-
-    formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-    }
-}
-
-    </script>
-    <script>
-        const players = [
-            new ePlayer({
-                element: document.getElementById('eplayer1'),
-                music: {
-                    title: '在那边点名的时候',
-                    author: 'eBible Fellowship-Hymns',
-                    url: 's/10.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]在那边点名的时候
+    
+    // 当音乐开始播放时，设置定时器
+    audioElement.addEventListener('play', () => {
+        lyricsInterval = setInterval(updateLRCDisplay.bind(this), 100); // 每100毫秒更新一次歌词位置
+    });
+    
+    // 当音乐停止或暂停时，清除定时器
+    audioElement.addEventListener('pause', () => {
+        clearInterval(lyricsInterval);
+    });
+    
+    // 确保在组件销毁时清除定时器
+    // 例如，如果您使用的是Vue或React，您可以在beforeDestroy或componentWillUnmount生命周期钩子中清除定时器</script>
+  <script>
+      const players = [
+          new ePlayer({
+              element: document.getElementById('eplayer1'),
+              music: {
+                  title: '在那边点名的时候',
+                  author: 'eBible Fellowship-Hymns',
+                  url: 's/10.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]在那边点名的时候
 [00:02.46]YouTube收录
 [00:04.83]eBible Fellowship-Hymns
 [00:10.05]主耶稣再临那日，必要高声吹起号筒
@@ -1364,16 +1166,16 @@ updateLRC(currentTime) {
 [01:57.87]在那边点名我亦必在其.中
 [02:02.78]在那边点名我亦必在其中.
 `
-                }
-            }),
-           new ePlayer({
-                element: document.getElementById('eplayer2'),
-                music: {
-                    title: '我宁愿有耶稣',
-                    author: 'eBible Fellowship-Hymns',
-                    url: 'Hymns/我宁愿有耶稣.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]我宁愿有耶稣
+              }
+          }),
+         new ePlayer({
+              element: document.getElementById('eplayer2'),
+              music: {
+                  title: '我宁愿有耶稣',
+                  author: 'eBible Fellowship-Hymns',
+                  url: 'Hymns/我宁愿有耶稣.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]我宁愿有耶稣
 [00:03.59]YouTube收录
 [00:10.35]eBible Fellowship-Hymns
 [00:20.33]我宁愿有耶稣，胜于金银，
@@ -1399,16 +1201,16 @@ updateLRC(currentTime) {
 [03:48.16]我宁愿有耶稣，胜于世上荣华，.富贵，声望
 [04:16.77]eBible Fellowship-Hymns
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer3'),
-                music: {
-                    title: '贺他为王歌',
-                    author: 'eBible Fellowship-Hymns',
-                    url: 'Hymns/贺他为王.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]贺他为王歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer3'),
+              music: {
+                  title: '贺他为王歌',
+                  author: 'eBible Fellowship-Hymns',
+                  url: 'Hymns/贺他为王.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]贺他为王歌
 [00:04.43]zanmei.ai收录
 [00:06.49]eBible Fellowship-Hymns
 [00:10.42]大哉！圣哉！耶稣之名！
@@ -1426,16 +1228,16 @@ updateLRC(currentTime) {
 [01:57.84]圣徒天使赞美不息。
 [02:05.79]庆贺他！贺他！贺他！
 [02:14.30]贺他！庆贺他为君王！`
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer4'),
-                music: {
-                  title: '你坐着为王',
-                  author: 'eBible Fellowship-Hymns',
-                    url: 'Hymns/你坐着为王.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]你坐着为王
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer4'),
+              music: {
+                title: '你坐着为王',
+                author: 'eBible Fellowship-Hymns',
+                  url: 'Hymns/你坐着为王.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]你坐着为王
 [00:03.79]zanmei.ai收录
 [00:09.41]eBible Fellowship-Hymns
 [00:39.28]主耶和华 满有怜悯和恩典
@@ -1475,16 +1277,16 @@ updateLRC(currentTime) {
 [03:52.19]eBible Fellowship -Hymns
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer5'),
-                music: {
-                    title: '有福确据歌',
-                    author: 'eBible Fellowship-Hymns',
-                    url: 'Hymns/有福确据歌 .mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]有福确据歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer5'),
+              music: {
+                  title: '有福确据歌',
+                  author: 'eBible Fellowship-Hymns',
+                  url: 'Hymns/有福确据歌 .mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]有福确据歌
 [00:04.50]zanmei.ai收录
 [00:06.49]eBible Fellowship-Hymns
 [00:08.19]1.有福的确据，耶稣属我
@@ -1513,16 +1315,16 @@ updateLRC(currentTime) {
 [02:22.87]赞美我救主，昼夜不分
 [02:30.97]阿们
 [02:36.32]eBible Fellowship-Hymns`
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer6'),
-                music: {
-                    title: '安居主怀歌',
-                    author: 'eBible Fellowship-Hymns',
-                    url: 'Hymns/安居主怀歌.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]安居主怀歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer6'),
+              music: {
+                  title: '安居主怀歌',
+                  author: 'eBible Fellowship-Hymns',
+                  url: 'Hymns/安居主怀歌.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]安居主怀歌
 [00:03.63]YouTube收录
 [00:05.66]eBible Fellowship-Hymns
 [00:21.57]安稳在耶稣手中，安稳在主怀内，
@@ -1544,16 +1346,16 @@ updateLRC(currentTime) {
 [03:20.46]安稳在耶稣手中，安稳在主.怀内，
 [03:30.18]因主慈爱常覆翼，我心必得.安慰。
 [03:37.23]eBible Fellowship-Hymns`
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer7'),
-                music: {
-                    title: '唯独耶稣歌',
-                    author: 'eBible Fellowship-Hymns',
-                    url: 'Hymns/惟独耶稣歌.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]唯独耶稣歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer7'),
+              music: {
+                  title: '唯独耶稣歌',
+                  author: 'eBible Fellowship-Hymns',
+                  url: 'Hymns/惟独耶稣歌.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]唯独耶稣歌
 [00:05.74]zanmei.ai收录
 [00:12.17]eBible Fellowship-Hymns
 [00:14.62]1.惟独耶稣是我信息，
@@ -1590,16 +1392,16 @@ updateLRC(currentTime) {
 [02:56.72]荣耀救主，再来之王。
 [03:03.84]eBible Fellowship-Hymns
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer8'),
-                music: {
-                    title: '主不改变歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/主不改变歌.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer8'),
+              music: {
+                  title: '主不改变歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/主不改变歌.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
 [00:00.98]主不改变歌
 [00:02.07]YouTube收录
 [00:07.63]eBible Fellowship -Hymns
@@ -1628,16 +1430,16 @@ updateLRC(currentTime) {
 [03:50.43]荣耀归主名！荣耀归主名！...
 [04:00.37]惟有耶稣永不改变，荣耀归主名！
 [04:09.90]eBible Fellowship- Hymns`
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer9'),
-                music: {
-                    title: '恩友歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/恩友歌.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]恩友歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer9'),
+              music: {
+                  title: '恩友歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/恩友歌.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]恩友歌
 [00:06.77]youtube收录
 [00:10.04]eBible Fellowship-Hymns
 [00:16.92]1、何等恩友慈仁救主，负我罪孽担我忧；
@@ -1655,16 +1457,16 @@ updateLRC(currentTime) {
 [02:55.46]eBible Fellowship-Hymns.
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer10'),
-                music: {
-                    title: '天父世界歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/天父世界.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]天父世界歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer10'),
+              music: {
+                  title: '天父世界歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/天父世界.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]天父世界歌
 [00:05.05]YouTube收录
 [00:11.41]eBible Fellowship -Hymns
 [00:23.97]1.这是天父世界
@@ -1700,16 +1502,16 @@ updateLRC(currentTime) {
 [03:23.61]eBible Fellowship -Hymns
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer11'),
-                music: {
-                    title: '主啊我赞美你',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/主啊我赞美你.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]主啊我赞美你
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer11'),
+              music: {
+                  title: '主啊我赞美你',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/主啊我赞美你.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]主啊我赞美你
 [00:02.76]YouTube收录
 [00:07.42]eBible Fellowship -Hymns
 [00:26.53]主啊，我赞美你！
@@ -1756,16 +1558,16 @@ updateLRC(currentTime) {
 [04:48.03]谁不感激赞美你！
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer12'),
-                music: {
-                    title: '我家乃在天',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/我家乃在天.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]我家乃在天
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer12'),
+              music: {
+                  title: '我家乃在天',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/我家乃在天.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]我家乃在天
 [00:03.86]YouTube收录
 [00:05.60]eBible Fellowship- Hymns
 [00:09.12]我昔日心贪爱 属世千百福
@@ -1787,16 +1589,16 @@ updateLRC(currentTime) {
 [02:26.65]我家乃在天 我家乃.在天
 [02:35.58]暂居此为客旅 我家乃在天
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer13'),
-                music: {
-                    title: '我的心你要称颂耶和华',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/我的心你要称颂耶和华.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.01]我的心，你要称颂耶和华
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer13'),
+              music: {
+                  title: '我的心你要称颂耶和华',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/我的心你要称颂耶和华.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.01]我的心，你要称颂耶和华
 [00:04.66]YouTube收录
 [00:07.80]eBible Fellowship -Hymns
 [00:34.75]我的心，你要称颂耶和华，
@@ -1836,16 +1638,16 @@ updateLRC(currentTime) {
 [04:51.98]eBible Fellowship -HYmns
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer14'),
-                music: {
-                    title: '万福泉源歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/万福泉源歌.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]万福泉源歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer14'),
+              music: {
+                  title: '万福泉源歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/万福泉源歌.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]万福泉源歌
 [00:06.19]YouTube收录
 [00:09.81]eBible Fellowship-Hymns
 [00:17.86]1.全能上帝，万福泉源
@@ -1875,16 +1677,16 @@ updateLRC(currentTime) {
 [02:16.86]阿们
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer15'),
-                music: {
-                    title: '耶和华神已掌权',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/耶和华神已掌权.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]耶和华神已掌权
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer15'),
+              music: {
+                  title: '耶和华神已掌权',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/耶和华神已掌权.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]耶和华神已掌权
 [00:01.63]YouTube收录
 [00:09.95]eBible Fellowship -Hymns
 [00:15.73]主耶和华我的神我的王
@@ -1932,16 +1734,16 @@ updateLRC(currentTime) {
 [04:44.49]eBible Fellowship -HYmns
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer16'),
-                music: {
-                    title: '靠主膀臂歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/靠主膀臂歌.mp4',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.00]靠主膀臂歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer16'),
+              music: {
+                  title: '靠主膀臂歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/靠主膀臂歌.mp4',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.00]靠主膀臂歌
 [00:02.17]YouTube收录
 [00:04.69]eBible Fellowship-Hymns
 [00:09.81]1、何等大快乐，何等深情谊，
@@ -1974,15 +1776,15 @@ updateLRC(currentTime) {
 [02:29.59]阿门
 `
 }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer17'),
-                music: {
-                    title: '他竟顾念我',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/1.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `[00:00.05]祂竟顾念我
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer17'),
+              music: {
+                  title: '他竟顾念我',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/1.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `[00:00.05]祂竟顾念我
 [00:03.02]zanmei.ai收录
 [00:04.89]eBible Fellowship -HYmns
 [00:22.52]我的心思我的意念主全都知道
@@ -2021,16 +1823,16 @@ updateLRC(currentTime) {
 
 `
 }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer18'),
-                music: {
-                    title: '时刻靠主歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/2.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `
-                    [00:00.00]时刻靠主歌
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer18'),
+              music: {
+                  title: '时刻靠主歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/2.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+                  [00:00.00]时刻靠主歌
 [00:01.18]zanmei.ai收录
 [00:05.88]eBible Fellowship -Hymns
 [00:12.58]1.我平时当靠救助
@@ -2068,17 +1870,17 @@ updateLRC(currentTime) {
 
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer19'),
-                music: {
-                    title: '每想到你歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/3.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `
-                    [00:00.00]每想到你歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer19'),
+              music: {
+                  title: '每想到你歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/3.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+                  [00:00.00]每想到你歌
 [00:05.44]www.zanmei.ai
 [00:06.60]eBible Fellowship -Hymns
 [00:20.49]1、主耶稣啊，每想到你，
@@ -2117,17 +1919,17 @@ updateLRC(currentTime) {
 [04:54.96]eBible Fellowship -Hymns
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer20'),
-                music: {
-                    title: '我不知明天的道路',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'Hymns/4.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `
-                    [:]
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer20'),
+              music: {
+                  title: '我不知明天的道路',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'Hymns/4.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+                  [:]
 [00:00.00]我不知明天的道路
 [00:03.00]zanmei.ai收录
 [00:07.00]eBible Fellowship -Hymns
@@ -2170,17 +1972,17 @@ updateLRC(currentTime) {
 
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer21'),
-                music: {
-                    title: '耶稣领我',
-                    author: 'eBible Fellowship -Hymns',
-                    url: '60.webm',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `
-                   00:00.10]耶稣领我歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer21'),
+              music: {
+                  title: '耶稣领我',
+                  author: 'eBible Fellowship -Hymns',
+                  url: '60.webm',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+                 00:00.10]耶稣领我歌
 [00:03.54]eBible Fellowship -Hymns
 [00:18.88]youtube收录
 [00:31.35]1.耶稣领我 我真喜欢
@@ -2218,17 +2020,17 @@ updateLRC(currentTime) {
 [04:49.15]eBible Fellowship-Hymns
 
 `
-                }
-            }),
-            new ePlayer({
-                element: document.getElementById('eplayer22'),
-                music: {
-                    title: '圣哉三一歌',
-                    author: 'eBible Fellowship -Hymns',
-                    url: 'https://play.zanmei.co/song/p/16875.mp3',
-                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
-                    lrc: `
-                  [00:00.10]圣哉三一歌
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer22'),
+              music: {
+                  title: '圣哉三一歌',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'https://play.zanmei.co/song/p/16875.mp3',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+                [00:00.10]圣哉三一歌
 [00:07.00]eBible Fellowship -Hymns
 [00:14.00]zanmei.ai 收录
 [00:19.07]1.圣哉，圣哉，圣哉！全权的神明
@@ -2248,9 +2050,155 @@ updateLRC(currentTime) {
 [03:05.48]圣哉，圣哉，圣哉！慈悲与全能
 [03:17.01]荣耀与赞美，归三一妙身
 `
-                }
-            }),
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer23'),
+              music: {
+                  title: '除你以外',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'https://apd-vlive.apdcdn.tc.qq.com/om.tc.qq.com/AwUuWldcYAx9DwO4cxgslski3aEDDIWzlfrfPTRIWbJo/B_JxNyiJmktHRgresXhfyMetGEeCbj_DV7UzxFQfJLwxj881Kda9k1djhVdebjcEEi/svp_50069/gzc_1000035_0bc36ueqyaajiiahnfvjcfqjz5odbt2qsdca.f204110.mp4?sdtfrom=v1010&guid=9b39a12bf53f7868&vkey=C3DC26D7DF1A28B16FCD8DA236A7D02CF0797584462F4BC231B7CC6E2BA560C7C129FC13556079881241E73475B1DF081ED871EC734C20E4AAEEE8A6C1389979A9D825B9CAC43D9B2533BA9B61D014EB798E5EDE518A864CE7E2FA7B5501ED4DCCFA891AC42CE2E6EC895665E9FF6E58DA9B79EBC10FAE18E3070BEE299FF40CE853DF9F36BCFA9AF9D300EA5D8BDC58510E25F36068A1AE9C93035EE612A474300E28EA4D53DF0B',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+               [:]
+[00:00.00]除你以外
+[00:17.00]eBible Fellowship Hymns
+[00:51.26]演唱：赞美之泉
+[01:23.98]除你以外
+[01:26.60]在天上我还能有谁
+[01:30.11]除你以外.
+[01:32.77]在地上我别无眷恋
+[01:36.13]除你以外 有谁能擦干我眼泪
+[01:42.34]除你以外 有谁能带给我安慰
+[01:52.91]虽然我的肉体 和我的心肠
+[01:58.87]渐渐地衰退 但是神是我
+[02:04.42]但是神是我 心里的力量
+[02:09.92]是我的福分 直到永远
+[02:19.11]除你以外 在天上我还能有谁
+[02:24.71]除你以外 在地上我别无眷恋
+[02:30.08]除你以外 有谁能擦干我眼.泪
+[02:36.23]除你以外 有谁能带给我安.慰
+[02:46.41]虽然我的肉体 和我的心.肠
+[02:52.48]渐渐地衰退 但是神是.我
+[02:57.85]心里的力量
+是我的福分
+直到永远
+[03:09.24]虽然.我的肉体 和我的心肠
+[03:15.25]渐渐地衰.退
+但是神是我
+[03:23.04]心里的.力量 是我的福分
+[03:27.85]直到.永远
+[03:32.28]虽然我.的肉体
+和我的心肠
+[03:38.08]渐渐地衰退
+但是神是.我
+[03:45.97]心里的力.量
+是我的福分
+[03:50.61]直到永远
+[03:58.06]除你以.外 在天上我还能有谁
+[04:03.85]除你以.外 在地上我别无眷恋
+[04:09.95]除你以.外 有谁能擦干我眼泪
+[04:15.71]除你以外
+有谁能带.给我安慰
 
-        ];
-    </script>
-    
+`
+              }
+          }),
+          new ePlayer({
+              element: document.getElementById('eplayer24'),
+              music: {
+                  title: '万物的结局近了',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'https://5aa03e72556c7d2d11980d3dc4280548.v.smtcdns.com/om.tc.qq.com/AqRJ21oNxTGCqnS6lZx4_BO1gFncVET8aEEKFlASm-Fw/B_JxNyiJmktHRgresXhfyMev1f7aGDoE592gGyRzTfJi4RGWBfetHyhem97R-tNpoO/svp_50200/njc_1000195_0bc3tqb3maaddmalgpetorrrxhgew2oahnsa.f2.mp4?sdtfrom=v1010&guid=9b39a12bf53f7868&vkey=FE7753D6621E189B9D11B72AA9B16E68CC4253AB0B5F92B0C122459AD9A88AD4A6B81C5896F66C6B298F03CCF8AE66D189A7351972B94A4CA7FF7B019F6C9716EEFFBDAE73482CEFB8860C8165D3BB1A66EAA2FFABC59D114D931D6074713A84C6CFE0898D9E1B6245362E5F50F82BACA76490316E2A8284DC01292B4F1D8D449AF15CFB3926A49BB2178EAB946C394205FD5EC35B17837F2C72BB488E9A439B6919BE5EC68400BF',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+                [:]
+[00:00.00]万物的结局近了
+[00:08.46]eBible Fellowship Hymns
+[00:19.86]万物的结局近了。
+[00:24.66]所以我们要谨慎自守
+[00:34.15]儆醒祷告。
+[00:39.05]最要紧的是彼此切实相爱。
+[00:48.16]因为爱能遮掩许多的罪。
+[00:57.69]因为爱能遮掩许多的罪
+[01:07.93]我们要互相款待，
+[01:12.70]不发怨言。
+[01:17.54]各人要照所得的恩赐彼此服事，
+[01:27.11]作神百般恩赐的好管家。
+[01:36.43]作神百般恩赐的好管家
+[01:56.02]万物的结局近了
+[02:00.58]所以我们要谨慎自守，
+[02:10.23]儆醒祷告
+[02:14.95]最要紧的是彼此切实相爱
+[02:24.19].因为爱能遮掩许多的罪。
+[02:33.87]..因为爱能遮掩许多的罪。
+[02:44.06]你们要互相款待.
+[02:47.37]不发怨言。.
+[02:53.57]各人要照所得的恩赐彼此服事.
+[03:03.12].作神百般恩赐的好管家。
+[03:12.35]作神百般恩赐的好管家.
+[03:41.63]最要紧的是彼此切实相爱。..
+[03:50.68]因为爱能遮掩许多的罪。..
+[04:00.11]..因为爱能遮掩许多的罪。
+[04:10.38]你们要互相款待，不发怨言。..
+[04:19.75]各人要照所得.的恩赐彼此服事，
+[04:29.45]作神百般恩赐的好.管家。
+[04:39.14]作神百般恩.赐的好管家。
+
+`
+              }
+          }),
+
+          new ePlayer({
+              element: document.getElementById('eplayer25'),
+              music: {
+                  title: '炼我俞精',
+                  author: 'eBible Fellowship -Hymns',
+                  url: 'https://39cdb657f812dca1ac2024ee7708ac62.v.smtcdns.com/om.tc.qq.com/AzeR_GIr-NxLg-v-Dmds_roVsL6GO4ctoiX6_Do6uuYw/B_JxNyiJmktHRgresXhfyMeiBRYWFu-cA36OTdkdf_oGMRGWBfetHyhem97R-tNpoO/svp_50200/njc_1000195_0bc36acgeaae4yaldpmvsvrrz4gemlyaiysa.f2.mp4?sdtfrom=v1010&guid=9b39a12bf53f7868&vkey=118D413A48D9C2A6E3F75B006A589692058D995B5D67F6D77ED90A7B5C1FF8B3D4F5BDCD06D81C90C536CC31D3729D5EDABB57EEA003326638E139979DBAADABB88002FC03F39343E761B63B088AC13B9F1719EAAFBC4B55C7769EBAF5CE26191A97F5A608ABEF3B1AA8AF2E8439D5D08897D9907E34F00F4F0475C3795ACF8DED581129ACBB2A443810D1EDF3D4F6BCA777B5877FDD7AE18960EA895D8D6DB987530F512A0754B8',
+                  cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                  lrc: `
+            [00:00.00]炼我愈精
+[00:06.82]eBible Fellowship -Hymns
+[00:24.04]祢若不压橄榄成渣
+[00:28.74]它就不能成油
+[00:34.16]祢若不投葡萄入醡
+[00:39.11]它就不能变成酒
+[00:44.18]祢若不炼哪哒成膏
+[00:48.93]它就不流芬芳
+[00:54.20]主我这人是否也要受祢许可的创伤
+[01:04.35]每次的打击 都是真利益
+[01:14.37]如果祢收去的东西
+[01:19.27]祢以自己来代替
+[01:24.59]如果你我所有苦乐
+[01:29.31]不能完全相同
+[01:34.49]要你喜乐须我负轭
+[01:39.63]我就愿意多苦痛。
+[01:44.91]主我全心求你喜悦
+[01:49.56]，不惜任何代价，
+[01:54.77]你若喜悦并得荣耀
+[01:59.82]我背任何十字架
+[02:04.83]每次的打击，都是真利益，
+[02:14.91]如果你收去的东西，你以自己来代替
+[02:45.73]我要赞美再要赞美
+[02:50.02]我要赞美再要赞美
+[02:55.30]虽我边赞美边流泪，
+[03:00.43]甘甜比前更加添。
+[03:05.52]主有什么比你更好？
+[03:10.41]比你喜悦可宝？
+[03:15.61]主我只有一个祷告
+[03:20.67]你能加增我减少。
+[03:26.05]每次的打击
+[03:30.65]都是真利益
+[03:35.81]如果你收去的东西
+[03:40.89]你以自己来代替
+[03:46.04]每次的打击都是真利益
+[03:56.10]如果你收去的东西你以自己来代替
+[04:06.56]如果你收去的东西.你以自己来代替
+
+`
+              }
+          }),
+
+      ];
+  </script>
+  
