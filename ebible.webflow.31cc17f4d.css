@@ -58318,7 +58318,7 @@ figcaption {
 
 .sidebar-menu {
   z-index: 2000;
-  background-color: #a0d1ff;
+  background-color:#d5ebff;
   border: 1px solid #000;
   flex-direction: column;
   justify-content: flex-start;
@@ -70845,7 +70845,7 @@ figcaption {
 }
 
 .heading-177-copy {
-  color: #000;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-family: Exo, sans-serif;
@@ -70855,7 +70855,8 @@ figcaption {
 
 .timeline_welcome_screen_home {
   z-index: 5000;
-  background-image: url("../615e0a924f1763d2506a1929_Purple Starry Backround.png");
+  background-color: #000027;
+  background-image: url(us/615e0a924f1763d2506a1929_Purple_Starry_Backround.png);
   background-position: 0 0;
   background-size: auto;
   flex-flow: column;
@@ -70863,10 +70864,7 @@ figcaption {
   align-items: flex-start;
   display: flex;
   position: static;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
   overflow: visible;
 }
 

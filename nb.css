@@ -50,13 +50,7 @@
 font-size: 30px;
 font-weight:bold;
 }
-body {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-height: 100%;
-font-family: Arial, sans-serif;
-}
+
 
 #player-container {
 position: relative;
@@ -441,9 +435,6 @@ div {
   display: none;
 }
 }
-body {
-background-color: #acd9fdc2; /* 淡黄色背景 */
-}
 /* 直播室容器 */
 .live-stream-container {
   display: none; /* 默认不显示 */
@@ -539,9 +530,7 @@ background-color: #acd9fdc2; /* 淡黄色背景 */
 }
 
 /* 确保顶部导航栏不会被其他内容覆盖 */
-body {
-  padding-top: 80px; /* 与顶部导航栏高度相同 */
-}
+
 
 .top-header {
   position: fixed;
@@ -644,10 +633,6 @@ body {
   .icon-container {
     display: none; /* 横屏时隐藏直播室和图标 */
   }
-}
-body, html {
-  margin: 0;
-  padding: 0;
 }
 .header {
   position: fixed;
@@ -1639,11 +1624,7 @@ height: 200px;
 margin: 10px auto;
 background-color: #f0f0f0; /* 占位背景色 */
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #aedbff;
-}
+
 .content {
   margin-right: 250px;
   padding: 20px;
@@ -1738,8 +1719,4 @@ body {
       right: 0;
   }
 }
-@media screen and (min-width: 1024px) {
-  body {
-    padding-left: 120px;
-  }
 
