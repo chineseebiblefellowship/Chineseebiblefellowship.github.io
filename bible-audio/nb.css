@@ -153,7 +153,41 @@ background-color: #acd9fdc2; /* 淡黄色背景 */
   text-align: center;
   margin-top: 320px; /* 直播室高度之上 */
 }
+.sidebar-menu {
+  z-index: 2000;
+  background-color: #a0d1ff;
+  border: 1px solid #000;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  height: auto;
+  margin-top: 0;
+  padding-top: 17px;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: auto;
+  overflow: scroll;
+  box-shadow: 15px 8px 5px rgba(0, 0, 0, .2);
+}
 
+.homepage_divnew, .sidebar-menu, .div-block-322-copy {
+  display: none;
+}
+.sidebar-menu {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-menu {
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 400px;
+  padding-left: 10px;
+}
 .icon {
   display: inline-block;
   margin: 10px;

@@ -2396,156 +2396,6 @@
         </div>
       </div>
     </div>
-    <div id="contact" class="webblockwhite2-2">
-      <div class="form-block-contact w-form">
-        <form id="email-form" name="email-form" method="get" class="form-7">
-          <h1 class="heading-149-copy">联系我们</h1>
-
-          <div class="input-container">
-            <input type="text" class="styled-input" id="name-input" placeholder="👤姓名:" required>
-          </div>
-          <div class="input-container">
-            <input type="email" class="styled-input" id="email-input" placeholder="电子邮箱:" required>
-          </div>
-          <div class="input-container">
-            <input type="text" class="styled-input" id="message-input" placeholder="信息" required>
-          </div>
-          <button type="submit" class="submit-button" id="submit-btn">提交</button>
-        </form>
-
-        <!-- 提交后显示的感谢信息 -->
-        <div id="thank-you-message" style="display: none;">
-          您的信息已经收到，谢谢！
-        </div>
-      </div>
-    </div>
-
-    <script>
-      document.getElementById('email-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // 防止默认提交行为
-
-        const name = document.getElementById('name-input').value;
-        const email = document.getElementById('email-input').value;
-        const message = document.getElementById('message-input').value;
-
-        const formData = `姓名: ${name}\n电子邮箱: ${email}\n信息: ${message}\n`;
-
-        const githubToken = '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'; // 替换为你的 GitHub Token
-        const repoOwner = 'chineseebiblefellowship'; // 替换为你的 GitHub 用户名
-        const repoName = 'chineseebiblefellowship.github.io'; // 替换为你的仓库名称
-        const filePath = 'us/e.txt'; // 你要写入的文件路径
-        const apiUrl = `https://api.github.com/repos/chineseebiblefellowship/chineseebiblefellowship.github.io/contents/us/e.txt`;
-
-        // 获取文件的 SHA 值以进行更新
-        fetch(apiUrl, {
-          method: 'GET',
-          headers: {
-            'Authorization': `token ${githubToken}`,
-            'Accept': 'application/vnd.github.v3+json',
-          }
-        })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json();
-          })
-          .then(data => {
-            const sha = data.sha; // 获取文件的 SHA，用于更新文件
-
-            // Base64 编码表单数据
-            function utf8ToB64(str) {
-              return btoa(unescape(encodeURIComponent(str)));
-            }
-
-            const encodedContent = utf8ToB64(formData);
-
-            // 更新文件内容
-            fetch(apiUrl, {
-              method: 'PUT',
-              headers: {
-                'Authorization': `token ${githubToken}`,
-                'Accept': 'application/vnd.github.v3+json',
-              },
-              body: JSON.stringify({
-                message: 'Updated contact information',
-                content: encodedContent, // 文件内容需为 Base64 编码格式
-                sha: sha // 文件的 SHA 值，用于进行更新
-              })
-            })
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error('Network response was not ok: ' + response.statusText);
-                }
-                return response.json();
-              })
-              .then(data => {
-                console.log('Success:', data);
-                // 隐藏表单，显示感谢信息
-                document.getElementById('email-form').style.display = 'none';
-                document.getElementById('thank-you-message').style.display = 'block';
-              })
-              .catch((error) => {
-                console.error('Error updating file:', error);
-              });
-          })
-          .catch((error) => {
-            console.error('Error fetching file SHA:', error);
-          });
-      });
-    </script>
-
-
-    <style>
-      .submit-button {
-        background-color: #007bff;
-        /* 背景颜色 */
-        color: white;
-        width: 200px;
-        /* 字体颜色 */
-        padding: 10px 20px;
-        /* 内边距 */
-        border: none;
-        /* 去掉默认边框 */
-        border-radius: 5px;
-        /* 圆角 */
-        font-size: 16px;
-        /* 字体大小 */
-        cursor: pointer;
-        /* 鼠标悬停时变成手型 */
-        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
-        /* 阴影 */
-        transition: background-color 0.3s, transform 0.3s;
-        /* 动效 */
-      }
-
-      .submit-button:hover {
-        background-color: #0056b3;
-        /* 悬停时背景颜色 */
-        transform: translateY(-2px);
-        /* 悬停时轻微向上移动 */
-      }
-
-      .submit-button:focus {
-        outline: none;
-        /* 去掉聚焦时的轮廓 */
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-        /* 聚焦时阴影 */
-      }
-    </style>
-
-    </form>
-    <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success" _msthidden="1"
-      _mstaria-label="317681" _msthash="444">
-      <div _msttexthash="1345955" _msthidden="1" _msthash="445">Thank you! Your submission has been received!</div>
-    </div>
-    <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure" _msthidden="1"
-      _mstaria-label="314067" _msthash="446">
-      <div _msttexthash="1861613" _msthidden="1" _msthash="447">Oops! Something went wrong while submitting the form.
-      </div>
-    </div>
-  </div>
-  </div>
 
   <style>
     /* 页脚链接样式 */
@@ -2666,38 +2516,24 @@
   </style>
 </head>
 
-<body>
-  <!-- 页脚部分 -->
-  <footer
-    style="background-color:#cccccc; color:rgb(0, 0, 0); padding:30px; text-align:center; position:relative; bottom:0; width:100%;">
-    <!-- 页脚顶部的标题 -->
-    <img class="icon-size"
-      src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="">
-    <div class="title-custom">eBible Fellowship</div>
-    <p style="font-size: 18px;TEXT-ALIGN:CENTER;">&copy; 2024 Your Website. All rights reserved.</p>
 
-    <!-- 按钮区域 -->
-    <div class="btn-group">
-      <a href="bible-study.html"><i class="fas fa-book"></i> 圣经学习</a>
-      <a href="bible-music.html"><i class="fas fa-music"></i> 圣经音乐</a>
-      <a href="bible-history.html"><i class="fas fa-calendar-alt"></i> 圣经历史年代</a>
-    </div>
-    <style>
-      .lllpa {
-        text-align: center;
-      }
-    </style>
-    <hr>
-    <h1>电子圣经团契平台</h1>
+<footer style="width: 100%; background-color: #333; color: white; padding: 20px 0; text-align: center; font-size: 14px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" style="width: 80px; margin-bottom: 20px;">
+  <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">eBible Fellowship</div>
+  <div style="display: flex; justify-content: center; margin: 15px 0;">
+      <a href="#" style="margin: 0 15px; color: white; text-decoration: none; font-weight: bold;">圣经查考</a>
+      <a href="#" style="margin: 0 15px; color: white; text-decoration: none; font-weight: bold;">圣经学习</a>
+      <a href="#" style="margin: 0 15px; color: white; text-decoration: none; font-weight: bold;">圣经音乐</a>
+  </div>
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <a href="https://www.qq.com" target="_blank" style="margin: 0 10px; font-size: 24px; color: white;"><i class="fab fa-qq"></i></a>
+      <a href="https://www.weixin.com" target="_blank" style="margin: 0 10px; font-size: 24px; color: white;"><i class="fab fa-weixin"></i></a>
+      <a href="https://www.youtube.com" target="_blank" style="margin: 0 10px; font-size: 24px; color: white;"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com" target="_blank" style="margin: 0 10px; font-size: 24px; color: white;"><i class="fab fa-facebook"></i></a>
+  </div>
+  <p style="margin: 10px 0;">版权所有 &copy; 2024 eBible Fellowship</p>
+</footer>
 
-    <div class="icon-group">
-      <div><a href="#"><i class="fab fa-youtube"></i> YouTube</a></div>
-      <div><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></div>
-      <div><a href="#"><i class="fab fa-twitter"></i> Twitter</a></div>
-      <div><a href="#"><i class="fab fa-weixin"></i> 微信</a></div>
-      <div><a href="#"><i class="fab fa-qq"></i> QQ</a></div>
-    </div>
-  </footer>
   <style>
     .content {
       margin-right: 300px;
@@ -2829,10 +2665,7 @@
       }
     }
 
-    /* 简单的样式，用于演示 */
-    #rightNav.active {
-      display: block;
-    }
+
 
     .hidden {
       display: none;
@@ -2855,9 +2688,53 @@
     }
   </style>
 
-  <button class="nav-toggle" id="navToggleButton">
-    <i class="fas fa-arrow-right"></i>
-  </button>
+
+<style>
+  body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+  }
+
+  /* 侧边栏控制按钮样式 */
+  .nav-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #007bff; /* 蓝色背景 */
+      color: white;
+      border: none;
+      width: 200px; /* 宽度设置为150px */
+      height: 45px; /* 高度设置为150px */
+      border-radius: 10px; /* 圆角设置 */
+      cursor: pointer;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+  }
+
+  .nav-toggle:hover {
+      background-color: #0056b3; /* 深蓝色背景，用于hover效果 */
+  }
+
+  .nav-toggle:focus {
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* 焦点时的蓝色光晕 */
+      outline: none; /* 去除焦点轮廓 */
+  }
+
+  .nav-toggle i {
+      font-size: 2em; /* 图标大小 */
+  }
+</style>
+</head>
+<body>
+
+<button class="nav-toggle" id="navToggleButton">
+<i class="fas fa-bars"></i> <!-- 可以使用fa-bars图标表示菜单 -->
+</button>
+
   <nav class="right-nav" id="rightNav">
     <ul>
       <li>

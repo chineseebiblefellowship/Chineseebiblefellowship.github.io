@@ -2400,7 +2400,7 @@ h1 {
 }
 
 h2 {
-  color: var(--slate-blue);
+  color: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: Montserrat, sans-serif;
@@ -2486,7 +2486,6 @@ li {
 
 img {
   margin-right: 20px;
-  display: block;
 }
 
 label {
@@ -2589,7 +2588,7 @@ figcaption {
 
 .container {
   text-align: left;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0);
   border-radius: 0;
   flex-direction: row;
   justify-content: center;
@@ -43670,6 +43669,8 @@ figcaption {
 
 .text-span-153 {
   color: #0082f3;
+  text-align: center;
+
 }
 
 .text-span-154 {
@@ -58317,7 +58318,7 @@ figcaption {
 
 .sidebar-menu {
   z-index: 2000;
-  background-color: #a0d1ff;
+  background-color:#d5ebff;
   border: 1px solid #000;
   flex-direction: column;
   justify-content: flex-start;
@@ -58419,7 +58420,6 @@ figcaption {
 }
 
 .sidebarplayer {
-  background-color: #151720;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -58456,6 +58456,7 @@ figcaption {
 .social_media_div {
   width: 200px;
   height: auto;
+  color: #a0d1ff;
 }
 
 .div-block-444 {
@@ -58543,7 +58544,7 @@ figcaption {
 }
 
 .webblockwhite {
-  background-color: #aedbff;
+  background-color: #fff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -66784,7 +66785,7 @@ figcaption {
 }
 
 .webblockwhite5-2 {
-  background-color: #aedbff;
+  background-color: #fff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -66997,7 +66998,7 @@ figcaption {
 }
 
 .webblockwhite2-2 {
-  background-color: #aedbff;
+  background-color: #fff;
   width: auto;
   height: auto;
   margin-bottom: 0;
@@ -70729,7 +70730,7 @@ figcaption {
 }
 
 .heading-177 {
-  color: #91d9ff;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
   font-family: Exo, sans-serif;
@@ -70744,7 +70745,7 @@ figcaption {
 }
 
 .paragraph-124 {
-  color: #fff;
+  color: #000;
   text-align: justify;
   margin-left: 40px;
   margin-right: 40px;
@@ -70818,7 +70819,7 @@ figcaption {
 }
 
 .tbtohm {
-  color: #91d9ff;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
   font-family: Exo, sans-serif;
@@ -70844,7 +70845,7 @@ figcaption {
 }
 
 .heading-177-copy {
-  color: #000;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-family: Exo, sans-serif;
@@ -70854,7 +70855,8 @@ figcaption {
 
 .timeline_welcome_screen_home {
   z-index: 5000;
-  background-image: url("../615e0a924f1763d2506a1929_Purple Starry Backround.png");
+  background-color: #000027;
+  background-image: url(us/615e0a924f1763d2506a1929_Purple_Starry_Backround.png);
   background-position: 0 0;
   background-size: auto;
   flex-flow: column;
@@ -70862,10 +70864,7 @@ figcaption {
   align-items: flex-start;
   display: flex;
   position: static;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
   overflow: visible;
 }
 
@@ -84757,7 +84756,7 @@ figcaption {
 
   .heading-158 {
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 45px;
   }
 
