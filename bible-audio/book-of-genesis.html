@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="nb.css">
   <link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
 
@@ -1028,6 +1029,35 @@ footer {
         }
         img, span {
     display: inline-block;
+}
+/* 当屏幕宽度小于768px时，应用以下样式 */
+@media (max-width: 768px) {
+    .aplayer .aplayer-lrc p {
+        font-size: 16px; /* 从12px修改为16px */
+        color: #777;
+        line-height: 16px !important;
+        height: 16px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transition: all 0.5s ease-out;
+        opacity: 0.4;
+        overflow: hidden;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 20px; /* 从17px修改为20px */
+        color: #1b82f1;
+        opacity: 1;
+        overflow: visible;
+        height: auto !important;
+        min-height: 16px;
+    }
+
+    .aplayer .aplayer-list .aplayer-list-body .aplayer-list-item {
+        font-size: 16px; /* 从默认值修改为16px */
+        padding: 10px 14px;
+        border-bottom: 1px solid #eaeaea;
+    }
 }
 </style>
 <link rel="stylesheet" href="APlayer.min.css">
