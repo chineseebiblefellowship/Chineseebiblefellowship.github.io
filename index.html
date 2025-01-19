@@ -15,12 +15,7 @@
     type="image/x-icon">
   <link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
 
-  <div class="logo-container">
-    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png"
-      alt="eBible Fellowship Logo" class="logo-image" style="width: 140px; height: auto;">
-    <span class="logo-text" style="color: #007bff; display: inline; font-size: 40px;">e</span>
-    <span class="logo-text" style="display: inline; font-size: 40px;">Bible Fellowship</span>
-  </div>
+
   <style>
     .title {
       font-size: 28px;
@@ -410,28 +405,7 @@
   </div>
 
   <!-- 引入 Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <div class="icon-row">
-    <a href="learnbible.html" class="icon-box">
-      <i class="fas fa-graduation-cap"></i>
-      <span>圣经学习</span>
-    </a>
-    <a href="lib.html?source=pageB" class="icon-box">
-      <i class="fas fa-book-open"></i>
-      <span>圣经书籍</span>
-    </a>
-  </div>
-  <div class="icon-row">
-    <a href="hymns.html" class="icon-box">
-      <i class="fas fa-music"></i>
-      <span>音乐</span>
-    </a>
-    <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="icon-box">
-      <i class="fas fa-video"></i>
-      <span>Zoom</span>
-    </a>
-  </div>
-  </div>
+
 
   <style>
     .icon-row {
@@ -531,7 +505,93 @@
       width="100%" height="300PX"></iframe>
   </div>
   </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <div class="button-container">
+    <div class="button-row">
+        <a href="learnbible.html" class="square-button" aria-label="圣经学习">
+            <i class="fas fa-book-open"></i>
+            <span>圣经学习</span>
+        </a>
+        <a href="lib.html?source=pageB" class="square-button" aria-label="圣经书籍">
+            <i class="fas fa-church"></i>
+            <span>圣经书籍</span>
+        </a>
+    </div>
+    <div class="button-row">
+        <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="square-button" aria-label="Zoom会议">
+            <i class="fas fa-video"></i>
+            <span>Zoom会议</span>
+        </a>
+        <a href="hymns.html" class="square-button" aria-label="音乐Hymns">
+            <i class="fas fa-music"></i>
+            <span>音乐</span>
+        </a>
+    </div>
+</div>
   <style>
+    a{
+      text-decoration: none;
+    }
+    .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* 按钮之间的间距 */
+            margin-top: 20px;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* 按钮之间的间距 */
+        }
+
+        .square-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px; /* 设置按钮的宽度 */
+            height: 120px; /* 设置按钮的高度，与宽度相同形成正方形 */
+            font-size: 16px; /* 设置文字的大小 */
+            color: #fff;
+            background: linear-gradient(135deg, #6d5dfc 0%, #6158fa 100%);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            outline: none; /* 去除默认的轮廓 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* 使文字水平居中 */
+            flex-direction: column; /* 使图标和文字垂直排列 */
+            text-decoration: none; /* 去除超链接的下划线 */
+        }
+
+        .square-button i {
+            margin-bottom: 8px; /* 图标和文字之间的间距 */
+        }
+
+        .square-button:hover {
+            background: linear-gradient(135deg, #5d4dfc 0%, #5148fa 100%);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .square-button:active {
+            background: linear-gradient(135deg, #4d3dfc 0%, #4138fa 100%);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+        }
+
+        .square-button:focus {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(109, 93, 252, 0.5);
+        }
+
+        .square-button:disabled {
+            color: #999;
+            background: linear-gradient(135deg, #ccc 0%, #ddd 100%);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
     .text-art {
       font-family: 'Arial', sans-serif;
       font-size: 4em;
@@ -2565,34 +2625,7 @@
       /* 显示右侧栏 */
     }
 
-    .nav-toggle {
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      z-index: 1000;
-      border-radius: 10px;
-      /* 圆角 */
-      width: 40px;
-      /* 正方形按钮宽度 */
-      height: 40px;
-      /* 正方形按钮高度 */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      /* 阴影 */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-toggle i {
-      font-size: 20px;
-      /* 图标大小 */
-    }
+ 
 
     .right-nav ul {
       list-style-type: none;
@@ -2699,12 +2732,12 @@
   /* 侧边栏控制按钮样式 */
   .nav-toggle {
       position: fixed;
-      top: 15px;
-      right: 15px;
+      top: 5px;
+      right: 5px;
       background-color: #007bff; /* 蓝色背景 */
       color: white;
       border: none;
-      width: 200px; /* 宽度设置为150px */
+      width: 50px; /* 宽度设置为150px */
       height: 45px; /* 高度设置为150px */
       border-radius: 10px; /* 圆角设置 */
       cursor: pointer;
@@ -2725,14 +2758,16 @@
   }
 
   .nav-toggle i {
-      font-size: 2em; /* 图标大小 */
+      font-size: 20px; /* 图标大小 */
   }
+  
+  
 </style>
 </head>
 <body>
 
 <button class="nav-toggle" id="navToggleButton">
-<i class="fas fa-bars"></i> <!-- 可以使用fa-bars图标表示菜单 -->
+<i class="fas fa-bars"></i>
 </button>
 
   <nav class="right-nav" id="rightNav">
@@ -2740,8 +2775,8 @@
       <li>
         <a href="#" id="languageLink"><i class="fa-solid fa-earth-asia"></i> 语言</a>
         <div class="language-options" id="languageOptions">
-          <a href="#" onclick="setLanguage('中文')">中文</a>
-          <a href="#" onclick="setLanguage('English')">English</a>
+          <a href="" >中文</a>
+          <a href="https://ebiblefellowship.org">English</a>
         </div>
       </li>
       <li><a href="bible-index.html"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
@@ -2762,10 +2797,7 @@
             class="fas fa-video"></i> Zoom</a></li>
       <li><a href="unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
       <li><a href="email.html"><i class="fa-solid fa-address-card"></i> 联系我们</a></li>
-      <li id="devTest" class="hidden"><a href="test.html"><i class="fa-solid fa-address-card"></i> 开发人员渠道test</a>
-      </li>
-      <li id="devTemp" class="hidden"><a href="temp.html"><i class="fa-solid fa-address-card"></i> 开发人员渠道temp</a>
-      </li>
+     
     </ul>
   </nav>
   <script>
@@ -2826,28 +2858,8 @@
       clearTimeout(timer);
     });
 
-    // 双指合并事件
-    let developerConfirmed = false; // 确认标志
-    document.addEventListener('touchstart', function (e) {
-      if (e.touches.length === 2 && !developerConfirmed) {
-        const isDeveloper = confirm("您是开发者吗？");
-        if (isDeveloper) {
-          developerConfirmed = true; // 设置确认状态
-          devTest.style.display = 'block'; // 显示开发人员渠道test
-          devTemp.style.display = 'block'; // 显示开发人员渠道temp
-        }
-      }
-    });
-    function toggleNav() {
-      var nav = document.getElementById("rightNav");
-      var icon = document.getElementById("toggleIcon");
-      nav.classList.toggle("active");
-      if (nav.classList.contains("active")) {
-        icon.innerHTML = "×";
-      } else {
-        icon.innerHTML = "展开";
-      }
-    }
+  
+
 
     function changeLanguage(lang) {
       console.log("Language changed to: " + lang);

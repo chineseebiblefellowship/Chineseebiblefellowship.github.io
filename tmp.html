@@ -1,138 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eBible Fellowship</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="nb.css">
-  <link rel="icon" href="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/5f359c4a91336f7eca8b3028_Ebibe%20Fav%2032.png" type="image/x-icon">
-  <link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
-
-  <!-- Additional styles -->
-  <style>
-    .navbar {
-      background-color: black;
-      padding: 10px;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      border-bottom: 5px solid black;
-      transition: background-color 0.3s;
-    }
-
-    .navbar:hover {
-      background-color: #333;
-    }
-
-    .title {
-      padding: 10px 20px;
-      font-size: 1.5em;
-      text-align: center;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-
-    .navbar button {
-      background-color: transparent;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .navbar button:hover {
-      color: #ff4081;
-    }
-
-    body {
-      margin: 0;
-      background-color: #dff0ff;
-    }
-
-    .text {
-      color: #0000ff;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .button {
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #008CBA;
-      color: white;
-      font-size: 16px;
-    }
-
-    .button:hover {
-      background-color: #005f73;
-    }
-
-    .smaller {
-      font-size: 14px;
-    }
-
-    .larger {
-      font-size: 18px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="navbar">
-    <div class="title" style="color: #fff;">创世纪</div>
-    <button>
-      <a href="index.html" class="link"><i class="fas fa-home"></i> <<首页</a>
-      <a href="bible-index.html" class="link"><i class="fas fa-book-open learn-icon"></i> <<圣经索引</a>
-      <a href="" class="link"><i class="fas fa-book-open learn-icon"></i> <<创世纪</a>
-      <a class="backk" href="index.html" style="color: #fff;">返回</a>
-    </button>
-    <div class="logo" style="text-align: center;">eBible Fellowship</div>
-  </div>
-
-  <div class="container">
-    <h1>创世纪 1 章</h1>
-    <button class="button" onclick="changeSize('smaller')">字体减小</button>
-    <button class="button" onclick="changeSize('larger')">字体加大</button>
-
-    <p class="text">1: 起初，神创造天地。</p>
-    <p class="text">2: 地是空虚混沌，渊面黑暗；神的灵运行在水面上。</p>
-    <p class="text">3: 神说：“要有光。”就有了光。</p>
-    <p class="text">4: 神看光是好的，就把光和暗分开了。</p>
-    <p class="text">5: 神称光为昼，称暗为夜。晚霞，早晨，第一日。</p>
-    <!-- 其他经文内容 -->
-    <p class="text">31: 天地万物都造齐了。</p>
-  </div>
-
-  <script>
-    let currentSize = 16; // 初始字体大小
-
-    function changeSize(sizeClass) {
-      var elements = document.getElementsByClassName('text');
-      for (var i = 0; i < elements.length; i++) {
-        var newSize = currentSize;
-        if (sizeClass === 'smaller') {
-          newSize = Math.max(5, currentSize - 1); // 减小字体大小，但不低于5px
-        } else {
-          newSize = Math.min(40, currentSize + 1); // 增大字体大小，但不超过40px
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增文件按钮动画示例</title>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden; /* 防止页面滚动 */
         }
-        elements[i].style.fontSize = newSize + 'px';
-        currentSize = newSize; // 更新当前字体大小
-      }
-    }
-  </script>
-</body>
 
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto; /* 允许垂直滚动 */
+            overflow-x: hidden; /* 防止水平滚动 */
+            height: 100vh;
+            padding: 20px 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth; /* 平滑滚动 */
+        }
+
+        .file-info {
+            display: flex;
+            flex-direction: column;
+            width: 90%; /* 设置文件信息的宽度 */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px; /* 设置圆角 */
+            padding: 10px;
+            text-align: center; /* 使文字水平居中 */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* 初始隐藏 */
+            transition: opacity 0.5s ease; /* 透明度动画 */
+        }
+
+        .file-info.visible {
+            opacity: 1; /* 显示文件信息 */
+        }
+
+        .new-file-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* 设置按钮的宽度为全屏 */
+            height: 50px; /* 设置按钮的高度 */
+            font-size: 18px; /* 设置文字的大小 */
+            color: #fff;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            border: none;
+            border-radius: 0; /* 初始无圆角 */
+            cursor: pointer;
+            transition: border-radius 0.5s ease;
+            outline: none; /* 去除默认的轮廓 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* 使文字水平居中 */
+            position: fixed; /* 固定定位 */
+            bottom: 0; /* 固定在底部 */
+            left: 0;
+            right: 0;
+        }
+
+        .new-file-button:hover {
+            background: linear-gradient(135deg, #0069d9 0%, #004c8c 100%);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .new-file-button:active {
+            background: linear-gradient(135deg, #0056b3 0%, #003d66 100%);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .new-file-button:focus {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+
+        .file-list {
+            width: 100%;
+            max-height: calc(100vh - 70px); /* 确保文件列表不超过按钮 */
+            overflow-y: auto; /* 允许垂直滚动 */
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="file-list">
+            <!-- 显示前两个示例文件 -->
+            <div class="file-info visible">
+                <div class="file-time">2025-01-12 14:30</div>
+                <div class="file-icon">
+                    <i class="fas fa-file-word"></i>
+                    <span>示例文件1</span>
+                </div>
+                <div class="file-size">1.2 MB</div>
+            </div>
+            <div class="file-info visible">
+                <div class="file-time">2025-01-11 10:00</div>
+                <div class="file-icon">
+                    <i class="fas fa-file-word"></i>
+                    <span>示例文件2</span>
+                </div>
+                <div class="file-size">2.5 MB</div>
+            </div>
+            <!-- 其他示例文件，初始隐藏 -->
+            <div class="file-info">
+                <div class="file-time">2025-01-10 12:00</div>
+                <div class="file-icon">
+                    <i class="fas fa-file-word"></i>
+                    <span>示例文件3</span>
+                </div>
+                <div class="file-size">1.8 MB</div>
+            </div>
+            <div class="file-info">
+                <div class="file-time">2025-01-09 09:00</div>
+                <div class="file-icon">
+                    <i class="fas fa-file-word"></i>
+                    <span>示例文件4</span>
+                </div>
+                <div class="file-size">1.5 MB</div>
+            </div>
+            <div class="file-info">
+                <div class="file-time">2025-01-08 15:00</div>
+                <div class="file-icon">
+                    <i class="fas fa-file-word"></i>
+                    <span>示例文件5</span>
+                </div>
+                <div class="file-size">2.0 MB</div>
+            </div>
+        </div>
+        <div class="file-info">
+            <div class="file-time">2025-01-08 15:00</div>
+            <div class="file-icon">
+                <i class="fas fa-file-word"></i>
+                <span>示例文件5</span>
+            </div>
+            <div class="file-size">2.0 MB</div>
+        </div>
+    </div>
+    <div class="file-info">
+        <div class="file-time">2025-01-08 15:00</div>
+        <div class="file-icon">
+            <i class="fas fa-file-word"></i>
+            <span>示例文件5</span>
+        </div>
+        <div class="file-size">2.0 MB</div>
+    </div>
+</div>
+<div class="file-info">
+    <div class="file-time">2025-01-08 15:00</div>
+    <div class="file-icon">
+        <i class="fas fa-file-word"></i>
+        <span>示例文件5</span>
+    </div>
+    <div class="file-size">2.0 MB</div>
+</div>
+</div>
+<div class="file-info">
+    <div class="file-time">2025-01-08 15:00</div>
+    <div class="file-icon">
+        <i class="fas fa-file-word"></i>
+        <span>示例文件5</span>
+    </div>
+    <div class="file-size">2.0 MB</div>
+</div>
+</div>
+<div class="file-info">
+    <div class="file-time">2025-01-08 15:00</div>
+    <div class="file-icon">
+        <i class="fas fa-file-word"></i>
+        <span>示例文件5</span>
+    </div>
+    <div class="file-size">2.0 MB</div>
+</div>
+</div>
+<div class="file-info">
+    <div class="file-time">2025-01-08 15:00</div>
+    <div class="file-icon">
+        <i class="fas fa-file-word"></i>
+        <span>示例文件5</span>
+    </div>
+    <div class="file-size">2.0 MB</div>
+</div>
+</div>
+<div class="file-info">
+    <div class="file-time">2025-01-08 15:00</div>
+    <div class="file-icon">
+        <i class="fas fa-file-word"></i>
+        <span>示例文件5</span>
+    </div>
+    <div class="file-size">2.0 MB</div>
+</div>
+</div>
+
+        <!-- 新增文件按钮 -->
+        <button class="new-file-button" id="newFileButton" aria-label="新增文件">
+            <span>新增文件</span>
+        </button>
+    </div>
+
+    <script>
+        let isExpanded = false;
+
+        document.getElementById('newFileButton').addEventListener('click', function(event) {
+            const fileInfos = document.querySelectorAll('.file-info');
+
+            if (isExpanded) {
+                // 如果已经展开，恢复到初始状态
+                fileInfos.forEach(fileInfo => {
+                    if (!fileInfo.classList.contains('visible')) {
+                        fileInfo.classList.remove('visible');
+                    }
+                });
+                isExpanded = false;
+            } else {
+                // 如果未展开，显示所有文件信息
+                fileInfos.forEach(fileInfo => {
+                    fileInfo.classList.add('visible');
+                });
+                isExpanded = true;
+            }
+        });
+    </script>
+</body>
 </html>
